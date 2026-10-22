@@ -28,6 +28,20 @@ STATIC = {'/': ('index.html', 'text/html; charset=utf-8'),
           '/assets/PretendardVariable.woff2': ('assets/PretendardVariable.woff2', 'font/woff2')}
 
 
+PRESENTATION_STATIC = {
+    '/presentation/': ('index.html', 'text/html; charset=utf-8'),
+    '/presentation/index.html': ('index.html', 'text/html; charset=utf-8'),
+    '/presentation/deck.css': ('deck.css', 'text/css; charset=utf-8'),
+    '/presentation/deck.js': ('deck.js', 'text/javascript; charset=utf-8'),
+    '/presentation/content.js': ('content.js', 'text/javascript; charset=utf-8'),
+    '/presentation/evidence.json': ('evidence.json', 'application/json; charset=utf-8'),
+    '/presentation/SCRIPT.txt': ('SCRIPT.txt', 'text/plain; charset=utf-8'),
+    '/presentation/assets/workspace.jpg': ('assets/workspace.jpg', 'image/jpeg'),
+    '/presentation/assets/PretendardVariable.woff2': ('assets/PretendardVariable.woff2', 'font/woff2'),
+    '/presentation/assets/Pretendard-LICENSE.txt': ('assets/Pretendard-LICENSE.txt', 'text/plain; charset=utf-8'),
+}
+
+
 def budget_snapshot():
     path = RUNTIME / 'llm-cost.sqlite3'
     if not path.is_file():
@@ -130,6 +144,9 @@ class Handler(BaseHTTPRequestHandler):
             if url.path in STATIC:
                 filename, mime = STATIC[url.path]
                 return self.send(200, (WEB / filename).read_bytes(), mime)
+            if url.path in PRESENTATION_STATIC:
+                filename, mime = PRESENTATION_STATIC[url.path]
+                return self.send(200, (ROOT / 'presentation' / filename).read_bytes(), mime)
             if url.path == '/api/bootstrap':
                 return self.send(200, bootstrap())
             if url.path == '/api/report':

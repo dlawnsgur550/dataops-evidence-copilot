@@ -1,0 +1,35 @@
+{
+  "slide_count": 9,
+  "planned_duration_seconds": 300,
+  "speaker_script_characters": 2284,
+  "script_and_deck_synchronized": true,
+  "pytest": "212 passed in 11.13s",
+  "api_requests_before": 128,
+  "api_requests_after": 128,
+  "new_provider_calls": 0,
+  "presentation_http": 200,
+  "path_traversal": 404,
+  "desktop_slides_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "mobile390_slides_inspected": [
+    1,
+    5,
+    6,
+    8
+  ],
+  "narrow320_slides_inspected": [
+    1
+  ],
+  "timer_keyboard_broadcast_guard_recovery": "verified in browser",
+  "detector_primary_findings": 0,
+  "detector_advisories": 35
+}

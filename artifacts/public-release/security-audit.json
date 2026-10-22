@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "tracked_files_checked": 3525,
+  "tracked_files_checked": 3538,
   "known_secret_values_checked": 6,
   "test_dummy_tokens_allowlisted": 4,
   "findings": [],
