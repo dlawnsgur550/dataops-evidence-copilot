@@ -1,0 +1,117 @@
+{
+  "scope": "actual gpt-6-luna calls on frozen authored synthetic evidence; baseline=1 call/no retrieval, full=2 calls/local hybrid retrieval. NOT live-system calls and NOT a comparison across model families.",
+  "phase": "pilot",
+  "cases": [
+    {
+      "case": "H02",
+      "expected": "CONNECTION_FAILURE",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1796,
+          "cost": 0.00012815,
+          "elapsed_seconds": 4.002681,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1711,
+          "output_tokens": 85,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "6541df4d948e5031b23c4d3aa3316213dae9b7efd675ff85f8a8f6fd9d2de40d",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4754,
+          "cost": 0.000322363,
+          "elapsed_seconds": 9.986076,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4619,
+          "output_tokens": 135,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "6541df4d948e5031b23c4d3aa3316213dae9b7efd675ff85f8a8f6fd9d2de40d"
+    }
+  ],
+  "independent_human_review": "pending",
+  "cost_before": {
+    "requests": 93,
+    "spent_or_reserved_usd": 0.015592371,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "cost_after": {
+    "requests": 96,
+    "spent_or_reserved_usd": 0.016042884,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "full_aggregate": {
+    "passed": 1,
+    "total": 1,
+    "wilson_95_interval": [
+      0.2065,
+      1.0
+    ],
+    "caution": "authored correlated convenience sample, not population generalization"
+  },
+  "baseline_aggregate": {
+    "passed": 1,
+    "total": 1,
+    "wilson_95_interval": [
+      0.2065,
+      1.0
+    ],
+    "caution": "authored correlated convenience sample, not population generalization"
+  }
+}

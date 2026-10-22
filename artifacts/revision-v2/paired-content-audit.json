@@ -1,0 +1,62 @@
+{
+  "input_checks": [
+    {
+      "case_id": "H01",
+      "canonical_evidence_hashes": {
+        "baseline": "777d58de3ec0ddd81ff685ab2ee7476b870ddbfbf96b33a4306d796712f8e4c3",
+        "final": "777d58de3ec0ddd81ff685ab2ee7476b870ddbfbf96b33a4306d796712f8e4c3"
+      },
+      "full_evidence_content_equal": true,
+      "array_order_equal": false,
+      "explanation": "Original same_full_evidence uses array-order-sensitive report hash and is false. All five evidence objects match after sorting IDs. Original reports/results preserved."
+    },
+    {
+      "case_id": "H02",
+      "canonical_evidence_hashes": {
+        "baseline": "49d0b05837f1d34fdad80b9a506573b538a914b5d58430814482a6338f2f8b8f",
+        "final": "49d0b05837f1d34fdad80b9a506573b538a914b5d58430814482a6338f2f8b8f"
+      },
+      "full_evidence_content_equal": true,
+      "array_order_equal": false,
+      "explanation": "Original same_full_evidence uses array-order-sensitive report hash and is false. All five evidence objects match after sorting IDs. Original reports/results preserved."
+    }
+  ],
+  "assisted_reviews": [
+    {
+      "case_id": "H01",
+      "system": "baseline",
+      "report_sha256": "912f0d6c899dba68d723643b206c5071c5fceea5270dc1d87e29c7cf60b0f68b",
+      "assisted_evidence_pass": true,
+      "reviewer": "Codex evidence audit; not independent human",
+      "reason": "customer_id NULL 75건·archive 대상·과거/현재 구분·승인된 정정과 새 실행 검증이 근거와 일치."
+    },
+    {
+      "case_id": "H01",
+      "system": "final",
+      "report_sha256": "847aa3aa41cb85caab2b4f28d5d28966001281f926077f327d90707f29497e4f",
+      "assisted_evidence_pass": true,
+      "reviewer": "Codex evidence audit; not independent human",
+      "reason": "customer_id NULL 75건·archive 대상·과거/현재 구분·승인된 정정과 새 실행 검증이 근거와 일치."
+    },
+    {
+      "case_id": "H02",
+      "system": "baseline",
+      "report_sha256": "a167777fc9fc28da729697023c97fca5cec59efc5e231a6e9add51d035151493",
+      "assisted_evidence_pass": true,
+      "reviewer": "Codex evidence audit; not independent human",
+      "reason": "역사적 dbt_orders 연결 거부·현재 probe 성공과 구분·근거 있는 부분 산출물 누락·실제 설정 점검과 새 실행 검증."
+    },
+    {
+      "case_id": "H02",
+      "system": "final",
+      "report_sha256": "63f29cf67ef4b226f05daff45e3e895f1b5938ad5d7cd15511101d56c0cd9de9",
+      "assisted_evidence_pass": false,
+      "reviewer": "Codex evidence audit; not independent human",
+      "reason": "RCA 후보는 역사적 연결 거부와 조건부 사람 점검·수정을 제안했으나 의미 Reviewer가 설정 문제를 단정한 것으로 해석해 거절. 최종 UNKNOWN이므로 원인 정답 미충족. 후보는 보존돼 재검토 가능."
+    }
+  ],
+  "independent_human_review_completed": false,
+  "original_results_preserved": true,
+  "model_generalization_claim": false,
+  "original_8_of_9_target_retested": false
+}

@@ -1,0 +1,51 @@
+{
+  "passed": 6,
+  "total": 6,
+  "api_calls": 0,
+  "checks": [
+    {
+      "negative_type": "fabricated_evidence",
+      "detected": true,
+      "violations": [
+        "FABRICATED_EVIDENCE_ID:invented"
+      ]
+    },
+    {
+      "negative_type": "missing_target",
+      "detected": true,
+      "violations": [
+        "PYDANTIC_EMPTY_TARGET_REJECTED"
+      ]
+    },
+    {
+      "negative_type": "retry_only",
+      "detected": true,
+      "violations": [
+        "INAPPROPRIATE_RECOVERY_KIND"
+      ]
+    },
+    {
+      "negative_type": "missing_logs",
+      "detected": true,
+      "violations": [
+        "UNSUCCESSFUL_EVIDENCE:live-00cf136913bcd8ce3df7",
+        "UNSUPPORTED_CATEGORY"
+      ]
+    },
+    {
+      "negative_type": "other_connection_success",
+      "detected": true,
+      "violations": [
+        "ACTION_WRONG_CONNECTION"
+      ]
+    },
+    {
+      "negative_type": "old_artifact_mixed",
+      "detected": true,
+      "violations": [
+        "FOREIGN_EXECUTION:live-33f6421aadd52c85623f",
+        "UNSUPPORTED_CATEGORY"
+      ]
+    }
+  ]
+}

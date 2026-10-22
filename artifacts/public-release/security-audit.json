@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tracked_files_checked": 3525,
+  "known_secret_values_checked": 6,
+  "test_dummy_tokens_allowlisted": 4,
+  "findings": [],
+  "provider_calls": 0
+}

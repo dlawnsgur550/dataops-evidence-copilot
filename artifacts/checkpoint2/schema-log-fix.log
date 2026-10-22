@@ -1,0 +1,51 @@
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+[10/20/26 17:11:17] INFO     Starting MCP server 'DataOps         server.py:2506
+                             read-only synthetic evidence' with                 
+                             transport 'stdio'                                  
+{
+  "fixture_selector": "schema",
+  "category": "SCHEMA_CHANGE",
+  "diagnosis_status": "supported",
+  "review_accepted": true,
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.424579
+  },
+  "nodes": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "real_mcp_stdio_live_backend",
+    "data": "synthetic_demo_data_on_live_airflow_postgres_dbt",
+    "external_systems": "live_local_airflow_postgres_dbt"
+  },
+  "protocol": {
+    "initialized": true,
+    "protocol_version": "2025-11-25",
+    "server": {
+      "name": "DataOps read-only synthetic evidence",
+      "title": null,
+      "version": "2.14.7",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "tools": [
+      "get_task_context",
+      "get_dbt_artifacts",
+      "compare_schema",
+      "get_quality_profile",
+      "check_connection"
+    ]
+  },
+  "report": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/schema-log-fix-report.json"
+}

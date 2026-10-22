@@ -1,0 +1,96 @@
+{
+  "cwd": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot",
+  "commands": [
+    {
+      "command": "open -a Docker",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "command": "uv run python scripts/setup_local.py",
+      "exit_code": 0,
+      "log": "setup-local.log"
+    },
+    {
+      "command": "uv run python scripts/dev_services.py start",
+      "exit_code": 0,
+      "log": "services-start.log"
+    },
+    {
+      "command": "uv run python scripts/live_e2e.py",
+      "exit_code": 0,
+      "log": "live-e2e.log"
+    },
+    {
+      "command": "uv run python scripts/live_limits.py",
+      "exit_code": 0,
+      "log": "live-limits.log"
+    },
+    {
+      "command": "uv run python scripts/live_post_recovery.py",
+      "exit_code": 0,
+      "log": "post-recovery-negatives.log"
+    },
+    {
+      "command": "uv run pytest -q -W error::RuntimeWarning --junitxml=artifacts/checkpoint2/unit-tests.xml",
+      "exit_code": 0,
+      "log": "unit-tests.log"
+    },
+    {
+      "command": "uv run python -m compileall -q src pipeline scripts tests",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "command": "docker exec dataops-c-cp2-airflow python -m pip check",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "command": "docker exec dataops-c-cp2-airflow /opt/dataops-dbt/bin/pip check",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "command": "uv pip check",
+      "exit_code": 0,
+      "log": null
+    },
+    {
+      "command": "uv run python scripts/dev_services.py stop",
+      "exit_code": 0,
+      "log": "services-stop.log"
+    },
+    {
+      "command": "uv run python scripts/audit_checkpoint2.py",
+      "exit_code": 0,
+      "log": "final-audit.log"
+    }
+  ],
+  "resolved_failures": [
+    {
+      "stage": "initial Airflow Viewer creation",
+      "exit_code": 1,
+      "cause": "Viewer role not created before sync-perm",
+      "log": "service-setup.log"
+    },
+    {
+      "stage": "native macOS Airflow start",
+      "exit_code": 1,
+      "cause": "Gunicorn worker SIGSEGV and API readiness timeout",
+      "log": "native-airflow-failure-excerpt.log"
+    },
+    {
+      "stage": "first live E2E",
+      "exit_code": 1,
+      "cause": "Airflow JSON log tuple representation truncated the error",
+      "log": "first-live-log-format-failure.log"
+    },
+    {
+      "stage": "second live E2E",
+      "exit_code": 1,
+      "cause": "dbt connection refusal did not create run_results; treated as invocation mismatch before partial receipt support",
+      "log": "second-live-partial-artifact-failure.log"
+    }
+  ]
+}

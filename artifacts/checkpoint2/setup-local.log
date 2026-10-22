@@ -1,0 +1,5 @@
+{"step": "app-install", "exit_code": 0}
+{"step": "airflow-install", "exit_code": 0}
+{"step": "dbt-install", "exit_code": 0}
+{"step": "postgres-pull", "exit_code": 0}
+설치와 Docker 준비를 확인했습니다. dev_services.py start로 격리 서비스를 시작하세요.

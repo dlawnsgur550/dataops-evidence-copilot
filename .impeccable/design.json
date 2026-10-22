@@ -1,0 +1,506 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T03:57:52.638437+00:00",
+  "title": "Design System: DataOps Copilot",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#202735",
+        "tonalRamp": [
+          "oklch(15% 0.02802 263.94)",
+          "oklch(26% 0.02802 263.94)",
+          "oklch(37% 0.02802 263.94)",
+          "oklch(48% 0.02802 263.94)",
+          "oklch(59% 0.02802 263.94)",
+          "oklch(70% 0.02802 263.94)",
+          "oklch(82% 0.02802 263.94)",
+          "oklch(95% 0.02802 263.94)"
+        ]
+      },
+      "secondary": {
+        "role": "neutral",
+        "displayName": "Secondary",
+        "canonical": "#606c7e",
+        "tonalRamp": [
+          "oklch(15% 0.03195 258.37)",
+          "oklch(26% 0.03195 258.37)",
+          "oklch(37% 0.03195 258.37)",
+          "oklch(48% 0.03195 258.37)",
+          "oklch(59% 0.03195 258.37)",
+          "oklch(70% 0.03195 258.37)",
+          "oklch(82% 0.03195 258.37)",
+          "oklch(95% 0.03195 258.37)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#6b7585",
+        "tonalRamp": [
+          "oklch(15% 0.02761 259.80)",
+          "oklch(26% 0.02761 259.80)",
+          "oklch(37% 0.02761 259.80)",
+          "oklch(48% 0.02761 259.80)",
+          "oklch(59% 0.02761 259.80)",
+          "oklch(70% 0.02761 259.80)",
+          "oklch(82% 0.02761 259.80)",
+          "oklch(95% 0.02761 259.80)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(37% 0.00000 0.00)",
+          "oklch(48% 0.00000 0.00)",
+          "oklch(59% 0.00000 0.00)",
+          "oklch(70% 0.00000 0.00)",
+          "oklch(82% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail",
+        "canonical": "#f6f7f9",
+        "tonalRamp": [
+          "oklch(15% 0.00287 264.54)",
+          "oklch(26% 0.00287 264.54)",
+          "oklch(37% 0.00287 264.54)",
+          "oklch(48% 0.00287 264.54)",
+          "oklch(59% 0.00287 264.54)",
+          "oklch(70% 0.00287 264.54)",
+          "oklch(82% 0.00287 264.54)",
+          "oklch(95% 0.00287 264.54)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#e5e8ee",
+        "tonalRamp": [
+          "oklch(15% 0.00872 264.52)",
+          "oklch(26% 0.00872 264.52)",
+          "oklch(37% 0.00872 264.52)",
+          "oklch(48% 0.00872 264.52)",
+          "oklch(59% 0.00872 264.52)",
+          "oklch(70% 0.00872 264.52)",
+          "oklch(82% 0.00872 264.52)",
+          "oklch(95% 0.00872 264.52)"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Blue",
+        "canonical": "#3157d5",
+        "tonalRamp": [
+          "oklch(15% 0.19839 266.36)",
+          "oklch(26% 0.19839 266.36)",
+          "oklch(37% 0.19839 266.36)",
+          "oklch(48% 0.19839 266.36)",
+          "oklch(59% 0.19839 266.36)",
+          "oklch(70% 0.19839 266.36)",
+          "oklch(82% 0.19839 266.36)",
+          "oklch(95% 0.19839 266.36)"
+        ]
+      },
+      "blue-light": {
+        "role": "primary",
+        "displayName": "Blue Light",
+        "canonical": "#edf1ff",
+        "tonalRamp": [
+          "oklch(15% 0.01925 273.24)",
+          "oklch(26% 0.01925 273.24)",
+          "oklch(37% 0.01925 273.24)",
+          "oklch(48% 0.01925 273.24)",
+          "oklch(59% 0.01925 273.24)",
+          "oklch(70% 0.01925 273.24)",
+          "oklch(82% 0.01925 273.24)",
+          "oklch(95% 0.01925 273.24)"
+        ]
+      },
+      "red": {
+        "role": "secondary",
+        "displayName": "Red",
+        "canonical": "#bd3444",
+        "tonalRamp": [
+          "oklch(15% 0.17275 18.94)",
+          "oklch(26% 0.17275 18.94)",
+          "oklch(37% 0.17275 18.94)",
+          "oklch(48% 0.17275 18.94)",
+          "oklch(59% 0.17275 18.94)",
+          "oklch(70% 0.17275 18.94)",
+          "oklch(82% 0.17275 18.94)",
+          "oklch(95% 0.17275 18.94)"
+        ]
+      },
+      "red-light": {
+        "role": "secondary",
+        "displayName": "Red Light",
+        "canonical": "#fff2f2",
+        "tonalRamp": [
+          "oklch(15% 0.01403 17.40)",
+          "oklch(26% 0.01403 17.40)",
+          "oklch(37% 0.01403 17.40)",
+          "oklch(48% 0.01403 17.40)",
+          "oklch(59% 0.01403 17.40)",
+          "oklch(70% 0.01403 17.40)",
+          "oklch(82% 0.01403 17.40)",
+          "oklch(95% 0.01403 17.40)"
+        ]
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "Green",
+        "canonical": "#16775e",
+        "tonalRamp": [
+          "oklch(15% 0.09406 170.38)",
+          "oklch(26% 0.09406 170.38)",
+          "oklch(37% 0.09406 170.38)",
+          "oklch(48% 0.09406 170.38)",
+          "oklch(59% 0.09406 170.38)",
+          "oklch(70% 0.09406 170.38)",
+          "oklch(82% 0.09406 170.38)",
+          "oklch(95% 0.09406 170.38)"
+        ]
+      },
+      "green-light": {
+        "role": "secondary",
+        "displayName": "Green Light",
+        "canonical": "#eaf6f0",
+        "tonalRamp": [
+          "oklch(15% 0.01494 164.73)",
+          "oklch(26% 0.01494 164.73)",
+          "oklch(37% 0.01494 164.73)",
+          "oklch(48% 0.01494 164.73)",
+          "oklch(59% 0.01494 164.73)",
+          "oklch(70% 0.01494 164.73)",
+          "oklch(82% 0.01494 164.73)",
+          "oklch(95% 0.01494 164.73)"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Amber",
+        "canonical": "#936111",
+        "tonalRamp": [
+          "oklch(15% 0.10837 72.09)",
+          "oklch(26% 0.10837 72.09)",
+          "oklch(37% 0.10837 72.09)",
+          "oklch(48% 0.10837 72.09)",
+          "oklch(59% 0.10837 72.09)",
+          "oklch(70% 0.10837 72.09)",
+          "oklch(82% 0.10837 72.09)",
+          "oklch(95% 0.10837 72.09)"
+        ]
+      },
+      "amber-light": {
+        "role": "secondary",
+        "displayName": "Amber Light",
+        "canonical": "#fff7e7",
+        "tonalRamp": [
+          "oklch(15% 0.02272 84.59)",
+          "oklch(26% 0.02272 84.59)",
+          "oklch(37% 0.02272 84.59)",
+          "oklch(48% 0.02272 84.59)",
+          "oklch(59% 0.02272 84.59)",
+          "oklch(70% 0.02272 84.59)",
+          "oklch(82% 0.02272 84.59)",
+          "oklch(95% 0.02272 84.59)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus",
+        "canonical": "#8ea4ff",
+        "tonalRamp": [
+          "oklch(15% 0.13413 272.43)",
+          "oklch(26% 0.13413 272.43)",
+          "oklch(37% 0.13413 272.43)",
+          "oklch(48% 0.13413 272.43)",
+          "oklch(59% 0.13413 272.43)",
+          "oklch(70% 0.13413 272.43)",
+          "oklch(82% 0.13413 272.43)",
+          "oklch(95% 0.13413 272.43)"
+        ]
+      },
+      "navigation-selected": {
+        "role": "primary",
+        "displayName": "Navigation Selected",
+        "canonical": "#e8edff",
+        "tonalRamp": [
+          "oklch(15% 0.02483 273.50)",
+          "oklch(26% 0.02483 273.50)",
+          "oklch(37% 0.02483 273.50)",
+          "oklch(48% 0.02483 273.50)",
+          "oklch(59% 0.02483 273.50)",
+          "oklch(70% 0.02483 273.50)",
+          "oklch(82% 0.02483 273.50)",
+          "oklch(95% 0.02483 273.50)"
+        ]
+      },
+      "panel-ground": {
+        "role": "neutral",
+        "displayName": "Panel Ground",
+        "canonical": "#fcfdff",
+        "tonalRamp": [
+          "oklch(15% 0.00285 264.54)",
+          "oklch(26% 0.00285 264.54)",
+          "oklch(37% 0.00285 264.54)",
+          "oklch(48% 0.00285 264.54)",
+          "oklch(59% 0.00285 264.54)",
+          "oklch(70% 0.00285 264.54)",
+          "oklch(82% 0.00285 264.54)",
+          "oklch(95% 0.00285 264.54)"
+        ]
+      },
+      "comparison-bar": {
+        "role": "secondary",
+        "displayName": "Comparison Bar",
+        "canonical": "#8197bb",
+        "tonalRamp": [
+          "oklch(15% 0.05923 260.18)",
+          "oklch(26% 0.05923 260.18)",
+          "oklch(37% 0.05923 260.18)",
+          "oklch(48% 0.05923 260.18)",
+          "oklch(59% 0.05923 260.18)",
+          "oklch(70% 0.05923 260.18)",
+          "oklch(82% 0.05923 260.18)",
+          "oklch(95% 0.05923 260.18)"
+        ]
+      },
+      "separate-scope": {
+        "role": "secondary",
+        "displayName": "Separate Scope",
+        "canonical": "#b4c1d9",
+        "tonalRamp": [
+          "oklch(15% 0.03683 262.79)",
+          "oklch(26% 0.03683 262.79)",
+          "oklch(37% 0.03683 262.79)",
+          "oklch(48% 0.03683 262.79)",
+          "oklch(59% 0.03683 262.79)",
+          "oklch(70% 0.03683 262.79)",
+          "oklch(82% 0.03683 262.79)",
+          "oklch(95% 0.03683 262.79)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Selected-run verdict."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section heading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Desktop body copy."
+      },
+      "diagnosis": {
+        "displayName": "Diagnosis",
+        "purpose": "Diagnosis prose."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Human action steps."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact control label."
+      },
+      "identifier": {
+        "displayName": "Identifier",
+        "purpose": "Evidence IDs and source records."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-case",
+        "value": "0 1px 4px #18253a0b",
+        "purpose": "Selected case only."
+      },
+      {
+        "name": "settings",
+        "value": "0 8px 28px #00000024",
+        "purpose": "Floating native-details settings."
+      },
+      {
+        "name": "dialog",
+        "value": "0 18px 70px #00000035",
+        "purpose": "Native modal surfaces."
+      },
+      {
+        "name": "toast",
+        "value": "0 5px 18px #00000024",
+        "purpose": "Transient feedback."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "background-color .15s, color .15s, border-color .15s",
+        "purpose": "Button hover state transitions."
+      },
+      {
+        "name": "busy-spinner",
+        "value": "spin .7s linear infinite",
+        "purpose": "Busy indicator only; disabled under prefers-reduced-motion."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 3px solid #8ea4ff; outline-offset: 3px",
+        "purpose": "Shared keyboard focus treatment."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Respect the reduced-motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      },
+      {
+        "name": "stacked-analysis",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "An explicit run or validation action.",
+      "html": "<button class=\"ds-primary\">진단 실행</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;padding:8px 13px;font-family:Pretendard,sans-serif;font-size:12px;font-weight:590;line-height:1.5;border-radius:6px;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;background:var(--blue,#3157d5);border:1px solid var(--blue,#3157d5);color:#fff}.ds-primary:hover{background:#284ac0;border-color:#284ac0}.ds-primary:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}.ds-primary:disabled{opacity:.58;cursor:not-allowed}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Download or supplementary action.",
+      "html": "<button class=\"ds-secondary\">보고서 JSON</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;padding:8px 13px;font-family:Pretendard,sans-serif;font-size:12px;font-weight:590;line-height:1.5;border-radius:6px;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;background:#fff;border:1px solid #dce1e8;color:#38465a}.ds-secondary:hover{background:#f4f6f9;border-color:#bfc9d7;color:#243348}.ds-secondary:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}.ds-secondary:disabled{opacity:.58;cursor:not-allowed}"
+    },
+    {
+      "name": "Icon button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "A labeled utility action.",
+      "html": "<button class=\"ds-icon\" aria-label=\"상세 닫기\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M6 6l12 12M6 18L18 6\"/></svg></button>",
+      "css": ".ds-icon{display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;width:40px;height:40px;border-radius:6px;color:#667487;cursor:pointer}.ds-icon:hover{background:#edf1f6;color:#2b3f59}.ds-icon:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}"
+    },
+    {
+      "name": "Native select",
+      "kind": "input",
+      "refersTo": "select",
+      "description": "Choose a saved or explicit execution mode.",
+      "html": "<label class=\"ds-field\">실행 방식<select class=\"ds-select\"><option>저장 결과 보기</option><option>저장 근거로 재진단</option><option>실시간 MCP 조회</option></select></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px;font:12px Pretendard,sans-serif;color:#5d6d83}.ds-select{appearance:auto;background:#fff;border:1px solid #dce1e8;color:#36455a;border-radius:6px;min-height:40px;padding:7px 28px 7px 10px;font:12px Pretendard,sans-serif;max-width:100%}.ds-select:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}"
+    },
+    {
+      "name": "Navigation row",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Current page in the cool gray rail.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-active\" href=\"#diagnosis\" aria-current=\"page\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M3 12h4l3-8 4 16 3-8h4\"/></svg>장애 진단</a><a class=\"ds-nav-link\" href=\"#recovery\">복구 검증</a></nav>",
+      "css": ".ds-nav{background:var(--rail,#f6f7f9);padding:12px;display:flex;flex-direction:column;gap:4px}.ds-nav-link{display:flex;align-items:center;gap:11px;padding:10px 12px;min-height:42px;border-radius:6px;color:#526075;font:560 13px Pretendard,sans-serif;text-decoration:none}.ds-nav-link:hover{background:#e9edf3;color:#27384d}.ds-nav-link.ds-active{background:#e8edff;color:#294bbe}.ds-nav-link:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}"
+    },
+    {
+      "name": "Verdict tags",
+      "kind": "chip",
+      "refersTo": "status-pass",
+      "description": "Explicit pass, reject and hold labels.",
+      "html": "<span class=\"ds-badge ds-pass\">통과</span> <span class=\"ds-badge ds-reject\">차단</span> <span class=\"ds-badge ds-hold\">보류</span>",
+      "css": ".ds-badge{font:10px/1.7 Pretendard,sans-serif;padding:2px 6px;border-radius:4px;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}.ds-pass{background:var(--green-light,#eaf6f0);color:var(--green,#16775e)}.ds-reject{background:var(--red-light,#fff2f2);color:var(--red,#bd3444)}.ds-hold{background:var(--amber-light,#fff7e7);color:var(--amber,#936111)}"
+    },
+    {
+      "name": "Pipeline task",
+      "kind": "custom",
+      "refersTo": "pipeline",
+      "description": "A stage with its name, state and mapped evidence focus.",
+      "html": "<div class=\"ds-pipeline\"><button class=\"ds-task\"><span class=\"ds-node\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M6 6l12 12M6 18L18 6\"/></svg></span><span class=\"ds-task-name\">원천 적재</span><span class=\"ds-task-state\">실패</span></button></div>",
+      "css": ".ds-pipeline{background:var(--panel-ground,#fcfdff);border:1px solid var(--line,#e5e8ee);border-radius:8px;padding:24px 16px 19px}.ds-task{position:relative;border:0;background:transparent;text-align:center;padding:0 5px;color:#44536a;border-radius:6px;font-family:Pretendard,sans-serif;cursor:pointer}.ds-task:hover{background:#f0f3fa}.ds-task:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}.ds-node{height:37px;width:37px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin:auto auto 11px;background:#fff1f1;border:1px solid #f1cbd0;color:var(--red,#bd3444)}.ds-task-name{display:block;font-size:13px;font-weight:600}.ds-task-state{display:block;font-size:11px;margin-top:1px;color:var(--red,#bd3444)}"
+    },
+    {
+      "name": "Evidence row",
+      "kind": "custom",
+      "refersTo": "evidence-row",
+      "description": "A source entry with temporal scope and collection state.",
+      "html": "<button class=\"ds-evidence\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M14 2H6v20h12V6zM14 2v5h5M8 12h8M8 16h8\"/></svg><span class=\"ds-evidence-main\"><strong>실행 로그</strong><small>선택 실행 당시</small></span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" class=\"ds-evidence-check\" aria-hidden=\"true\"><path d=\"M5 12l4 4L19 6\"/></svg></button>",
+      "css": ".ds-evidence{display:flex;align-items:center;gap:10px;width:100%;border:0;border-bottom:1px solid #eef0f4;background:#fff;padding:12px 2px;text-align:left;color:#536379;min-width:0;font-family:Pretendard,sans-serif;cursor:pointer}.ds-evidence:hover{background:#f7f9fd}.ds-evidence:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}.ds-evidence-main{flex:1;min-width:0}.ds-evidence-main strong{font-size:12px;font-weight:570;display:block;color:#38465a}.ds-evidence-main small{font-size:10px;color:#5d6c80;display:block;margin-top:1px}.ds-evidence-check{color:var(--green,#16775e)}"
+    },
+    {
+      "name": "Claim reference",
+      "kind": "custom",
+      "refersTo": "claim-reference",
+      "description": "A diagnosis citation keeps its source ID and scope visible.",
+      "html": "<button class=\"ds-reference\"><span>실행 로그 · 선택 실행 당시</span><code translate=\"no\">evidence-id</code></button>",
+      "css": ".ds-reference{border:0;border-bottom:1px solid var(--line,#e5e8ee);background:transparent;color:#53657d;text-align:left;padding:7px 0;min-height:44px;font:11px/1.6 Pretendard,sans-serif;cursor:pointer}.ds-reference:hover{color:var(--blue,#3157d5);background:#f7f9fd}.ds-reference:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}.ds-reference span,.ds-reference code{display:block;overflow-wrap:anywhere}.ds-reference code{font:10px ui-monospace,SFMono-Regular,Consolas,monospace;color:#53657d}"
+    },
+    {
+      "name": "Source dialog",
+      "kind": "custom",
+      "refersTo": "detail-dialog",
+      "description": "Source detail with title, ID, scoped JSON and close control.",
+      "html": "<section class=\"ds-dialog\" aria-label=\"근거 상세\"><div class=\"ds-dialog-head\"><div><h2>근거 상세</h2><p>선택 실행 당시 근거</p></div><button class=\"ds-dialog-close\" aria-label=\"상세 닫기\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><path d=\"M6 6l12 12M6 18L18 6\"/></svg></button></div><div class=\"ds-dialog-body\"><code translate=\"no\">evidence-id</code></div></section>",
+      "css": ".ds-dialog{background:#fff;border-radius:12px;box-shadow:0 18px 70px #00000035;color:var(--ink,#202735);width:min(760px,calc(100vw - 32px));max-height:86vh;font-family:Pretendard,sans-serif;overflow:auto}.ds-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:22px 24px 17px;border-bottom:1px solid var(--line,#e5e8ee);position:sticky;top:0;background:#fff}.ds-dialog h2{font-size:18px;margin:0;font-weight:680}.ds-dialog p{font-size:12px;color:#5d6c80;margin:5px 0 0}.ds-dialog-body{padding:20px 24px 25px;font-size:13px;overflow-wrap:anywhere}.ds-dialog-body code{font:11px ui-monospace,SFMono-Regular,Consolas,monospace}.ds-dialog-close{background:transparent;border:0;color:#667487;width:40px;height:40px;border-radius:6px;cursor:pointer}.ds-dialog-close:hover{background:#edf1f6;color:#2b3f59}.ds-dialog-close:focus-visible{outline:3px solid var(--focus,#8ea4ff);outline-offset:3px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Precise validation record",
+    "overview": "A precise validation record: white work surfaces, a cool gray navigation rail, cobalt actions and selected states. Typography, dividers and aligned rows establish hierarchy; content remains close to its source.\n\nThis is an operating workspace with flat regions and compact native controls. The visual signature is an evidence reference that preserves its ID and temporal scope, opens source details, and emphasizes the related pipeline task when a mapping exists.",
+    "keyCharacteristics": [
+      "Evidence IDs and scope labels stay next to claims.",
+      "A restrained cobalt accent and explicit red, amber and green states.",
+      "Flat, divided regions with compact native interaction."
+    ],
+    "rules": [
+      {
+        "name": "Evidence continuity",
+        "body": "Keep the same evidence ID and temporal-scope label in the claim reference and source detail. Emphasize a pipeline task only when the evidence maps to it.",
+        "section": "typography"
+      },
+      {
+        "name": "State has words",
+        "body": "Pair state color with a label or icon; color alone does not carry a verdict.",
+        "section": "colors"
+      },
+      {
+        "name": "Flat at rest",
+        "body": "Use borders, spacing and tone for ordinary content. Reserve pronounced shadows for popovers, dialogs and transient feedback.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve native buttons, selects, checkboxes, details and dialogs with visible keyboard focus.",
+      "Do keep desktop body and action prose at the recorded body size; ordinary action controls have a minimum height of 40px.",
+      "Do display measured comparison bars with visible labels and values, and label the source and scope of those values.",
+      "Do retain evidence IDs, temporal scope and source access when extending a screen."
+    ],
+    "donts": [
+      "Don't substitute decorative charts, invented telemetry or quality metrics for available evidence.",
+      "Don't infer historical absence of failure or complete recovery from a separate current observation.",
+      "Don't reintroduce repeated statistic cards or decorative images into the selected-run workspace.",
+      "Don't treat compact captions or the observed mobile diagnosis reduction as a new general body-text rule."
+    ]
+  }
+}

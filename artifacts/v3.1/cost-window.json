@@ -1,0 +1,16 @@
+{
+  "start": {
+    "requests": 126,
+    "spent_or_reserved_usd": 0.020466205,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "max_requests": 2,
+  "max_usd": 0.005
+}

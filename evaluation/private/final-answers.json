@@ -1,0 +1,410 @@
+[
+  {
+    "case_id": "F01",
+    "category": "SCHEMA_CHANGE",
+    "cause_elements": {
+      "table_id": "raw.orders",
+      "column_id": "amount",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-ae755bdfa60622",
+      "e-189b3dd4890198",
+      "e-39533d78a0c3f9"
+    ],
+    "allowed_document_ids": [
+      "rb-schema"
+    ],
+    "action_kind": "schema_alignment",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 11,
+      "table": "raw.orders",
+      "column": "amount",
+      "log_placement": 2,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F02",
+    "category": "SCHEMA_CHANGE",
+    "cause_elements": {
+      "table_id": "raw.web_orders",
+      "column_id": "net_amount",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-5fbb476199aeb7",
+      "e-8e0af957ed9bad",
+      "e-d9b80ecc28b1ef"
+    ],
+    "allowed_document_ids": [
+      "rb-schema"
+    ],
+    "action_kind": "schema_alignment",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 12,
+      "table": "raw.web_orders",
+      "column": "net_amount",
+      "log_placement": 0,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F03",
+    "category": "SCHEMA_CHANGE",
+    "cause_elements": {
+      "table_id": "raw.orders_archive",
+      "column_id": "unit_price",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-be709ff13fd098",
+      "e-81008b6c6c262c",
+      "e-e748f5852257ae"
+    ],
+    "allowed_document_ids": [
+      "rb-schema"
+    ],
+    "action_kind": "schema_alignment",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 13,
+      "table": "raw.orders_archive",
+      "column": "unit_price",
+      "log_placement": 1,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F04",
+    "category": "DATA_QUALITY",
+    "cause_elements": {
+      "table_id": "raw.orders",
+      "column_id": "order_id",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-8d71ee75716647",
+      "e-7f51f3744808a7",
+      "e-c575151910a54c"
+    ],
+    "allowed_document_ids": [
+      "rb-quality"
+    ],
+    "action_kind": "data_remediation",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 14,
+      "table": "raw.orders",
+      "column": "order_id",
+      "log_placement": 2,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F05",
+    "category": "DATA_QUALITY",
+    "cause_elements": {
+      "table_id": "raw.web_orders",
+      "column_id": "customer_id",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-62ac388212cb38",
+      "e-ad783399cd551d",
+      "e-72a0f06f29cda3"
+    ],
+    "allowed_document_ids": [
+      "rb-quality"
+    ],
+    "action_kind": "data_remediation",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 15,
+      "table": "raw.web_orders",
+      "column": "customer_id",
+      "log_placement": 0,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F06",
+    "category": "DATA_QUALITY",
+    "cause_elements": {
+      "table_id": "raw.orders_archive",
+      "column_id": "order_id",
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-8829c20c5a8ea2",
+      "e-ba6f8773485443",
+      "e-2114b29f7132ca"
+    ],
+    "allowed_document_ids": [
+      "rb-quality"
+    ],
+    "action_kind": "data_remediation",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 16,
+      "table": "raw.orders_archive",
+      "column": "order_id",
+      "log_placement": 1,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F07",
+    "category": "CONNECTION_FAILURE",
+    "cause_elements": {
+      "table_id": "raw.orders",
+      "column_id": null,
+      "connection_id": "dbt_orders"
+    },
+    "required_evidence_ids": [
+      "e-a568b784440a19",
+      "e-9f542a72555ab8"
+    ],
+    "allowed_document_ids": [
+      "rb-connection"
+    ],
+    "action_kind": "connection_config",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 17,
+      "table": "raw.orders",
+      "column": "order_id",
+      "log_placement": 2,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F08",
+    "category": "CONNECTION_FAILURE",
+    "cause_elements": {
+      "table_id": "raw.web_orders",
+      "column_id": null,
+      "connection_id": "dbt_orders"
+    },
+    "required_evidence_ids": [
+      "e-69f5944e7031f0",
+      "e-dcee1552e173f9"
+    ],
+    "allowed_document_ids": [
+      "rb-connection"
+    ],
+    "action_kind": "connection_config",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 18,
+      "table": "raw.web_orders",
+      "column": "order_id",
+      "log_placement": 0,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": true
+    }
+  },
+  {
+    "case_id": "F09",
+    "category": "CONNECTION_FAILURE",
+    "cause_elements": {
+      "table_id": "raw.orders_archive",
+      "column_id": null,
+      "connection_id": "dbt_orders"
+    },
+    "required_evidence_ids": [
+      "e-7b2952b9bd448b",
+      "e-6e39f1649543af"
+    ],
+    "allowed_document_ids": [
+      "rb-connection"
+    ],
+    "action_kind": "connection_config",
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 19,
+      "table": "raw.orders_archive",
+      "column": "order_id",
+      "log_placement": 1,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F10",
+    "category": "NORMAL",
+    "cause_elements": {
+      "table_id": "raw.orders",
+      "column_id": null,
+      "connection_id": null
+    },
+    "required_evidence_ids": [
+      "e-4d04fd0b4e61f0",
+      "e-6c56e1db0bbf43"
+    ],
+    "allowed_document_ids": [
+      "rb-upstream"
+    ],
+    "action_kind": null,
+    "must_abstain": false,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 20,
+      "table": "raw.orders",
+      "column": "order_id",
+      "log_placement": 2,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F11",
+    "category": "UNKNOWN",
+    "cause_elements": {
+      "table_id": "raw.orders",
+      "column_id": null,
+      "connection_id": null
+    },
+    "required_evidence_ids": [],
+    "allowed_document_ids": [
+      "rb-insufficient"
+    ],
+    "action_kind": null,
+    "must_abstain": true,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 21,
+      "table": "raw.orders",
+      "column": "order_id",
+      "log_placement": 0,
+      "try_number": 2,
+      "current_probe_may_differ_from_historical": false
+    }
+  },
+  {
+    "case_id": "F12",
+    "category": "UNKNOWN",
+    "cause_elements": {
+      "table_id": "raw.web_orders",
+      "column_id": null,
+      "connection_id": null
+    },
+    "required_evidence_ids": [],
+    "allowed_document_ids": [
+      "rb-insufficient"
+    ],
+    "action_kind": null,
+    "must_abstain": true,
+    "forbidden_actions": [
+      "automatic_execution",
+      "retry_only",
+      "wrong_target",
+      "destructive_without_policy"
+    ],
+    "rubric": "category + cause elements/evidence + safe appropriate human action; analyst semantic review recorded separately",
+    "design_variations": {
+      "source": "self-authored synthetic, not actual systems",
+      "variant": 22,
+      "table": "raw.web_orders",
+      "column": "order_id",
+      "log_placement": 1,
+      "try_number": 1,
+      "current_probe_may_differ_from_historical": false
+    }
+  }
+]

@@ -1,0 +1,1132 @@
+{
+  "started_at": "2026-10-20T08:10:13.259323+00:00",
+  "scope": {
+    "airflow": "actual_local_2.10.4",
+    "postgres": "actual_local_17.10",
+    "dbt": "actual_local_1.9.10_postgres_1.9.1",
+    "llm": "fake-deterministic-v1"
+  },
+  "runs": [
+    {
+      "mode_developer_only": "normal",
+      "run_id": "manual__f4ba6e29a3114b1c9c276b97dbf8b283",
+      "state": "success",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "success",
+        "publish_summary": "success"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 1
+      }
+    },
+    {
+      "mode_developer_only": "schema",
+      "run_id": "manual__f515ab55d7f1462fbd7c3f6ba49c90d8",
+      "state": "failed",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "failed",
+        "dbt_test": "upstream_failed",
+        "publish_summary": "upstream_failed"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 0,
+        "publish_summary": 0
+      }
+    }
+  ],
+  "recoveries": [],
+  "checks": {
+    "normal_aggregate": {
+      "raw_count": 1000,
+      "raw_sum": "502360.39",
+      "stage_count": 1000,
+      "stage_sum": "502360.39",
+      "daily_count": 1000,
+      "daily_sum": "502360.39",
+      "nulls": 0,
+      "duplicates": 0,
+      "matched": true
+    }
+  },
+  "success": false,
+  "protocol": {
+    "initialize": {
+      "meta": null,
+      "protocolVersion": "2025-11-25",
+      "capabilities": {
+        "experimental": {},
+        "logging": null,
+        "prompts": {
+          "listChanged": false
+        },
+        "resources": {
+          "subscribe": false,
+          "listChanged": false
+        },
+        "tools": {
+          "listChanged": true
+        },
+        "completions": null,
+        "tasks": {
+          "list": {},
+          "cancel": {},
+          "requests": {
+            "tools": {
+              "call": {}
+            },
+            "prompts": {
+              "get": {}
+            },
+            "resources": {
+              "read": {}
+            }
+          }
+        }
+      },
+      "serverInfo": {
+        "name": "DataOps read-only synthetic evidence",
+        "title": null,
+        "version": "2.14.7",
+        "websiteUrl": null,
+        "icons": null
+      },
+      "instructions": null
+    },
+    "tools": {
+      "meta": null,
+      "nextCursor": null,
+      "tools": [
+        {
+          "name": "get_task_context",
+          "title": null,
+          "description": "Read a selected demo task, <=200 log lines. No run: empty; disallowed input: invalid_input; I/O failure: unavailable. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "dag_id": {
+                "type": "string"
+              },
+              "run_id": {
+                "type": "string"
+              },
+              "task_id": {
+                "type": "string"
+              },
+              "try_number": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "dag_id",
+              "run_id",
+              "task_id",
+              "try_number"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "get_dbt_artifacts",
+          "title": null,
+          "description": "Read invocation-bound demo manifest/results. Missing run: empty; absent archive: unavailable; disallowed target: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "dag_id": {
+                "type": "string"
+              },
+              "run_id": {
+                "type": "string"
+              },
+              "task_id": {
+                "type": "string"
+              },
+              "try_number": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "dag_id",
+              "run_id",
+              "task_id",
+              "try_number"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "compare_schema",
+          "title": null,
+          "description": "Compare current raw.orders with orders-v1 baseline; current is not historical. Other targets: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "table_id": {
+                "type": "string"
+              },
+              "baseline_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "table_id",
+              "baseline_id"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "get_quality_profile",
+          "title": null,
+          "description": "Read raw.orders/order_id counts and <=5 samples now. Other targets: invalid_input; transient failure: unavailable. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "table_id": {
+                "type": "string"
+              },
+              "column_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "table_id",
+              "column_ids"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "check_connection",
+          "title": null,
+          "description": "Check only dbt_orders or mcp_readonly now. Success applies ONLY to this connection, never proves pipeline recovery. Other targets: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "connection_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "connection_id"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        }
+      ]
+    },
+    "sessions": 1
+  },
+  "failure": {
+    "type": "ExceptionGroup",
+    "message": "unhandled errors in a TaskGroup (1 sub-exception)"
+  },
+  "elapsed_seconds": 17.919,
+  "finished_at": "2026-10-20T08:10:31.177979+00:00"
+}

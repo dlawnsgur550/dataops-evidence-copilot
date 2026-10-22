@@ -1,0 +1,23 @@
+{
+  "incident_ref": {
+    "incident_id": "live-incident",
+    "dag_id": "orders_demo",
+    "run_id": "manual__78c225e48fbd4624a7cdd1a8ddd12827",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "command": "run",
+  "call_id": "548668d175b24faea8e855cf2929d1df",
+  "invocation_id": "9ce7d861-91b5-44b1-aff0-db755e796abd",
+  "exit_code": 2,
+  "elapsed_seconds": 1.3362517919999846,
+  "stdout_invocation_ids": [
+    "9ce7d861-91b5-44b1-aff0-db755e796abd"
+  ],
+  "archived_at": "2026-10-22T00:29:29.237674+00:00",
+  "hashes": {
+    "manifest": "161c03adc06df33cc061bc6a6e6301db7c417e147abffd4ebc389eeb139cedef"
+  },
+  "stdout_sha256": "35ecfb404cab315b74583e6491121ecd100f52a4fd5bc4466b241a1028ea49dd",
+  "simulated": false
+}

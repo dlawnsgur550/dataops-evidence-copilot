@@ -1,0 +1,127 @@
+{
+  "scope": "FakeLLM contract regression only, not model accuracy",
+  "passed": 20,
+  "cases": [
+    {
+      "split": "dev",
+      "case": "D01",
+      "category": "SCHEMA_CHANGE",
+      "api_calls": 0
+    },
+    {
+      "split": "dev",
+      "case": "D02",
+      "category": "DATA_QUALITY",
+      "api_calls": 0
+    },
+    {
+      "split": "dev",
+      "case": "D03",
+      "category": "CONNECTION_FAILURE",
+      "api_calls": 0
+    },
+    {
+      "split": "dev",
+      "case": "D04",
+      "category": "NORMAL",
+      "api_calls": 0
+    },
+    {
+      "split": "dev",
+      "case": "D05",
+      "category": "UNKNOWN",
+      "api_calls": 0
+    },
+    {
+      "split": "dev",
+      "case": "D06",
+      "category": "SCHEMA_CHANGE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F01",
+      "category": "SCHEMA_CHANGE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F02",
+      "category": "SCHEMA_CHANGE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F03",
+      "category": "SCHEMA_CHANGE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F04",
+      "category": "DATA_QUALITY",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F05",
+      "category": "DATA_QUALITY",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F06",
+      "category": "DATA_QUALITY",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F07",
+      "category": "CONNECTION_FAILURE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F08",
+      "category": "CONNECTION_FAILURE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F09",
+      "category": "CONNECTION_FAILURE",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F10",
+      "category": "NORMAL",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F11",
+      "category": "UNKNOWN",
+      "api_calls": 0
+    },
+    {
+      "split": "final",
+      "case": "F12",
+      "category": "UNKNOWN",
+      "api_calls": 0
+    },
+    {
+      "split": "v2-check",
+      "case": "H01",
+      "category": "DATA_QUALITY",
+      "api_calls": 0
+    },
+    {
+      "split": "v2-check",
+      "case": "H02",
+      "category": "CONNECTION_FAILURE",
+      "api_calls": 0
+    }
+  ],
+  "api_calls": 0
+}

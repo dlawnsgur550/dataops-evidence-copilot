@@ -1,0 +1,172 @@
+{
+  "cwd": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot",
+  "api_settings": "explicit user-supplied local path outside outputs; key value not recorded",
+  "commands": [
+    {
+      "commands": [
+        "uv add 'qdrant-client>=1.14,<2' 'rank-bm25>=0.2,<0.3' 'onnxruntime>=1.20,<2' 'tokenizers>=0.21,<1' 'huggingface-hub>=0.30,<2' 'streamlit>=1.45,<2'",
+        "uv add --dev 'playwright>=1.50,<2'"
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "record": "uv.lock"
+    },
+    {
+      "command": "uv run python scripts/prepare_knowledge.py",
+      "exit_code": 0,
+      "documents": 12
+    },
+    {
+      "command": "uv run python scripts/setup_rag_model.py",
+      "exit_code": 0,
+      "log": "model-setup.log"
+    },
+    {
+      "command": "uv run python scripts/prepare_evaluation.py",
+      "exit_code": 0,
+      "dev_cases": 6,
+      "final_cases": 12
+    },
+    {
+      "command": "uv run python scripts/dev_services.py start",
+      "exit_code": 0,
+      "log": "services-start.log"
+    },
+    {
+      "command": "uv run python scripts/live_e2e_openai.py",
+      "attempts": [
+        {
+          "exit_code": 1,
+          "log": "first-collector-validation-failure-live-e2e.log",
+          "reason": "optional profile assumption"
+        },
+        {
+          "exit_code": 1,
+          "log": "second-retrieval-failure-live-e2e.log",
+          "reason": "quality runbook retrieval"
+        },
+        {
+          "exit_code": 1,
+          "log": "third-response-parse-failure-live-e2e.log",
+          "reason": "Inspector JSON contract"
+        },
+        {
+          "exit_code": 0,
+          "log": "live-e2e.log",
+          "actual_recoveries": 3
+        }
+      ]
+    },
+    {
+      "command": "uv run dataops-copilot --replay-report <saved actual quality evidence> --llm openai --retrieval hybrid --api-settings <explicit local file> --output artifacts/checkpoint4/live-quality-report.json",
+      "exit_code": 0,
+      "log": "quality-retrieval-recheck.log"
+    },
+    {
+      "command": "uv run dataops-copilot --replay-report artifacts/checkpoint4/connection-retry-evidence-report.json --llm openai --retrieval hybrid --budget-profile evaluation --api-settings <explicit local file> --output artifacts/checkpoint4/live-connection-report.json",
+      "exit_code": 0,
+      "log": "connection-final-recheck.log"
+    },
+    {
+      "command": "explicit one-request format diagnostics; no provider body retained",
+      "exit_code": 0,
+      "records": [
+        "response-format-diagnostic.json",
+        "final-protocol-diagnostic.json"
+      ],
+      "included_in_ledger": true
+    },
+    {
+      "command": "uv run python scripts/run_evaluation.py --split dev",
+      "exit_code": 0,
+      "log": "development.log",
+      "paid": false
+    },
+    {
+      "command": "uv run python scripts/run_evaluation.py --split dev --case D01 --paid --baseline --service-tier flex --api-settings <explicit local file>",
+      "exit_code": 0,
+      "log": "development-api.log"
+    },
+    {
+      "command": "uv run pytest -q -W error::RuntimeWarning --junitxml=artifacts/checkpoint4/tests.xml",
+      "exit_code": 0,
+      "log": "tests.log",
+      "passed": 86,
+      "seconds": 6.49
+    },
+    {
+      "command": "uv run python scripts/freeze_evaluation.py",
+      "exit_code": 0,
+      "record": "../../evaluation/freeze.json"
+    },
+    {
+      "command": "uv run python scripts/run_evaluation.py --split final --paid --baseline --service-tier flex --api-settings <explicit local file>",
+      "exit_code": 0,
+      "log": "final-evaluation.log",
+      "completed_cases": 12,
+      "note": "completion includes recorded model failures; does not mean all targets passed"
+    },
+    {
+      "command": "uv run python scripts/verify_negatives.py",
+      "exit_code": 0,
+      "record": "negative-checks.json"
+    },
+    {
+      "command": "uv run python scripts/verify_container_boundary.py",
+      "exit_code": 0,
+      "log": "container-boundary.log"
+    },
+    {
+      "command": "uv run python scripts/capture_ui.py (local Chromium path explicitly configured)",
+      "exit_code": 0,
+      "log": "browser-capture.log",
+      "new_api_calls": 0
+    },
+    {
+      "command": "uv run python scripts/verify_ui_free_live.py (local Chromium path explicitly configured)",
+      "exit_code": 0,
+      "log": "ui-free-live.log",
+      "new_api_calls": 0
+    },
+    {
+      "command": "uv run python scripts/dev_services.py stop",
+      "exit_code": 0,
+      "log": "services-stop.log"
+    },
+    {
+      "command": "uv run python -m compileall -q src scripts tests",
+      "exit_code": 0,
+      "log": "compile.log"
+    },
+    {
+      "command": "uv pip check",
+      "exit_code": 0,
+      "log": "dependency-check.log"
+    },
+    {
+      "command": "uv run python scripts/build_materials.py",
+      "exit_code": 0,
+      "new_api_calls": 0
+    },
+    {
+      "command": "uv run python scripts/audit_checkpoint4.py",
+      "exit_code": 0,
+      "log": "audit.log",
+      "new_api_calls": 0
+    },
+    {
+      "command": "Stop owned Streamlit execution session with SIGINT",
+      "exit_code": 130,
+      "expected_interrupt": true,
+      "remaining_owned_ui_processes": 0
+    },
+    {
+      "command": "uv run dataops-copilot --replay-report artifacts/checkpoint4/connection-retry-evidence-report.json --llm openai --api-settings <explicit local file> --retrieval hybrid --output artifacts/checkpoint4/live-connection-report.json",
+      "exit_code": 2,
+      "log": "connection-parse-recheck.log",
+      "reason": "JSON contract failed; safe abstention; later manual recheck recorded separately"
+    }
+  ]
+}

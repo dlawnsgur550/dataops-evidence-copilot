@@ -1,0 +1,185 @@
+{
+  "verified_at_utc": "2026-10-20T07:51:05.613396+00:00",
+  "python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "cwd": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot",
+  "results": [
+    {
+      "name": "locked-install",
+      "command": [
+        "uv",
+        "sync",
+        "--locked",
+        "--python",
+        "3.11"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.0115,
+      "log": "artifacts/locked-install.log"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "uv",
+        "run",
+        "pytest",
+        "-q",
+        "-W",
+        "error::RuntimeWarning",
+        "--junitxml=artifacts/test-results.xml"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 5.9845,
+      "log": "artifacts/tests.log"
+    },
+    {
+      "name": "compile",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        "scripts"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.0333,
+      "log": "artifacts/compile.log"
+    },
+    {
+      "name": "protocol",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "scripts/protocol_probe.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.692,
+      "log": "artifacts/protocol.log"
+    },
+    {
+      "name": "schema",
+      "command": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--fixture",
+        "schema",
+        "--transport",
+        "stdio",
+        "--output",
+        "artifacts/schema.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.888,
+      "log": "artifacts/schema.log"
+    },
+    {
+      "name": "quality",
+      "command": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--fixture",
+        "quality",
+        "--transport",
+        "stdio",
+        "--output",
+        "artifacts/quality.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.8678,
+      "log": "artifacts/quality.log"
+    },
+    {
+      "name": "connection",
+      "command": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--fixture",
+        "connection",
+        "--transport",
+        "stdio",
+        "--output",
+        "artifacts/connection.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.8849,
+      "log": "artifacts/connection.log"
+    },
+    {
+      "name": "normal",
+      "command": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--fixture",
+        "normal",
+        "--transport",
+        "stdio",
+        "--output",
+        "artifacts/normal.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.8704,
+      "log": "artifacts/normal.log"
+    },
+    {
+      "name": "insufficient",
+      "command": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--fixture",
+        "insufficient",
+        "--transport",
+        "stdio",
+        "--output",
+        "artifacts/insufficient.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 2.9529,
+      "log": "artifacts/insufficient.log"
+    },
+    {
+      "name": "versions",
+      "command": [
+        "uv",
+        "pip",
+        "freeze"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.0088,
+      "log": "artifacts/versions.log"
+    },
+    {
+      "name": "docker-readonly",
+      "command": [
+        "docker",
+        "version",
+        "--format",
+        "{{.Client.Version}} {{if .Server}}{{.Server.Version}}{{end}}"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "elapsed_seconds": 0.1531,
+      "log": "artifacts/docker-readonly.log"
+    }
+  ],
+  "all_expected": true
+}

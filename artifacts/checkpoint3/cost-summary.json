@@ -1,0 +1,70 @@
+{
+  "requests": 7,
+  "spent_or_reserved_usd": 0.00264445,
+  "uncertain_requests": 0,
+  "lifetime_cap_usd": 0.05,
+  "daily_cap_usd": 0.02,
+  "diagnosis_cap_usd": 0.01,
+  "day_timezone": "Asia/Seoul",
+  "price_date": "2026-10-20",
+  "model": "gpt-6-luna",
+  "cost_basis": "provider_token_usage_price_estimate_not_account_invoice",
+  "input_tokens": 15821,
+  "output_tokens": 1431,
+  "requests_by_role": [
+    {
+      "role": "triage",
+      "input_tokens": 931,
+      "output_tokens": 91,
+      "estimated_usd": 0.0001386,
+      "usage_collected": true
+    },
+    {
+      "role": "inspector",
+      "input_tokens": 1001,
+      "output_tokens": 23,
+      "estimated_usd": 0.0001116,
+      "usage_collected": true
+    },
+    {
+      "role": "rca",
+      "input_tokens": 2828,
+      "output_tokens": 429,
+      "estimated_usd": 0.000567925,
+      "usage_collected": true
+    },
+    {
+      "role": "reviewer",
+      "input_tokens": 2655,
+      "output_tokens": 320,
+      "estimated_usd": 0.0004918,
+      "usage_collected": true
+    },
+    {
+      "role": "reviewer",
+      "input_tokens": 2685,
+      "output_tokens": 90,
+      "estimated_usd": 0.00038055,
+      "usage_collected": true
+    },
+    {
+      "role": "rca",
+      "input_tokens": 3035,
+      "output_tokens": 460,
+      "estimated_usd": 0.0006093,
+      "usage_collected": true
+    },
+    {
+      "role": "reviewer",
+      "input_tokens": 2686,
+      "output_tokens": 18,
+      "estimated_usd": 0.000344675,
+      "usage_collected": true
+    }
+  ],
+  "cached_repeat": {
+    "api_calls": 0,
+    "cache_hits": 4,
+    "additional_cost_usd": 0.0
+  }
+}

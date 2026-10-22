@@ -1,0 +1,2 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{"downloaded_public_model": true, "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3", "total_bytes": 135430652}

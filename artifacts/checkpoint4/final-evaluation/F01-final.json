@@ -1,0 +1,124 @@
+{
+  "trace_id": "1b92f2fc-e090-4cd3-949c-73533290e60b",
+  "incident_ref": {
+    "incident_id": "inc-f47c886e1e7e",
+    "dag_id": "orders_demo",
+    "run_id": "eval-f47c886e1e7e",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "plan": {
+    "provisional_category": "SCHEMA_CHANGE",
+    "investigation": [
+      "`stg_orders`에서 `amount` 컬럼을 찾지 못해 dbt 실행이 실패했습니다.",
+      "`raw.orders`의 현재 컬럼과 `stg_orders`의 컬럼 참조를 확인해 스키마 변경 또는 불일치 여부를 조사하세요.",
+      "관련 dbt 테스트는 선행 작업 실패로 실행되지 않았습니다."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-39533d78a0c3f9",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-f47c886e1e7e",
+          "dag_id": "orders_demo",
+          "run_id": "eval-f47c886e1e7e",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "column \"amount\" does not exist in model stg_orders"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "failed",
+    "severity": "unknown",
+    "cause": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+    "evidence_ids": [],
+    "missing_evidence": [
+      "Review rejected: OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": false,
+    "violations": [
+      "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+    ],
+    "feedback": [
+      "Execution stopped within the configured boundary"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [
+    "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+  ],
+  "usage": {
+    "llm_calls": 2,
+    "tool_calls": 1,
+    "rag_calls": 0,
+    "tokens": 1212,
+    "cost": 0.0000892,
+    "elapsed_seconds": 7.434493,
+    "api_calls": 2,
+    "local_cache_hits": 0,
+    "input_tokens": 1069,
+    "output_tokens": 143,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "triage",
+    "inspector"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "b00e74fd3b6ea7f225fad06bf4acfd3cacdb5dc066d4e31aa4a09615de8a8985",
+  "versions": {
+    "app": "0.1.0",
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

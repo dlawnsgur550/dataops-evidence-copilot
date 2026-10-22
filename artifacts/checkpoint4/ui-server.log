@@ -1,0 +1,39 @@
+2026-10-20 18:55:18.993 Uvicorn server started on 127.0.0.1:18784
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://127.0.0.1:18784
+
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+[10/20/26 18:56:50] INFO     Starting MCP server 'DataOps         server.py:2506
+                             read-only live local evidence' with                
+                             transport 'stdio'                                  
+  Stopping...
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2053, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2011, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/scripts/run_ui.py", line 7, in <module>
+    raise SystemExit(subprocess.call([sys.executable,'-m','streamlit','run',str(ROOT/'src/dataops_copilot/ui.py'),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 391, in call
+    return p.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 1277, in wait
+    self._wait(timeout=sigint_timeout)
+  File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/subprocess.py", line 2047, in _wait
+    time.sleep(delay)
+KeyboardInterrupt

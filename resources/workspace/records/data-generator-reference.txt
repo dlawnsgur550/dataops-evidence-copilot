@@ -1,0 +1,10 @@
+Original: dataops-copilot-v3.1/pipeline/driver.py
+SHA256: 807a6bcf042c7225bdb4c89b4cdbed22a780dae76165f79dedfd86ebc1da2f3a
+
+def demo_rows(mode, row_count=1000):
+    if not isinstance(row_count,int) or isinstance(row_count,bool) or not 100<=row_count<=1000000:raise ValueError("DEMO_ROW_COUNT_OUT_OF_BOUNDS")
+    rng = random.Random(42)
+    return [(None if mode == "quality" and i < 3 else i + 1, rng.randint(1, 100),
+             Decimal(rng.randint(100, 100000)) / 100, datetime(2026, 1, 1) + timedelta(minutes=i)) for i in range(row_count)]
+
+The demonstration generator yields the same tuples for row_count=100000 and modes normal, quality and schema. CSVs are regenerated illustrations, not database dumps.

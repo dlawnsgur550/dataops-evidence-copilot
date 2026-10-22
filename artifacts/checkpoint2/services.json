@@ -1,0 +1,21 @@
+{
+  "airflow_version": "2.10.4",
+  "airflow_engine": "official Linux container + isolated dbt/driver venvs",
+  "airflow_base_image": "apache/airflow:2.10.4-python3.11",
+  "airflow_api": "http://127.0.0.1:18783/api/v1",
+  "auth": "Basic, dedicated Viewer account",
+  "postgres_version": "postgres (PostgreSQL) 17.10",
+  "postgres_image": [
+    "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+  ],
+  "airflow_image_id": "sha256:111dec0eb1a40b1256c1619cc704aef16e661fb972a6d6dba5ac9c18698cd593",
+  "containers": [
+    "dataops-c-cp2-postgres",
+    "dataops-c-cp2-airflow"
+  ],
+  "volume": "dataops_c_cp2_pg17",
+  "ports": {
+    "postgres": 15439,
+    "airflow": 18783
+  }
+}

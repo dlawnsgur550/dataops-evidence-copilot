@@ -1,0 +1,343 @@
+{
+  "trace_id": "b3d9083e-0284-420e-a188-411a7bf00b5a",
+  "incident_ref": {
+    "incident_id": "5c7e9d8c2200424d825107c51a045ff5",
+    "dag_id": "orders_demo",
+    "run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+    "task_id": "dbt_test",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "DATA_QUALITY",
+    "investigation": [
+      "Confirm selected invocation before establishing a cause",
+      "Collect current schema/profile separately",
+      "Check only the named dbt connection"
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "live-7cc9324634430e51049b",
+      "kind": "get_task_context",
+      "source": "live://airflow/2.10.4/api/v1",
+      "observed_at": "2026-10-20T08:13:59.357268Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "success",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "log_lines": [
+          "897ca77fea57",
+          " INFO - ::group::Log message source details",
+          "*** Found local files:",
+          "***   * /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/logs/dag_id=orders_demo/run_id=manual__9a8c4c9f0c5d43c08398b895c863c4df/task_id=dbt_test/attempt=1.log",
+          " INFO - ::endgroup::",
+          "[2026-10-20T08:13:54.657+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs",
+          "[2026-10-20T08:13:54.660+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_demo.dbt_test manual__9a8c4c9f0c5d43c08398b895c863c4df [queued]>",
+          "[2026-10-20T08:13:54.662+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_demo.dbt_test manual__9a8c4c9f0c5d43c08398b895c863c4df [queued]>",
+          "[2026-10-20T08:13:54.662+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1",
+          "[2026-10-20T08:13:54.667+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): dbt_test> on 2026-10-20 08:13:48.409425+00:00",
+          "[2026-10-20T08:13:54.669+0000] {standard_task_runner.py:72} INFO - Started process 891 to run task",
+          "[2026-10-20T08:13:54.670+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'orders_demo', 'dbt_test', 'manual__9a8c4c9f0c5d43c08398b895c863c4df', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/orders_demo.py', '--cfg-path', '/tmp/tmpryg8dz63']",
+          "[2026-10-20T08:13:54.671+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask dbt_test",
+          "[2026-10-20T08:13:54.685+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_demo.dbt_test manual__9a8c4c9f0c5d43c08398b895c863c4df [running]> on host 897ca77fea57",
+          "[2026-10-20T08:13:54.707+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='orders_demo' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2026-10-20T08:13:48.409425+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__9a8c4c9f0c5d43c08398b895c863c4df'",
+          "[2026-10-20T08:13:54.707+0000] {taskinstance.py:731} INFO - ::endgroup::",
+          "Running with dbt=1.9.10",
+          "Registered adapter: postgres=1.9.1",
+          "Unable to do partial parsing because saved manifest not found. Starting full parse.",
+          "Found 2 models, 2 data tests, 1 source, 475 macros",
+          "Concurrency: 1 threads (target='local')",
+          "1 of 2 START test not_null_stg_orders_order_id ................................. [RUN]",
+          "1 of 2 PASS not_null_stg_orders_order_id ....................................... [PASS in 0.02s]",
+          "2 of 2 START test unique_stg_orders_order_id ................................... [RUN]",
+          "2 of 2 PASS unique_stg_orders_order_id ......................................... [PASS in 0.01s]",
+          "Finished running 2 data tests in 0 hours 0 minutes and 0.09 seconds (0.09s).",
+          "Completed successfully",
+          "Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2",
+          "{\"dbt_archive\": \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/dbt-archives/aaa99291ccbc38c1286e501cf56a4fbb55c168d2802cc19cf5cffa6db08ed708/fb9882d5072f4bb3a866de95bb957d8f\", \"exit_code\": 0}",
+          "[2026-10-20T08:13:56.302+0000] {python.py:240} INFO - Done. Returned value was: None",
+          "[2026-10-20T08:13:56.305+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs",
+          "[2026-10-20T08:13:56.305+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=orders_demo, task_id=dbt_test, run_id=manual__9a8c4c9f0c5d43c08398b895c863c4df, execution_date=20261020T081348, start_date=20261020T081354, end_date=20261020T081356",
+          "[2026-10-20T08:13:56.350+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0",
+          "[2026-10-20T08:13:56.357+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check",
+          "[2026-10-20T08:13:56.358+0000] {local_task_job_runner.py:245} INFO - ::endgroup::"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T08:13:54.661042+00:00",
+        "run_finished_at": "2026-10-20T08:13:56.305565+00:00",
+        "log_try_number": 1,
+        "tasks_complete": true
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-04ffafee2f452a0c3820",
+      "kind": "get_dbt_artifacts",
+      "source": "live://dbt/immutable-artifact-store",
+      "observed_at": "2026-10-20T08:13:59.448651Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "945a9660-cf78-4060-921e-499bc2666b5d",
+        "manifest_invocation_id": "945a9660-cf78-4060-921e-499bc2666b5d",
+        "run_results_invocation_id": "945a9660-cf78-4060-921e-499bc2666b5d",
+        "artifact_status": "complete",
+        "available_artifacts": [
+          "manifest",
+          "run_results"
+        ],
+        "command": "test",
+        "missing_artifacts": [],
+        "stdout_invocation_ids": [
+          "945a9660-cf78-4060-921e-499bc2666b5d"
+        ],
+        "command_log_sha256": "18793f36496b27d4211c481602360168c0530361690511d78814776faf5c59aa",
+        "exit_code": 0,
+        "issue": null,
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "results": [
+          {
+            "unique_id": "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+            "resource_type": "test",
+            "status": "pass",
+            "message": "",
+            "depends_on": [
+              "model.orders_demo.stg_orders"
+            ]
+          },
+          {
+            "unique_id": "test.orders_demo.unique_stg_orders_order_id.e3b841c71a",
+            "resource_type": "test",
+            "status": "pass",
+            "message": "",
+            "depends_on": [
+              "model.orders_demo.stg_orders"
+            ]
+          }
+        ],
+        "test_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "failed_node": null,
+        "actual_failed": [],
+        "potential_downstream": [],
+        "content_hashes": {
+          "manifest": "390b3729025c332c5b638bd0004a8f3e8def9b620bb0fb129a74ccb5f2950450",
+          "run_results": "ed0ae918417615dc1e6ca8f258cb8094b19fc5343bbb22674f0e332c7300746a"
+        },
+        "archived_at": "2026-10-20T08:13:56.286880+00:00",
+        "message": "\n"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-ccba0cfb988cecb88670",
+      "kind": "compare_schema",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T08:13:59.470160Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_id": "orders-v1",
+        "baseline_observed_at": "2026-10-20T08:10:15.358314+00:00",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation, not failed-run snapshot"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-8cae021ac24e92aa4fbe",
+      "kind": "get_quality_profile",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T08:13:59.488314Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 0
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [],
+        "truncated": false,
+        "warning": "Current observation, not failed-run snapshot"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-76177c6a5b5f0a862c56",
+      "kind": "check_connection",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T08:13:59.502607Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "endpoint": {
+          "host": "127.0.0.1",
+          "port": 15439
+        },
+        "probe_role": "read_only_observer",
+        "scope": "Only this named endpoint now; not proof of failed dbt process configuration or pipeline recovery"
+      },
+      "error": null,
+      "simulated": false
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-schema",
+      "doc_version": "1",
+      "chunk_id": "rb-schema:whole",
+      "rank": 1,
+      "content_hash": "d08adabd38424def5d6a541f52a6af2ebd2972f3e5eb6e8a1a81c0613ef9b044",
+      "content": "# Schema contract mismatch — version 1 — 2026-10-20\nSymptoms: missing_column, column amount does not exist, stg_orders.\nConfirm: selected dbt invocation and task log name the missing column; compare current raw.orders with orders-v1 baseline. A current observation is not a snapshot of the failed execution.\nAction: a developer verifies the producer contract and aligns source mapping or dependent model SQL after review. Preserve source data and record the mapping decision.\nPrerequisite: confirm intended meaning of amount and paid_amount; establish which contract is authoritative.\nVerification: new execution has all tasks successful and not_null/unique tests passing; inspect daily_orders aggregate.\nExclude: connection refusal, unrelated current schema, and data-quality-only failures. A retry alone does not fix this mismatch.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "1",
+      "chunk_id": "rb-connection:whole",
+      "rank": 2,
+      "content_hash": "94ba485f3fbc3025a5c2215fe1c0637bb149648edfbcc1d0b8ffbcc61d24a0fe",
+      "content": "# dbt connection refused — version 1 — 2026-10-20\nSymptoms: connection_refused, connection refused, dbt_orders, dbt_run.\nConfirm: failed task log and selected dbt artifacts identify the failing connection. mcp_readonly success only confirms that separate connection.\nAction: developer checks dbt endpoint, service availability, routing and authentication using explicitly supplied configuration. Do not expose passwords. Correct a port only if endpoint evidence proves it is wrong.\nPrerequisite: establish the actual dbt execution configuration; do not infer an incorrect port from a generic refusal.\nVerification: successful new pipeline execution and passing not_null/unique checks; a successful connection probe alone does not prove recovery.\nExclude: schema and data-quality failures with functioning connectivity. Never claim a specific port from an absent log value.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-quality",
+      "doc_version": "1",
+      "chunk_id": "rb-quality:whole",
+      "rank": 3,
+      "content_hash": "9642f10da53b0c8ed050f0a1a9e9e928059f5d812aeeb7e40735ae0ebc0477f4",
+      "content": "# Null order key — version 1 — 2026-10-20\nSymptoms: not_null, order_id, null rows, dbt_test.\nConfirm: selected invocation records failing not_null_order_id; current raw.orders profile provides null_counts and limited samples. Do not treat current counts as past counts.\nAction: developer verifies source provenance, repairs the source mapping or quarantines invalid records according to the agreed policy, preserving originals.\nPrerequisite: confirm business key definition and approved remediation policy.\nVerification: separate new execution succeeds, not_null and unique both pass, reconciled counts and aggregates are checked.\nExclude: absent column or failed connectivity; a retry alone cannot repair bad data.\n",
+      "method": "lexical_overlap_checkpoint"
+    }
+  ],
+  "diagnosis": {
+    "category": "NORMAL",
+    "diagnosis_status": "supported",
+    "severity": "low",
+    "cause": "선택 실행의 전체 태스크와 필수 dbt 품질 검사가 성공했습니다.",
+    "evidence_ids": [
+      "live-7cc9324634430e51049b",
+      "live-04ffafee2f452a0c3820"
+    ],
+    "missing_evidence": [],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Fake reviewer only: semantic LLM review remains unverified"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "fake-deterministic-v1"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.335917
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "7bcb5f396706a7d7a3316859fbb7af08e76199927ed5854ce97a7527f94a1eae",
+  "versions": {
+    "app": "0.1.0",
+    "model": "fake-deterministic-v1",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "lexical-v1"
+  },
+  "validation_scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "real_mcp_stdio_live_backend",
+    "data": "synthetic_demo_data_on_live_airflow_postgres_dbt",
+    "external_systems": "live_local_airflow_postgres_dbt"
+  },
+  "recovered": null
+}

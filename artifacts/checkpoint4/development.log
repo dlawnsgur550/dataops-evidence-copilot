@@ -1,0 +1,6 @@
+{"case": "D01", "category": "SCHEMA_CHANGE", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}
+{"case": "D02", "category": "DATA_QUALITY", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}
+{"case": "D03", "category": "CONNECTION_FAILURE", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}
+{"case": "D04", "category": "NORMAL", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}
+{"case": "D05", "category": "UNKNOWN", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}
+{"case": "D06", "category": "SCHEMA_CHANGE", "structural_pass": true, "new_api_calls_for_report": null, "baseline_category": null, "errors": []}

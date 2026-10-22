@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "name": "desktop_initial_render",
+      "passed": true
+    },
+    {
+      "name": "free_replay_in_basic_web",
+      "passed": true
+    },
+    {
+      "name": "forged_evidence_blocked",
+      "passed": true
+    },
+    {
+      "name": "unproved_port_blocked",
+      "passed": true
+    },
+    {
+      "name": "reviewer_unsubstantiated_rejection",
+      "passed": true
+    },
+    {
+      "name": "new_run_recovery_passed",
+      "passed": true
+    },
+    {
+      "name": "recovery_stale_result_cleared",
+      "passed": true
+    },
+    {
+      "name": "same_run_recovery_blocked",
+      "passed": true
+    },
+    {
+      "name": "evaluation_graphs_rendered",
+      "passed": true
+    },
+    {
+      "name": "historical_model_record_rendered",
+      "passed": true
+    },
+    {
+      "name": "report_download",
+      "passed": true
+    },
+    {
+      "name": "wrong_run_upload_abstains",
+      "passed": true
+    },
+    {
+      "name": "rejected_binding_no_pipeline_graph",
+      "passed": true
+    },
+    {
+      "name": "valid_replay_restored_after_bad_upload",
+      "passed": true
+    },
+    {
+      "name": "evidence_details_tab",
+      "passed": true
+    },
+    {
+      "name": "responsive_layout",
+      "passed": true
+    }
+  ],
+  "responsive": [
+    {
+      "cssHeight": 833,
+      "cssWidth": 1200,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 900,
+      "cssWidth": 800,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 900,
+      "cssWidth": 390,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 800,
+      "cssWidth": 320,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    }
+  ]
+}

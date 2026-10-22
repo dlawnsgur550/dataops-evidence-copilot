@@ -1,0 +1,6 @@
+FROM apache/airflow:2.10.4-python3.11
+USER root
+RUN mkdir -p /opt/dataops-dbt /opt/dataops-driver && chown -R airflow:root /opt/dataops-dbt /opt/dataops-driver
+USER airflow
+RUN python -m venv /opt/dataops-dbt && /opt/dataops-dbt/bin/pip install --no-cache-dir dbt-core==1.9.10 dbt-postgres==1.9.1
+RUN python -m venv /opt/dataops-driver && /opt/dataops-driver/bin/pip install --no-cache-dir pydantic==2.14.1 'psycopg[binary]==3.3.6'

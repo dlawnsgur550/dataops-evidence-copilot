@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "audited_at": "2026-10-20T08:53:27.212241+00:00",
+  "model": "gpt-6-luna",
+  "key_scan_scope": "only user-specified local API key; current C outputs excluding environments/bytecode/git",
+  "scanned_files": 569,
+  "key_leak_files": [],
+  "private_files_600": 8,
+  "private_directories_700": true,
+  "tests_passed": 71,
+  "containers": [
+    {
+      "name": "dataops-c-cp2-airflow",
+      "running": false,
+      "status": "exited"
+    },
+    {
+      "name": "dataops-c-cp2-postgres",
+      "running": false,
+      "status": "exited"
+    }
+  ],
+  "remaining_mcp_servers": 0,
+  "real_llm_scope": "saved actual schema evidence replay; no new live system query",
+  "new_api_calls_by_audit": 0
+}

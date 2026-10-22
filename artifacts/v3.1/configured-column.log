@@ -1,0 +1,7 @@
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+[10/22/26 09:44:02] INFO     Starting MCP server 'DataOps         server.py:2506
+                             read-only live local evidence' with                
+                             transport 'stdio'                                  
+{"success": true, "server_version": "0.3.1", "row_count": 100000, "duplicate_customer_ids": 99900, "database_writes": 0, "api_calls": 0}

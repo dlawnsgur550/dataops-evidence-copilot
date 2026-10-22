@@ -1,0 +1,1 @@
+{"success": true, "actual_browser_form_submission": true, "model": "fake-deterministic-v1", "mcp": "actual read-only live stdio", "category": "CONNECTION_FAILURE", "current_probe_connected": true, "historical_failed_run_not_marked_recovered": true, "additional_api_calls": 0, "ledger_requests_before": 83, "ledger_requests_after": 83, "child_session_closed_after_diagnosis": true}

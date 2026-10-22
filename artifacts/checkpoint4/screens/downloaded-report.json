@@ -1,0 +1,386 @@
+{
+  "trace_id": "a40a827d-dd93-42e2-a1cd-ce652bc57d3c",
+  "incident_ref": {
+    "incident_id": "2b0a03556c3d43b68d803ba3cff63f3e",
+    "dag_id": "orders_demo",
+    "run_id": "manual__a296f6eedb744f90bb8e889e09dc1a91",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "CONNECTION_FAILURE",
+    "investigation": [
+      "로그에 DB 서버 연결이 거부되었다고 기록되어 있습니다. 서버 가동 상태와 해당 주소·포트의 접근 가능 여부를 확인하세요.",
+      "dbt 연결 설정과 실행 시점의 네트워크 상태를 점검하세요.",
+      "dbt_run 실패로 dbt_test와 publish_summary가 상위 단계 실패 상태입니다."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "live-4b2ec34f0bc6f2be89f9",
+      "kind": "get_task_context",
+      "source": "live://airflow/2.10.4/api/v1",
+      "observed_at": "2026-10-20T09:26:11.233661Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__a296f6eedb744f90bb8e889e09dc1a91",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "897ca77fea57",
+          " INFO - ::group::Log message source details",
+          "*** Found local files:",
+          "***   * /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/logs/dag_id=orders_demo/run_id=manual__a296f6eedb744f90bb8e889e09dc1a91/task_id=dbt_run/attempt=1.log",
+          " INFO - ::endgroup::",
+          "[2026-10-20T09:26:08.028+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs",
+          "[2026-10-20T09:26:08.031+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_demo.dbt_run manual__a296f6eedb744f90bb8e889e09dc1a91 [queued]>",
+          "[2026-10-20T09:26:08.033+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_demo.dbt_run manual__a296f6eedb744f90bb8e889e09dc1a91 [queued]>",
+          "[2026-10-20T09:26:08.033+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1",
+          "[2026-10-20T09:26:08.037+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): dbt_run> on 2026-10-20 09:26:04.521180+00:00",
+          "[2026-10-20T09:26:08.039+0000] {standard_task_runner.py:72} INFO - Started process 579 to run task",
+          "[2026-10-20T09:26:08.040+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'orders_demo', 'dbt_run', 'manual__a296f6eedb744f90bb8e889e09dc1a91', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/orders_demo.py', '--cfg-path', '/tmp/tmp7o7monfa']",
+          "[2026-10-20T09:26:08.041+0000] {standard_task_runner.py:105} INFO - Job 74: Subtask dbt_run",
+          "[2026-10-20T09:26:08.053+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_demo.dbt_run manual__a296f6eedb744f90bb8e889e09dc1a91 [running]> on host 897ca77fea57",
+          "[2026-10-20T09:26:08.070+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='orders_demo' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-10-20T09:26:04.521180+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__a296f6eedb744f90bb8e889e09dc1a91'",
+          "[2026-10-20T09:26:08.070+0000] {taskinstance.py:731} INFO - ::endgroup::",
+          "Running with dbt=1.9.10",
+          "Registered adapter: postgres=1.9.1",
+          "Unable to do partial parsing because saved manifest not found. Starting full parse.",
+          "Found 2 models, 2 data tests, 1 source, 475 macros",
+          "Concurrency: 1 threads (target='local')",
+          "Finished running  in 0 hours 0 minutes and 0.02 seconds (0.02s).",
+          "Encountered an error:",
+          "Database Error",
+          "  connection to server at \"host.docker.internal\" (192.168.65.254), port 60857 failed: Connection refused",
+          "  \tIs the server running on that host and accepting TCP/IP connections?",
+          "  ",
+          "{\"dbt_archive\": \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint4/dbt-archives/e64ad69b2b2cf6a4a3d293ade7130cba490da286d84e4b874ab3bb8e519a72c0/6cac19df2508445f98895923d2c8963e\", \"exit_code\": 2}",
+          "[2026-10-20T09:26:09.460+0000] {taskinstance.py:3311} ERROR - Task failed with exception",
+          "Traceback (most recent call last):",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 767, in _execute_task",
+          "    result = _execute_callable(context=context, **execute_callable_kwargs)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 733, in _execute_callable",
+          "    return ExecutionCallableRunner(",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py\", line 422, in wrapper",
+          "    return func(self, *args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 238, in execute",
+          "    return_value = self.execute_callable()",
+          "                   ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 256, in execute_callable",
+          "    return runner.run(*self.op_args, **self.op_kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/pipeline/dags/orders_demo.py\", line 27, in run_step",
+          "    raise RuntimeError(\"선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.\")",
+          "RuntimeError: 선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.",
+          "[2026-10-20T09:26:09.462+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=orders_demo, task_id=dbt_run, run_id=manual__a296f6eedb744f90bb8e889e09dc1a91, execution_date=20261020T092604, start_date=20261020T092608, end_date=20261020T092609",
+          "[2026-10-20T09:26:09.467+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs",
+          "[2026-10-20T09:26:09.467+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 74 for task dbt_run (선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.; 579)",
+          "Traceback (most recent call last):",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py\", line 117, in _start_by_fork",
+          "    ret = args.func(args, dag=self.dag)",
+          "          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py\", line 49, in command",
+          "    return func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py\", line 116, in wrapper",
+          "    return f(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 483, in task_run",
+          "    task_return_code = _run_task_by_selected_method(args, _dag, ti)",
+          "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 256, in _run_task_by_selected_method",
+          "    return _run_raw_task(args, ti)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 341, in _run_raw_task",
+          "    return ti._run_raw_task(",
+          "           ^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py\", line 97, in wrapper",
+          "    return func(*args, session=session, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3005, in _run_raw_task",
+          "    return _run_raw_task(",
+          "           ^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 273, in _run_raw_task",
+          "    TaskInstance._execute_task_with_callbacks(",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3159, in _execute_task_with_callbacks",
+          "    result = self._execute_task(context, task_orig)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3183, in _execute_task",
+          "    return _execute_task(self, context, task_orig)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 767, in _execute_task",
+          "    result = _execute_callable(context=context, **execute_callable_kwargs)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 733, in _execute_callable",
+          "    return ExecutionCallableRunner(",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py\", line 422, in wrapper",
+          "    return func(self, *args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 238, in execute",
+          "    return_value = self.execute_callable()",
+          "                   ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 256, in execute_callable",
+          "    return runner.run(*self.op_args, **self.op_kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/pipeline/dags/orders_demo.py\", line 27, in run_step",
+          "    raise RuntimeError(\"선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.\")",
+          "RuntimeError: 선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.",
+          "[2026-10-20T09:26:09.509+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1",
+          "[2026-10-20T09:26:09.515+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check",
+          "[2026-10-20T09:26:09.517+0000] {local_task_job_runner.py:245} INFO - ::endgroup::"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T09:26:08.031674+00:00",
+        "run_finished_at": "2026-10-20T09:26:09.462640+00:00",
+        "log_try_number": 1,
+        "tasks_complete": true
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-491c174559ca8702e254",
+      "kind": "check_connection",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T09:27:41.098535Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": false,
+        "error_type": "connection_refused",
+        "endpoint": {
+          "host": "127.0.0.1",
+          "port": 60857
+        },
+        "probe_role": "read_only_observer",
+        "scope": "Only this named endpoint now; not proof of failed dbt process configuration or pipeline recovery"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-214ffd9949335421b9f4",
+      "kind": "get_dbt_artifacts",
+      "source": "live://dbt/immutable-artifact-store",
+      "observed_at": "2026-10-20T09:27:41.036350Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__a296f6eedb744f90bb8e889e09dc1a91",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "b0d15237-7783-4d93-8d2b-07eb26f82527",
+        "manifest_invocation_id": "b0d15237-7783-4d93-8d2b-07eb26f82527",
+        "run_results_invocation_id": null,
+        "artifact_status": "partial",
+        "available_artifacts": [
+          "manifest"
+        ],
+        "command": "run",
+        "missing_artifacts": [
+          "run_results"
+        ],
+        "stdout_invocation_ids": [
+          "b0d15237-7783-4d93-8d2b-07eb26f82527"
+        ],
+        "command_log_sha256": "bb9d8db4862f0b57d5413efbab2f6c5b246b76f0701f85af6c0e0dded5bfe01f",
+        "exit_code": 2,
+        "issue": "connection_refused",
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "results": [],
+        "test_results": {},
+        "failed_node": null,
+        "actual_failed": [],
+        "potential_downstream": [],
+        "content_hashes": {
+          "manifest": "565e7add831e7474af92a9160cd2f30bb399523590c951783370fd3d9ffe0b86"
+        },
+        "archived_at": "2026-10-20T09:26:09.445579+00:00",
+        "message": ""
+      },
+      "error": null,
+      "simulated": false
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "2",
+      "chunk_id": "rb-connection:0",
+      "rank": 1,
+      "content_hash": "46708c1494c355883792be62429a5bc25510fb86f27b3b98aa261f8ab07c58d5",
+      "content": "# dbt 실행 연결 거부 / connection refused\n# dbt 실행 연결 거부 / connection refused\n\n문서 ID: rb-connection\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nconnection_refused, connection refused, dbt_orders, dbt_run, endpoint, host, port\n\n## 확인과 원인 구분\n실패 실행의 로그와 해당 dbt invocation 자료에서 실제 연결 ID를 확인한다. partial manifest만 있으면 검증된 명령 영수증과 누락 run_results를 명시한다.\n\n## 사람의 조치\n개발자가 실제 dbt 실행 설정과 서비스 상태·경로를 점검하고 확인된 설정 오류를 바로잡는다. 비밀번호는 보고서에 넣지 않는다.\n\n## 선행 조건\n실패 프로세스가 사용한 연결 설정을 먼저 확인한다. 포트가 로그에 없으면 잘못된 포트를 확정하지 않는다.\n\n## 검증\n새 실행의 모든 태스크와 두 품질 검사, 집계가 통과해야 한다. 현재 probe 성공이나 mcp_readonly 접속 성공만으로 복구라고 부르지 않는다.\n\n## 적용 제외\n다른 연결의 접속 성공은 dbt_orders 성공이 아니다. 현재 연결 성공은 과거 실행 실패를 지우지 않는다. 인증 오류·DNS 오류는 별도 런북을 확인한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm dbt_orders connection refusal in selected-run log and matching dbt invocation. A verified partial manifest receipt can support refusal, but disclose missing run_results. Inspect actual execution endpoint and service configuration; never print credentials or infer a wrong port without evidence. Another connection success, or a current successful probe, does not prove historical recovery. A developer corrects confirmed configuration problems. Verify a new full pipeline run, both tests and aggregates."
+    },
+    {
+      "doc_id": "case-endpoint",
+      "doc_version": "1",
+      "chunk_id": "case-endpoint:0",
+      "rank": 2,
+      "content_hash": "e12f0adaf4903a36ea7bf30b6e7dc92c48924cf9eca5a7bcec6fd9a38424d545",
+      "content": "# 관측 연결 성공과 실행 연결 실패의 분리\n# 관측 연결 성공과 실행 연결 실패의 분리\n\n문서 ID: case-endpoint\n버전: 1\n수정일: 2026-10-20\n자료 유형: 교육용 합성 장애 기록. 평가셋과 별도 작성.\n관련 절차: rb-connection\n\n## 관측\n관측 계정 접속은 성공했으나 dbt 실행 연결은 거부됐다. 실패 당시 포트는 로그에 없어 잘못된 포트라고 단정하지 않았다.\n\n## 대응과 검증\n실제 실행 설정을 확인한 개발자가 설정을 정정하고 새 실행의 태스크·품질·집계로 복구를 확인했다.\n\n## 한계\n특정 실행의 정답이 아니며 이 기록만으로 현재 원인을 확정하지 않는다. 원본·실행 식별자를 대조한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Separate synthetic history: observer connection succeeded while the dbt execution connection was refused. No wrong-port claim was made without actual endpoint evidence. A developer checked real configuration and verified a separate full pipeline run. Another connection probe is insufficient proof of recovery."
+    },
+    {
+      "doc_id": "rb-auth",
+      "doc_version": "2",
+      "chunk_id": "rb-auth:0",
+      "rank": 3,
+      "content_hash": "ae43f3dce0db42549a3e0f3792a2c896580d7e11267f405332b11997425be988",
+      "content": "# 인증·권한 거부 / authentication permission denied\n# 인증·권한 거부 / authentication permission denied\n\n문서 ID: rb-auth\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\npassword authentication failed, 28P01, 42501, permission denied, role, grant\n\n## 확인과 원인 구분\n실패한 실제 역할과 DB의 인증·권한 오류 코드를 확인한다. 연결 거부와 구분한다. 비밀번호 값을 수집하거나 출력하지 않는다.\n\n## 사람의 조치\n관리자가 최소 권한과 자격 유효성을 확인하고 승인된 경로로 접근 설정을 정정한다. 에이전트는 권한을 부여하지 않는다.\n\n## 선행 조건\n정확한 실행 계정과 대상, 승인된 자격 관리 담당자가 확인돼야 한다.\n\n## 검증\n같은 역할·같은 대상의 새 실행과 품질 검사 통과를 확인한다.\n\n## 적용 제외\nconnection refused는 인증 전 연결 실패일 수 있으므로 비밀번호 오류로 단정하지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm actual execution role, target and authentication or privilege code such as 28P01 or 42501. Do not expose passwords. An authorized administrator checks credential validity and minimum privileges. Verify same-role same-target access and a new pipeline run. Connection refused alone is not evidence of a bad password."
+    }
+  ],
+  "diagnosis": {
+    "category": "CONNECTION_FAILURE",
+    "diagnosis_status": "supported",
+    "severity": "high",
+    "cause": "선택된 실행에서 dbt_run이 연결 거부로 실패했습니다. dbt 산출물에도 connection_refused가 기록되어 있습니다. run_results는 누락되어 부분 근거이며, 현재 프로브 역시 지정 엔드포인트의 현재 상태만 보여 줍니다.",
+    "evidence_ids": [
+      "live-4b2ec34f0bc6f2be89f9",
+      "live-214ffd9949335421b9f4"
+    ],
+    "missing_evidence": [
+      "dbt run_results 누락",
+      "실제 실행 엔드포인트 및 서비스 설정 확인"
+    ],
+    "impact": [
+      "dbt_test와 publish_summary는 upstream_failed로 관찰됨",
+      "후속 영향 목록은 산출물에서 확인되지 않음"
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "review-dbt-connection",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "kind": "connection_config",
+        "prerequisites": [
+          "실제 실행 엔드포인트와 서비스 설정을 확인할 담당자"
+        ],
+        "steps": [
+          "보존된 실행 로그와 dbt 호출 산출물에서 연결 거부를 확인합니다.",
+          "실제 실행 엔드포인트와 서비스 설정을 검토하고, 확인된 설정 문제만 담당 개발자가 수정합니다.",
+          "자격 증명은 노출하지 않습니다."
+        ],
+        "verification": [
+          "새 전체 파이프라인 실행에서 dbt 단계, 테스트 및 집계 결과를 확인합니다.",
+          "현재 연결 프로브만으로 복구를 판정하지 않습니다."
+        ],
+        "evidence_ids": [
+          "live-4b2ec34f0bc6f2be89f9",
+          "live-214ffd9949335421b9f4"
+        ],
+        "runbook_ids": [
+          "rb-connection"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 3,
+    "rag_calls": 1,
+    "tokens": 4860,
+    "cost": 0.00076185,
+    "elapsed_seconds": 6.253506,
+    "api_calls": 2,
+    "local_cache_hits": 2,
+    "input_tokens": 4448,
+    "output_tokens": 412,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": null
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "investigate",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 1,
+  "revision_count": 0,
+  "evidence_hash": "74832a29159130bbb66c736c226f0620f2127ae4935d51b563e7f9a25b7bb699",
+  "versions": {
+    "app": "0.1.0",
+    "model": "gpt-6-luna",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "saved_evidence_replay_no_live_query",
+    "data": "replay_of_saved_collected_evidence",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

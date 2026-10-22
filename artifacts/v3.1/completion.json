@@ -1,0 +1,80 @@
+{
+  "version": "0.3.1",
+  "stage_1": "bounded claims, component gates, conditional human actions, candidate preservation",
+  "stage_2": {
+    "generated_rule_checks": 10000,
+    "passed": 10000,
+    "semantic_templates": 10,
+    "not_independent_incidents": true
+  },
+  "stage_3": {
+    "config": "config/project.json",
+    "live_rows_per_run": 100000,
+    "runs": 7,
+    "recoveries": 3,
+    "success": true,
+    "llm": "FakeLLM",
+    "offline_bundles": 500,
+    "profile_checks": 1000,
+    "profile_passed": 1000
+  },
+  "stage_4": {
+    "model": "gpt-6-luna",
+    "comparison": {
+      "baseline": {
+        "passed": 8,
+        "total": 10,
+        "category_matches": 10,
+        "cost_usd": 0.001244191,
+        "mean_seconds": 4.014
+      },
+      "full": {
+        "passed": 8,
+        "total": 10,
+        "category_matches": 10,
+        "cost_usd": 0.00317913,
+        "mean_seconds": 11.05
+      }
+    },
+    "default_selected": "economy: one call + mandatory code gates",
+    "model_families_compared": 1
+  },
+  "stage_5": {
+    "v3_0_all_component_passed_full": 7,
+    "v3_0_first_final": "8/10 both arms; new authored synthetic fixed evidence; not independent real incidents",
+    "wilson_95_interval": [
+      0.4902,
+      0.9433
+    ],
+    "v3_1_targeted": {
+      "passed": 2,
+      "total": 2,
+      "scope": "abstention and successful-ID contract only; one current-observation citation is separately rejected; NOT a full-suite score",
+      "all_component_passed": 1
+    },
+    "reviewer_findings": 23,
+    "verified": 4,
+    "unsubstantiated": 19,
+    "ai_evidence_review": "completed",
+    "independent_human_review": "pending"
+  },
+  "billing": {
+    "additional_requests": 35,
+    "additional_estimated_usd": 0.005097009,
+    "lifetime": {
+      "requests": 128,
+      "spent_or_reserved_usd": 0.02068938,
+      "uncertain_requests": 0,
+      "lifetime_cap_usd": 0.05,
+      "daily_cap_usd": 0.02,
+      "diagnosis_cap_usd": 0.01,
+      "day_timezone": "Asia/Seoul",
+      "profile": "evaluation",
+      "daily_call_cap": 96,
+      "total_call_cap": 128
+    },
+    "invoice_actual": "not fetched; token-usage price estimate"
+  },
+  "production_approval": false,
+  "presentation_created": false
+}

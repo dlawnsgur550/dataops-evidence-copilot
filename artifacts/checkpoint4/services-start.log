@@ -1,0 +1,1 @@
+{"ready": true, "engine": "docker", "airflow_version": "2.10.4", "ports": {"postgres": 15439, "airflow": 18783}}

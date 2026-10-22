@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "data": {
+    "invocation_id": "92bc4dd8-e9e6-4819-a27c-e00fe1349946",
+    "manifest_invocation_id": "92bc4dd8-e9e6-4819-a27c-e00fe1349946",
+    "run_results_invocation_id": "92bc4dd8-e9e6-4819-a27c-e00fe1349946",
+    "artifact_status": "complete",
+    "available_artifacts": [
+      "manifest",
+      "run_results"
+    ],
+    "command": "test",
+    "missing_artifacts": [],
+    "stdout_invocation_ids": [
+      "92bc4dd8-e9e6-4819-a27c-e00fe1349946"
+    ],
+    "command_log_sha256": "ac7538ef2657b8b8c14f612eb4f5657b9f7ae5520fd796b0c2c8d48937c344f8",
+    "exit_code": 0,
+    "issue": null,
+    "column_id": null,
+    "table_id": "raw.orders",
+    "connection_id": "dbt_orders",
+    "results": [
+      {
+        "unique_id": "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+        "resource_type": "test",
+        "status": "pass",
+        "message": "",
+        "depends_on": [
+          "model.orders_demo.stg_orders"
+        ]
+      },
+      {
+        "unique_id": "test.orders_demo.unique_stg_orders_order_id.e3b841c71a",
+        "resource_type": "test",
+        "status": "pass",
+        "message": "",
+        "depends_on": [
+          "model.orders_demo.stg_orders"
+        ]
+      }
+    ],
+    "test_results": {
+      "not_null_order_id": "pass",
+      "unique_order_id": "pass"
+    },
+    "failed_node": null,
+    "actual_failed": [],
+    "potential_downstream": [],
+    "content_hashes": {
+      "manifest": "9bcb934a95e50429b99e8fa0a1df72665bc28eb88a8d2b6e97f9acb6691bd69b",
+      "run_results": "95192e049ae9efa57274c54966c64305401efa1e54bdc1c9b45a477c63464f53"
+    },
+    "archived_at": "2026-10-22T00:39:33.280632+00:00",
+    "message": "\n"
+  },
+  "error": null,
+  "evidence_id": "live-4df22400332accdca5ed"
+}

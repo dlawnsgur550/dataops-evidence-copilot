@@ -1,0 +1,82 @@
+{
+  "scope": "two fresh authored insufficient-evidence cases, economy 1-call profile; NOT full-suite or independent human validation",
+  "paid": true,
+  "cases": [
+    {
+      "case": "I01",
+      "passed": true,
+      "citation_ids": [
+        "e-272f595807e181"
+      ],
+      "usage": {
+        "llm_calls": 1,
+        "tool_calls": 5,
+        "rag_calls": 0,
+        "tokens": 1578,
+        "cost": 0.000109275,
+        "elapsed_seconds": 6.613965,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1521,
+        "output_tokens": 57,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "evidence_hash": "4dc96e789813b78b9a2f9b717b420a03bd14a2c7ea4c1ded8baf69b336b87533"
+    },
+    {
+      "case": "I02",
+      "passed": true,
+      "citation_ids": [
+        "e-62f2a4aa7d532a",
+        "e-4d962b39b36e75"
+      ],
+      "usage": {
+        "llm_calls": 1,
+        "tool_calls": 5,
+        "rag_calls": 0,
+        "tokens": 1604,
+        "cost": 0.0001139,
+        "elapsed_seconds": 9.039308,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1531,
+        "output_tokens": 73,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "evidence_hash": "2a6bf78e792a03b5342b34e146823027361d1a3777b336ba92f2aa6e5657d854"
+    }
+  ],
+  "passed": 2,
+  "total": 2,
+  "cost_before": {
+    "requests": 126,
+    "spent_or_reserved_usd": 0.020466205,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "cost_after": {
+    "requests": 128,
+    "spent_or_reserved_usd": 0.02068938,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "independent_human_review": "pending"
+}

@@ -1,0 +1,43 @@
+{
+  "case_developer_only": "quality",
+  "original_run_id": "manual__b72d8c2ba13c4005882d8ae8a3bd9ebf",
+  "followup_run_id": "manual__b1d4aac776f8440bb6855a31cfefbf98",
+  "action": {
+    "developer_action": "quality",
+    "performed_at": "2026-10-22T00:40:03.990360+00:00",
+    "performed_by": "authorized_developer_script",
+    "agent_executed": false
+  },
+  "recovery_check": {
+    "recovered": true,
+    "rule_id": "R10",
+    "reasons": [],
+    "original_run_id": "manual__b72d8c2ba13c4005882d8ae8a3bd9ebf",
+    "followup_run_id": "manual__b1d4aac776f8440bb6855a31cfefbf98",
+    "scope": "actual controlled local synthetic pipeline; authorized developer repair; no agent writes",
+    "task_statuses": {
+      "load_demo_data": "success",
+      "dbt_run": "success",
+      "dbt_test": "success",
+      "publish_summary": "success"
+    },
+    "test_results": {
+      "not_null_order_id": "pass",
+      "unique_order_id": "pass"
+    }
+  },
+  "aggregate": {
+    "raw_count": 100000,
+    "raw_sum": "50025858.92",
+    "stage_count": 100000,
+    "stage_sum": "50025858.92",
+    "daily_count": 100000,
+    "daily_sum": "50025858.92",
+    "nulls": 0,
+    "duplicates": 0,
+    "matched": true,
+    "run_id": "manual__b1d4aac776f8440bb6855a31cfefbf98",
+    "table_id": "raw.orders",
+    "checked_at": "2026-10-22T00:40:15.160684+00:00"
+  }
+}

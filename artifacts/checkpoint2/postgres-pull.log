@@ -1,0 +1,4 @@
+17.10-alpine: Pulling from library/postgres
+Digest: sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193
+Status: Image is up to date for postgres:17.10-alpine
+docker.io/library/postgres:17.10-alpine

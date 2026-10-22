@@ -1,0 +1,36 @@
+{
+  "fixture_selector": "schema",
+  "category": "UNKNOWN",
+  "diagnosis_status": "failed",
+  "review_accepted": false,
+  "usage": {
+    "llm_calls": 2,
+    "tool_calls": 1,
+    "rag_calls": 0,
+    "tokens": 1020,
+    "cost": 0.000122,
+    "elapsed_seconds": 4.158943,
+    "api_calls": 1,
+    "local_cache_hits": 1,
+    "input_tokens": 970,
+    "output_tokens": 50,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0
+  },
+  "nodes": [
+    "triage",
+    "inspector"
+  ],
+  "scope": {
+    "llm": "gpt-6-luna",
+    "transport": "saved_evidence_replay_no_live_query",
+    "data": "replay_of_saved_collected_evidence",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "protocol": {
+    "initialized": false,
+    "note": "Saved evidence replay; no live MCP or database query in this run"
+  },
+  "report": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint4/live-connection-report.json"
+}

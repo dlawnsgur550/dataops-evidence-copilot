@@ -1,0 +1,405 @@
+{
+  "split": "dev",
+  "model": "fake-deterministic-v1",
+  "freeze_id": null,
+  "cases": [
+    {
+      "case_id": "D01",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-insufficient:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "case-contract:0",
+          "rb-dns:0",
+          "case-endpoint:0",
+          "case-key:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-connection"
+        ],
+        "query_sha256": "bdd8c0914403c9f6c5bf898575ac64d01e4fa05765dbe348990585773fd28abc"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.010279,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "SCHEMA_CHANGE",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [],
+      "review_violations": []
+    },
+    {
+      "case_id": "D02",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-quality:0",
+          "rb-auth:0",
+          "rb-duplicate:0",
+          "rb-connection:0",
+          "rb-dns:0",
+          "case-key:0",
+          "rb-schema:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-schema:0",
+          "case-key:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "case-endpoint:0",
+          "rb-insufficient:0",
+          "rb-stale:0"
+        ],
+        "top3_doc_ids": [
+          "rb-quality",
+          "rb-connection",
+          "rb-duplicate"
+        ],
+        "query_sha256": "75875efbe03854af48feb9a6114c1a07446d6774a359dd297b96006580d19c56"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.007715,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "DATA_QUALITY",
+      "expected_category": "DATA_QUALITY",
+      "errors": [],
+      "review_violations": []
+    },
+    {
+      "case_id": "D03",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "case-endpoint:0",
+          "rb-stale:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "rb-dns:0",
+          "rb-quality:0",
+          "rb-schema:0",
+          "rb-duplicate:0",
+          "rb-insufficient:0",
+          "rb-stale:0",
+          "rb-upstream:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-dns",
+          "rb-auth"
+        ],
+        "query_sha256": "446f20f6225070661695154e8b0eea9efd6f6ba334fd908d6dbcebfd59274586"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.008186,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "CONNECTION_FAILURE",
+      "expected_category": "CONNECTION_FAILURE",
+      "errors": [],
+      "review_violations": []
+    },
+    {
+      "case_id": "D04",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": false,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-dns:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-upstream:0",
+          "rb-schema:0",
+          "rb-dns:0",
+          "case-endpoint:0",
+          "rb-duplicate:0",
+          "rb-insufficient:0",
+          "case-key:0",
+          "rb-stale:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-quality",
+          "case-endpoint"
+        ],
+        "query_sha256": "5ac71348e9bad9d85796c80683ab833e7f61460a82168ba4f13c24b9c43b4d53"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.006436,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "NORMAL",
+      "expected_category": "NORMAL",
+      "errors": [],
+      "review_violations": []
+    },
+    {
+      "case_id": "D05",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-insufficient:0",
+          "rb-stale:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-upstream:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-insufficient:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-schema:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-quality:0",
+          "case-endpoint:0",
+          "rb-auth:0"
+        ],
+        "top3_doc_ids": [
+          "rb-insufficient",
+          "rb-stale",
+          "rb-schema"
+        ],
+        "query_sha256": "19ddc8b7ee6edc5be06d33803a8570f9e8ce1b481b1b7d324aa084986b7d43ef"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 7,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.040212,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "UNKNOWN",
+      "errors": [],
+      "review_violations": []
+    },
+    {
+      "case_id": "D06",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-stale:0",
+          "rb-auth:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-insufficient:0",
+          "case-contract:0",
+          "rb-auth:0",
+          "rb-upstream:0",
+          "rb-dns:0",
+          "case-endpoint:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-connection"
+        ],
+        "query_sha256": "b124b4bfae08da3880b6dd6b241d9345f1755b3635b1cafddaee18858954bb06"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": null,
+        "cost": null,
+        "elapsed_seconds": 0.008241,
+        "api_calls": null,
+        "local_cache_hits": 0,
+        "input_tokens": null,
+        "output_tokens": null,
+        "price_date": null,
+        "cost_basis": "not_collected",
+        "uncertain_reserved_usd": 0
+      },
+      "final_category": "SCHEMA_CHANGE",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [],
+      "review_violations": []
+    }
+  ],
+  "scope": "synthetic fixed evidence replay; gold read only by scorer; no live system queries",
+  "baseline": null
+}

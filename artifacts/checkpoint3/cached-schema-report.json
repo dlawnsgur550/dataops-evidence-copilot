@@ -1,0 +1,429 @@
+{
+  "trace_id": "57211ddb-7204-4432-935b-620650913fdc",
+  "incident_ref": {
+    "incident_id": "9cd5a75856c14236a7a9bd41acc53d8f",
+    "dag_id": "orders_demo",
+    "run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "SCHEMA_CHANGE",
+    "investigation": [
+      "dbt 모델 stg_orders 실행 중 `amount` 컬럼이 없다는 오류가 발생했습니다.",
+      "입력 테이블 `raw.orders`의 현재 컬럼과 모델이 참조하는 컬럼을 읽기 전용으로 비교하세요.",
+      "최근 스키마 변경이나 적재 데이터의 컬럼 구성을 확인하세요."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "live-00cf136913bcd8ce3df7",
+      "kind": "get_task_context",
+      "source": "live://airflow/2.10.4/api/v1",
+      "observed_at": "2026-10-20T08:13:48.204239Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "897ca77fea57",
+          " INFO - ::group::Log message source details",
+          "*** Found local files:",
+          "***   * /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/logs/dag_id=orders_demo/run_id=manual__03aaec2bcadb4f1a8c15072d6322b918/task_id=dbt_run/attempt=1.log",
+          " INFO - ::endgroup::",
+          "[2026-10-20T08:13:44.474+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs",
+          "[2026-10-20T08:13:44.478+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_demo.dbt_run manual__03aaec2bcadb4f1a8c15072d6322b918 [queued]>",
+          "[2026-10-20T08:13:44.480+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_demo.dbt_run manual__03aaec2bcadb4f1a8c15072d6322b918 [queued]>",
+          "[2026-10-20T08:13:44.480+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1",
+          "[2026-10-20T08:13:44.485+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): dbt_run> on 2026-10-20 08:13:40.452448+00:00",
+          "[2026-10-20T08:13:44.487+0000] {standard_task_runner.py:72} INFO - Started process 810 to run task",
+          "[2026-10-20T08:13:44.488+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'orders_demo', 'dbt_run', 'manual__03aaec2bcadb4f1a8c15072d6322b918', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/orders_demo.py', '--cfg-path', '/tmp/tmp7xzreec6']",
+          "[2026-10-20T08:13:44.489+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask dbt_run",
+          "[2026-10-20T08:13:44.505+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_demo.dbt_run manual__03aaec2bcadb4f1a8c15072d6322b918 [running]> on host 897ca77fea57",
+          "[2026-10-20T08:13:44.528+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='orders_demo' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-10-20T08:13:40.452448+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__03aaec2bcadb4f1a8c15072d6322b918'",
+          "[2026-10-20T08:13:44.528+0000] {taskinstance.py:731} INFO - ::endgroup::",
+          "Running with dbt=1.9.10",
+          "Registered adapter: postgres=1.9.1",
+          "Unable to do partial parsing because saved manifest not found. Starting full parse.",
+          "Found 2 models, 2 data tests, 1 source, 475 macros",
+          "Concurrency: 1 threads (target='local')",
+          "1 of 2 START sql table model analytics.stg_orders .............................. [RUN]",
+          "1 of 2 ERROR creating sql table model analytics.stg_orders ..................... [ERROR in 0.03s]",
+          "2 of 2 SKIP relation analytics.daily_orders .................................... [SKIP]",
+          "Finished running 2 table models in 0 hours 0 minutes and 0.09 seconds (0.09s).",
+          "Completed with 1 error, 0 partial successes, and 0 warnings:",
+          "  Database Error in model stg_orders (models/stg_orders.sql)",
+          "  column \"amount\" does not exist",
+          "  LINE 12:     select order_id, customer_id, amount, created_at from \"d...",
+          "                                             ^",
+          "  compiled code at /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/dbt-calls/9a7785c7b07ba33933325af9b586f3458c038cfc49b545a80a8803007670125c/f41f9b10b0424db6876ef5bb28ed3c00/target/run/orders_demo/models/stg_orders.sql",
+          "Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2",
+          "{\"dbt_archive\": \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/dbt-archives/9a7785c7b07ba33933325af9b586f3458c038cfc49b545a80a8803007670125c/f41f9b10b0424db6876ef5bb28ed3c00\", \"exit_code\": 1}",
+          "[2026-10-20T08:13:46.127+0000] {taskinstance.py:3311} ERROR - Task failed with exception",
+          "Traceback (most recent call last):",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 767, in _execute_task",
+          "    result = _execute_callable(context=context, **execute_callable_kwargs)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 733, in _execute_callable",
+          "    return ExecutionCallableRunner(",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py\", line 422, in wrapper",
+          "    return func(self, *args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 238, in execute",
+          "    return_value = self.execute_callable()",
+          "                   ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 256, in execute_callable",
+          "    return runner.run(*self.op_args, **self.op_kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/pipeline/dags/orders_demo.py\", line 27, in run_step",
+          "    raise RuntimeError(\"선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.\")",
+          "RuntimeError: 선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.",
+          "[2026-10-20T08:13:46.130+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=orders_demo, task_id=dbt_run, run_id=manual__03aaec2bcadb4f1a8c15072d6322b918, execution_date=20261020T081340, start_date=20261020T081344, end_date=20261020T081346",
+          "[2026-10-20T08:13:46.134+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs",
+          "[2026-10-20T08:13:46.134+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 33 for task dbt_run (선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.; 810)",
+          "Traceback (most recent call last):",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/task/task_runner/standard_task_runner.py\", line 117, in _start_by_fork",
+          "    ret = args.func(args, dag=self.dag)",
+          "          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/cli_config.py\", line 49, in command",
+          "    return func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/cli.py\", line 116, in wrapper",
+          "    return f(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 483, in task_run",
+          "    task_return_code = _run_task_by_selected_method(args, _dag, ti)",
+          "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 256, in _run_task_by_selected_method",
+          "    return _run_raw_task(args, ti)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/cli/commands/task_command.py\", line 341, in _run_raw_task",
+          "    return ti._run_raw_task(",
+          "           ^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/session.py\", line 97, in wrapper",
+          "    return func(*args, session=session, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3005, in _run_raw_task",
+          "    return _run_raw_task(",
+          "           ^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 273, in _run_raw_task",
+          "    TaskInstance._execute_task_with_callbacks(",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3159, in _execute_task_with_callbacks",
+          "    result = self._execute_task(context, task_orig)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 3183, in _execute_task",
+          "    return _execute_task(self, context, task_orig)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 767, in _execute_task",
+          "    result = _execute_callable(context=context, **execute_callable_kwargs)",
+          "             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py\", line 733, in _execute_callable",
+          "    return ExecutionCallableRunner(",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py\", line 422, in wrapper",
+          "    return func(self, *args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 238, in execute",
+          "    return_value = self.execute_callable()",
+          "                   ^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py\", line 256, in execute_callable",
+          "    return runner.run(*self.op_args, **self.op_kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/operator_helpers.py\", line 252, in run",
+          "    return self.func(*args, **kwargs)",
+          "           ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+          "  File \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/pipeline/dags/orders_demo.py\", line 27, in run_step",
+          "    raise RuntimeError(\"선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.\")",
+          "RuntimeError: 선택된 파이프라인 단계가 실패했습니다. 보존된 호출 산출물을 확인하세요.",
+          "[2026-10-20T08:13:46.171+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1",
+          "[2026-10-20T08:13:46.178+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check",
+          "[2026-10-20T08:13:46.180+0000] {local_task_job_runner.py:245} INFO - ::endgroup::"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T08:13:44.478246+00:00",
+        "run_finished_at": "2026-10-20T08:13:46.130221+00:00",
+        "log_try_number": 1,
+        "tasks_complete": true
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-0e15ffbeb75b562c0529",
+      "kind": "compare_schema",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T08:13:48.309345Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "paid_amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_id": "orders-v1",
+        "baseline_observed_at": "2026-10-20T08:10:15.358314+00:00",
+        "removed": [
+          "amount"
+        ],
+        "added": [
+          "paid_amount"
+        ],
+        "type_changes": [],
+        "warning": "Current observation, not failed-run snapshot"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-33f6421aadd52c85623f",
+      "kind": "get_dbt_artifacts",
+      "source": "live://dbt/immutable-artifact-store",
+      "observed_at": "2026-10-20T08:13:48.287727Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "4ee3533d-0d3c-40a9-84fa-6c91359afaf7",
+        "manifest_invocation_id": "4ee3533d-0d3c-40a9-84fa-6c91359afaf7",
+        "run_results_invocation_id": "4ee3533d-0d3c-40a9-84fa-6c91359afaf7",
+        "artifact_status": "complete",
+        "available_artifacts": [
+          "manifest",
+          "run_results"
+        ],
+        "command": "run",
+        "missing_artifacts": [],
+        "stdout_invocation_ids": [
+          "4ee3533d-0d3c-40a9-84fa-6c91359afaf7"
+        ],
+        "command_log_sha256": "c35ec753bb0c95fb29c6a8dd0c950aeb63fc98fee32ab23d60277c22db0e0d03",
+        "exit_code": 1,
+        "issue": "missing_column",
+        "column_id": "amount",
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "results": [
+          {
+            "unique_id": "model.orders_demo.stg_orders",
+            "resource_type": "model",
+            "status": "error",
+            "message": "Database Error in model stg_orders (models/stg_orders.sql)\n  column \"amount\" does not exist\n  LINE 12:     select order_id, customer_id, amount, created_at from \"d...\n                                             ^\n  compiled code at /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/dbt-calls/9a7785c7b07ba33933325af9b586f3458c038cfc49b545a80a8803007670125c/f41f9b10b0424db6876ef5bb28ed3c00/target/run/orders_demo/models/stg_orders.sql",
+            "depends_on": [
+              "source.orders_demo.raw.orders"
+            ]
+          },
+          {
+            "unique_id": "model.orders_demo.daily_orders",
+            "resource_type": "model",
+            "status": "skipped",
+            "message": "",
+            "depends_on": [
+              "model.orders_demo.stg_orders"
+            ]
+          }
+        ],
+        "test_results": {},
+        "failed_node": "model.orders_demo.stg_orders",
+        "actual_failed": [
+          "model.orders_demo.stg_orders"
+        ],
+        "potential_downstream": [
+          "model.orders_demo.daily_orders",
+          "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+          "test.orders_demo.unique_stg_orders_order_id.e3b841c71a"
+        ],
+        "content_hashes": {
+          "manifest": "a5a47f7ffdc63b87126d48c13c6b025510ae4350c6cfb1892e8c3b14979886b2",
+          "run_results": "094b8b70fe74415e502104d6c1eae7bbb39e451a7d0c7dc987e880acc4e03023"
+        },
+        "archived_at": "2026-10-20T08:13:46.111494+00:00",
+        "message": "Database Error in model stg_orders (models/stg_orders.sql)\n  column \"amount\" does not exist\n  LINE 12:     select order_id, customer_id, amount, created_at from \"d...\n                                             ^\n  compiled code at /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint2/dbt-calls/9a7785c7b07ba33933325af9b586f3458c038cfc49b545a80a8803007670125c/f41f9b10b0424db6876ef5bb28ed3c00/target/run/orders_demo/models/stg_orders.sql\n"
+      },
+      "error": null,
+      "simulated": false
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-schema",
+      "doc_version": "1",
+      "chunk_id": "rb-schema:whole",
+      "rank": 1,
+      "content_hash": "d08adabd38424def5d6a541f52a6af2ebd2972f3e5eb6e8a1a81c0613ef9b044",
+      "content": "# Schema contract mismatch — version 1 — 2026-10-20\nSymptoms: missing_column, column amount does not exist, stg_orders.\nConfirm: selected dbt invocation and task log name the missing column; compare current raw.orders with orders-v1 baseline. A current observation is not a snapshot of the failed execution.\nAction: a developer verifies the producer contract and aligns source mapping or dependent model SQL after review. Preserve source data and record the mapping decision.\nPrerequisite: confirm intended meaning of amount and paid_amount; establish which contract is authoritative.\nVerification: new execution has all tasks successful and not_null/unique tests passing; inspect daily_orders aggregate.\nExclude: connection refusal, unrelated current schema, and data-quality-only failures. A retry alone does not fix this mismatch.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "1",
+      "chunk_id": "rb-connection:whole",
+      "rank": 2,
+      "content_hash": "94ba485f3fbc3025a5c2215fe1c0637bb149648edfbcc1d0b8ffbcc61d24a0fe",
+      "content": "# dbt connection refused — version 1 — 2026-10-20\nSymptoms: connection_refused, connection refused, dbt_orders, dbt_run.\nConfirm: failed task log and selected dbt artifacts identify the failing connection. mcp_readonly success only confirms that separate connection.\nAction: developer checks dbt endpoint, service availability, routing and authentication using explicitly supplied configuration. Do not expose passwords. Correct a port only if endpoint evidence proves it is wrong.\nPrerequisite: establish the actual dbt execution configuration; do not infer an incorrect port from a generic refusal.\nVerification: successful new pipeline execution and passing not_null/unique checks; a successful connection probe alone does not prove recovery.\nExclude: schema and data-quality failures with functioning connectivity. Never claim a specific port from an absent log value.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-quality",
+      "doc_version": "1",
+      "chunk_id": "rb-quality:whole",
+      "rank": 3,
+      "content_hash": "9642f10da53b0c8ed050f0a1a9e9e928059f5d812aeeb7e40735ae0ebc0477f4",
+      "content": "# Null order key — version 1 — 2026-10-20\nSymptoms: not_null, order_id, null rows, dbt_test.\nConfirm: selected invocation records failing not_null_order_id; current raw.orders profile provides null_counts and limited samples. Do not treat current counts as past counts.\nAction: developer verifies source provenance, repairs the source mapping or quarantines invalid records according to the agreed policy, preserving originals.\nPrerequisite: confirm business key definition and approved remediation policy.\nVerification: separate new execution succeeds, not_null and unique both pass, reconciled counts and aggregates are checked.\nExclude: absent column or failed connectivity; a retry alone cannot repair bad data.\n",
+      "method": "lexical_overlap_checkpoint"
+    }
+  ],
+  "diagnosis": {
+    "category": "SCHEMA_CHANGE",
+    "diagnosis_status": "supported",
+    "severity": "high",
+    "cause": "실패한 dbt 실행에서 stg_orders가 amount 컬럼 누락으로 실패했습니다. 현재 raw.orders 관측에서는 amount가 제거되고 paid_amount가 추가됐지만, 이는 실패 시점 스냅샷은 아닙니다. 부분 run_results 누락은 없습니다.",
+    "evidence_ids": [
+      "live-00cf136913bcd8ce3df7",
+      "live-0e15ffbeb75b562c0529",
+      "live-33f6421aadd52c85623f"
+    ],
+    "missing_evidence": [],
+    "impact": [
+      "dbt_run 실패, dbt_test 및 publish_summary는 upstream_failed로 관측됨.",
+      "daily_orders와 두 테스트는 잠재적 하위 영향으로 확인됐으며, 개별 실패 상태로 확인된 것은 아닙니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "align_orders_schema",
+        "target_ref": {
+          "incident": {
+            "incident_id": "9cd5a75856c14236a7a9bd41acc53d8f",
+            "dag_id": "orders_demo",
+            "run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+            "task_id": "dbt_run",
+            "try_number": 1
+          },
+          "table_id": "raw.orders",
+          "connection_id": null,
+          "baseline_id": "orders-v1"
+        },
+        "kind": "schema_alignment",
+        "prerequisites": [
+          "amount와 paid_amount의 의도된 의미를 확인하고 기준 계약을 정합니다."
+        ],
+        "steps": [
+          "개발자가 생산자 계약을 검토합니다.",
+          "검토 결과에 따라 소스 매핑 또는 종속 모델 SQL을 조정하고, 매핑 결정을 기록하며 원본 데이터를 보존합니다."
+        ],
+        "verification": [
+          "새 실행에서 모든 작업 성공 및 not_null/unique 테스트 통과를 확인합니다.",
+          "daily_orders 집계를 점검합니다."
+        ],
+        "evidence_ids": [
+          "live-00cf136913bcd8ce3df7",
+          "live-0e15ffbeb75b562c0529",
+          "live-33f6421aadd52c85623f"
+        ],
+        "runbook_ids": [
+          "rb-schema"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 3,
+    "rag_calls": 1,
+    "tokens": 0,
+    "cost": 0.0,
+    "elapsed_seconds": 0.009634,
+    "api_calls": 0,
+    "local_cache_hits": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "price_date": "2026-10-20",
+    "cost_basis": "local_cache_or_no_request",
+    "uncertain_reserved_usd": 0.0
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "62b330b7dc692d468bce189821a0b06437065b9decfef9894e5a9c4e7238da0d",
+  "versions": {
+    "app": "0.1.0",
+    "model": "gpt-6-luna",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "lexical-v1"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "saved_evidence_replay_no_live_query",
+    "data": "replay_of_saved_collected_evidence",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

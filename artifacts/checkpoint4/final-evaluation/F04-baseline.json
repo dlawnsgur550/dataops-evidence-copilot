@@ -1,0 +1,231 @@
+{
+  "trace_id": "base-869f5d8ff81048e7b1dfef191efbe2a5",
+  "incident_ref": {
+    "incident_id": "inc-d91c20902679",
+    "dag_id": "orders_demo",
+    "run_id": "eval-d91c20902679",
+    "task_id": "dbt_test",
+    "try_number": 1
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-c575151910a54c",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d91c20902679",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d91c20902679",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "not_null_orders_order_id failed: 29 null rows"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-7f51f3744808a7",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1182,
+        "null_counts": {
+          "order_id": 29
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          }
+        ],
+        "truncated": true,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-8d71ee75716647",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d91c20902679",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d91c20902679",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-d91c20902679",
+        "manifest_invocation_id": "inv-d91c20902679",
+        "run_results_invocation_id": "inv-d91c20902679",
+        "issue": "not_null",
+        "column_id": "order_id",
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_order_id": "fail"
+        },
+        "message": "not_null_order_id failed with 29 offending rows"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "DATA_QUALITY",
+    "diagnosis_status": "supported",
+    "severity": "medium",
+    "cause": "실행 시점에 raw.orders의 order_id not_null 검사가 29개 NULL로 실패했습니다. 현재 프로파일에서도 NULL 29개가 관찰되지만, 이는 과거 실행 시점의 상태를 입증하지 않습니다.",
+    "evidence_ids": [
+      "e-c575151910a54c",
+      "e-8d71ee75716647",
+      "e-7f51f3744808a7"
+    ],
+    "missing_evidence": [
+      "run_results의 부분 누락 여부를 판단할 추가 정보가 없습니다."
+    ],
+    "impact": [
+      "dbt_test 실패로 publish_summary가 upstream_failed 상태입니다.",
+      "model.orders.daily_orders가 잠재적 하위 영향 대상으로 기록됐습니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "review-and-remediate-order-id-nulls",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "kind": "data_remediation",
+        "prerequisites": [
+          "원본 데이터를 보존하고 승인된 담당자가 NULL 발생 원인을 검토합니다."
+        ],
+        "steps": [
+          "담당자가 NULL 행의 출처와 적절한 정정 기준을 확인합니다.",
+          "승인된 기준에 따라 원천을 수정하고 영향 범위를 검토합니다. 임의의 대체값을 입력하지 않습니다."
+        ],
+        "verification": [
+          "수정 후 품질 프로파일과 not_null 검사를 다시 확인합니다.",
+          "검사 통과 후 하위 작업을 재실행하고 결과를 확인합니다."
+        ],
+        "evidence_ids": [
+          "e-c575151910a54c",
+          "e-8d71ee75716647",
+          "e-7f51f3744808a7"
+        ],
+        "runbook_ids": [
+          "rb-quality"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Deterministic validation only; no semantic reviewer in baseline."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "none-baseline-code-only"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 1,
+    "tool_calls": 0,
+    "rag_calls": 0,
+    "tokens": 1879,
+    "cost": 0.000188463,
+    "elapsed_seconds": 7.468114834045991,
+    "api_calls": 1,
+    "local_cache_hits": 0,
+    "input_tokens": 1500,
+    "output_tokens": 379,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "single_llm"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "c4bd1c69b159b1bd86e298a83fd8f2510065669aab2a736407b9bb5a29e0b246",
+  "versions": {
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "retrieval": "none-fixed-identifier-catalog"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "same_actual_rca_evidence_as_final",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

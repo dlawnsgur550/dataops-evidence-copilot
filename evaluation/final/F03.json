@@ -1,0 +1,184 @@
+{
+  "incident_ref": {
+    "incident_id": "inc-267bc1cb90ca",
+    "dag_id": "orders_demo",
+    "run_id": "eval-267bc1cb90ca",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-7576725fa664ac",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-be709ff13fd098",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": "archive-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "created_at": "timestamp",
+          "paid_unit_price": "numeric"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "unit_price": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "archive-v1",
+        "removed": [
+          "unit_price"
+        ],
+        "added": [
+          "paid_unit_price"
+        ],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-81008b6c6c262c",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-267bc1cb90ca",
+          "dag_id": "orders_demo",
+          "run_id": "eval-267bc1cb90ca",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-267bc1cb90ca",
+        "manifest_invocation_id": "inv-267bc1cb90ca",
+        "run_results_invocation_id": "inv-267bc1cb90ca",
+        "issue": "missing_column",
+        "column_id": "unit_price",
+        "table_id": "raw.orders_archive",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {},
+        "message": "Database Error in model stg_orders: column \"unit_price\" does not exist"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-c21e4f7e8d62e2",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 0
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [],
+        "truncated": false,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-e748f5852257ae",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-267bc1cb90ca",
+          "dag_id": "orders_demo",
+          "run_id": "eval-267bc1cb90ca",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "begin selected attempt",
+          "column \"unit_price\" does not exist in model stg_orders",
+          "attempt closed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders_archive",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "provenance": {
+    "source": "self-authored synthetic evidence",
+    "simulated": true,
+    "schema_version": 1
+  }
+}

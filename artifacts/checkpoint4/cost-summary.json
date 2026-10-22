@@ -1,0 +1,32 @@
+{
+  "requests": 83,
+  "spent_or_reserved_usd": 0.014109658,
+  "uncertain_requests": 0,
+  "lifetime_cap_usd": 0.05,
+  "daily_cap_usd": 0.02,
+  "diagnosis_cap_usd": 0.01,
+  "day_timezone": "Asia/Seoul",
+  "profile": "evaluation",
+  "daily_call_cap": 96,
+  "total_call_cap": 128,
+  "price_date": "2026-10-20",
+  "cost_basis": "provider_token_usage_price_estimate_not_account_invoice",
+  "tiers": [
+    {
+      "service_tier": "default",
+      "requests": 23,
+      "input_tokens": 47713,
+      "output_tokens": 3793,
+      "estimated_usd": 0.00761965
+    },
+    {
+      "service_tier": "flex",
+      "requests": 60,
+      "input_tokens": 67139,
+      "output_tokens": 9886,
+      "estimated_usd": 0.006490008
+    }
+  ],
+  "checkpoint3_prior_estimated_usd": 0.00264445,
+  "current_checkpoint_added_estimated_usd": 0.011465208
+}

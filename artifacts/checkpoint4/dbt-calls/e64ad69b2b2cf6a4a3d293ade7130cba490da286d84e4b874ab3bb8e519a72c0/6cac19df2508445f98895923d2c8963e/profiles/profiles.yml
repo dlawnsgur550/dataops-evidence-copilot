@@ -1,0 +1,14 @@
+orders_demo:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: host.docker.internal
+      port: 60857
+      user: dataops_builder
+      password: "{{ env_var('C_DBT_PASSWORD') }}"
+      dbname: dataops_c_cp2
+      schema: analytics
+      threads: 1
+      connect_timeout: 3
+      retries: 0

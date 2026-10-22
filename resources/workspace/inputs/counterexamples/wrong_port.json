@@ -1,0 +1,19 @@
+{
+  "scope": "deliberately injected synthetic counterexample; not an actual model response",
+  "proposal": {
+    "category": "CONNECTION_FAILURE",
+    "evidence_ids": [
+      "live-7e0b0c8a7b659de381ff",
+      "live-8262c67ab5ce70a1baab",
+      "live-ca7cd7e433b0f91c6389",
+      "live-7c922fcdf47a11893c02",
+      "live-fdcb17020639d447390b"
+    ],
+    "current_connection": "connected",
+    "artifact_coverage": "run_results_missing",
+    "config_error": "wrong_port",
+    "business_equivalence": "unknown",
+    "propose_action": true
+  },
+  "reviewer_findings": []
+}

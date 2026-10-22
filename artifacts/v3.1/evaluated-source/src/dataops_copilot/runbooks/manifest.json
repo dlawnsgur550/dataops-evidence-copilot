@@ -1,0 +1,74 @@
+[
+  {
+    "doc_id": "rb-schema",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-schema.md"
+  },
+  {
+    "doc_id": "rb-quality",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-quality.md"
+  },
+  {
+    "doc_id": "rb-connection",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-connection.md"
+  },
+  {
+    "doc_id": "rb-duplicate",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-duplicate.md"
+  },
+  {
+    "doc_id": "rb-auth",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-auth.md"
+  },
+  {
+    "doc_id": "rb-dns",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-dns.md"
+  },
+  {
+    "doc_id": "rb-stale",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-stale.md"
+  },
+  {
+    "doc_id": "rb-upstream",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-upstream.md"
+  },
+  {
+    "doc_id": "rb-insufficient",
+    "version": "2",
+    "kind": "runbook",
+    "path": "rb-insufficient.md"
+  },
+  {
+    "doc_id": "case-contract",
+    "version": "1",
+    "kind": "synthetic_history",
+    "path": "case-contract.md"
+  },
+  {
+    "doc_id": "case-key",
+    "version": "1",
+    "kind": "synthetic_history",
+    "path": "case-key.md"
+  },
+  {
+    "doc_id": "case-endpoint",
+    "version": "1",
+    "kind": "synthetic_history",
+    "path": "case-endpoint.md"
+  }
+]

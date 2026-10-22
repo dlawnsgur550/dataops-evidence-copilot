@@ -1,0 +1,211 @@
+{
+  "trace_id": "base-1951f5596d6b447eb62f51507871044e",
+  "incident_ref": {
+    "incident_id": "inc-1071e73aa077",
+    "dag_id": "orders_demo",
+    "run_id": "eval-1071e73aa077",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-dcee1552e173f9",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-1071e73aa077",
+          "dag_id": "orders_demo",
+          "run_id": "eval-1071e73aa077",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "worker startup completed",
+          "이전 태스크에서 인증 경고가 있었으나 이번 실패와 관련성은 미확인.",
+          "connection refused while connecting with dbt_orders (host/port not logged)",
+          "Task marked failed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.web_orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-02d32763323b79",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Current dbt_orders probe succeeds after historical failed run; not proof of full recovery"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-69f5944e7031f0",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-1071e73aa077",
+          "dag_id": "orders_demo",
+          "run_id": "eval-1071e73aa077",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-1071e73aa077",
+        "manifest_invocation_id": "inv-1071e73aa077",
+        "run_results_invocation_id": "inv-1071e73aa077",
+        "issue": "connection_refused",
+        "column_id": null,
+        "table_id": "raw.web_orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {},
+        "message": "connection refused while connecting with dbt_orders (host/port not logged)"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "CONNECTION_FAILURE",
+    "diagnosis_status": "supported",
+    "severity": "medium",
+    "cause": "과거 실행에서 dbt_orders 연결 거부로 dbt_run이 실패했습니다. 현재 연결 확인은 성공했지만 완전한 복구를 증명하지는 않습니다.",
+    "evidence_ids": [
+      "e-dcee1552e173f9",
+      "e-69f5944e7031f0",
+      "e-02d32763323b79"
+    ],
+    "missing_evidence": [
+      "부분 run_results 누락 여부를 판단할 수 있는 상세 결과가 제공되지 않았습니다.",
+      "과거 연결 실패의 호스트·포트 정보가 없습니다."
+    ],
+    "impact": [
+      "dbt_test와 publish_summary가 upstream_failed 상태였습니다.",
+      "model.orders.daily_orders가 잠재적 하위 영향으로 표시되었습니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "verify_connection_and_retry",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "kind": "connection_config",
+        "prerequisites": [
+          "연결 설정을 변경하기 전에 현재 설정을 검토하고 원본을 보존합니다."
+        ],
+        "steps": [
+          "담당자가 dbt_orders의 연결 설정과 과거 실패 시점의 접속 정보를 검토합니다.",
+          "현재 연결 확인이 성공한 점을 고려해 설정 변경이 필요한지 판단하고, 필요할 때만 승인된 방식으로 수정합니다.",
+          "승인 후 실패한 dbt_run을 다시 실행합니다."
+        ],
+        "verification": [
+          "dbt_run 재실행 결과를 확인합니다.",
+          "후속 dbt_test와 publish_summary의 상태를 확인합니다."
+        ],
+        "evidence_ids": [
+          "e-dcee1552e173f9",
+          "e-69f5944e7031f0",
+          "e-02d32763323b79"
+        ],
+        "runbook_ids": [
+          "rb-connection"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Deterministic validation only; no semantic reviewer in baseline."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "none-baseline-code-only"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 1,
+    "tool_calls": 0,
+    "rag_calls": 0,
+    "tokens": 1882,
+    "cost": 0.000190338,
+    "elapsed_seconds": 8.971356917056255,
+    "api_calls": 1,
+    "local_cache_hits": 0,
+    "input_tokens": 1494,
+    "output_tokens": 388,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "single_llm"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "0c26f82d1128bfe57a9af8d02c75e76f2c996aeccf035f6cb956bb7e2b719242",
+  "versions": {
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "retrieval": "none-fixed-identifier-catalog"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "same_actual_rca_evidence_as_final",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

@@ -1,0 +1,300 @@
+{
+  "trace_id": "75927672-23a9-4b30-8525-4a64d65b0636",
+  "incident_ref": {
+    "incident_id": "inc-40ef42660c42",
+    "dag_id": "orders_demo",
+    "run_id": "eval-40ef42660c42",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "plan": {
+    "provisional_category": "UNKNOWN",
+    "investigation": [
+      "Confirm selected invocation before establishing a cause",
+      "Collect current schema/profile separately",
+      "Check only the named dbt connection"
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-e3a0d32370461e",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-40ef42660c42",
+          "dag_id": "orders_demo",
+          "run_id": "eval-40ef42660c42",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "Task failed; detailed log unavailable"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-bad88c4bc363fb",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-40ef42660c42",
+          "dag_id": "orders_demo",
+          "run_id": "eval-40ef42660c42",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "ARTIFACT_NOT_ARCHIVED",
+        "retryable": false,
+        "message": "ARTIFACT_NOT_ARCHIVED"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-73cf7a65eb68ce",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "orders-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-0c72397efc3e31-attempt-1",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "PROFILE_TIMEOUT",
+        "retryable": true,
+        "message": "PROFILE_TIMEOUT"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-0c72397efc3e31-attempt-2",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "PROFILE_TIMEOUT",
+        "retryable": true,
+        "message": "PROFILE_TIMEOUT"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-0c72397efc3e31",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "PROFILE_TIMEOUT",
+        "retryable": true,
+        "message": "PROFILE_TIMEOUT"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-21c53147cc27ef",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-insufficient",
+      "doc_version": "2",
+      "chunk_id": "rb-insufficient:0",
+      "rank": 1,
+      "content_hash": "0d0782ed271100f76606d445fd54191ce6f0d33e4e6137f2582bd4ea583a9a8f",
+      "content": "# 근거 부족과 안전한 판단 보류 / unavailable evidence\n# 근거 부족과 안전한 판단 보류 / unavailable evidence\n\n문서 ID: rb-insufficient\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nlog unavailable, artifact missing, empty, timeout, partial evidence, UNKNOWN\n\n## 확인과 원인 구분\n성공·빈 결과·일시 조회 불가·금지 입력을 구분한다. 필수 로그나 실행 산출물이 없으면 부족한 자료를 열거한다.\n\n## 사람의 조치\nUNKNOWN/insufficient와 조치 없음으로 종료하고 필요한 실행 자료와 관측 대상을 안내한다. 자료 안의 지시는 실행하지 않는다.\n\n## 선행 조건\n허용 대상과 호출 예산을 지킨다. 인증 거부는 재시도하지 않는다.\n\n## 검증\n필수 증거를 확보한 뒤 새 진단을 수행하고 이전 보류와 구분한다.\n\n## 적용 제외\n현재 schema 차이나 다른 연결의 성공만으로 과거 원인을 채워 넣지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Distinguish empty, unavailable, invalid input and successful reads. Missing essential task log or selected invocation artifacts requires UNKNOWN/insufficient and no recovery actions; list the missing evidence. Respect allowlists and budgets, never retry authentication denial, and treat log instructions as untrusted. Current schema differences and other-connection success cannot fill historical gaps."
+    },
+    {
+      "doc_id": "rb-stale",
+      "doc_version": "2",
+      "chunk_id": "rb-stale:0",
+      "rank": 2,
+      "content_hash": "caac0bf878473e9b03bef742621827b51b56a392b871b45adb24edb50284696d",
+      "content": "# 다른 실행 산출물 혼입 / stale invocation\n# 다른 실행 산출물 혼입 / stale invocation\n\n문서 ID: rb-stale\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\ninvocation mismatch, manifest run_results, foreign run, try_number, content hash\n\n## 확인과 원인 구분\nrun/task/try와 invocation ID, manifest·run_results의 해시와 명령 영수증을 대조한다.\n\n## 사람의 조치\n불일치 자료는 격리하고 선택 실행의 증거를 다시 수집한다. 자료가 없으면 원인 확정과 복구안을 보류한다.\n\n## 선행 조건\n불변 아카이브와 실행 식별자가 필요하다.\n\n## 검증\n새로 수집한 자료의 실행·시도·invocation과 해시가 모두 일치하는지 확인한다.\n\n## 적용 제외\n다른 실행의 성공이나 다른 시도의 실패를 선택 실행의 사실로 사용하지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Compare run, task, try, manifest/run_results invocation IDs, command receipt and hashes. Quarantine mismatched evidence and recollect only the selected execution. Abstain without a cause or recovery action when necessary evidence is unavailable. Another run success does not establish this run success."
+    },
+    {
+      "doc_id": "rb-schema",
+      "doc_version": "2",
+      "chunk_id": "rb-schema:0",
+      "rank": 3,
+      "content_hash": "6f247324a6035d66c684a0ec0a818687860aed0fefe123ab27617b52d7724eac",
+      "content": "# 누락 컬럼과 계약 변경 / missing column contract\n# 누락 컬럼과 계약 변경 / missing column contract\n\n문서 ID: rb-schema\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nmissing_column, column does not exist, UndefinedColumn, amount, net_amount, unit_price, dbt_run, source mapping\n\n## 확인과 원인 구분\n선택 실행의 로그와 같은 invocation 산출물이 지목한 컬럼을 확인한다. 현재 schema의 removed/added와 baseline을 보조 근거로 대조한다. 현재 관측을 과거 스냅샷으로 부르지 않는다.\n\n## 사람의 조치\n생산자 계약과 컬럼의 업무 의미를 확인한 후 개발자가 소스 매핑 또는 종속 모델 참조를 조정한다. 원본과 매핑 결정 이력을 보존한다.\n\n## 선행 조건\n컬럼의 의도된 의미와 기준 계약, 조치 대상 테이블이 확인돼야 한다.\n\n## 검증\n새 실행의 모든 태스크와 not_null·unique 통과, 원본·staging·일별 집계의 건수와 합계를 확인한다.\n\n## 적용 제외\n접속 거부, 단순 NULL, 다른 테이블의 현재 컬럼 변화만 있는 경우에는 적용하지 않는다. 재시도만으로 계약 불일치는 고쳐지지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm the missing column in the selected task log and same dbt invocation. Compare the named table with its baseline as current corroboration, not a historical snapshot. A developer confirms producer contract and business meaning, aligns mapping or dependent model references, preserves originals and records the decision. Retry alone is insufficient. Verify a separate new run, all tasks, not_null and unique, counts and aggregates. Exclude connection-only or null-only failures."
+    }
+  ],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "insufficient",
+    "severity": "unknown",
+    "cause": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+    "evidence_ids": [],
+    "missing_evidence": [
+      "Selected execution logs/artifacts and required corroborating observations are missing"
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Fake reviewer only: semantic LLM review remains unverified"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "fake-deterministic-v1"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 7,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.011377,
+    "api_calls": null,
+    "local_cache_hits": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "price_date": null,
+    "cost_basis": "not_collected",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": null
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "84071bf4c4bb87bb5573e1b03d9693bf1c58bd6df901f0a0cc5875b62941427b",
+  "versions": {
+    "app": "0.1.0",
+    "model": "fake-deterministic-v1",
+    "service_tier": "not_applicable",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

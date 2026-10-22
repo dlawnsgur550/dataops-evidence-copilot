@@ -1,0 +1,27 @@
+{
+  "scope": "regenerated synthetic illustration CSVs, same seed/formula as live test; not archived DB dumps; not inputs directly accepted by the diagnosis API",
+  "seed": 42,
+  "datasets": [
+    {
+      "file": "inputs/data/orders_normal.csv",
+      "rows": 100000,
+      "null_order_ids": 0,
+      "amount_sum": "50025858.92",
+      "sha256": "6ab92b27f4455729314d7204d0c14b371288e3622b92ed3c7785a92ad93b3636"
+    },
+    {
+      "file": "inputs/data/orders_quality_null.csv",
+      "rows": 100000,
+      "null_order_ids": 3,
+      "amount_sum": "50025858.92",
+      "sha256": "8a05a551b23d4f45ad9ea9230f5d4596b749de079f8bbe0993392b0777289b38"
+    },
+    {
+      "file": "inputs/data/orders_schema_changed.csv",
+      "rows": 100000,
+      "null_order_ids": 0,
+      "amount_sum": "50025858.92",
+      "sha256": "0610b90a1f77252b1950d0aa4dc57f1dfb24c35bb3708596edeedb70b43f1194"
+    }
+  ]
+}

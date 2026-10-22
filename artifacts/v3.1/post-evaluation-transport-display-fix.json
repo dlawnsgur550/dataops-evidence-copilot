@@ -1,0 +1,22 @@
+{
+  "scope": "after paid targeted eval: explicit current MCP source, server version attestation, current live report display; inference schema/prompts/gates/collector logic unchanged",
+  "changes": [
+    {
+      "file": "src/dataops_copilot/mcp_client.py",
+      "evaluated_sha256": "42d5823f2ac39a53d46d697cc198854185ef67827f80f66135b4eb962d5bf43e",
+      "release_sha256": "3a072a396e09fc12bd215aa0fff8ff2ea659505384d0009d51d09ae6e916e253"
+    },
+    {
+      "file": "src/dataops_copilot/mcp_server.py",
+      "evaluated_sha256": "15f05afcd2d5625d3bdc3650ae0682e77e312f2d9968e01201d5f130b1fe20df",
+      "release_sha256": "5eb2007beaa633e5e8ae3814569b84fe7970c4ba59117f339fa45d241574dc07"
+    },
+    {
+      "file": "src/dataops_copilot/ui.py",
+      "evaluated_sha256": "1c5522a8bba1f630ca417bf52e5a37af37d9d3fa61950f3e661e451c21cb8909",
+      "release_sha256": "3f5b22b99881e2d54632630f4eb660e4d9497757b49526d4c703397ee634f42b"
+    }
+  ],
+  "inference_files_unchanged": true,
+  "rechecked": "164 free tests and fresh actual 100000-row MCP/live runs"
+}

@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "cases": [
+    {
+      "page": "COMPLETION.html",
+      "width": 320,
+      "no_overflow": true
+    },
+    {
+      "page": "COMPLETION.html",
+      "width": 390,
+      "no_overflow": true
+    },
+    {
+      "page": "COMPLETION.html",
+      "width": 768,
+      "no_overflow": true
+    },
+    {
+      "page": "COMPLETION.html",
+      "width": 1440,
+      "no_overflow": true
+    },
+    {
+      "page": "REVIEW.html",
+      "width": 320,
+      "no_overflow": true
+    },
+    {
+      "page": "REVIEW.html",
+      "width": 390,
+      "no_overflow": true
+    },
+    {
+      "page": "REVIEW.html",
+      "width": 768,
+      "no_overflow": true
+    },
+    {
+      "page": "REVIEW.html",
+      "width": 1440,
+      "no_overflow": true
+    }
+  ],
+  "page_errors": [],
+  "all_review_fields_initially_pending": true,
+  "missing_reviewer_export_blocked": true,
+  "human_review_performed": false,
+  "api_calls": 0
+}

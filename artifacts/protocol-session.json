@@ -1,0 +1,1358 @@
+{
+  "scope": "REAL MCP stdio protocol with synthetic backend; no Airflow/PostgreSQL",
+  "initialize": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": true
+      },
+      "completions": null,
+      "tasks": {
+        "list": {},
+        "cancel": {},
+        "requests": {
+          "tools": {
+            "call": {}
+          },
+          "prompts": {
+            "get": {}
+          },
+          "resources": {
+            "read": {}
+          }
+        }
+      }
+    },
+    "serverInfo": {
+      "name": "DataOps read-only synthetic evidence",
+      "title": null,
+      "version": "2.14.7",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": null
+  },
+  "tools_list": {
+    "meta": null,
+    "nextCursor": null,
+    "tools": [
+      {
+        "name": "get_task_context",
+        "title": null,
+        "description": "Read a selected demo task, <=200 log lines. No run: empty; disallowed input: invalid_input; I/O failure: unavailable. Synthetic backend.",
+        "inputSchema": {
+          "properties": {
+            "dag_id": {
+              "type": "string"
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "task_id": {
+              "type": "string"
+            },
+            "try_number": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dag_id",
+            "run_id",
+            "task_id",
+            "try_number"
+          ],
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "evidence_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "temporal_scope": {
+              "enum": [
+                "run_snapshot",
+                "current_observation",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            "target_ref": {
+              "properties": {
+                "incident": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "incident_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "dag_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "run_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "task_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "try_number": {
+                          "minimum": 1,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "incident_id",
+                        "dag_id",
+                        "run_id",
+                        "task_id",
+                        "try_number"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "table_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "connection_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "baseline_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "type": "object"
+            },
+            "status": {
+              "enum": [
+                "success",
+                "empty",
+                "unavailable",
+                "invalid_input"
+              ],
+              "type": "string"
+            },
+            "data": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "error": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "retryable": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "retryable",
+                    "message"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "simulated": {
+              "default": true,
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "kind",
+            "source",
+            "observed_at",
+            "temporal_scope",
+            "target_ref",
+            "status"
+          ],
+          "type": "object"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": {
+          "_fastmcp": {
+            "tags": []
+          }
+        },
+        "execution": null
+      },
+      {
+        "name": "get_dbt_artifacts",
+        "title": null,
+        "description": "Read invocation-bound demo manifest/results. Missing run: empty; absent archive: unavailable; disallowed target: invalid_input. Synthetic backend.",
+        "inputSchema": {
+          "properties": {
+            "dag_id": {
+              "type": "string"
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "task_id": {
+              "type": "string"
+            },
+            "try_number": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "dag_id",
+            "run_id",
+            "task_id",
+            "try_number"
+          ],
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "evidence_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "temporal_scope": {
+              "enum": [
+                "run_snapshot",
+                "current_observation",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            "target_ref": {
+              "properties": {
+                "incident": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "incident_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "dag_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "run_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "task_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "try_number": {
+                          "minimum": 1,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "incident_id",
+                        "dag_id",
+                        "run_id",
+                        "task_id",
+                        "try_number"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "table_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "connection_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "baseline_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "type": "object"
+            },
+            "status": {
+              "enum": [
+                "success",
+                "empty",
+                "unavailable",
+                "invalid_input"
+              ],
+              "type": "string"
+            },
+            "data": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "error": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "retryable": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "retryable",
+                    "message"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "simulated": {
+              "default": true,
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "kind",
+            "source",
+            "observed_at",
+            "temporal_scope",
+            "target_ref",
+            "status"
+          ],
+          "type": "object"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": {
+          "_fastmcp": {
+            "tags": []
+          }
+        },
+        "execution": null
+      },
+      {
+        "name": "compare_schema",
+        "title": null,
+        "description": "Compare current raw.orders with orders-v1 baseline; current is not historical. Other targets: invalid_input. Synthetic backend.",
+        "inputSchema": {
+          "properties": {
+            "table_id": {
+              "type": "string"
+            },
+            "baseline_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "table_id",
+            "baseline_id"
+          ],
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "evidence_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "temporal_scope": {
+              "enum": [
+                "run_snapshot",
+                "current_observation",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            "target_ref": {
+              "properties": {
+                "incident": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "incident_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "dag_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "run_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "task_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "try_number": {
+                          "minimum": 1,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "incident_id",
+                        "dag_id",
+                        "run_id",
+                        "task_id",
+                        "try_number"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "table_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "connection_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "baseline_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "type": "object"
+            },
+            "status": {
+              "enum": [
+                "success",
+                "empty",
+                "unavailable",
+                "invalid_input"
+              ],
+              "type": "string"
+            },
+            "data": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "error": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "retryable": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "retryable",
+                    "message"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "simulated": {
+              "default": true,
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "kind",
+            "source",
+            "observed_at",
+            "temporal_scope",
+            "target_ref",
+            "status"
+          ],
+          "type": "object"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": {
+          "_fastmcp": {
+            "tags": []
+          }
+        },
+        "execution": null
+      },
+      {
+        "name": "get_quality_profile",
+        "title": null,
+        "description": "Read raw.orders/order_id counts and <=5 samples now. Other targets: invalid_input; transient failure: unavailable. Synthetic backend.",
+        "inputSchema": {
+          "properties": {
+            "table_id": {
+              "type": "string"
+            },
+            "column_ids": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "table_id",
+            "column_ids"
+          ],
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "evidence_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "temporal_scope": {
+              "enum": [
+                "run_snapshot",
+                "current_observation",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            "target_ref": {
+              "properties": {
+                "incident": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "incident_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "dag_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "run_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "task_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "try_number": {
+                          "minimum": 1,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "incident_id",
+                        "dag_id",
+                        "run_id",
+                        "task_id",
+                        "try_number"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "table_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "connection_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "baseline_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "type": "object"
+            },
+            "status": {
+              "enum": [
+                "success",
+                "empty",
+                "unavailable",
+                "invalid_input"
+              ],
+              "type": "string"
+            },
+            "data": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "error": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "retryable": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "retryable",
+                    "message"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "simulated": {
+              "default": true,
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "kind",
+            "source",
+            "observed_at",
+            "temporal_scope",
+            "target_ref",
+            "status"
+          ],
+          "type": "object"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": {
+          "_fastmcp": {
+            "tags": []
+          }
+        },
+        "execution": null
+      },
+      {
+        "name": "check_connection",
+        "title": null,
+        "description": "Check only dbt_orders or mcp_readonly now. Success applies ONLY to this connection, never proves pipeline recovery. Other targets: invalid_input. Synthetic backend.",
+        "inputSchema": {
+          "properties": {
+            "connection_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "connection_id"
+          ],
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "evidence_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "temporal_scope": {
+              "enum": [
+                "run_snapshot",
+                "current_observation",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            "target_ref": {
+              "properties": {
+                "incident": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "incident_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "dag_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "run_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "task_id": {
+                          "minLength": 1,
+                          "type": "string"
+                        },
+                        "try_number": {
+                          "minimum": 1,
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "incident_id",
+                        "dag_id",
+                        "run_id",
+                        "task_id",
+                        "try_number"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "table_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "connection_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                },
+                "baseline_id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "type": "object"
+            },
+            "status": {
+              "enum": [
+                "success",
+                "empty",
+                "unavailable",
+                "invalid_input"
+              ],
+              "type": "string"
+            },
+            "data": {
+              "anyOf": [
+                {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "error": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "retryable": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "retryable",
+                    "message"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "simulated": {
+              "default": true,
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "kind",
+            "source",
+            "observed_at",
+            "temporal_scope",
+            "target_ref",
+            "status"
+          ],
+          "type": "object"
+        },
+        "icons": null,
+        "annotations": {
+          "title": null,
+          "readOnlyHint": true,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "meta": {
+          "_fastmcp": {
+            "tags": []
+          }
+        },
+        "execution": null
+      }
+    ]
+  },
+  "tools_call": [
+    {
+      "tool": "get_task_context",
+      "arguments": {
+        "dag_id": "orders_demo",
+        "run_id": "manual__2026-10-20T07:00:00Z",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "result": {
+        "evidence_id": "ev-80f9a89418177e0a",
+        "kind": "get_task_context",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.845553Z",
+        "temporal_scope": "run_snapshot",
+        "target_ref": {
+          "incident": {
+            "incident_id": "incident-001",
+            "dag_id": "orders_demo",
+            "run_id": "manual__2026-10-20T07:00:00Z",
+            "task_id": "dbt_run",
+            "try_number": 1
+          },
+          "table_id": null,
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "state": "failed",
+          "task_statuses": {
+            "load_demo_data": "success",
+            "dbt_run": "failed",
+            "dbt_test": "upstream_failed",
+            "publish_summary": "upstream_failed"
+          },
+          "log_lines": [
+            "connection refused while connecting with dbt_orders (host/port not logged)"
+          ],
+          "truncated": false,
+          "dbt_connection_id": "dbt_orders",
+          "table_id": "raw.orders",
+          "run_started_at": "2026-10-20T07:00:00Z",
+          "run_finished_at": "2026-10-20T07:01:00Z"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "get_dbt_artifacts",
+      "arguments": {
+        "dag_id": "orders_demo",
+        "run_id": "manual__2026-10-20T07:00:00Z",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "result": {
+        "evidence_id": "ev-e43a09d32db41dd6",
+        "kind": "get_dbt_artifacts",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.852579Z",
+        "temporal_scope": "run_snapshot",
+        "target_ref": {
+          "incident": {
+            "incident_id": "incident-001",
+            "dag_id": "orders_demo",
+            "run_id": "manual__2026-10-20T07:00:00Z",
+            "task_id": "dbt_run",
+            "try_number": 1
+          },
+          "table_id": null,
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "invocation_id": "dbt-invocation-001",
+          "manifest_invocation_id": "dbt-invocation-001",
+          "run_results_invocation_id": "dbt-invocation-001",
+          "issue": "connection_refused",
+          "column_id": null,
+          "table_id": "raw.orders",
+          "connection_id": "dbt_orders",
+          "failed_node": "model.orders.stg_orders",
+          "potential_downstream": [
+            "model.orders.daily_orders"
+          ],
+          "test_results": {},
+          "message": "connection refused while connecting with dbt_orders (host/port not logged)"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "compare_schema",
+      "arguments": {
+        "table_id": "raw.orders",
+        "baseline_id": "orders-v1"
+      },
+      "result": {
+        "evidence_id": "ev-2f5b0c620200557d",
+        "kind": "compare_schema",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.859000Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": null,
+          "baseline_id": "orders-v1"
+        },
+        "status": "success",
+        "data": {
+          "current_columns": {
+            "order_id": "integer",
+            "customer_id": "integer",
+            "amount": "numeric",
+            "created_at": "timestamp"
+          },
+          "baseline_columns": {
+            "order_id": "integer",
+            "customer_id": "integer",
+            "amount": "numeric",
+            "created_at": "timestamp"
+          },
+          "baseline_observed_at": "2026-10-19T07:00:00Z",
+          "baseline_id": "orders-v1",
+          "removed": [],
+          "added": [],
+          "type_changes": [],
+          "warning": "Current observation; not a historical run snapshot"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "get_quality_profile",
+      "arguments": {
+        "table_id": "raw.orders",
+        "column_ids": [
+          "order_id"
+        ]
+      },
+      "result": {
+        "evidence_id": "ev-d3f23dae93d3b8aa",
+        "kind": "get_quality_profile",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.865277Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "row_count": 1000,
+          "null_counts": {
+            "order_id": 0
+          },
+          "duplicate_counts": {
+            "order_id": 0
+          },
+          "samples": [],
+          "truncated": false,
+          "warning": "Current observation; not a historical run snapshot"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "check_connection",
+      "arguments": {
+        "connection_id": "dbt_orders"
+      },
+      "result": {
+        "evidence_id": "ev-83d68af2ff91c485",
+        "kind": "check_connection",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.871551Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "connected": false,
+          "error_type": "connection_refused",
+          "scope": "Only the named connection at observation time; not proof of recovery"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "check_connection",
+      "arguments": {
+        "connection_id": "mcp_readonly"
+      },
+      "result": {
+        "evidence_id": "ev-01ae1225c2ba7f3c",
+        "kind": "check_connection",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.877788Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "mcp_readonly",
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "connected": true,
+          "error_type": null,
+          "scope": "Only the named connection at observation time; not proof of recovery"
+        },
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "get_task_context",
+      "arguments": {
+        "dag_id": "orders_demo",
+        "run_id": "absent",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "result": {
+        "evidence_id": "ev-8bb8343c26e5dbc0",
+        "kind": "get_task_context",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.884041Z",
+        "temporal_scope": "run_snapshot",
+        "target_ref": {
+          "incident": {
+            "incident_id": "incident-001",
+            "dag_id": "orders_demo",
+            "run_id": "absent",
+            "task_id": "dbt_run",
+            "try_number": 1
+          },
+          "table_id": null,
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "status": "empty",
+        "data": null,
+        "error": null,
+        "simulated": true
+      }
+    },
+    {
+      "tool": "compare_schema",
+      "arguments": {
+        "table_id": "forbidden",
+        "baseline_id": "orders-v1"
+      },
+      "result": {
+        "evidence_id": "ev-aa5f75c888fad9f3",
+        "kind": "compare_schema",
+        "source": "fixture://synthetic-backend/v1",
+        "observed_at": "2026-10-20T07:50:58.890351Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": "forbidden",
+          "connection_id": null,
+          "baseline_id": "orders-v1"
+        },
+        "status": "invalid_input",
+        "data": null,
+        "error": {
+          "code": "TARGET_NOT_ALLOWED",
+          "retryable": false,
+          "message": "TARGET_NOT_ALLOWED"
+        },
+        "simulated": true
+      }
+    }
+  ],
+  "session_count": 1,
+  "session_context_closed": true
+}

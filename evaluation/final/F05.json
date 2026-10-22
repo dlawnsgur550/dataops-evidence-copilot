@@ -1,0 +1,199 @@
+{
+  "incident_ref": {
+    "incident_id": "inc-d135a57808dc",
+    "dag_id": "orders_demo",
+    "run_id": "eval-d135a57808dc",
+    "task_id": "dbt_test",
+    "try_number": 2
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-238ba0ad5dafa6",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-cad5ae7da63e7f",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.web_orders",
+        "connection_id": null,
+        "baseline_id": "web-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "web-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-62ac388212cb38",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d135a57808dc",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d135a57808dc",
+          "task_id": "dbt_test",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-d135a57808dc",
+        "manifest_invocation_id": "inv-d135a57808dc",
+        "run_results_invocation_id": "inv-d135a57808dc",
+        "issue": "not_null",
+        "column_id": "customer_id",
+        "table_id": "raw.web_orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_customer_id": "fail"
+        },
+        "message": "not_null_customer_id failed with 31 offending rows"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-ad783399cd551d",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.web_orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1195,
+        "null_counts": {
+          "customer_id": 31
+        },
+        "duplicate_counts": {
+          "customer_id": 0
+        },
+        "samples": [
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          }
+        ],
+        "truncated": true,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-72a0f06f29cda3",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d135a57808dc",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d135a57808dc",
+          "task_id": "dbt_test",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "worker startup completed",
+          "이전 태스크에서 인증 경고가 있었으나 이번 실패와 관련성은 미확인.",
+          "not_null_orders_customer_id failed: 31 null rows",
+          "Task marked failed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.web_orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "customer_id"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "provenance": {
+    "source": "self-authored synthetic evidence",
+    "simulated": true,
+    "schema_version": 1
+  }
+}

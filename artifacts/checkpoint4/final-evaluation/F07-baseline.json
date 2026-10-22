@@ -1,0 +1,207 @@
+{
+  "trace_id": "base-bc39cdfe50724a93a6e4513081f15fba",
+  "incident_ref": {
+    "incident_id": "inc-2586cb5534fe",
+    "dag_id": "orders_demo",
+    "run_id": "eval-2586cb5534fe",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-9f542a72555ab8",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-2586cb5534fe",
+          "dag_id": "orders_demo",
+          "run_id": "eval-2586cb5534fe",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "connection refused while connecting with dbt_orders (host/port not logged)"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-2ff03fb5aa3c01",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": false,
+        "error_type": "connection_refused",
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-a568b784440a19",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-2586cb5534fe",
+          "dag_id": "orders_demo",
+          "run_id": "eval-2586cb5534fe",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-2586cb5534fe",
+        "manifest_invocation_id": "inv-2586cb5534fe",
+        "run_results_invocation_id": "inv-2586cb5534fe",
+        "issue": "connection_refused",
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {},
+        "message": "connection refused while connecting with dbt_orders (host/port not logged)"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "CONNECTION_FAILURE",
+    "diagnosis_status": "supported",
+    "severity": "high",
+    "cause": "실행 당시 dbt_orders 연결 거부로 dbt_run이 실패했고, 현재 관찰에서도 연결 거부가 확인됩니다. 호스트와 포트 정보는 기록되지 않았습니다. run_results 세부 결과는 제공되지 않았습니다.",
+    "evidence_ids": [
+      "e-9f542a72555ab8",
+      "e-2ff03fb5aa3c01",
+      "e-a568b784440a19"
+    ],
+    "missing_evidence": [
+      "연결의 호스트·포트 및 설정",
+      "run_results 세부 결과"
+    ],
+    "impact": [
+      "dbt_test와 publish_summary가 상위 작업 실패로 표시되었습니다.",
+      "관련 downstream 모델 영향 가능성이 아티팩트에 기재되어 있으나 실행 결과는 확인되지 않았습니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "review-dbt-connection",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "kind": "connection_config",
+        "prerequisites": [
+          "연결 설정을 변경하기 전에 현재 설정을 보존하세요."
+        ],
+        "steps": [
+          "담당자가 dbt_orders의 연결 설정과 접근 대상 호스트·포트를 검토하세요.",
+          "설정이 올바른지 확인하고, 승인된 변경이 필요한 경우 담당자가 직접 수정하세요."
+        ],
+        "verification": [
+          "담당자가 연결을 다시 확인하고 결과를 기록하세요.",
+          "연결 확인 후 실패 작업을 재실행하고 후속 작업 결과를 검토하세요."
+        ],
+        "evidence_ids": [
+          "e-9f542a72555ab8",
+          "e-2ff03fb5aa3c01",
+          "e-a568b784440a19"
+        ],
+        "runbook_ids": [
+          "rb-connection"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Deterministic validation only; no semantic reviewer in baseline."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "none-baseline-code-only"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 1,
+    "tool_calls": 0,
+    "rag_calls": 0,
+    "tokens": 1865,
+    "cost": 0.000187588,
+    "elapsed_seconds": 7.815811082953587,
+    "api_calls": 1,
+    "local_cache_hits": 0,
+    "input_tokens": 1486,
+    "output_tokens": 379,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "single_llm"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "dd6812e90c5d39b277fc3338768fc7603fd67bcdf46db552b96a5499e5ceb479",
+  "versions": {
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "retrieval": "none-fixed-identifier-catalog"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "same_actual_rca_evidence_as_final",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

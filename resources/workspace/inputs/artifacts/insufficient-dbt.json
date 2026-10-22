@@ -1,0 +1,10 @@
+{
+  "status": "unavailable",
+  "data": null,
+  "error": {
+    "code": "ARTIFACT_NOT_ARCHIVED",
+    "retryable": false,
+    "message": "ARTIFACT_NOT_ARCHIVED"
+  },
+  "evidence_id": "e-6240801ff65a83"
+}

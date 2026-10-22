@@ -1,0 +1,61 @@
+{
+  "status": "success",
+  "data": {
+    "invocation_id": "80ee4da2-17ae-4236-bb41-d7e3e887218f",
+    "manifest_invocation_id": "80ee4da2-17ae-4236-bb41-d7e3e887218f",
+    "run_results_invocation_id": "80ee4da2-17ae-4236-bb41-d7e3e887218f",
+    "artifact_status": "complete",
+    "available_artifacts": [
+      "manifest",
+      "run_results"
+    ],
+    "command": "test",
+    "missing_artifacts": [],
+    "stdout_invocation_ids": [
+      "80ee4da2-17ae-4236-bb41-d7e3e887218f"
+    ],
+    "command_log_sha256": "c631cc2bf6a7c995cd4cff750b55973ad4cfab5228753b0cbb76b52986fa33cc",
+    "exit_code": 1,
+    "issue": "not_null",
+    "column_id": "order_id",
+    "table_id": "raw.orders",
+    "connection_id": "dbt_orders",
+    "results": [
+      {
+        "unique_id": "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+        "resource_type": "test",
+        "status": "fail",
+        "message": "Got 3 results, configured to fail if != 0",
+        "depends_on": [
+          "model.orders_demo.stg_orders"
+        ]
+      },
+      {
+        "unique_id": "test.orders_demo.unique_stg_orders_order_id.e3b841c71a",
+        "resource_type": "test",
+        "status": "pass",
+        "message": "",
+        "depends_on": [
+          "model.orders_demo.stg_orders"
+        ]
+      }
+    ],
+    "test_results": {
+      "not_null_order_id": "fail",
+      "unique_order_id": "pass"
+    },
+    "failed_node": "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+    "actual_failed": [
+      "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64"
+    ],
+    "potential_downstream": [],
+    "content_hashes": {
+      "manifest": "13ee2e2699da205bbfe346d8dd958ddcda2bb29ecf9050ce7d2e495b519c0657",
+      "run_results": "d7cb58330205936220995a805cad9d1b4e31d02a2bcaae3dd87cff9948413996"
+    },
+    "archived_at": "2026-10-22T00:40:02.896708+00:00",
+    "message": "Got 3 results, configured to fail if != 0\n"
+  },
+  "error": null,
+  "evidence_id": "live-56ba7d67f4b803ca73cb"
+}

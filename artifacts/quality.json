@@ -1,0 +1,308 @@
+{
+  "trace_id": "6e8de953-d47d-49ab-887f-89640820444c",
+  "incident_ref": {
+    "incident_id": "incident-001",
+    "dag_id": "orders_demo",
+    "run_id": "manual__2026-10-20T07:00:00Z",
+    "task_id": "dbt_test",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "DATA_QUALITY",
+    "investigation": [
+      "Confirm selected invocation before establishing a cause",
+      "Collect current schema/profile separately",
+      "Check only the named dbt connection"
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "ev-cc407c138da29634",
+      "kind": "get_task_context",
+      "source": "fixture://synthetic-backend/v1",
+      "observed_at": "2026-10-20T07:51:00.595998Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "incident-001",
+          "dag_id": "orders_demo",
+          "run_id": "manual__2026-10-20T07:00:00Z",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "not_null_orders_order_id failed: 3 null rows"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "ev-594f8b06b5d0fa04",
+      "kind": "get_dbt_artifacts",
+      "source": "fixture://synthetic-backend/v1",
+      "observed_at": "2026-10-20T07:51:00.603540Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "incident-001",
+          "dag_id": "orders_demo",
+          "run_id": "manual__2026-10-20T07:00:00Z",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "dbt-invocation-001",
+        "manifest_invocation_id": "dbt-invocation-001",
+        "run_results_invocation_id": "dbt-invocation-001",
+        "issue": "not_null",
+        "column_id": "order_id",
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_order_id": "fail"
+        },
+        "message": "not_null_orders_order_id failed: 3 null rows"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "ev-2f5b0c620200557d",
+      "kind": "compare_schema",
+      "source": "fixture://synthetic-backend/v1",
+      "observed_at": "2026-10-20T07:51:00.610028Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "orders-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "ev-d3f23dae93d3b8aa",
+      "kind": "get_quality_profile",
+      "source": "fixture://synthetic-backend/v1",
+      "observed_at": "2026-10-20T07:51:00.616491Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 3
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          },
+          {
+            "order_id": null
+          }
+        ],
+        "truncated": false,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "ev-83d68af2ff91c485",
+      "kind": "check_connection",
+      "source": "fixture://synthetic-backend/v1",
+      "observed_at": "2026-10-20T07:51:00.623043Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-schema",
+      "doc_version": "1",
+      "chunk_id": "rb-schema:whole",
+      "rank": 1,
+      "content_hash": "d08adabd38424def5d6a541f52a6af2ebd2972f3e5eb6e8a1a81c0613ef9b044",
+      "content": "# Schema contract mismatch — version 1 — 2026-10-20\nSymptoms: missing_column, column amount does not exist, stg_orders.\nConfirm: selected dbt invocation and task log name the missing column; compare current raw.orders with orders-v1 baseline. A current observation is not a snapshot of the failed execution.\nAction: a developer verifies the producer contract and aligns source mapping or dependent model SQL after review. Preserve source data and record the mapping decision.\nPrerequisite: confirm intended meaning of amount and paid_amount; establish which contract is authoritative.\nVerification: new execution has all tasks successful and not_null/unique tests passing; inspect daily_orders aggregate.\nExclude: connection refusal, unrelated current schema, and data-quality-only failures. A retry alone does not fix this mismatch.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-quality",
+      "doc_version": "1",
+      "chunk_id": "rb-quality:whole",
+      "rank": 2,
+      "content_hash": "9642f10da53b0c8ed050f0a1a9e9e928059f5d812aeeb7e40735ae0ebc0477f4",
+      "content": "# Null order key — version 1 — 2026-10-20\nSymptoms: not_null, order_id, null rows, dbt_test.\nConfirm: selected invocation records failing not_null_order_id; current raw.orders profile provides null_counts and limited samples. Do not treat current counts as past counts.\nAction: developer verifies source provenance, repairs the source mapping or quarantines invalid records according to the agreed policy, preserving originals.\nPrerequisite: confirm business key definition and approved remediation policy.\nVerification: separate new execution succeeds, not_null and unique both pass, reconciled counts and aggregates are checked.\nExclude: absent column or failed connectivity; a retry alone cannot repair bad data.\n",
+      "method": "lexical_overlap_checkpoint"
+    },
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "1",
+      "chunk_id": "rb-connection:whole",
+      "rank": 3,
+      "content_hash": "94ba485f3fbc3025a5c2215fe1c0637bb149648edfbcc1d0b8ffbcc61d24a0fe",
+      "content": "# dbt connection refused — version 1 — 2026-10-20\nSymptoms: connection_refused, connection refused, dbt_orders, dbt_run.\nConfirm: failed task log and selected dbt artifacts identify the failing connection. mcp_readonly success only confirms that separate connection.\nAction: developer checks dbt endpoint, service availability, routing and authentication using explicitly supplied configuration. Do not expose passwords. Correct a port only if endpoint evidence proves it is wrong.\nPrerequisite: establish the actual dbt execution configuration; do not infer an incorrect port from a generic refusal.\nVerification: successful new pipeline execution and passing not_null/unique checks; a successful connection probe alone does not prove recovery.\nExclude: schema and data-quality failures with functioning connectivity. Never claim a specific port from an absent log value.\n",
+      "method": "lexical_overlap_checkpoint"
+    }
+  ],
+  "diagnosis": {
+    "category": "DATA_QUALITY",
+    "diagnosis_status": "supported",
+    "severity": "high",
+    "cause": "선택 실행의 order_id not_null 검사가 실패했습니다. 현재 조회에서도 NULL 3건이 관측됐으며 과거 실행 건수와는 구분합니다.",
+    "evidence_ids": [
+      "ev-cc407c138da29634",
+      "ev-594f8b06b5d0fa04",
+      "ev-d3f23dae93d3b8aa"
+    ],
+    "missing_evidence": [],
+    "impact": [
+      "실행 상태상 publish_summary가 차단됐습니다.",
+      "manifest 의존관계상 daily_orders에 영향 가능성이 있으며 실제 모델 실패와는 구분합니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "action-001",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "kind": "data_remediation",
+        "prerequisites": [
+          "업무 키 정의와 정정 정책을 확인합니다."
+        ],
+        "steps": [
+          "원본을 보존한 뒤 승인된 정책에 따라 잘못된 주문 키를 수정하거나 격리합니다."
+        ],
+        "verification": [
+          "사람이 별도 새 실행을 수행하여 모든 태스크 성공과 not_null 및 unique 통과, 집계 정합성을 확인합니다."
+        ],
+        "evidence_ids": [
+          "ev-cc407c138da29634",
+          "ev-594f8b06b5d0fa04",
+          "ev-d3f23dae93d3b8aa"
+        ],
+        "runbook_ids": [
+          "rb-quality"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Fake reviewer only: semantic LLM review remains unverified"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "fake-deterministic-v1"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.038367
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "b83552dad2425b2cae73cbd34d8fd8418f327166ed37a89cd77677bd1b9bfb15",
+  "versions": {
+    "app": "0.1.0",
+    "model": "fake-deterministic-v1",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "lexical-v1"
+  },
+  "validation_scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "real_mcp_stdio_synthetic_backend",
+    "data": "synthetic_fixture_only",
+    "external_systems": "not_connected"
+  },
+  "recovered": null
+}

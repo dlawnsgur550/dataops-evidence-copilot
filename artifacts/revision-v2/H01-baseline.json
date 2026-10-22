@@ -1,0 +1,312 @@
+{
+  "trace_id": "base-6d7953face1c4bf7901c9b860ad740e9",
+  "incident_ref": {
+    "incident_id": "inc-1462acfd3f73",
+    "dag_id": "orders_demo",
+    "run_id": "eval-1462acfd3f73",
+    "task_id": "dbt_test",
+    "try_number": 2
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-5599c94f60b29a",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-d68a0f62f64c7c",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": "archive-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "archive-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-d36258259c5739",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-1462acfd3f73",
+          "dag_id": "orders_demo",
+          "run_id": "eval-1462acfd3f73",
+          "task_id": "dbt_test",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-1462acfd3f73",
+        "manifest_invocation_id": "inv-1462acfd3f73",
+        "run_results_invocation_id": "inv-1462acfd3f73",
+        "issue": "not_null",
+        "column_id": "customer_id",
+        "table_id": "raw.orders_archive",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_customer_id": "fail"
+        },
+        "message": "not_null_customer_id failed with 75 offending rows",
+        "artifact_status": "complete",
+        "available_artifacts": [
+          "manifest",
+          "run_results"
+        ],
+        "missing_artifacts": [],
+        "command": "test",
+        "exit_code": 1,
+        "stdout_invocation_ids": [
+          "inv-1462acfd3f73"
+        ],
+        "command_log_sha256": "1462acfd3f7301c9b686e161b7cc04262261b53d63d93d39e811b0157d2ef9cd"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-5a9f5d10c99b36",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1753,
+        "null_counts": {
+          "customer_id": 75
+        },
+        "duplicate_counts": {
+          "customer_id": 0
+        },
+        "samples": [
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          },
+          {
+            "customer_id": null
+          }
+        ],
+        "truncated": true,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-69c87ae7a54e16",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-1462acfd3f73",
+          "dag_id": "orders_demo",
+          "run_id": "eval-1462acfd3f73",
+          "task_id": "dbt_test",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "begin selected attempt",
+          "not_null_orders_customer_id failed: 75 null rows",
+          "attempt closed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders_archive",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "customer_id"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "DATA_QUALITY",
+    "diagnosis_status": "supported",
+    "severity": "medium",
+    "cause": "실행 기록에서 customer_id의 not_null 검사가 75개 null 행으로 실패했습니다. 현재 프로필에서도 null 75개가 관찰됐으나, 이는 과거 실행 시점의 상태를 입증하지 않습니다.",
+    "evidence_ids": [
+      "e-69c87ae7a54e16",
+      "e-d36258259c5739",
+      "e-5a9f5d10c99b36"
+    ],
+    "missing_evidence": [],
+    "impact": [
+      "dbt_test가 실패했고 publish_summary는 upstream_failed입니다.",
+      "현재 스키마 비교에서 변경은 관찰되지 않았고, 연결 점검은 해당 연결의 현재 성공만 보여 줍니다."
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "review_customer_id_nulls",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders_archive",
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "kind": "data_remediation",
+        "prerequisites": [
+          "원본 데이터를 보존하고, 영향 범위를 검토합니다."
+        ],
+        "steps": [
+          "사람이 null 행의 출처와 업무상 의미를 확인합니다.",
+          "승인된 규칙에 따라 원천 또는 변환 로직을 검토·수정합니다."
+        ],
+        "verification": [
+          "새 실행에서 not_null 검사를 수행하고 결과를 확인합니다. 이는 현재 통과 사실이 아닙니다.",
+          "새 실행 결과와 영향받는 후속 태스크를 확인합니다."
+        ],
+        "evidence_ids": [
+          "e-69c87ae7a54e16",
+          "e-d36258259c5739",
+          "e-5a9f5d10c99b36"
+        ],
+        "runbook_ids": [
+          "rb-quality"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Deterministic validation only; no semantic reviewer in baseline."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "none-baseline-code-only"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 1,
+    "tool_calls": 0,
+    "rag_calls": 0,
+    "tokens": 2544,
+    "cost": 0.000247275,
+    "elapsed_seconds": 9.580611041979864,
+    "api_calls": 1,
+    "local_cache_hits": 0,
+    "input_tokens": 2073,
+    "output_tokens": 471,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "single_llm"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "91d1184e7de1b6fb54c06b42c9244d8b4efa664299768be843510ee6ec77ba94",
+  "versions": {
+    "app": "0.2.0",
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "retrieval": "none-fixed-identifier-catalog"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "independent_full_frozen_bundle",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null,
+  "rejected_candidates": [],
+  "output_diagnostics": [
+    {
+      "role": "rca",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 1730,
+      "outcome": "validated"
+    }
+  ]
+}

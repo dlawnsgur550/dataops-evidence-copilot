@@ -1,0 +1,389 @@
+{
+  "trace_id": "c6081fba-51f0-4358-969d-dbcede49e0c1",
+  "incident_ref": {
+    "incident_id": "inc-7a16e8cdbd5c",
+    "dag_id": "orders_demo",
+    "run_id": "eval-7a16e8cdbd5c",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "CONNECTION_FAILURE",
+    "investigation": [
+      "dbt_run에서 dbt_orders 연결 시 연결 거부가 기록되었으나 호스트와 포트는 로그에 없습니다.",
+      "연결 대상과 접근 가능 여부를 확인하고, 실패 시각 전후의 연결 로그를 점검하세요.",
+      "dbt_test와 publish_summary는 upstream_failed 상태이므로 dbt_run 결과를 확인한 뒤 후속 작업을 재평가하세요."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-744940e07cce88",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-7a16e8cdbd5c",
+          "dag_id": "orders_demo",
+          "run_id": "eval-7a16e8cdbd5c",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "connection refused while connecting with dbt_orders (host/port not logged)"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.web_orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-52912ad13e73e3",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-7a16e8cdbd5c",
+          "dag_id": "orders_demo",
+          "run_id": "eval-7a16e8cdbd5c",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-7a16e8cdbd5c",
+        "manifest_invocation_id": "inv-7a16e8cdbd5c",
+        "run_results_invocation_id": null,
+        "issue": "connection_refused",
+        "column_id": null,
+        "table_id": "raw.web_orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {},
+        "message": "connection refused while connecting with dbt_orders (host/port not logged)",
+        "artifact_status": "partial",
+        "available_artifacts": [
+          "manifest"
+        ],
+        "missing_artifacts": [
+          "run_results"
+        ],
+        "command": "run",
+        "exit_code": 2,
+        "stdout_invocation_ids": [
+          "inv-7a16e8cdbd5c"
+        ],
+        "command_log_sha256": "7a16e8cdbd5c7098ed340d0a876fd8cdc680b1e6f1e785e828eedc67fa4d760a"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-7a9b5235c741b8",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.web_orders",
+        "connection_id": null,
+        "baseline_id": "web-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "web-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-b0db495b15fcf7",
+      "kind": "get_quality_profile",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.web_orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 0
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [],
+        "truncated": false,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-929c3f47f876d8",
+      "kind": "check_connection",
+      "source": "synthetic-evaluation://v2-new-smoke",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Current dbt_orders probe succeeds after historical failed run; not proof of full recovery"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "2",
+      "chunk_id": "rb-connection:0",
+      "rank": 1,
+      "content_hash": "46708c1494c355883792be62429a5bc25510fb86f27b3b98aa261f8ab07c58d5",
+      "content": "# dbt 실행 연결 거부 / connection refused\n# dbt 실행 연결 거부 / connection refused\n\n문서 ID: rb-connection\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nconnection_refused, connection refused, dbt_orders, dbt_run, endpoint, host, port\n\n## 확인과 원인 구분\n실패 실행의 로그와 해당 dbt invocation 자료에서 실제 연결 ID를 확인한다. partial manifest만 있으면 검증된 명령 영수증과 누락 run_results를 명시한다.\n\n## 사람의 조치\n개발자가 실제 dbt 실행 설정과 서비스 상태·경로를 점검하고 확인된 설정 오류를 바로잡는다. 비밀번호는 보고서에 넣지 않는다.\n\n## 선행 조건\n실패 프로세스가 사용한 연결 설정을 먼저 확인한다. 포트가 로그에 없으면 잘못된 포트를 확정하지 않는다.\n\n## 검증\n새 실행의 모든 태스크와 두 품질 검사, 집계가 통과해야 한다. 현재 probe 성공이나 mcp_readonly 접속 성공만으로 복구라고 부르지 않는다.\n\n## 적용 제외\n다른 연결의 접속 성공은 dbt_orders 성공이 아니다. 현재 연결 성공은 과거 실행 실패를 지우지 않는다. 인증 오류·DNS 오류는 별도 런북을 확인한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm dbt_orders connection refusal in selected-run log and matching dbt invocation. A verified partial manifest receipt can support refusal, but disclose missing run_results. Inspect actual execution endpoint and service configuration; never print credentials or infer a wrong port without evidence. Another connection success, or a current successful probe, does not prove historical recovery. A developer corrects confirmed configuration problems. Verify a new full pipeline run, both tests and aggregates."
+    },
+    {
+      "doc_id": "rb-dns",
+      "doc_version": "2",
+      "chunk_id": "rb-dns:0",
+      "rank": 2,
+      "content_hash": "701b5694f154c3622493d7681f31b48b932bf2639127f6614e0093c662bc3b35",
+      "content": "# 호스트 이름 해석 실패 / DNS\n# 호스트 이름 해석 실패 / DNS\n\n문서 ID: rb-dns\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\ncould not translate host name, name resolution, NXDOMAIN, DNS, dbt_orders\n\n## 확인과 원인 구분\n실패 로그의 실제 호스트 이름과 이름 해석 오류를 확인하고 실행 환경의 resolver 설정을 대조한다.\n\n## 사람의 조치\n개발자가 호스트 이름과 네트워크·resolver 구성을 검토한다. 확인된 오타 또는 DNS 설정을 승인 후 정정한다.\n\n## 선행 조건\n실제 프로세스가 사용한 호스트와 DNS 오류 증거가 필요하다.\n\n## 검증\n이름 해석과 해당 대상 연결, 새 파이프라인 실행·품질 검사를 확인한다.\n\n## 적용 제외\n연결 거부만으로 DNS 장애를 확정하지 않는다. IP가 같다는 추측으로 다른 연결 성공을 차용하지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm host-name resolution errors and the actual execution host/resolver. A developer checks configured host spelling and DNS/network configuration, then corrects only confirmed settings. Verify resolution, named connection and a full new run. Generic connection refusal does not establish DNS failure."
+    },
+    {
+      "doc_id": "rb-auth",
+      "doc_version": "2",
+      "chunk_id": "rb-auth:0",
+      "rank": 3,
+      "content_hash": "ae43f3dce0db42549a3e0f3792a2c896580d7e11267f405332b11997425be988",
+      "content": "# 인증·권한 거부 / authentication permission denied\n# 인증·권한 거부 / authentication permission denied\n\n문서 ID: rb-auth\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\npassword authentication failed, 28P01, 42501, permission denied, role, grant\n\n## 확인과 원인 구분\n실패한 실제 역할과 DB의 인증·권한 오류 코드를 확인한다. 연결 거부와 구분한다. 비밀번호 값을 수집하거나 출력하지 않는다.\n\n## 사람의 조치\n관리자가 최소 권한과 자격 유효성을 확인하고 승인된 경로로 접근 설정을 정정한다. 에이전트는 권한을 부여하지 않는다.\n\n## 선행 조건\n정확한 실행 계정과 대상, 승인된 자격 관리 담당자가 확인돼야 한다.\n\n## 검증\n같은 역할·같은 대상의 새 실행과 품질 검사 통과를 확인한다.\n\n## 적용 제외\nconnection refused는 인증 전 연결 실패일 수 있으므로 비밀번호 오류로 단정하지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm actual execution role, target and authentication or privilege code such as 28P01 or 42501. Do not expose passwords. An authorized administrator checks credential validity and minimum privileges. Verify same-role same-target access and a new pipeline run. Connection refused alone is not evidence of a bad password."
+    }
+  ],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "insufficient",
+    "severity": "unknown",
+    "cause": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+    "evidence_ids": [],
+    "missing_evidence": [
+      "Review rejected: SEMANTIC_REVIEW_REJECTED"
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": false,
+    "violations": [
+      "SEMANTIC_REVIEW_REJECTED"
+    ],
+    "feedback": [
+      "현재 성공한 연결 프로브와 기록된 연결 거부만으로 확인된 설정 문제가 있다고 전제해 수정 절차를 제시할 수 없습니다.",
+      "실제 엔드포인트·설정을 확인한 뒤 문제를 확인한 경우에만 수정하도록 조치 조건을 명확히 하세요."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": 6352,
+    "cost": 0.000490763,
+    "elapsed_seconds": 38.454149,
+    "api_calls": 4,
+    "local_cache_hits": 0,
+    "input_tokens": 5771,
+    "output_tokens": 581,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "e06215465bfd4cd7580e008b7901f215acef507d60b285571692fb88fc98af6d",
+  "versions": {
+    "app": "0.2.0",
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "prompt_sha256": "3e8d8992fc3f89e3142b42c0b491a7174df52a05aeca31daf302a3cb87967e1f",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null,
+  "rejected_candidates": [
+    {
+      "diagnosis": {
+        "category": "CONNECTION_FAILURE",
+        "diagnosis_status": "supported",
+        "severity": "medium",
+        "cause": "dbt_run 실행 기록에서 dbt_orders 접속 거부가 확인됩니다. 호스트와 포트는 기록되지 않아 잘못된 포트를 원인으로 단정할 수 없습니다. run_results 누락은 검증된 산출물에서 확인됩니다. 현재 연결 프로브 성공은 과거 실패의 복구를 증명하지 않습니다.",
+        "evidence_ids": [
+          "e-744940e07cce88",
+          "e-52912ad13e73e3"
+        ],
+        "missing_evidence": [],
+        "impact": [
+          "dbt_test와 publish_summary는 upstream_failed 상태입니다.",
+          "model.orders.daily_orders는 잠재적 영향 대상으로 표시되었으며, 실패가 관측된 것은 아닙니다."
+        ],
+        "recovery_actions": [
+          {
+            "action_id": "ra-1",
+            "target_ref": {
+              "incident": null,
+              "table_id": "raw.web_orders",
+              "connection_id": "dbt_orders",
+              "baseline_id": null
+            },
+            "kind": "connection_config",
+            "prerequisites": [
+              "개발자가 실제 실행 엔드포인트와 서비스 설정을 확인합니다.",
+              "자격 증명을 출력하거나 공유하지 않습니다."
+            ],
+            "steps": [
+              "확인된 실행 엔드포인트와 dbt_orders 설정을 대조합니다.",
+              "확인된 설정 문제만 개발자가 수정합니다."
+            ],
+            "verification": [
+              "새 전체 파이프라인 실행에서 모든 태스크와 두 검사가 통과하는지 확인합니다.",
+              "집계 결과를 검토합니다. 이는 향후 검증 제안입니다."
+            ],
+            "evidence_ids": [
+              "e-744940e07cce88",
+              "e-52912ad13e73e3"
+            ],
+            "runbook_ids": [
+              "rb-connection"
+            ],
+            "execution_mode": "human_only_text"
+          }
+        ]
+      },
+      "review": {
+        "accepted": false,
+        "violations": [
+          "SEMANTIC_REVIEW_REJECTED"
+        ],
+        "feedback": [
+          "현재 성공한 연결 프로브와 기록된 연결 거부만으로 확인된 설정 문제가 있다고 전제해 수정 절차를 제시할 수 없습니다.",
+          "실제 엔드포인트·설정을 확인한 뒤 문제를 확인한 경우에만 수정하도록 조치 조건을 명확히 하세요."
+        ],
+        "revision_count": 0,
+        "semantic_reviewer": "gpt-6-luna"
+      },
+      "revision_count": 0
+    }
+  ],
+  "output_diagnostics": [
+    {
+      "role": "triage",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 433,
+      "outcome": "validated"
+    },
+    {
+      "role": "inspector",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 89,
+      "outcome": "validated"
+    },
+    {
+      "role": "rca",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 1508,
+      "outcome": "validated"
+    },
+    {
+      "role": "reviewer",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 332,
+      "outcome": "validated"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "split": "dev",
+  "model": "gpt-6-luna",
+  "service_tier": "flex",
+  "freeze_id": null,
+  "cases": [
+    {
+      "case_id": "D01",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-insufficient:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "case-contract:0",
+          "rb-dns:0",
+          "case-endpoint:0",
+          "case-key:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-connection"
+        ],
+        "query_sha256": "bdd8c0914403c9f6c5bf898575ac64d01e4fa05765dbe348990585773fd28abc"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 5115,
+        "cost": 0.000404888,
+        "elapsed_seconds": 16.411023,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4590,
+        "output_tokens": 525,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "SCHEMA_CHANGE",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1988,
+        "cost": 0.000205588,
+        "elapsed_seconds": 13.640474667074159,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1554,
+        "output_tokens": 434,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "SCHEMA_CHANGE",
+      "baseline_errors": []
+    }
+  ],
+  "scope": "synthetic fixed evidence replay; gold read only by scorer; no live system queries",
+  "baseline": "one model call, same actually collected evidence, empty fixed identifier catalog, no retrieved text"
+}

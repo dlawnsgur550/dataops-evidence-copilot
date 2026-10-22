@@ -1,0 +1,7 @@
+{
+  "scope": "hypothetical contract example, not approved business policy",
+  "approved": false,
+  "amount_vs_paid_amount": "unknown",
+  "decision_if_equivalent": "담당자가 계약을 확인하고 매핑 수정 검토",
+  "decision_if_different_or_unknown": "자동 치환하지 않고 확인까지 유지"
+}

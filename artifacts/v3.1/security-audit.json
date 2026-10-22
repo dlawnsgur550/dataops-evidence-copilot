@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "real_secret_leaks": 0,
+  "known_secret_values_checked": 6,
+  "prior_archives_preserved": 4,
+  "evaluated_sources_verified": [
+    {
+      "source_copy": "artifacts/v3/evaluated-source",
+      "verified_files": 568
+    },
+    {
+      "source_copy": "artifacts/v3.1/evaluated-source",
+      "verified_files": 55
+    }
+  ],
+  "api_key_file_mode": "0600",
+  "runtime_directory_mode": "0700",
+  "api_key_not_visible_in_container": true,
+  "openai_env_not_in_container": true,
+  "whole_workspace_not_mounted": true,
+  "ledger": {
+    "requests": 128,
+    "spent_or_reserved_usd": 0.02068938,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "additional_estimated_usd": 0.005097009,
+  "presentation_files_in_archive": 0
+}

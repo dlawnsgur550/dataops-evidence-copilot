@@ -1,0 +1,8 @@
+name: orders_demo
+version: '1.0'
+config-version: 2
+profile: orders_demo
+model-paths: [models]
+models:
+  orders_demo:
+    +materialized: table

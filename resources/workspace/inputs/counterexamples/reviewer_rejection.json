@@ -1,0 +1,29 @@
+{
+  "scope": "deliberately injected synthetic counterexample; not an actual model response",
+  "proposal": {
+    "category": "CONNECTION_FAILURE",
+    "evidence_ids": [
+      "live-7e0b0c8a7b659de381ff",
+      "live-8262c67ab5ce70a1baab",
+      "live-ca7cd7e433b0f91c6389",
+      "live-7c922fcdf47a11893c02",
+      "live-fdcb17020639d447390b"
+    ],
+    "current_connection": "connected",
+    "artifact_coverage": "run_results_missing",
+    "config_error": "unknown",
+    "business_equivalence": "unknown",
+    "propose_action": true
+  },
+  "reviewer_findings": [
+    {
+      "finding": {
+        "component": "actions",
+        "rule_id": "R06",
+        "claim_id": "propose_action"
+      },
+      "status": "unsubstantiated",
+      "reason": "실행 가능한 규칙과 근거로 반례를 검증합니다. 설명 없는 거절은 원인 판정을 덮어쓰지 않습니다."
+    }
+  ]
+}

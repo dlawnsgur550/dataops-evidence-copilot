@@ -1,0 +1,1455 @@
+{
+  "started_at": "2026-10-20T08:13:28.403962+00:00",
+  "scope": {
+    "airflow": "actual_local_2.10.4",
+    "postgres": "actual_local_17.10",
+    "dbt": "actual_local_1.9.10_postgres_1.9.1",
+    "llm": "fake-deterministic-v1"
+  },
+  "runs": [
+    {
+      "mode_developer_only": "normal",
+      "run_id": "manual__81c40d510c2e4205922c485043b83e4f",
+      "state": "success",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "success",
+        "publish_summary": "success"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 1
+      }
+    },
+    {
+      "mode_developer_only": "schema",
+      "run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+      "state": "failed",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "failed",
+        "dbt_test": "upstream_failed",
+        "publish_summary": "upstream_failed"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 0,
+        "publish_summary": 0
+      }
+    },
+    {
+      "mode_developer_only": "verify",
+      "run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+      "state": "success",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "success",
+        "publish_summary": "success"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 1
+      }
+    },
+    {
+      "mode_developer_only": "quality",
+      "run_id": "manual__54f708a5458e41008c2da535d1cf9235",
+      "state": "failed",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "failed",
+        "publish_summary": "upstream_failed"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 0
+      }
+    },
+    {
+      "mode_developer_only": "verify",
+      "run_id": "manual__ca4ecf2585b44a378e9655f4bf6aefd1",
+      "state": "success",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "success",
+        "publish_summary": "success"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 1
+      }
+    },
+    {
+      "mode_developer_only": "connection",
+      "run_id": "manual__4495fb5d971649aaa77bc394a6060f78",
+      "state": "failed",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "failed",
+        "dbt_test": "upstream_failed",
+        "publish_summary": "upstream_failed"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 0,
+        "publish_summary": 0
+      }
+    },
+    {
+      "mode_developer_only": "verify",
+      "run_id": "manual__ce754c273ea54579a973e6393a9756c3",
+      "state": "success",
+      "task_statuses": {
+        "load_demo_data": "success",
+        "dbt_run": "success",
+        "dbt_test": "success",
+        "publish_summary": "success"
+      },
+      "tries": {
+        "load_demo_data": 1,
+        "dbt_run": 1,
+        "dbt_test": 1,
+        "publish_summary": 1
+      }
+    }
+  ],
+  "recoveries": [
+    {
+      "case_developer_only": "schema",
+      "original_run_id": "manual__03aaec2bcadb4f1a8c15072d6322b918",
+      "followup_run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+      "action": {
+        "developer_action": "schema",
+        "performed_at": "2026-10-20T08:13:48.360592+00:00",
+        "performed_by": "authorized_developer_script",
+        "agent_executed": false
+      },
+      "recovery_check": {
+        "original_incident_id": "9cd5a75856c14236a7a9bd41acc53d8f",
+        "followup_run_id": "manual__9a8c4c9f0c5d43c08398b895c863c4df",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "quality_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "recovered": true
+      },
+      "aggregate": {
+        "raw_count": 1000,
+        "raw_sum": "502360.39",
+        "stage_count": 1000,
+        "stage_sum": "502360.39",
+        "daily_count": 1000,
+        "daily_sum": "502360.39",
+        "nulls": 0,
+        "duplicates": 0,
+        "matched": true
+      }
+    },
+    {
+      "case_developer_only": "quality",
+      "original_run_id": "manual__54f708a5458e41008c2da535d1cf9235",
+      "followup_run_id": "manual__ca4ecf2585b44a378e9655f4bf6aefd1",
+      "action": {
+        "developer_action": "quality",
+        "performed_at": "2026-10-20T08:14:08.622702+00:00",
+        "performed_by": "authorized_developer_script",
+        "agent_executed": false
+      },
+      "recovery_check": {
+        "original_incident_id": "fd4f03b0d0b7464f8137f96720d26ee3",
+        "followup_run_id": "manual__ca4ecf2585b44a378e9655f4bf6aefd1",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "quality_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "recovered": true
+      },
+      "aggregate": {
+        "raw_count": 1000,
+        "raw_sum": "502360.39",
+        "stage_count": 1000,
+        "stage_sum": "502360.39",
+        "daily_count": 1000,
+        "daily_sum": "502360.39",
+        "nulls": 0,
+        "duplicates": 0,
+        "matched": true
+      }
+    },
+    {
+      "case_developer_only": "connection",
+      "original_run_id": "manual__4495fb5d971649aaa77bc394a6060f78",
+      "followup_run_id": "manual__ce754c273ea54579a973e6393a9756c3",
+      "action": {
+        "developer_action": "connection",
+        "performed_at": "2026-10-20T08:14:25.541116+00:00",
+        "performed_by": "authorized_developer_script",
+        "agent_executed": false
+      },
+      "recovery_check": {
+        "original_incident_id": "f7e36a712a364498a114393adcda9422",
+        "followup_run_id": "manual__ce754c273ea54579a973e6393a9756c3",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "quality_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "recovered": true
+      },
+      "aggregate": {
+        "raw_count": 1000,
+        "raw_sum": "502360.39",
+        "stage_count": 1000,
+        "stage_sum": "502360.39",
+        "daily_count": 1000,
+        "daily_sum": "502360.39",
+        "nulls": 0,
+        "duplicates": 0,
+        "matched": true
+      }
+    }
+  ],
+  "checks": {
+    "normal_aggregate": {
+      "raw_count": 1000,
+      "raw_sum": "502360.39",
+      "stage_count": 1000,
+      "stage_sum": "502360.39",
+      "daily_count": 1000,
+      "daily_sum": "502360.39",
+      "nulls": 0,
+      "duplicates": 0,
+      "matched": true
+    },
+    "different_connection": {
+      "observer": {
+        "evidence_id": "live-eb31acd3e1e115a3b7e8",
+        "kind": "check_connection",
+        "source": "live://postgres/read-only",
+        "observed_at": "2026-10-20T08:14:25.529207Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "mcp_readonly",
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "connected": true,
+          "error_type": null,
+          "endpoint": {
+            "host": "127.0.0.1",
+            "port": 15439
+          },
+          "probe_role": "read_only_observer",
+          "scope": "Only this named endpoint now; not proof of failed dbt process configuration or pipeline recovery"
+        },
+        "error": null,
+        "simulated": false
+      },
+      "dbt_endpoint": {
+        "evidence_id": "live-b15b3639ca3135a2b632",
+        "kind": "check_connection",
+        "source": "live://postgres/read-only",
+        "observed_at": "2026-10-20T08:14:25.507018Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": null,
+          "connection_id": "dbt_orders",
+          "baseline_id": null
+        },
+        "status": "success",
+        "data": {
+          "connected": false,
+          "error_type": "connection_refused",
+          "endpoint": {
+            "host": "127.0.0.1",
+            "port": 59458
+          },
+          "probe_role": "read_only_observer",
+          "scope": "Only this named endpoint now; not proof of failed dbt process configuration or pipeline recovery"
+        },
+        "error": null,
+        "simulated": false
+      },
+      "diagnosis": "CONNECTION_FAILURE"
+    },
+    "negative_tool_statuses": [
+      {
+        "evidence_id": "live-3f4205c4aff31a48acd1",
+        "kind": "compare_schema",
+        "source": "live://postgres/read-only",
+        "observed_at": "2026-10-20T08:14:36.703118Z",
+        "temporal_scope": "current_observation",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders; DROP TABLE x",
+          "connection_id": null,
+          "baseline_id": "orders-v1"
+        },
+        "status": "invalid_input",
+        "data": null,
+        "error": {
+          "code": "TARGET_NOT_ALLOWED",
+          "retryable": false,
+          "message": "TARGET_NOT_ALLOWED"
+        },
+        "simulated": false
+      },
+      {
+        "evidence_id": "live-f72268b63ec5f14d8211",
+        "kind": "get_task_context",
+        "source": "live://airflow/2.10.4/api/v1",
+        "observed_at": "2026-10-20T08:14:36.761376Z",
+        "temporal_scope": "run_snapshot",
+        "target_ref": {
+          "incident": {
+            "incident_id": "selected-live-incident",
+            "dag_id": "orders_demo",
+            "run_id": "absent",
+            "task_id": "dbt_run",
+            "try_number": 1
+          },
+          "table_id": null,
+          "connection_id": null,
+          "baseline_id": null
+        },
+        "status": "empty",
+        "data": null,
+        "error": null,
+        "simulated": false
+      }
+    ],
+    "postgres_write_denied": [
+      {
+        "sql_kind": "INSERT",
+        "sqlstate": "42501",
+        "denied": true
+      },
+      {
+        "sql_kind": "UPDATE",
+        "sqlstate": "42501",
+        "denied": true
+      },
+      {
+        "sql_kind": "CREATE",
+        "sqlstate": "42501",
+        "denied": true
+      }
+    ],
+    "airflow_viewer_write_denied": 403,
+    "aggregate_after_denied_writes": {
+      "raw_count": 1000,
+      "raw_sum": "502360.39",
+      "stage_count": 1000,
+      "stage_sum": "502360.39",
+      "daily_count": 1000,
+      "daily_sum": "502360.39",
+      "nulls": 0,
+      "duplicates": 0,
+      "matched": true
+    }
+  },
+  "success": true,
+  "protocol": {
+    "initialize": {
+      "meta": null,
+      "protocolVersion": "2025-11-25",
+      "capabilities": {
+        "experimental": {},
+        "logging": null,
+        "prompts": {
+          "listChanged": false
+        },
+        "resources": {
+          "subscribe": false,
+          "listChanged": false
+        },
+        "tools": {
+          "listChanged": true
+        },
+        "completions": null,
+        "tasks": {
+          "list": {},
+          "cancel": {},
+          "requests": {
+            "tools": {
+              "call": {}
+            },
+            "prompts": {
+              "get": {}
+            },
+            "resources": {
+              "read": {}
+            }
+          }
+        }
+      },
+      "serverInfo": {
+        "name": "DataOps read-only synthetic evidence",
+        "title": null,
+        "version": "2.14.7",
+        "websiteUrl": null,
+        "icons": null
+      },
+      "instructions": null
+    },
+    "tools": {
+      "meta": null,
+      "nextCursor": null,
+      "tools": [
+        {
+          "name": "get_task_context",
+          "title": null,
+          "description": "Read a selected demo task, <=200 log lines. No run: empty; disallowed input: invalid_input; I/O failure: unavailable. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "dag_id": {
+                "type": "string"
+              },
+              "run_id": {
+                "type": "string"
+              },
+              "task_id": {
+                "type": "string"
+              },
+              "try_number": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "dag_id",
+              "run_id",
+              "task_id",
+              "try_number"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "get_dbt_artifacts",
+          "title": null,
+          "description": "Read invocation-bound demo manifest/results. Missing run: empty; absent archive: unavailable; disallowed target: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "dag_id": {
+                "type": "string"
+              },
+              "run_id": {
+                "type": "string"
+              },
+              "task_id": {
+                "type": "string"
+              },
+              "try_number": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "dag_id",
+              "run_id",
+              "task_id",
+              "try_number"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "compare_schema",
+          "title": null,
+          "description": "Compare current raw.orders with orders-v1 baseline; current is not historical. Other targets: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "table_id": {
+                "type": "string"
+              },
+              "baseline_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "table_id",
+              "baseline_id"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "get_quality_profile",
+          "title": null,
+          "description": "Read raw.orders/order_id counts and <=5 samples now. Other targets: invalid_input; transient failure: unavailable. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "table_id": {
+                "type": "string"
+              },
+              "column_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "table_id",
+              "column_ids"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        },
+        {
+          "name": "check_connection",
+          "title": null,
+          "description": "Check only dbt_orders or mcp_readonly now. Success applies ONLY to this connection, never proves pipeline recovery. Other targets: invalid_input. Synthetic backend.",
+          "inputSchema": {
+            "properties": {
+              "connection_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "connection_id"
+            ],
+            "type": "object"
+          },
+          "outputSchema": {
+            "properties": {
+              "evidence_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "observed_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "temporal_scope": {
+                "enum": [
+                  "run_snapshot",
+                  "current_observation",
+                  "baseline"
+                ],
+                "type": "string"
+              },
+              "target_ref": {
+                "properties": {
+                  "incident": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "incident_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "dag_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "run_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "task_id": {
+                            "minLength": 1,
+                            "type": "string"
+                          },
+                          "try_number": {
+                            "minimum": 1,
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "incident_id",
+                          "dag_id",
+                          "run_id",
+                          "task_id",
+                          "try_number"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "table_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "connection_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  },
+                  "baseline_id": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "default": null
+                  }
+                },
+                "type": "object"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "empty",
+                  "unavailable",
+                  "invalid_input"
+                ],
+                "type": "string"
+              },
+              "data": {
+                "anyOf": [
+                  {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "error": {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "retryable": {
+                        "type": "boolean"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "code",
+                      "retryable",
+                      "message"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "simulated": {
+                "default": true,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "evidence_id",
+              "kind",
+              "source",
+              "observed_at",
+              "temporal_scope",
+              "target_ref",
+              "status"
+            ],
+            "type": "object"
+          },
+          "icons": null,
+          "annotations": {
+            "title": null,
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          },
+          "meta": {
+            "_fastmcp": {
+              "tags": []
+            }
+          },
+          "execution": null
+        }
+      ]
+    },
+    "sessions": 1
+  },
+  "elapsed_seconds": 68.542,
+  "finished_at": "2026-10-20T08:14:36.931475+00:00"
+}

@@ -1,0 +1,5 @@
+{
+  "scope": "auxiliary verification script mismatch, no model calls",
+  "reason": "old verifier omitted rows, so default 1000 differed from the existing 100000-row dataset",
+  "action": "parameterize verifier and pass 100000 explicitly; preserve first failed run in Airflow history"
+}

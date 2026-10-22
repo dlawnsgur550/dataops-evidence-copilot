@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>DataOps Copilot · 장애 진단</title>
+  <link rel="preload" href="/assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <aside id="sidebar" class="sidebar" aria-label="워크스페이스 메뉴"></aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-start"><button id="menu-open" class="icon-button mobile-only" aria-label="메뉴 열기"></button><span class="workspace-name">로컬 워크스페이스</span><span class="breadcrumb-divider" aria-hidden="true">/</span><span id="breadcrumb">장애 진단</span></div>
+      <div class="topbar-end"><span class="environment"><span class="live-dot"></span>저장 근거</span><button id="help-open" class="icon-button" aria-label="자료 출처와 실행 범위"></button></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div id="page-status" class="sr-only" role="status" aria-live="polite"></div>
+    <div id="error-banner" class="error-banner" role="alert" tabindex="-1" hidden></div>
+      <div id="content" aria-busy="true"><div class="loading-screen"><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-figure"></div><p>저장된 실행을 불러오는 중…</p></div></div>
+    </main>
+  </div>
+  <dialog id="mobile-menu" class="mobile-menu"><div class="mobile-menu-head"><span>워크스페이스</span><button class="icon-button" data-close-dialog aria-label="메뉴 닫기"></button></div><div id="mobile-sidebar"></div></dialog>
+  <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><div class="dialog-head"><div><h2 id="detail-title">근거 상세</h2><p id="detail-kicker" class="dialog-meta"></p></div><button class="icon-button" data-close-dialog aria-label="상세 닫기"></button></div><div id="detail-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

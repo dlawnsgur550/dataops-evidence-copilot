@@ -1,0 +1,62 @@
+{
+  "status": "success",
+  "data": {
+    "invocation_id": "5c569d78-3fa9-45b4-82fa-bdf1d0cc171a",
+    "manifest_invocation_id": "5c569d78-3fa9-45b4-82fa-bdf1d0cc171a",
+    "run_results_invocation_id": "5c569d78-3fa9-45b4-82fa-bdf1d0cc171a",
+    "artifact_status": "complete",
+    "available_artifacts": [
+      "manifest",
+      "run_results"
+    ],
+    "command": "run",
+    "missing_artifacts": [],
+    "stdout_invocation_ids": [
+      "5c569d78-3fa9-45b4-82fa-bdf1d0cc171a"
+    ],
+    "command_log_sha256": "db36b0c8007b1ae4eb36c1ce975a6836c2de988d08e588e60496afb3a40d5ba4",
+    "exit_code": 1,
+    "issue": "missing_column",
+    "column_id": "amount",
+    "table_id": "raw.orders",
+    "connection_id": "dbt_orders",
+    "results": [
+      {
+        "unique_id": "model.orders_demo.stg_orders",
+        "resource_type": "model",
+        "status": "error",
+        "message": "Database Error in model stg_orders (models/stg_orders.sql)\n  column \"amount\" does not exist\n  LINE 12:     select order_id, customer_id, amount, created_at from \"d...\n                                             ^\n  compiled code at /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot-v3/artifacts/v3/live/dbt-calls/ef6193401d9624ecedab3c6afb544b305265c824b5605f6ff717e39745f62ffe/ce04a04223db46629b76d5dc3d0a3bfa/target/run/orders_demo/models/stg_orders.sql",
+        "depends_on": [
+          "source.orders_demo.raw.orders"
+        ]
+      },
+      {
+        "unique_id": "model.orders_demo.daily_orders",
+        "resource_type": "model",
+        "status": "skipped",
+        "message": "",
+        "depends_on": [
+          "model.orders_demo.stg_orders"
+        ]
+      }
+    ],
+    "test_results": {},
+    "failed_node": "model.orders_demo.stg_orders",
+    "actual_failed": [
+      "model.orders_demo.stg_orders"
+    ],
+    "potential_downstream": [
+      "model.orders_demo.daily_orders",
+      "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+      "test.orders_demo.unique_stg_orders_order_id.e3b841c71a"
+    ],
+    "content_hashes": {
+      "manifest": "5c4f48b5be745167135c7ef6aa01067d6ed7e0df5f7e1b050738a4cb42ae54dc",
+      "run_results": "a248f3677ca703778a0dd0d53560d6419e46692d12183d806628aef5cf36f7ba"
+    },
+    "archived_at": "2026-10-22T00:39:41.211069+00:00",
+    "message": "Database Error in model stg_orders (models/stg_orders.sql)\n  column \"amount\" does not exist\n  LINE 12:     select order_id, customer_id, amount, created_at from \"d...\n                                             ^\n  compiled code at /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot-v3/artifacts/v3/live/dbt-calls/ef6193401d9624ecedab3c6afb544b305265c824b5605f6ff717e39745f62ffe/ce04a04223db46629b76d5dc3d0a3bfa/target/run/orders_demo/models/stg_orders.sql\n"
+  },
+  "error": null,
+  "evidence_id": "live-504e625aeb0ff3b3a343"
+}

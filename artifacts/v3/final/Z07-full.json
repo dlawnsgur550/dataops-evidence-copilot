@@ -1,0 +1,463 @@
+{
+  "claim_proposal": {
+    "category": "NORMAL",
+    "evidence_ids": [
+      "e-2694cd00ee2d9c",
+      "e-4a19ff37d4ead2",
+      "e-d7968f847a19c3",
+      "e-3f4475145c3bed",
+      "e-4505280cdc6b83"
+    ],
+    "current_connection": "connected",
+    "artifact_coverage": "complete",
+    "config_error": "unknown",
+    "business_equivalence": "unknown",
+    "propose_action": false
+  },
+  "component_reviews": [
+    {
+      "rule_id": "R00",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "구조화된 유한 명제만 수용"
+    },
+    {
+      "rule_id": "R01",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "근거 식별자 중복 금지"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "성공하고 실행·대상이 일치하는 근거만 인용"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "원인별 필수 근거 모두 인용"
+    },
+    {
+      "rule_id": "R03",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "로그·산출물·현재 보조 관측으로 범주 검증"
+    },
+    {
+      "rule_id": "R08",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "전체 태스크·필수 검사 정상 시 불필요한 보류 금지"
+    },
+    {
+      "rule_id": "R09",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "근거 부족일 때만 판단 보류"
+    },
+    {
+      "rule_id": "R04",
+      "claim_id": "current_connection",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "현재 연결 관측을 과거 장애·복구와 분리"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "current_connection",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "현재 연결 주장도 해당 관측 근거 인용"
+    },
+    {
+      "rule_id": "R05",
+      "claim_id": "config_error",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "설정 오류를 근거 없이 확정하지 않음"
+    },
+    {
+      "rule_id": "R07",
+      "claim_id": "artifact_coverage",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "검증된 partial 명령 영수증에서만 파일 누락 확정"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "artifact_coverage",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "산출물 범위 주장도 해당 영수증 인용"
+    },
+    {
+      "rule_id": "R12",
+      "claim_id": "business_equivalence",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "업무 의미 동일성은 명시적 계약 필요"
+    },
+    {
+      "rule_id": "R14",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "정상·판단 보류에 복구 조치 없음"
+    },
+    {
+      "rule_id": "R06",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "설정 수정은 확인되면 수정, 미확인이면 유지하는 조건부 절차"
+    },
+    {
+      "rule_id": "R10",
+      "claim_id": "category",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "복구 완료 주장은 생성하지 않으며 별도 실행 검사 사용"
+    },
+    {
+      "rule_id": "R11",
+      "claim_id": "category",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "실제 태스크 상태와 manifest 영향 가능성은 별도 렌더링"
+    },
+    {
+      "rule_id": "R13",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "검증 절차는 앞으로 수행할 제안으로 표시"
+    },
+    {
+      "rule_id": "R15",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "원본 보존과 승인된 업무 정책 적용"
+    },
+    {
+      "rule_id": "R17",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "원래 구조화 후보와 판정 모두 보고서에 보존"
+    }
+  ],
+  "reviewer_findings": [],
+  "trace_id": "v3-6ab1acab6a38400994eb8c4dd5ff1d80",
+  "incident_ref": {
+    "incident_id": "inc-d8384c29d0c4",
+    "dag_id": "orders_demo",
+    "run_id": "eval-d8384c29d0c4",
+    "task_id": "publish_summary",
+    "try_number": 2
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-2694cd00ee2d9c",
+      "kind": "get_task_context",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d8384c29d0c4",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d8384c29d0c4",
+          "task_id": "publish_summary",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "success",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "log_lines": [
+          "All pipeline tasks and dbt tests succeeded"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-4a19ff37d4ead2",
+      "kind": "get_dbt_artifacts",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-d8384c29d0c4",
+          "dag_id": "orders_demo",
+          "run_id": "eval-d8384c29d0c4",
+          "task_id": "publish_summary",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-d8384c29d0c4",
+        "manifest_invocation_id": "inv-d8384c29d0c4",
+        "run_results_invocation_id": "inv-d8384c29d0c4",
+        "issue": null,
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": null,
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "message": "All pipeline tasks and dbt tests succeeded",
+        "artifact_status": "complete",
+        "available_artifacts": [
+          "manifest",
+          "run_results"
+        ],
+        "missing_artifacts": [],
+        "command": "test",
+        "exit_code": 0,
+        "stdout_invocation_ids": [
+          "inv-d8384c29d0c4"
+        ],
+        "command_log_sha256": "d8384c29d0c448bbc7aa6451da0cf656a843e1b474b915c9863b4d10775f737a"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-d7968f847a19c3",
+      "kind": "compare_schema",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "orders-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-3f4475145c3bed",
+      "kind": "get_quality_profile",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 0
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [],
+        "truncated": false,
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-4505280cdc6b83",
+      "kind": "check_connection",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "2",
+      "chunk_id": "rb-connection:0",
+      "rank": 1,
+      "content_hash": "46708c1494c355883792be62429a5bc25510fb86f27b3b98aa261f8ab07c58d5",
+      "content": "# dbt 실행 연결 거부 / connection refused\n# dbt 실행 연결 거부 / connection refused\n\n문서 ID: rb-connection\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nconnection_refused, connection refused, dbt_orders, dbt_run, endpoint, host, port\n\n## 확인과 원인 구분\n실패 실행의 로그와 해당 dbt invocation 자료에서 실제 연결 ID를 확인한다. partial manifest만 있으면 검증된 명령 영수증과 누락 run_results를 명시한다.\n\n## 사람의 조치\n개발자가 실제 dbt 실행 설정과 서비스 상태·경로를 점검하고 확인된 설정 오류를 바로잡는다. 비밀번호는 보고서에 넣지 않는다.\n\n## 선행 조건\n실패 프로세스가 사용한 연결 설정을 먼저 확인한다. 포트가 로그에 없으면 잘못된 포트를 확정하지 않는다.\n\n## 검증\n새 실행의 모든 태스크와 두 품질 검사, 집계가 통과해야 한다. 현재 probe 성공이나 mcp_readonly 접속 성공만으로 복구라고 부르지 않는다.\n\n## 적용 제외\n다른 연결의 접속 성공은 dbt_orders 성공이 아니다. 현재 연결 성공은 과거 실행 실패를 지우지 않는다. 인증 오류·DNS 오류는 별도 런북을 확인한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm dbt_orders connection refusal in selected-run log and matching dbt invocation. A verified partial manifest receipt can support refusal, but disclose missing run_results. Inspect actual execution endpoint and service configuration; never print credentials or infer a wrong port without evidence. Another connection success, or a current successful probe, does not prove historical recovery. A developer corrects confirmed configuration problems. Verify a new full pipeline run, both tests and aggregates."
+    },
+    {
+      "doc_id": "rb-quality",
+      "doc_version": "2",
+      "chunk_id": "rb-quality:0",
+      "rank": 2,
+      "content_hash": "48084cb943e1e05f19b62a1c0c478de3a265957a34d1e4fea6f8a6ad135ecedd",
+      "content": "# 필수 키 NULL과 데이터 정정 / not_null\n# 필수 키 NULL과 데이터 정정 / not_null\n\n문서 ID: rb-quality\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nnot_null, null_counts, order_id, customer_id, null rows, dbt_test, quality profile\n\n## 확인과 원인 구분\n선택 실행의 검사 결과와 로그에서 실제 실패한 키를 확인하고 현재 같은 테이블의 제한된 프로필을 대조한다. 현재 NULL 건수를 과거 실패 건수로 단정하지 않는다.\n\n## 사람의 조치\n개발자가 원천 매핑과 누락 경로를 확인한다. 원본을 보존하고 승인된 정책에 따라 키를 정정하거나 잘못된 레코드를 격리한다.\n\n## 선행 조건\n업무 키 정의와 정정·격리 정책이 필요하다. 임의 삭제나 임의 키 생성으로 통과시키지 않는다.\n\n## 검증\n새 실행의 not_null와 unique가 모두 통과하고 태스크 성공, 건수·금액 정합성이 유지되는지 확인한다.\n\n## 적용 제외\n컬럼이 없거나 DB에 접속하지 못한 상태를 NULL 문제로 단정하지 않는다. 단순 재시도는 데이터 정정이 아니다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm the failing not_null key in selected-run logs and dbt tests. Current same-table null counts are corroboration, not historical counts. A developer traces source mapping and applies approved correction or quarantine while preserving originals. Do not invent keys or delete data just to pass. Retry alone is insufficient. Verify new-run tasks, not_null and unique, counts and monetary aggregates. Exclude missing-column or connectivity-only failures."
+    },
+    {
+      "doc_id": "rb-dns",
+      "doc_version": "2",
+      "chunk_id": "rb-dns:0",
+      "rank": 3,
+      "content_hash": "701b5694f154c3622493d7681f31b48b932bf2639127f6614e0093c662bc3b35",
+      "content": "# 호스트 이름 해석 실패 / DNS\n# 호스트 이름 해석 실패 / DNS\n\n문서 ID: rb-dns\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\ncould not translate host name, name resolution, NXDOMAIN, DNS, dbt_orders\n\n## 확인과 원인 구분\n실패 로그의 실제 호스트 이름과 이름 해석 오류를 확인하고 실행 환경의 resolver 설정을 대조한다.\n\n## 사람의 조치\n개발자가 호스트 이름과 네트워크·resolver 구성을 검토한다. 확인된 오타 또는 DNS 설정을 승인 후 정정한다.\n\n## 선행 조건\n실제 프로세스가 사용한 호스트와 DNS 오류 증거가 필요하다.\n\n## 검증\n이름 해석과 해당 대상 연결, 새 파이프라인 실행·품질 검사를 확인한다.\n\n## 적용 제외\n연결 거부만으로 DNS 장애를 확정하지 않는다. IP가 같다는 추측으로 다른 연결 성공을 차용하지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm host-name resolution errors and the actual execution host/resolver. A developer checks configured host spelling and DNS/network configuration, then corrects only confirmed settings. Verify resolution, named connection and a full new run. Generic connection refusal does not establish DNS failure."
+    }
+  ],
+  "diagnosis": {
+    "category": "NORMAL",
+    "diagnosis_status": "supported",
+    "severity": "low",
+    "cause": "선택 실행의 전체 필수 태스크와 dbt 필수 품질 검사가 성공했습니다.",
+    "evidence_ids": [
+      "e-2694cd00ee2d9c",
+      "e-4a19ff37d4ead2"
+    ],
+    "missing_evidence": [],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "원인·관측·조치는 별도 판정합니다. 모델 반례는 규칙으로 검증합니다. 독립 사람 검토는 별도입니다."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 2,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": 4716,
+    "cost": 0.000317175,
+    "elapsed_seconds": 7.570471,
+    "api_calls": 2,
+    "local_cache_hits": 0,
+    "input_tokens": 4596,
+    "output_tokens": 120,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "bounded_readonly_collector",
+    "retrieval",
+    "claims",
+    "executable_R00_R17",
+    "claim_reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "b5d9df7dfcdb55b41f10d195061849e1607e0e5d727c312995af84548edd69b3",
+  "versions": {
+    "app": "0.3.0",
+    "model": "gpt-6-luna",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb",
+    "project_policy_sha256": "08f37a995b7fba8714b69ca218c622baa0e76b461f43fbc270e0c341fb4b4995",
+    "review_policy": "R00-R17-v3-bounded-claims"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run",
+    "human_review": "not_independently_performed"
+  },
+  "recovered": null,
+  "rejected_candidates": [],
+  "output_diagnostics": [
+    {
+      "role": "claims",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 278,
+      "outcome": "validated"
+    },
+    {
+      "role": "claim_reviewer",
+      "schema_version": 2,
+      "response_status": "completed",
+      "output_text_blocks": 1,
+      "output_utf8_bytes": 15,
+      "outcome": "validated"
+    }
+  ]
+}

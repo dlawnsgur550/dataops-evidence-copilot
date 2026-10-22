@@ -1,0 +1,840 @@
+{
+  "reviewer": "Codex AI",
+  "independent_human_review": false,
+  "entries": [
+    {
+      "case": "Z01",
+      "source": "artifacts/v3/final/Z01-full.json",
+      "source_sha256": "f267189f9e93395ed93fa23d8ee38b1054d7f6b00e55f702f90f6040823bbb30",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 raw.orders 참조에서 unit_price 컬럼 부재가 로그·dbt 산출물에 기록됐습니다. 현재 스키마 차이는 별도 시점의 보조 관측입니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "SCHEMA_CHANGE",
+        "evidence_ids": [
+          "e-d99e6e6a08455a",
+          "e-00e4bd051042de",
+          "e-59f25898961e02",
+          "e-f8ace6b4f0de80"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-374f7d67063c",
+        "dag_id": "orders_demo",
+        "run_id": "eval-374f7d67063c",
+        "task_id": "dbt_run",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-d99e6e6a08455a",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-00e4bd051042de",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-59f25898961e02",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-d64491688dded4",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-f8ace6b4f0de80",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z02",
+      "source": "artifacts/v3/final/Z02-full.json",
+      "source_sha256": "c95b972fc923d067cf6a0db393e288309f79ad516ae4941d07821f3a61e8e62e",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 raw.web_orders 참조에서 amount 컬럼 부재가 로그·dbt 산출물에 기록됐습니다. 현재 스키마 차이는 별도 시점의 보조 관측입니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "SCHEMA_CHANGE",
+        "evidence_ids": [
+          "e-d9a939f56347c2",
+          "e-2ae809d6ab2dc1",
+          "e-dbefc47c91ac7b",
+          "e-f79bde788da03d"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-adb7358ac78a",
+        "dag_id": "orders_demo",
+        "run_id": "eval-adb7358ac78a",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-d9a939f56347c2",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-2ae809d6ab2dc1",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-dbefc47c91ac7b",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-3d61afcb2674bf",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-f79bde788da03d",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z03",
+      "source": "artifacts/v3/final/Z03-full.json",
+      "source_sha256": "6de79d37b53a9d10a4f4c5c5c9af60e1cc1ff4425c3be385f29fb5cc85479daa",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 raw.orders.order_id not_null 검사가 실패했습니다. 현재 NULL 건수는 별도 시점의 관측입니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "DATA_QUALITY",
+        "evidence_ids": [
+          "e-a29ed6817756ca",
+          "e-e3f4e578f8c8f7",
+          "e-545790bd725c9a",
+          "e-300fd4aea1af0e"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-e6e5b33f3b8e",
+        "dag_id": "orders_demo",
+        "run_id": "eval-e6e5b33f3b8e",
+        "task_id": "dbt_test",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-a29ed6817756ca",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-e3f4e578f8c8f7",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-ebd3ffcd40a791",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-545790bd725c9a",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-300fd4aea1af0e",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z04",
+      "source": "artifacts/v3/final/Z04-full.json",
+      "source_sha256": "93c5e062f17585a2c35f322fdbe0a15c510a5f932a3dfc7c620dc3812d606d47",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 raw.orders_archive.customer_id not_null 검사가 실패했습니다. 현재 NULL 건수는 별도 시점의 관측입니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "DATA_QUALITY",
+        "evidence_ids": [
+          "e-b1cda801888064",
+          "e-3315caabb481d0",
+          "e-20fbf2ae2d30e3",
+          "e-12339a3ea7076a",
+          "e-9a0572dcfb2a87"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-83a553006ca4",
+        "dag_id": "orders_demo",
+        "run_id": "eval-83a553006ca4",
+        "task_id": "dbt_test",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-b1cda801888064",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-3315caabb481d0",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-20fbf2ae2d30e3",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-12339a3ea7076a",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-9a0572dcfb2a87",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z05",
+      "source": "artifacts/v3/final/Z05-full.json",
+      "source_sha256": "03b4904464022b1e77f49f1c34779f27f456deed821e8dcfb67373d96394ec75",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행에서 dbt_orders 연결 거부가 로그·dbt 산출물에 기록됐습니다. 현재 연결 결과만으로 과거 실패의 부재나 복구를 확정하지 않습니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "CONNECTION_FAILURE",
+        "evidence_ids": [
+          "e-805a76d0b1b7b1",
+          "e-616d55f9c8701c",
+          "e-d2642875d94dd4"
+        ],
+        "current_connection": "unavailable",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-bc22726b1f7f",
+        "dag_id": "orders_demo",
+        "run_id": "eval-bc22726b1f7f",
+        "task_id": "dbt_run",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-805a76d0b1b7b1",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-616d55f9c8701c",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-b8b058f096ff2f",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-ae3db05ead8a79",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-d2642875d94dd4",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z06",
+      "source": "artifacts/v3/final/Z06-full.json",
+      "source_sha256": "a38f290c6ca3b5dedd77f44a6ce9804913a7d79af985f8decee35656081e7f4c",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행에서 dbt_orders 연결 거부가 로그·dbt 산출물에 기록됐습니다. 현재 연결 결과만으로 과거 실패의 부재나 복구를 확정하지 않습니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "CONNECTION_FAILURE",
+        "evidence_ids": [
+          "e-8412d6f8327c97",
+          "e-cf85f321c11b76",
+          "e-7179bfa7e13a70",
+          "e-d9f8bd9f1105b7",
+          "e-774c0640046ead"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "run_results_missing",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": true
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-ae0bc42f35fc",
+        "dag_id": "orders_demo",
+        "run_id": "eval-ae0bc42f35fc",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-8412d6f8327c97",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-cf85f321c11b76",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-7179bfa7e13a70",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-d9f8bd9f1105b7",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-774c0640046ead",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z07",
+      "source": "artifacts/v3/final/Z07-full.json",
+      "source_sha256": "5511aa0410a532db2d96d741c04b23b57c8ffb9a876f93749889a20fdf6617bf",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 전체 필수 태스크와 dbt 필수 품질 검사가 성공했습니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "NORMAL",
+        "evidence_ids": [
+          "e-2694cd00ee2d9c",
+          "e-4a19ff37d4ead2",
+          "e-d7968f847a19c3",
+          "e-3f4475145c3bed",
+          "e-4505280cdc6b83"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-d8384c29d0c4",
+        "dag_id": "orders_demo",
+        "run_id": "eval-d8384c29d0c4",
+        "task_id": "publish_summary",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-2694cd00ee2d9c",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-4a19ff37d4ead2",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-d7968f847a19c3",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-3f4475145c3bed",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-4505280cdc6b83",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z08",
+      "source": "artifacts/v3/final/Z08-full.json",
+      "source_sha256": "df4ab04561e8df4970393ea39bd588e09d621d9c11c0223d9da3e722eab34d34",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "선택 실행의 전체 필수 태스크와 dbt 필수 품질 검사가 성공했습니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "NORMAL",
+        "evidence_ids": [
+          "e-7b1845906c386a",
+          "e-a2593091a268a8"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "complete",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [
+        {
+          "rule_id": "R02",
+          "claim_id": "current_connection",
+          "component": "observations",
+          "verdict": "REJECT",
+          "reason": "현재 연결 주장도 해당 관측 근거 인용"
+        }
+      ],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-78438ca80dc3",
+        "dag_id": "orders_demo",
+        "run_id": "eval-78438ca80dc3",
+        "task_id": "publish_summary",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-7b1845906c386a",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-a2593091a268a8",
+          "kind": "get_dbt_artifacts",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-b663fcebaf1b27",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-55c822144e7d7f",
+          "kind": "get_quality_profile",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-8af25cae85880e",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z09",
+      "source": "artifacts/v3/final/Z09-full.json",
+      "source_sha256": "da0968e7e228702ef9e69051c24b611cbfda0b3557c149d90187ba597a72ada8",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "REJECT",
+      "basis": "판단 보류는 맞지만 unavailable 자료를 성공 근거로 인용하여 R02 위반. 최초 결과를 보존합니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "UNKNOWN",
+        "evidence_ids": [
+          "e-ecdb352216f2c6",
+          "e-89ed6971cde753"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "unknown",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [
+        {
+          "rule_id": "R02",
+          "claim_id": "evidence_ids",
+          "component": "cause",
+          "verdict": "REJECT",
+          "reason": "성공하고 실행·대상이 일치하는 근거만 인용"
+        },
+        {
+          "rule_id": "R02",
+          "claim_id": "current_connection",
+          "component": "observations",
+          "verdict": "REJECT",
+          "reason": "현재 연결 주장도 해당 관측 근거 인용"
+        }
+      ],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-420889036045",
+        "dag_id": "orders_demo",
+        "run_id": "eval-420889036045",
+        "task_id": "dbt_run",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-ecdb352216f2c6",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-89ed6971cde753",
+          "kind": "get_dbt_artifacts",
+          "status": "unavailable",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-9363dd241c8090",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-cd6cb9c9421f42",
+          "kind": "get_quality_profile",
+          "status": "unavailable",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-540d2b57b12aa0",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "Z10",
+      "source": "artifacts/v3/final/Z10-full.json",
+      "source_sha256": "52e8d3e895c17c7d247cf62584c0b5ab8c4fe3c51d4342ce01889eb2126e709a",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "REJECT",
+      "basis": "판단 보류는 맞지만 unavailable 자료를 성공 근거로 인용하여 R02 위반. 최초 결과를 보존합니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "UNKNOWN",
+        "evidence_ids": [
+          "e-eb1e95eecb09bf",
+          "e-17cd46df1fb123"
+        ],
+        "current_connection": "unknown",
+        "artifact_coverage": "unknown",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [
+        {
+          "rule_id": "R02",
+          "claim_id": "evidence_ids",
+          "component": "cause",
+          "verdict": "REJECT",
+          "reason": "성공하고 실행·대상이 일치하는 근거만 인용"
+        }
+      ],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-44239693bc08",
+        "dag_id": "orders_demo",
+        "run_id": "eval-44239693bc08",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-eb1e95eecb09bf",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-17cd46df1fb123",
+          "kind": "get_dbt_artifacts",
+          "status": "unavailable",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-306c91a95f26d3",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-ec4badd6160ef2",
+          "kind": "get_quality_profile",
+          "status": "unavailable",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-592685a699fb41",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "I01",
+      "source": "artifacts/v3.1/targeted/I01-economy.json",
+      "source_sha256": "9f98bcbcb3f41487f78f6cf459bf97b13562347220e1f0de2de494fcf753a2e0",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "UNKNOWN",
+        "evidence_ids": [
+          "e-272f595807e181"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "unknown",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [
+        {
+          "rule_id": "R02",
+          "claim_id": "current_connection",
+          "component": "observations",
+          "verdict": "REJECT",
+          "reason": "현재 연결 주장도 해당 관측 근거 인용"
+        }
+      ],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-f53815f462d6",
+        "dag_id": "orders_demo",
+        "run_id": "eval-f53815f462d6",
+        "task_id": "dbt_run",
+        "try_number": 2
+      },
+      "evidence_refs": [
+        {
+          "id": "e-272f595807e181",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-326bf333db9f10",
+          "kind": "get_dbt_artifacts",
+          "status": "unavailable",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-4b9711ba3ea4b1",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-5b2f92120be212",
+          "kind": "get_quality_profile",
+          "status": "unavailable",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-753d9585206da6",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    },
+    {
+      "case": "I02",
+      "source": "artifacts/v3.1/targeted/I02-economy.json",
+      "source_sha256": "ed811ede85bf163aa2d05518f2892d505f73a240fe2034a52a8650029718df20",
+      "reviewer": "Codex AI",
+      "independent_human": false,
+      "verdict": "PASS",
+      "basis": "실행 근거와 구조화 주장·보류·조건부 조치를 대조했습니다. 실제 복구 완료 주장은 없습니다.",
+      "cause_pointer": "/diagnosis/cause",
+      "cause_quote": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+      "claim_pointer": "/claim_proposal",
+      "claim": {
+        "category": "UNKNOWN",
+        "evidence_ids": [
+          "e-62f2a4aa7d532a",
+          "e-4d962b39b36e75"
+        ],
+        "current_connection": "connected",
+        "artifact_coverage": "unknown",
+        "config_error": "unknown",
+        "business_equivalence": "unknown",
+        "propose_action": false
+      },
+      "component_rejections": [],
+      "review_scope": "canonical diagnosis text and actions; rejected observation proposals are quarantined separately",
+      "execution_ref": {
+        "incident_id": "inc-c2fac4631279",
+        "dag_id": "orders_demo",
+        "run_id": "eval-c2fac4631279",
+        "task_id": "dbt_run",
+        "try_number": 1
+      },
+      "evidence_refs": [
+        {
+          "id": "e-62f2a4aa7d532a",
+          "kind": "get_task_context",
+          "status": "success",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-6240801ff65a83",
+          "kind": "get_dbt_artifacts",
+          "status": "unavailable",
+          "scope": "run_snapshot"
+        },
+        {
+          "id": "e-1b311e27158c81",
+          "kind": "compare_schema",
+          "status": "success",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-f85a4fd838b015",
+          "kind": "get_quality_profile",
+          "status": "unavailable",
+          "scope": "current_observation"
+        },
+        {
+          "id": "e-4d962b39b36e75",
+          "kind": "check_connection",
+          "status": "success",
+          "scope": "current_observation"
+        }
+      ]
+    }
+  ]
+}

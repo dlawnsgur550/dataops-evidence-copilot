@@ -1,0 +1,10 @@
+{
+  "baseline_id": "orders-v1",
+  "observed_at": "2026-10-20T08:10:15.358314+00:00",
+  "columns": {
+    "order_id": "integer",
+    "customer_id": "integer",
+    "amount": "numeric",
+    "created_at": "timestamp without time zone"
+  }
+}

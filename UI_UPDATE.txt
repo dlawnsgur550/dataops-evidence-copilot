@@ -1,0 +1,51 @@
+DataOps Copilot 기본 웹 재설계 — 2026-10-22
+
+실행
+  start_web.command 또는 프로젝트 폴더에서:
+  uv sync --locked
+  uv run python scripts/run_ui.py
+  기본 주소 http://127.0.0.1:18784
+  --no-browser는 브라우저 자동 열기를 생략합니다.
+  이전 시연 실행기도 같은 기본 웹을 사용합니다. 별도 18788 서버는 사용하지 않습니다.
+
+사용 순서
+  1. 왼쪽 사례 → 장애 진단 → 저장 근거로 재진단 → 진단 실행.
+     모델 변환/품질 검사 등 파이프라인 태스크나 수집 근거를 누르면 원본 근거를 엽니다.
+     입력 자료에서 실행키 JSON, 로그와 설명용 10만 행 CSV를 내려받습니다.
+     잘못된 실행 ID를 입력하면 판단 보류·조치 없음으로 표시합니다.
+  2. 안전성 검사에서 세 가지 반례를 선택하고 주장 검사 실행을 누릅니다.
+     없는 근거는 R02, 근거 없는 포트 오류는 R05로 차단합니다.
+     코드 위반 근거가 없는 Reviewer 거절은 기록하고 유효한 조건부 조치를 유지합니다.
+  3. 복구 검증에서 보존된 새 실행을 검사합니다. 같은 실행 반례는 차단합니다.
+     새 실행·수정 이후 시각·전체 태스크·품질 검사·집계 정합성을 함께 보여줍니다.
+  4. 평가 기록에서 기존 비용·응답시간, 실제 모델 원본 11건과 평가 한계를 확인합니다.
+     모델 원본 열람과 다운로드는 새 모델 호출이 아닙니다.
+
+적용한 디자인 자료
+  Impeccable 4.7.0: https://github.com/pbakaus/impeccable
+  Vercel Web Design Guidelines: https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+  두 스킬은 작업 공간 .agents/skills에 설치했습니다.
+  고정한 커밋과 방향 선택 기록은 .impeccable/surfaces/workspace.md와 artifacts/ui-redesign/validation.json에 있습니다.
+  자체 HTML·CSS·JavaScript, Pretendard 로컬 폰트, 일관된 SVG 아이콘/실제 수치 차트를 사용합니다.
+  폰트 출처와 SIL Open Font License는 src/dataops_copilot/web/assets에 포함합니다.
+  디자인 시스템은 DESIGN.md와 .impeccable/design.json에 있습니다.
+
+그래픽의 출처
+  태스크 흐름: 선택 보고서의 get_task_context.task_statuses. 정해진 프로젝트 표시 순서입니다.
+  근거 분포: temporal_scope. 규칙 판정: component_reviews 실제 횟수이며 모델 정확도가 아닙니다.
+  복구 시간표·행 수·금액: 실제 로컬 합성 파이프라인의 보존된 후속 실행·수정 기록입니다.
+  비용·응답시간: artifacts/v3.1/completion.json의 기존 실제 모델 평가입니다.
+
+보존한 경계
+  Python 진단·MCP·주장 검증·복구 엔진과 기존 ZIP·평가 당시 소스는 보존합니다.
+  resources/workspace 58개 파일은 복사 원본과 바이트 단위로 같습니다.
+  기본 재진단은 무료 FakeLLM입니다. 실시간 MCP에는 로컬 서비스 설정이 필요합니다.
+  일반 실행 50회·과거 평가 128회 정책을 유지했습니다. 누적 128회이므로 유료 실행은 잠겨 있습니다. 키는 화면이나 응답에 포함하지 않습니다.
+  서버는 127.0.0.1에만 바인딩하고 같은 출처의 JSON 실행 요청만 받습니다.
+  모든 시연 데이터는 합성입니다. LangSmith·독립 LLM Judge·독립 사람 평가는 별도 미완료 상태입니다.
+
+검증
+  자동 검사: 기존 184개 + 새 HTTP 경계/기능 검사 28개 = 212개 통과.
+  artifacts/ui-redesign/validation.json: 원본 보존·비용·브라우저 검증 요약.
+  artifacts/ui-redesign/*.jpg: 실제 브라우저의 최신 화면.
+  .impeccable/review/finish-review.md: 독립 UI 리뷰 결과.

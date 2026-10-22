@@ -1,0 +1,9 @@
+{
+  "scope": "schema observation copied from collected evidence",
+  "columns": {
+    "order_id": "integer",
+    "customer_id": "integer",
+    "paid_amount": "numeric",
+    "created_at": "timestamp without time zone"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "version": "project-policy-v3",
+  "targets": [
+    {
+      "id": "orders",
+      "dag_id": "orders_demo",
+      "table_id": "raw.orders",
+      "baseline_id": "orders-v1",
+      "quality_column": "order_id",
+      "schema_columns": [
+        "amount",
+        "net_amount",
+        "unit_price"
+      ],
+      "connection_id": "dbt_orders",
+      "tasks": [
+        "load_demo_data",
+        "dbt_run",
+        "dbt_test",
+        "publish_summary"
+      ],
+      "required_tests": [
+        "not_null_order_id",
+        "unique_order_id"
+      ],
+      "business_equivalence": "unknown",
+      "business_contract_id": null,
+      "max_profile_samples": 5
+    },
+    {
+      "id": "web",
+      "dag_id": "orders_demo",
+      "table_id": "raw.web_orders",
+      "baseline_id": "web-v1",
+      "quality_column": "order_id",
+      "schema_columns": [
+        "amount",
+        "net_amount",
+        "unit_price"
+      ],
+      "connection_id": "dbt_orders",
+      "tasks": [
+        "load_demo_data",
+        "dbt_run",
+        "dbt_test",
+        "publish_summary"
+      ],
+      "required_tests": [
+        "not_null_order_id",
+        "unique_order_id"
+      ],
+      "business_equivalence": "unknown",
+      "business_contract_id": null,
+      "max_profile_samples": 5
+    },
+    {
+      "id": "archive",
+      "dag_id": "orders_demo",
+      "table_id": "raw.orders_archive",
+      "baseline_id": "archive-v1",
+      "quality_column": "customer_id",
+      "schema_columns": [
+        "amount",
+        "net_amount",
+        "unit_price"
+      ],
+      "connection_id": "dbt_orders",
+      "tasks": [
+        "load_demo_data",
+        "dbt_run",
+        "dbt_test",
+        "publish_summary"
+      ],
+      "required_tests": [
+        "not_null_customer_id",
+        "unique_customer_id"
+      ],
+      "business_equivalence": "unknown",
+      "business_contract_id": null,
+      "max_profile_samples": 5
+    }
+  ]
+}

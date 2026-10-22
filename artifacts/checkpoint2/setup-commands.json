@@ -1,0 +1,48 @@
+[
+  {
+    "command": [
+      "uv",
+      "sync",
+      "--locked",
+      "--python",
+      "3.11"
+    ],
+    "exit_code": 0,
+    "log": "artifacts/checkpoint2/app-install.log"
+  },
+  {
+    "command": [
+      "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "apache-airflow==2.10.4",
+      "--constraint",
+      "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/deployment/airflow-2.10.4-python3.11-constraints.txt"
+    ],
+    "exit_code": 0,
+    "log": "artifacts/checkpoint2/airflow-install.log"
+  },
+  {
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/dbt-venv/bin/python",
+      "--requirement",
+      "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/deployment/dbt-resolved.txt"
+    ],
+    "exit_code": 0,
+    "log": "artifacts/checkpoint2/dbt-install.log"
+  },
+  {
+    "command": [
+      "docker",
+      "pull",
+      "postgres:17.10-alpine"
+    ],
+    "exit_code": 0,
+    "log": "artifacts/checkpoint2/postgres-pull.log"
+  }
+]

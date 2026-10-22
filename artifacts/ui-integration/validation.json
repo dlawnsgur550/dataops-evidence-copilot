@@ -1,0 +1,67 @@
+{
+  "source_changes_from_original": [
+    "src/dataops_copilot/ui.py"
+  ],
+  "original_non_ui_python_unchanged": true,
+  "prior_zip_count": 6,
+  "prior_zips_unchanged": true,
+  "tests": 184,
+  "failures": 0,
+  "browser_passed": 16,
+  "browser_total": 16,
+  "responsive": [
+    {
+      "cssHeight": 833,
+      "cssWidth": 1200,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 900,
+      "cssWidth": 800,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 900,
+      "cssWidth": 390,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    },
+    {
+      "cssHeight": 800,
+      "cssWidth": 320,
+      "pageOverflow": false,
+      "pipelineLoaded": true,
+      "statCount": 4,
+      "statOverflow": false
+    }
+  ],
+  "recorded_api_requests": 128,
+  "current_api_requests": 128,
+  "new_api_requests_since_record": 0,
+  "secret_format_findings": [],
+  "separate_demo_server": "stopped; launcher redirects to base web",
+  "main_url": "http://127.0.0.1:18784",
+  "real_model_quality_re_evaluated": false,
+  "text_contrast_adjustment": {
+    "secondary_text": "#5f7085",
+    "main_background": "#f5f7fa",
+    "contrast_ratio": 4.72
+  },
+  "ui_file_sha256": {
+    "src/dataops_copilot/ui.py": "c18be592040747f88ef5a626a9ccc32174e640e8ec38034e154fa9b75c8835b2",
+    "src/dataops_copilot/ui_workspace.py": "6729f636d5ed46db51806cb9ff9f1690fbfe8938f39e344b6d81fa91d73cd6e7",
+    "src/dataops_copilot/ui_visuals.py": "48d53222a3a080961d5e5e6d8b90b63eac3a34932fb9f7a16057b5d0052d2024",
+    "src/dataops_copilot/ui_assets/workspace.css": "dd568693b4c70507c418bc63ef31aeef5ee25c1fdd944b9369b7250d0f4f1694",
+    ".streamlit/config.toml": "b453bbdceda010fdcc429b0f707d33a0646060d529dc7067fa8728c8cf29b8ed",
+    "scripts/run_ui.py": "957b39355794c0a24923d59d24009752690f2b000b87779f2cdbcdf6a3f1c280",
+    "start_web.command": "77cdd46ecd68ab9c78fdb300be0cd21afb8f6b2dd479b1b0e03b616bccf24da5"
+  }
+}

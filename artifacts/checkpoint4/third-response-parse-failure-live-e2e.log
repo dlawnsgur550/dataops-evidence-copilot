@@ -1,0 +1,60 @@
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/fastmcp/server/auth/providers/jwt.py:10: AuthlibDeprecationWarning: authlib.jose module is deprecated, please use joserfc instead.
+It will be compatible before version 2.0.0.
+  from authlib.jose import JsonWebKey, JsonWebToken
+[10/20/26 18:25:54] INFO     Starting MCP server 'DataOps         server.py:2506
+                             read-only live local evidence' with                
+                             transport 'stdio'                                  
+{"mode_developer_only": "verify", "run_id": "manual__d83189d19f274cd79749d612032eac55", "state": "success", "task_statuses": {"load_demo_data": "success", "dbt_run": "success", "dbt_test": "success", "publish_summary": "success"}, "tries": {"load_demo_data": 1, "dbt_run": 1, "dbt_test": 1, "publish_summary": 1}}
+{"mode_developer_only": "connection", "run_id": "manual__a296f6eedb744f90bb8e889e09dc1a91", "state": "failed", "task_statuses": {"load_demo_data": "success", "dbt_run": "failed", "dbt_test": "upstream_failed", "publish_summary": "upstream_failed"}, "tries": {"load_demo_data": 1, "dbt_run": 1, "dbt_test": 0, "publish_summary": 0}}
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/scripts/live_e2e_openai.py", line 183, in <module>
+  |     asyncio.run(main())
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+  |     return runner.run(main)
+  |            ^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/scripts/live_e2e_openai.py", line 87, in main
+  |     async with open_live_mcp(RUNTIME / "live-settings.json") as mcp:
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/src/dataops_copilot/mcp_client.py", line 44, in open_live_mcp
+  |     async with _open(["--settings", str(settings_path.resolve())], live=True) as client:
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/src/dataops_copilot/mcp_client.py", line 53, in _open
+  |     async with stdio_client(params) as (read, write):
+  |   File "/opt/homebrew/Cellar/python@3.11/3.11.15_4/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/mcp/client/stdio/__init__.py", line 182, in stdio_client
+  |     async with (
+  |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/mcp/client/stdio/__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/src/dataops_copilot/mcp_client.py", line 54, in _open
+    |     async with ClientSession(read, write) as session:
+    |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/.venv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/src/dataops_copilot/mcp_client.py", line 57, in _open
+      |     yield MCPToolClient(session, initialization, tool_list, live=live)
+      |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/src/dataops_copilot/mcp_client.py", line 45, in open_live_mcp
+      |     yield client
+      |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/scripts/live_e2e_openai.py", line 128, in main
+      |     original, report = await diagnose(run_id, items, failed_task, case)
+      |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |   File "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/scripts/live_e2e_openai.py", line 98, in diagnose
+      |     assert report.review.accepted, report.review.violations
+      |            ^^^^^^^^^^^^^^^^^^^^^^
+      | AssertionError: ['OPENAI_TRANSPORT_OR_PARSE_FAILURE_NO_RETRY']
+      +------------------------------------

@@ -1,0 +1,11 @@
+[
+  {
+    "container": "dataops-c-cp2-airflow",
+    "stopped": true
+  },
+  {
+    "container": "dataops-c-cp2-postgres",
+    "stopped": true,
+    "volume_preserved": "dataops_c_cp2_pg17"
+  }
+]

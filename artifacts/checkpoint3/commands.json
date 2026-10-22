@@ -1,0 +1,184 @@
+{
+  "cwd": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot",
+  "commands": [
+    {
+      "label": "initial_output_limit",
+      "argv": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--replay-report",
+        "artifacts/checkpoint2/schema-report.json",
+        "--llm",
+        "openai",
+        "--api-settings",
+        "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/openai.env",
+        "--output",
+        "artifacts/checkpoint3/openai-schema-report.json"
+      ],
+      "exit_code": 2,
+      "log": "first-output-limit.log",
+      "preserved_report": "first-output-limit-report.json",
+      "usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 8278,
+        "cost": 0.001309925,
+        "elapsed_seconds": 12.415973,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 7415,
+        "output_tokens": 863,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0
+      },
+      "note": "Same output path used during execution; earlier results preserved separately before later runs."
+    },
+    {
+      "label": "reviewer_rejected_id_mix",
+      "argv": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--replay-report",
+        "artifacts/checkpoint2/schema-report.json",
+        "--llm",
+        "openai",
+        "--api-settings",
+        "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/openai.env",
+        "--output",
+        "artifacts/checkpoint3/openai-schema-report.json"
+      ],
+      "exit_code": 2,
+      "log": "second-id-rejection.log",
+      "preserved_report": "second-id-rejection-report.json",
+      "usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 2775,
+        "cost": 0.00038055,
+        "elapsed_seconds": 2.588257,
+        "api_calls": 1,
+        "local_cache_hits": 3,
+        "input_tokens": 2685,
+        "output_tokens": 90,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0
+      },
+      "note": "Same output path used during execution; earlier results preserved separately before later runs."
+    },
+    {
+      "label": "final_schema_success",
+      "argv": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--replay-report",
+        "artifacts/checkpoint2/schema-report.json",
+        "--llm",
+        "openai",
+        "--api-settings",
+        "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/openai.env",
+        "--output",
+        "artifacts/checkpoint3/openai-schema-report.json"
+      ],
+      "exit_code": 0,
+      "log": "openai-smoke.log",
+      "preserved_report": "openai-schema-report.json",
+      "usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 6199,
+        "cost": 0.000953975,
+        "elapsed_seconds": 6.518386,
+        "api_calls": 2,
+        "local_cache_hits": 2,
+        "input_tokens": 5721,
+        "output_tokens": 478,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0
+      },
+      "note": "Same output path used during execution; earlier results preserved separately before later runs."
+    },
+    {
+      "label": "cached_repeat",
+      "argv": [
+        "uv",
+        "run",
+        "dataops-copilot",
+        "--replay-report",
+        "artifacts/checkpoint2/schema-report.json",
+        "--llm",
+        "openai",
+        "--api-settings",
+        "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/openai.env",
+        "--output",
+        "artifacts/checkpoint3/cached-schema-report.json"
+      ],
+      "exit_code": 0,
+      "log": "cached-smoke.log",
+      "report": "cached-schema-report.json",
+      "usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 0,
+        "cost": 0.0,
+        "elapsed_seconds": 0.009634,
+        "api_calls": 0,
+        "local_cache_hits": 4,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "price_date": "2026-10-20",
+        "cost_basis": "local_cache_or_no_request",
+        "uncertain_reserved_usd": 0.0
+      }
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "pytest",
+        "-q",
+        "-W",
+        "error::RuntimeWarning",
+        "--junitxml=artifacts/checkpoint3/tests.xml"
+      ],
+      "exit_code": 0,
+      "log": "tests.log",
+      "tests_passed": 71,
+      "seconds": 5.67
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "python",
+        "scripts/audit_checkpoint3.py"
+      ],
+      "exit_code": 0,
+      "log": "audit.log",
+      "new_api_calls": 0
+    }
+  ]
+}

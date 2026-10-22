@@ -1,0 +1,5 @@
+﻿case_id,system,report_sha256,human_verdict,human_reason,reviewer_name,reviewed_at
+H01,baseline,912f0d6c899dba68d723643b206c5071c5fceea5270dc1d87e29c7cf60b0f68b,,,,
+H01,final,847aa3aa41cb85caab2b4f28d5d28966001281f926077f327d90707f29497e4f,,,,
+H02,baseline,a167777fc9fc28da729697023c97fca5cec59efc5e231a6e9add51d035151493,,,,
+H02,final,63f29cf67ef4b226f05daff45e3e895f1b5938ad5d7cd15511101d56c0cd9de9,,,,

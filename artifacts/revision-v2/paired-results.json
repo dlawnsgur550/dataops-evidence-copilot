@@ -1,0 +1,156 @@
+{
+  "freeze_id": "4b9f9d51adfedb0997f5a21eabca4da66d1f2e40e37093b9bc605f688ad9e9a9",
+  "scope": "2 newly authored synthetic paired smoke cases, not an independent accuracy benchmark",
+  "cases": [
+    {
+      "case_id": "H01",
+      "bundle_sha256": "a5c83b8ace55b7c05172c924bcdb0ba1e4a16cf446e4d4ed27a96f8f6c0c1a6a",
+      "baseline_report_sha256": "912f0d6c899dba68d723643b206c5071c5fceea5270dc1d87e29c7cf60b0f68b",
+      "final_report_sha256": "847aa3aa41cb85caab2b4f28d5d28966001281f926077f327d90707f29497e4f",
+      "baseline_category": "DATA_QUALITY",
+      "final_category": "DATA_QUALITY",
+      "same_full_evidence": false,
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 2544,
+        "cost": 0.000247275,
+        "elapsed_seconds": 9.580611041979864,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 2073,
+        "output_tokens": 471,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": 6363,
+        "cost": 0.000486275,
+        "elapsed_seconds": 23.358744,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 5813,
+        "output_tokens": 550,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "errors": [],
+      "review_violations": [],
+      "baseline_score": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "final_score": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      }
+    },
+    {
+      "case_id": "H02",
+      "bundle_sha256": "fc1b3093f15c4876676c83ff0cb86f07705594625e66514daf162ecc2edcf472",
+      "baseline_report_sha256": "a167777fc9fc28da729697023c97fca5cec59efc5e231a6e9add51d035151493",
+      "final_report_sha256": "63f29cf67ef4b226f05daff45e3e895f1b5938ad5d7cd15511101d56c0cd9de9",
+      "baseline_category": "CONNECTION_FAILURE",
+      "final_category": "UNKNOWN",
+      "same_full_evidence": false,
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 2593,
+        "cost": 0.0002584,
+        "elapsed_seconds": 13.963598875096068,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 2079,
+        "output_tokens": 514,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 5,
+        "rag_calls": 1,
+        "tokens": 6352,
+        "cost": 0.000490763,
+        "elapsed_seconds": 38.454149,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 5771,
+        "output_tokens": 581,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "errors": [],
+      "review_violations": [
+        "SEMANTIC_REVIEW_REJECTED"
+      ],
+      "baseline_score": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "final_score": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      }
+    }
+  ],
+  "requests_before": 83,
+  "new_requests": 10,
+  "new_estimated_usd": 0.001482713,
+  "ledger_after": {
+    "requests": 93,
+    "spent_or_reserved_usd": 0.015592371,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "independent_human_review_completed": false,
+  "original_8_of_9_target_retested": false,
+  "automatic_api_retries": 0
+}

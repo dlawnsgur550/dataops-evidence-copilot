@@ -1,0 +1,7011 @@
+{
+  "scope": "500 generated correlated bundles, two FakeLLM profiles; NOT real-model accuracy",
+  "checks": 1000,
+  "bundles": 500,
+  "passed": 1000,
+  "failed": [],
+  "api_calls": 0,
+  "elapsed_seconds": 1.033,
+  "rows": [
+    {
+      "case": "M0000",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0000",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0001",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0001",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0002",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0002",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0003",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0003",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0004",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0004",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0005",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0005",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0006",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0006",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0007",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0007",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0008",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0008",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0009",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0009",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0010",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0010",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0011",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0011",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0012",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0012",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0013",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0013",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0014",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0014",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0015",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0015",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0016",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0016",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0017",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0017",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0018",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0018",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0019",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0019",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0020",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0020",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0021",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0021",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0022",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0022",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0023",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0023",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0024",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0024",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0025",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0025",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0026",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0026",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0027",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0027",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0028",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0028",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0029",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0029",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0030",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0030",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0031",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0031",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0032",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0032",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0033",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0033",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0034",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0034",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0035",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0035",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0036",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0036",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0037",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0037",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0038",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0038",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0039",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0039",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0040",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0040",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0041",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0041",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0042",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0042",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0043",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0043",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0044",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0044",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0045",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0045",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0046",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0046",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0047",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0047",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0048",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0048",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0049",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0049",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0050",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0050",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0051",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0051",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0052",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0052",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0053",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0053",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0054",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0054",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0055",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0055",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0056",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0056",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0057",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0057",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0058",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0058",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0059",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0059",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0060",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0060",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0061",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0061",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0062",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0062",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0063",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0063",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0064",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0064",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0065",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0065",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0066",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0066",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0067",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0067",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0068",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0068",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0069",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0069",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0070",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0070",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0071",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0071",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0072",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0072",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0073",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0073",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0074",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0074",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0075",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0075",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0076",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0076",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0077",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0077",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0078",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0078",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0079",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0079",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0080",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0080",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0081",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0081",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0082",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0082",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0083",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0083",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0084",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0084",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0085",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0085",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0086",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0086",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0087",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0087",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0088",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0088",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0089",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0089",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0090",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0090",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0091",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0091",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0092",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0092",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0093",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0093",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0094",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0094",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0095",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0095",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0096",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0096",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0097",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0097",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0098",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0098",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0099",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0099",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0100",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0100",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0101",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0101",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0102",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0102",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0103",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0103",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0104",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0104",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0105",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0105",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0106",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0106",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0107",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0107",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0108",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0108",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0109",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0109",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0110",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0110",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0111",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0111",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0112",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0112",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0113",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0113",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0114",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0114",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0115",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0115",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0116",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0116",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0117",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0117",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0118",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0118",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0119",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0119",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0120",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0120",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0121",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0121",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0122",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0122",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0123",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0123",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0124",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0124",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0125",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0125",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0126",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0126",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0127",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0127",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0128",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0128",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0129",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0129",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0130",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0130",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0131",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0131",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0132",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0132",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0133",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0133",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0134",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0134",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0135",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0135",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0136",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0136",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0137",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0137",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0138",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0138",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0139",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0139",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0140",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0140",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0141",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0141",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0142",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0142",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0143",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0143",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0144",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0144",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0145",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0145",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0146",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0146",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0147",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0147",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0148",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0148",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0149",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0149",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0150",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0150",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0151",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0151",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0152",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0152",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0153",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0153",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0154",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0154",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0155",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0155",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0156",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0156",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0157",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0157",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0158",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0158",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0159",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0159",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0160",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0160",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0161",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0161",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0162",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0162",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0163",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0163",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0164",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0164",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0165",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0165",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0166",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0166",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0167",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0167",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0168",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0168",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0169",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0169",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0170",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0170",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0171",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0171",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0172",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0172",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0173",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0173",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0174",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0174",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0175",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0175",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0176",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0176",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0177",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0177",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0178",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0178",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0179",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0179",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0180",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0180",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0181",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0181",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0182",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0182",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0183",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0183",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0184",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0184",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0185",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0185",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0186",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0186",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0187",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0187",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0188",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0188",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0189",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0189",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0190",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0190",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0191",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0191",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0192",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0192",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0193",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0193",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0194",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0194",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0195",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0195",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0196",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0196",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0197",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0197",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0198",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0198",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0199",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0199",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0200",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0200",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0201",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0201",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0202",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0202",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0203",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0203",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0204",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0204",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0205",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0205",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0206",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0206",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0207",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0207",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0208",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0208",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0209",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0209",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0210",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0210",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0211",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0211",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0212",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0212",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0213",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0213",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0214",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0214",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0215",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0215",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0216",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0216",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0217",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0217",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0218",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0218",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0219",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0219",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0220",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0220",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0221",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0221",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0222",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0222",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0223",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0223",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0224",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0224",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0225",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0225",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0226",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0226",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0227",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0227",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0228",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0228",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0229",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0229",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0230",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0230",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0231",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0231",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0232",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0232",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0233",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0233",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0234",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0234",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0235",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0235",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0236",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0236",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0237",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0237",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0238",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0238",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0239",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0239",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0240",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0240",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0241",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0241",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0242",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0242",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0243",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0243",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0244",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0244",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0245",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0245",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0246",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0246",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0247",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0247",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0248",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0248",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0249",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0249",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0250",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0250",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0251",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0251",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0252",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0252",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0253",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0253",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0254",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0254",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0255",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0255",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0256",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0256",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0257",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0257",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0258",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0258",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0259",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0259",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0260",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0260",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0261",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0261",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0262",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0262",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0263",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0263",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0264",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0264",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0265",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0265",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0266",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0266",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0267",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0267",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0268",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0268",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0269",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0269",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0270",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0270",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0271",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0271",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0272",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0272",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0273",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0273",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0274",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0274",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0275",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0275",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0276",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0276",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0277",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0277",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0278",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0278",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0279",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0279",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0280",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0280",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0281",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0281",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0282",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0282",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0283",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0283",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0284",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0284",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0285",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0285",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0286",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0286",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0287",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0287",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0288",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0288",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0289",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0289",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0290",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0290",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0291",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0291",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0292",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0292",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0293",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0293",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0294",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0294",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0295",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0295",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0296",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0296",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0297",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0297",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0298",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0298",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0299",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0299",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0300",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0300",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0301",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0301",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0302",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0302",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0303",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0303",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0304",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0304",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0305",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0305",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0306",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0306",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0307",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0307",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0308",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0308",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0309",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0309",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0310",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0310",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0311",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0311",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0312",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0312",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0313",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0313",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0314",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0314",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0315",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0315",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0316",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0316",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0317",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0317",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0318",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0318",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0319",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0319",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0320",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0320",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0321",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0321",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0322",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0322",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0323",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0323",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0324",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0324",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0325",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0325",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0326",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0326",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0327",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0327",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0328",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0328",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0329",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0329",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0330",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0330",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0331",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0331",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0332",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0332",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0333",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0333",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0334",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0334",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0335",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0335",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0336",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0336",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0337",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0337",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0338",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0338",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0339",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0339",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0340",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0340",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0341",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0341",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0342",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0342",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0343",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0343",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0344",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0344",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0345",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0345",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0346",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0346",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0347",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0347",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0348",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0348",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0349",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0349",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0350",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0350",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0351",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0351",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0352",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0352",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0353",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0353",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0354",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0354",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0355",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0355",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0356",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0356",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0357",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0357",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0358",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0358",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0359",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0359",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0360",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0360",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0361",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0361",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0362",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0362",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0363",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0363",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0364",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0364",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0365",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0365",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0366",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0366",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0367",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0367",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0368",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0368",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0369",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0369",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0370",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0370",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0371",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0371",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0372",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0372",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0373",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0373",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0374",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0374",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0375",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0375",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0376",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0376",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0377",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0377",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0378",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0378",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0379",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0379",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0380",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0380",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0381",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0381",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0382",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0382",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0383",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0383",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0384",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0384",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0385",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0385",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0386",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0386",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0387",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0387",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0388",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0388",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0389",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0389",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0390",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0390",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0391",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0391",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0392",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0392",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0393",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0393",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0394",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0394",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0395",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0395",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0396",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0396",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0397",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0397",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0398",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0398",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0399",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0399",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0400",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0400",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0401",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0401",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0402",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0402",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0403",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0403",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0404",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0404",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0405",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0405",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0406",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0406",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0407",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0407",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0408",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0408",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0409",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0409",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0410",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0410",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0411",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0411",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0412",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0412",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0413",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0413",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0414",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0414",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0415",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0415",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0416",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0416",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0417",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0417",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0418",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0418",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0419",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0419",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0420",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0420",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0421",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0421",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0422",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0422",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0423",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0423",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0424",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0424",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0425",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0425",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0426",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0426",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0427",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0427",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0428",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0428",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0429",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0429",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0430",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0430",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0431",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0431",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0432",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0432",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0433",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0433",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0434",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0434",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0435",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0435",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0436",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0436",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0437",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0437",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0438",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0438",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0439",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0439",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0440",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0440",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0441",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0441",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0442",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0442",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0443",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0443",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0444",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0444",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0445",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0445",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0446",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0446",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0447",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0447",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0448",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0448",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0449",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0449",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0450",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0450",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0451",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0451",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0452",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0452",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0453",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0453",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0454",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0454",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0455",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0455",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0456",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0456",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0457",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0457",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0458",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0458",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0459",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0459",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0460",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0460",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0461",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0461",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0462",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0462",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0463",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0463",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0464",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0464",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0465",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0465",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0466",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0466",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0467",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0467",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0468",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0468",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0469",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0469",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0470",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0470",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0471",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0471",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0472",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0472",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0473",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0473",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0474",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0474",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0475",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0475",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0476",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0476",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0477",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0477",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0478",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0478",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0479",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0479",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0480",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0480",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0481",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0481",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0482",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0482",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0483",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0483",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0484",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0484",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0485",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0485",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0486",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0486",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0487",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0487",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0488",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0488",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0489",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0489",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0490",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0490",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0491",
+      "profile": "economy",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 1
+    },
+    {
+      "case": "M0491",
+      "profile": "full",
+      "passed": true,
+      "category": "SCHEMA_CHANGE",
+      "calls": 2
+    },
+    {
+      "case": "M0492",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0492",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0493",
+      "profile": "economy",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 1
+    },
+    {
+      "case": "M0493",
+      "profile": "full",
+      "passed": true,
+      "category": "DATA_QUALITY",
+      "calls": 2
+    },
+    {
+      "case": "M0494",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0494",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0495",
+      "profile": "economy",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 1
+    },
+    {
+      "case": "M0495",
+      "profile": "full",
+      "passed": true,
+      "category": "CONNECTION_FAILURE",
+      "calls": 2
+    },
+    {
+      "case": "M0496",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0496",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0497",
+      "profile": "economy",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 1
+    },
+    {
+      "case": "M0497",
+      "profile": "full",
+      "passed": true,
+      "category": "NORMAL",
+      "calls": 2
+    },
+    {
+      "case": "M0498",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0498",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    },
+    {
+      "case": "M0499",
+      "profile": "economy",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 1
+    },
+    {
+      "case": "M0499",
+      "profile": "full",
+      "passed": true,
+      "category": "UNKNOWN",
+      "calls": 2
+    }
+  ]
+}

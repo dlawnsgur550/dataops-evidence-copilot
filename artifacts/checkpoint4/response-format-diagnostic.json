@@ -1,0 +1,10 @@
+{
+  "characters": 30,
+  "starts_code_fence": false,
+  "ends_code_fence": false,
+  "status": "completed",
+  "output_block_types": [
+    "output_text"
+  ],
+  "json_type": "dict"
+}

@@ -1,0 +1,127 @@
+{
+  "trace_id": "8f2dc163-7d46-4610-86ae-73490befa830",
+  "incident_ref": {
+    "incident_id": "inc-ee6415f5fbbe",
+    "dag_id": "orders_demo",
+    "run_id": "eval-ee6415f5fbbe",
+    "task_id": "dbt_run",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "SCHEMA_CHANGE",
+    "investigation": [
+      "모델 stg_orders에서 net_amount 컬럼을 참조하지만 존재하지 않는다는 오류를 확인했습니다.",
+      "원본 테이블 스키마와 stg_orders의 컬럼 참조를 대조해 변경 여부를 확인하세요.",
+      "dbt_run 실패로 후속 dbt_test와 publish_summary가 실행되지 않았습니다."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-d9b80ecc28b1ef",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-ee6415f5fbbe",
+          "dag_id": "orders_demo",
+          "run_id": "eval-ee6415f5fbbe",
+          "task_id": "dbt_run",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "worker startup completed",
+          "이전 태스크에서 인증 경고가 있었으나 이번 실패와 관련성은 미확인.",
+          "column \"net_amount\" does not exist in model stg_orders",
+          "Task marked failed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.web_orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "failed",
+    "severity": "unknown",
+    "cause": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+    "evidence_ids": [],
+    "missing_evidence": [
+      "Review rejected: OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": false,
+    "violations": [
+      "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+    ],
+    "feedback": [
+      "Execution stopped within the configured boundary"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [
+    "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+  ],
+  "usage": {
+    "llm_calls": 2,
+    "tool_calls": 1,
+    "rag_calls": 0,
+    "tokens": 1203,
+    "cost": 0.00008955,
+    "elapsed_seconds": 6.588669,
+    "api_calls": 2,
+    "local_cache_hits": 0,
+    "input_tokens": 1056,
+    "output_tokens": 147,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "triage",
+    "inspector"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "5dc553af8794071c7cc90ed871f19adca509bf3cdcb564ee7f572775a40873ff",
+  "versions": {
+    "app": "0.1.0",
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

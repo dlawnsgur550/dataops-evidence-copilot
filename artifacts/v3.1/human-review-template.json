@@ -1,0 +1,114 @@
+{
+  "status": "pending",
+  "reviewer": null,
+  "cases": [
+    {
+      "case": "Z01",
+      "source": "artifacts/v3/final/Z01-full.json",
+      "source_sha256": "f267189f9e93395ed93fa23d8ee38b1054d7f6b00e55f702f90f6040823bbb30",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z02",
+      "source": "artifacts/v3/final/Z02-full.json",
+      "source_sha256": "c95b972fc923d067cf6a0db393e288309f79ad516ae4941d07821f3a61e8e62e",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z03",
+      "source": "artifacts/v3/final/Z03-full.json",
+      "source_sha256": "6de79d37b53a9d10a4f4c5c5c9af60e1cc1ff4425c3be385f29fb5cc85479daa",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z04",
+      "source": "artifacts/v3/final/Z04-full.json",
+      "source_sha256": "93c5e062f17585a2c35f322fdbe0a15c510a5f932a3dfc7c620dc3812d606d47",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z05",
+      "source": "artifacts/v3/final/Z05-full.json",
+      "source_sha256": "03b4904464022b1e77f49f1c34779f27f456deed821e8dcfb67373d96394ec75",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z06",
+      "source": "artifacts/v3/final/Z06-full.json",
+      "source_sha256": "a38f290c6ca3b5dedd77f44a6ce9804913a7d79af985f8decee35656081e7f4c",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z07",
+      "source": "artifacts/v3/final/Z07-full.json",
+      "source_sha256": "5511aa0410a532db2d96d741c04b23b57c8ffb9a876f93749889a20fdf6617bf",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z08",
+      "source": "artifacts/v3/final/Z08-full.json",
+      "source_sha256": "df4ab04561e8df4970393ea39bd588e09d621d9c11c0223d9da3e722eab34d34",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z09",
+      "source": "artifacts/v3/final/Z09-full.json",
+      "source_sha256": "da0968e7e228702ef9e69051c24b611cbfda0b3557c149d90187ba597a72ada8",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "Z10",
+      "source": "artifacts/v3/final/Z10-full.json",
+      "source_sha256": "52e8d3e895c17c7d247cf62584c0b5ab8c4fe3c51d4342ce01889eb2126e709a",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "I01",
+      "source": "artifacts/v3.1/targeted/I01-economy.json",
+      "source_sha256": "9f98bcbcb3f41487f78f6cf459bf97b13562347220e1f0de2de494fcf753a2e0",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    },
+    {
+      "case": "I02",
+      "source": "artifacts/v3.1/targeted/I02-economy.json",
+      "source_sha256": "ed811ede85bf163aa2d05518f2892d505f73a240fe2034a52a8650029718df20",
+      "cause": null,
+      "observations": null,
+      "actions": null,
+      "notes": ""
+    }
+  ]
+}

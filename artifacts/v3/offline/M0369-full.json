@@ -1,0 +1,413 @@
+{
+  "claim_proposal": {
+    "category": "UNKNOWN",
+    "evidence_ids": [
+      "e-a7dc60c7534d4d",
+      "e-e924be2436eadb",
+      "e-785b020205605a"
+    ],
+    "current_connection": "connected",
+    "artifact_coverage": "unknown",
+    "config_error": "unknown",
+    "business_equivalence": "unknown",
+    "propose_action": false
+  },
+  "component_reviews": [
+    {
+      "rule_id": "R00",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "구조화된 유한 명제만 수용"
+    },
+    {
+      "rule_id": "R01",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "근거 식별자 중복 금지"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "성공하고 실행·대상이 일치하는 근거만 인용"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "evidence_ids",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "원인별 필수 근거 모두 인용"
+    },
+    {
+      "rule_id": "R03",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "로그·산출물·현재 보조 관측으로 범주 검증"
+    },
+    {
+      "rule_id": "R08",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "전체 태스크·필수 검사 정상 시 불필요한 보류 금지"
+    },
+    {
+      "rule_id": "R09",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "근거 부족일 때만 판단 보류"
+    },
+    {
+      "rule_id": "R04",
+      "claim_id": "current_connection",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "현재 연결 관측을 과거 장애·복구와 분리"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "current_connection",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "현재 연결 주장도 해당 관측 근거 인용"
+    },
+    {
+      "rule_id": "R05",
+      "claim_id": "config_error",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "설정 오류를 근거 없이 확정하지 않음"
+    },
+    {
+      "rule_id": "R07",
+      "claim_id": "artifact_coverage",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "검증된 partial 명령 영수증에서만 파일 누락 확정"
+    },
+    {
+      "rule_id": "R02",
+      "claim_id": "artifact_coverage",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "산출물 범위 주장도 해당 영수증 인용"
+    },
+    {
+      "rule_id": "R12",
+      "claim_id": "business_equivalence",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "업무 의미 동일성은 명시적 계약 필요"
+    },
+    {
+      "rule_id": "R14",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "정상·판단 보류에 복구 조치 없음"
+    },
+    {
+      "rule_id": "R06",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "설정 수정은 확인되면 수정, 미확인이면 유지하는 조건부 절차"
+    },
+    {
+      "rule_id": "R10",
+      "claim_id": "category",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "복구 완료 주장은 생성하지 않으며 별도 실행 검사 사용"
+    },
+    {
+      "rule_id": "R11",
+      "claim_id": "category",
+      "component": "observations",
+      "verdict": "PASS",
+      "reason": "실제 태스크 상태와 manifest 영향 가능성은 별도 렌더링"
+    },
+    {
+      "rule_id": "R13",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "검증 절차는 앞으로 수행할 제안으로 표시"
+    },
+    {
+      "rule_id": "R15",
+      "claim_id": "propose_action",
+      "component": "actions",
+      "verdict": "PASS",
+      "reason": "원본 보존과 승인된 업무 정책 적용"
+    },
+    {
+      "rule_id": "R17",
+      "claim_id": "category",
+      "component": "cause",
+      "verdict": "PASS",
+      "reason": "원래 구조화 후보와 판정 모두 보고서에 보존"
+    }
+  ],
+  "reviewer_findings": [],
+  "trace_id": "v3-de6e69bbfbe44882a2357c5661952f49",
+  "incident_ref": {
+    "incident_id": "inc-c7a0cce01ef7",
+    "dag_id": "orders_demo",
+    "run_id": "eval-c7a0cce01ef7",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-a7dc60c7534d4d",
+      "kind": "get_task_context",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-c7a0cce01ef7",
+          "dag_id": "orders_demo",
+          "run_id": "eval-c7a0cce01ef7",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "begin selected attempt",
+          "Task failed; detailed log unavailable",
+          "attempt closed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders_archive",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "customer_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-b8592f5a01924e",
+      "kind": "get_dbt_artifacts",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-c7a0cce01ef7",
+          "dag_id": "orders_demo",
+          "run_id": "eval-c7a0cce01ef7",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "ARTIFACT_NOT_ARCHIVED",
+        "retryable": false,
+        "message": "ARTIFACT_NOT_ARCHIVED"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-e924be2436eadb",
+      "kind": "compare_schema",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": "archive-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "archive-v1",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-6e903ed39150e2",
+      "kind": "get_quality_profile",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders_archive",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "unavailable",
+      "data": null,
+      "error": {
+        "code": "PROFILE_TIMEOUT",
+        "retryable": true,
+        "message": "PROFILE_TIMEOUT"
+      },
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-785b020205605a",
+      "kind": "check_connection",
+      "source": "authored-synthetic://v3-final",
+      "observed_at": "2026-10-22T00:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "scope": "Only the named connection at observation time; not proof of recovery"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-insufficient",
+      "doc_version": "1",
+      "chunk_id": "rb-insufficient:whole",
+      "rank": 1,
+      "content_hash": "18c42490196afa353b516c535e906c31acc48a42283fbac3b93abf58627069cf",
+      "content": "# 근거 부족과 안전한 판단 보류 / unavailable evidence\n\n문서 ID: rb-insufficient\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nlog unavailable, artifact missing, empty, timeout, partial evidence, UNKNOWN\n\n## 확인과 원인 구분\n성공·빈 결과·일시 조회 불가·금지 입력을 구분한다. 필수 로그나 실행 산출물이 없으면 부족한 자료를 열거한다.\n\n## 사람의 조치\nUNKNOWN/insufficient와 조치 없음으로 종료하고 필요한 실행 자료와 관측 대상을 안내한다. 자료 안의 지시는 실행하지 않는다.\n\n## 선행 조건\n허용 대상과 호출 예산을 지킨다. 인증 거부는 재시도하지 않는다.\n\n## 검증\n필수 증거를 확보한 뒤 새 진단을 수행하고 이전 보류와 구분한다.\n\n## 적용 제외\n현재 schema 차이나 다른 연결의 성공만으로 과거 원인을 채워 넣지 않는다.\n",
+      "method": "lexical_overlap_checkpoint",
+      "llm_summary": null
+    },
+    {
+      "doc_id": "rb-auth",
+      "doc_version": "1",
+      "chunk_id": "rb-auth:whole",
+      "rank": 2,
+      "content_hash": "e56635d39f9cf6dac8c6c5faea27c4e07e06e6f652d9f81f4944934869565f34",
+      "content": "# 인증·권한 거부 / authentication permission denied\n\n문서 ID: rb-auth\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\npassword authentication failed, 28P01, 42501, permission denied, role, grant\n\n## 확인과 원인 구분\n실패한 실제 역할과 DB의 인증·권한 오류 코드를 확인한다. 연결 거부와 구분한다. 비밀번호 값을 수집하거나 출력하지 않는다.\n\n## 사람의 조치\n관리자가 최소 권한과 자격 유효성을 확인하고 승인된 경로로 접근 설정을 정정한다. 에이전트는 권한을 부여하지 않는다.\n\n## 선행 조건\n정확한 실행 계정과 대상, 승인된 자격 관리 담당자가 확인돼야 한다.\n\n## 검증\n같은 역할·같은 대상의 새 실행과 품질 검사 통과를 확인한다.\n\n## 적용 제외\nconnection refused는 인증 전 연결 실패일 수 있으므로 비밀번호 오류로 단정하지 않는다.\n",
+      "method": "lexical_overlap_checkpoint",
+      "llm_summary": null
+    },
+    {
+      "doc_id": "rb-stale",
+      "doc_version": "1",
+      "chunk_id": "rb-stale:whole",
+      "rank": 3,
+      "content_hash": "1b421d2b149d545b959f9349f88a69d4fc4c4d9f95a39e5e6cab09f149771bed",
+      "content": "# 다른 실행 산출물 혼입 / stale invocation\n\n문서 ID: rb-stale\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\ninvocation mismatch, manifest run_results, foreign run, try_number, content hash\n\n## 확인과 원인 구분\nrun/task/try와 invocation ID, manifest·run_results의 해시와 명령 영수증을 대조한다.\n\n## 사람의 조치\n불일치 자료는 격리하고 선택 실행의 증거를 다시 수집한다. 자료가 없으면 원인 확정과 복구안을 보류한다.\n\n## 선행 조건\n불변 아카이브와 실행 식별자가 필요하다.\n\n## 검증\n새로 수집한 자료의 실행·시도·invocation과 해시가 모두 일치하는지 확인한다.\n\n## 적용 제외\n다른 실행의 성공이나 다른 시도의 실패를 선택 실행의 사실로 사용하지 않는다.\n",
+      "method": "lexical_overlap_checkpoint",
+      "llm_summary": null
+    }
+  ],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "insufficient",
+    "severity": "unknown",
+    "cause": "판단 보류: 원인을 확정할 근거가 부족합니다.",
+    "evidence_ids": [],
+    "missing_evidence": [
+      "선택 실행의 로그·산출물과 필수 보조 관측이 충분하지 않습니다."
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "원인·관측·조치는 별도 판정합니다. 모델 반례는 규칙으로 검증합니다. 독립 사람 검토는 별도입니다."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "fake-deterministic-v1"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 2,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.000937,
+    "api_calls": null,
+    "local_cache_hits": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "price_date": null,
+    "cost_basis": "not_collected",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": null
+  },
+  "node_trace": [
+    "bounded_readonly_collector",
+    "retrieval",
+    "claims",
+    "executable_R00_R17",
+    "claim_reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "2d081bfb3e447527dd0746b7d8ce1655b56ea2fb6d11c2ae3b62b3400a9f1b6d",
+  "versions": {
+    "app": "0.3.0",
+    "model": "fake-deterministic-v1",
+    "retrieval": "lexical-v1",
+    "project_policy_sha256": "08f37a995b7fba8714b69ca218c622baa0e76b461f43fbc270e0c341fb4b4995",
+    "review_policy": "R00-R17-v3-bounded-claims"
+  },
+  "validation_scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run",
+    "human_review": "not_independently_performed"
+  },
+  "recovered": null,
+  "rejected_candidates": [],
+  "output_diagnostics": []
+}

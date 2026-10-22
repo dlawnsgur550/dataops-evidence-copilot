@@ -1,0 +1,350 @@
+{
+  "trace_id": "9a669a61-9ce9-4bb5-8cc8-c53038583895",
+  "incident_ref": {
+    "incident_id": "7321ba2d7a38464cb9e826fd98a86c88",
+    "dag_id": "orders_demo",
+    "run_id": "manual__e57ba71dbfb54bfe9960acf223143e69",
+    "task_id": "dbt_test",
+    "try_number": 1
+  },
+  "plan": {
+    "provisional_category": "DATA_QUALITY",
+    "investigation": [
+      "Confirm selected invocation before establishing a cause",
+      "Collect current schema/profile separately",
+      "Check only the named dbt connection"
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "live-a619adcb5632cc099469",
+      "kind": "get_task_context",
+      "source": "live://airflow/2.10.4/api/v1",
+      "observed_at": "2026-10-20T09:21:13.666994Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__e57ba71dbfb54bfe9960acf223143e69",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "success",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "log_lines": [
+          "897ca77fea57",
+          " INFO - ::group::Log message source details",
+          "*** Found local files:",
+          "***   * /Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/logs/dag_id=orders_demo/run_id=manual__e57ba71dbfb54bfe9960acf223143e69/task_id=dbt_test/attempt=1.log",
+          " INFO - ::endgroup::",
+          "[2026-10-20T09:21:09.497+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs",
+          "[2026-10-20T09:21:09.500+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orders_demo.dbt_test manual__e57ba71dbfb54bfe9960acf223143e69 [queued]>",
+          "[2026-10-20T09:21:09.502+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orders_demo.dbt_test manual__e57ba71dbfb54bfe9960acf223143e69 [queued]>",
+          "[2026-10-20T09:21:09.502+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1",
+          "[2026-10-20T09:21:09.506+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): dbt_test> on 2026-10-20 09:21:03.861843+00:00",
+          "[2026-10-20T09:21:09.508+0000] {standard_task_runner.py:72} INFO - Started process 291 to run task",
+          "[2026-10-20T09:21:09.509+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'orders_demo', 'dbt_test', 'manual__e57ba71dbfb54bfe9960acf223143e69', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/orders_demo.py', '--cfg-path', '/tmp/tmpsj0ui1wf']",
+          "[2026-10-20T09:21:09.510+0000] {standard_task_runner.py:105} INFO - Job 64: Subtask dbt_test",
+          "[2026-10-20T09:21:09.522+0000] {task_command.py:467} INFO - Running <TaskInstance: orders_demo.dbt_test manual__e57ba71dbfb54bfe9960acf223143e69 [running]> on host 897ca77fea57",
+          "[2026-10-20T09:21:09.539+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='orders_demo' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2026-10-20T09:21:03.861843+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__e57ba71dbfb54bfe9960acf223143e69'",
+          "[2026-10-20T09:21:09.540+0000] {taskinstance.py:731} INFO - ::endgroup::",
+          "Running with dbt=1.9.10",
+          "Registered adapter: postgres=1.9.1",
+          "Unable to do partial parsing because saved manifest not found. Starting full parse.",
+          "Found 2 models, 2 data tests, 1 source, 475 macros",
+          "Concurrency: 1 threads (target='local')",
+          "1 of 2 START test not_null_stg_orders_order_id ................................. [RUN]",
+          "1 of 2 PASS not_null_stg_orders_order_id ....................................... [PASS in 0.02s]",
+          "2 of 2 START test unique_stg_orders_order_id ................................... [RUN]",
+          "2 of 2 PASS unique_stg_orders_order_id ......................................... [PASS in 0.01s]",
+          "Finished running 2 data tests in 0 hours 0 minutes and 0.08 seconds (0.08s).",
+          "Completed successfully",
+          "Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2",
+          "{\"dbt_archive\": \"/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint4/dbt-archives/b147a1c36b99b988b4edffd0d88ba0ea239ce9599b845c96708de83803961844/67b2c55610d843e1a375a4747756c400\", \"exit_code\": 0}",
+          "[2026-10-20T09:21:11.001+0000] {python.py:240} INFO - Done. Returned value was: None",
+          "[2026-10-20T09:21:11.003+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs",
+          "[2026-10-20T09:21:11.004+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=orders_demo, task_id=dbt_test, run_id=manual__e57ba71dbfb54bfe9960acf223143e69, execution_date=20261020T092103, start_date=20261020T092109, end_date=20261020T092111",
+          "[2026-10-20T09:21:11.030+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0",
+          "[2026-10-20T09:21:11.036+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check",
+          "[2026-10-20T09:21:11.037+0000] {local_task_job_runner.py:245} INFO - ::endgroup::"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T09:21:09.500775+00:00",
+        "run_finished_at": "2026-10-20T09:21:11.003981+00:00",
+        "log_try_number": 1,
+        "tasks_complete": true
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-8f6b3582c2a0871487c2",
+      "kind": "get_dbt_artifacts",
+      "source": "live://dbt/immutable-artifact-store",
+      "observed_at": "2026-10-20T09:21:13.743631Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "selected-live-incident",
+          "dag_id": "orders_demo",
+          "run_id": "manual__e57ba71dbfb54bfe9960acf223143e69",
+          "task_id": "dbt_test",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "6c2d84b3-38a8-4496-9738-4878d8200d8e",
+        "manifest_invocation_id": "6c2d84b3-38a8-4496-9738-4878d8200d8e",
+        "run_results_invocation_id": "6c2d84b3-38a8-4496-9738-4878d8200d8e",
+        "artifact_status": "complete",
+        "available_artifacts": [
+          "manifest",
+          "run_results"
+        ],
+        "command": "test",
+        "missing_artifacts": [],
+        "stdout_invocation_ids": [
+          "6c2d84b3-38a8-4496-9738-4878d8200d8e"
+        ],
+        "command_log_sha256": "8bb58e46526ef4c6b12d5e405ddf2993c9468dcca420be6106cd8591eef064c5",
+        "exit_code": 0,
+        "issue": null,
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "results": [
+          {
+            "unique_id": "test.orders_demo.not_null_stg_orders_order_id.81cfe2fe64",
+            "resource_type": "test",
+            "status": "pass",
+            "message": "",
+            "depends_on": [
+              "model.orders_demo.stg_orders"
+            ]
+          },
+          {
+            "unique_id": "test.orders_demo.unique_stg_orders_order_id.e3b841c71a",
+            "resource_type": "test",
+            "status": "pass",
+            "message": "",
+            "depends_on": [
+              "model.orders_demo.stg_orders"
+            ]
+          }
+        ],
+        "test_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "failed_node": null,
+        "actual_failed": [],
+        "potential_downstream": [],
+        "content_hashes": {
+          "manifest": "22c2021099be942102492139dc84cbcf7a95773050d5984d24767eab97aab318",
+          "run_results": "077360dd61dfb14c8a758ec7a07e087cd30b3c1f294315df6c7e9b3828771df8"
+        },
+        "archived_at": "2026-10-20T09:21:10.986970+00:00",
+        "message": "\n"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-c2854c0e965991eebd8d",
+      "kind": "compare_schema",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T09:21:13.766396Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp without time zone"
+        },
+        "baseline_id": "orders-v1",
+        "baseline_observed_at": "2026-10-20T09:19:03.363484+00:00",
+        "removed": [],
+        "added": [],
+        "type_changes": [],
+        "warning": "Current observation, not failed-run snapshot"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-d2caef7e8f1c1d99bf05",
+      "kind": "get_quality_profile",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T09:21:13.786091Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "row_count": 1000,
+        "null_counts": {
+          "order_id": 0
+        },
+        "duplicate_counts": {
+          "order_id": 0
+        },
+        "samples": [],
+        "truncated": false,
+        "warning": "Current observation, not failed-run snapshot"
+      },
+      "error": null,
+      "simulated": false
+    },
+    {
+      "evidence_id": "live-ddbac35fcf1f7b30ab99",
+      "kind": "check_connection",
+      "source": "live://postgres/read-only",
+      "observed_at": "2026-10-20T09:21:13.797814Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": null,
+        "connection_id": "dbt_orders",
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "connected": true,
+        "error_type": null,
+        "endpoint": {
+          "host": "127.0.0.1",
+          "port": 15439
+        },
+        "probe_role": "read_only_observer",
+        "scope": "Only this named endpoint now; not proof of failed dbt process configuration or pipeline recovery"
+      },
+      "error": null,
+      "simulated": false
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "2",
+      "chunk_id": "rb-connection:0",
+      "rank": 1,
+      "content_hash": "46708c1494c355883792be62429a5bc25510fb86f27b3b98aa261f8ab07c58d5",
+      "content": "# dbt 실행 연결 거부 / connection refused\n# dbt 실행 연결 거부 / connection refused\n\n문서 ID: rb-connection\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nconnection_refused, connection refused, dbt_orders, dbt_run, endpoint, host, port\n\n## 확인과 원인 구분\n실패 실행의 로그와 해당 dbt invocation 자료에서 실제 연결 ID를 확인한다. partial manifest만 있으면 검증된 명령 영수증과 누락 run_results를 명시한다.\n\n## 사람의 조치\n개발자가 실제 dbt 실행 설정과 서비스 상태·경로를 점검하고 확인된 설정 오류를 바로잡는다. 비밀번호는 보고서에 넣지 않는다.\n\n## 선행 조건\n실패 프로세스가 사용한 연결 설정을 먼저 확인한다. 포트가 로그에 없으면 잘못된 포트를 확정하지 않는다.\n\n## 검증\n새 실행의 모든 태스크와 두 품질 검사, 집계가 통과해야 한다. 현재 probe 성공이나 mcp_readonly 접속 성공만으로 복구라고 부르지 않는다.\n\n## 적용 제외\n다른 연결의 접속 성공은 dbt_orders 성공이 아니다. 현재 연결 성공은 과거 실행 실패를 지우지 않는다. 인증 오류·DNS 오류는 별도 런북을 확인한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60"
+    },
+    {
+      "doc_id": "rb-duplicate",
+      "doc_version": "2",
+      "chunk_id": "rb-duplicate:0",
+      "rank": 2,
+      "content_hash": "5077572ec6be4ecbe31558661202eeef05cc4e7b9e251583426bc8da72923e52",
+      "content": "# 중복 키 / unique violation\n# 중복 키 / unique violation\n\n문서 ID: rb-duplicate\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nunique, duplicate_counts, duplicate order_id, dbt_test, primary key\n\n## 확인과 원인 구분\n선택 invocation에서 unique 검사가 실패했는지 확인하고 중복 그룹·원천 재적재 범위를 제한 조회한다. NULL 검사와 구분한다.\n\n## 사람의 조치\n업무상 중복 정의와 적재 멱등성을 개발자가 검토하고 승인된 중복 처리 정책을 적용한다. 원본을 보존한다.\n\n## 선행 조건\n유효한 최신 레코드 선택 기준과 중복 처리 승인이 필요하다.\n\n## 검증\n새 실행의 unique와 not_null, 원천 대비 건수·금액 정합성을 확인한다.\n\n## 적용 제외\nNULL만 있고 중복 수가 0이면 이 문서를 원인 근거로 삼지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60"
+    },
+    {
+      "doc_id": "case-key",
+      "doc_version": "1",
+      "chunk_id": "case-key:0",
+      "rank": 3,
+      "content_hash": "80605d16ef14be7817fb6b1d6e0548c2d157d7211b9efa181a7834e80e268356",
+      "content": "# 원천 필수 키 누락을 격리\n# 원천 필수 키 누락을 격리\n\n문서 ID: case-key\n버전: 1\n수정일: 2026-10-20\n자료 유형: 교육용 합성 장애 기록. 평가셋과 별도 작성.\n관련 절차: rb-quality\n\n## 관측\n선택 실행 not_null 실패와 제한된 현재 프로필을 구분해 설명했다. 중복 0건은 NULL 부재를 뜻하지 않았다.\n\n## 대응과 검증\n원본을 보존하고 승인된 원천 정정 절차 후 새 실행의 not_null·unique와 건수·합계를 검증했다.\n\n## 한계\n특정 실행의 정답이 아니며 이 기록만으로 현재 원인을 확정하지 않는다. 원본·실행 식별자를 대조한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60"
+    }
+  ],
+  "diagnosis": {
+    "category": "NORMAL",
+    "diagnosis_status": "supported",
+    "severity": "low",
+    "cause": "선택 실행의 전체 태스크와 필수 dbt 품질 검사가 성공했습니다.",
+    "evidence_ids": [
+      "live-a619adcb5632cc099469",
+      "live-8f6b3582c2a0871487c2"
+    ],
+    "missing_evidence": [],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Fake reviewer only: semantic LLM review remains unverified"
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "fake-deterministic-v1"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 5,
+    "rag_calls": 1,
+    "tokens": null,
+    "cost": null,
+    "elapsed_seconds": 0.337687,
+    "api_calls": null,
+    "local_cache_hits": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "price_date": null,
+    "cost_basis": "not_collected",
+    "uncertain_reserved_usd": 0.0
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "cb61b042e736d71df5b0a53171be1bcbae1b666a3a317e9effd792fb3a5a1266",
+  "versions": {
+    "app": "0.1.0",
+    "model": "fake-deterministic-v1",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-27058e5de5b7a7ad"
+  },
+  "validation_scope": {
+    "llm": "fake-deterministic-v1",
+    "transport": "real_mcp_stdio_live_backend",
+    "data": "synthetic_demo_data_on_live_airflow_postgres_dbt",
+    "external_systems": "live_local_airflow_postgres_dbt"
+  },
+  "recovered": null
+}

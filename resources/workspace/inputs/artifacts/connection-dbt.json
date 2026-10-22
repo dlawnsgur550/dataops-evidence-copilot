@@ -1,0 +1,37 @@
+{
+  "status": "success",
+  "data": {
+    "invocation_id": "74a363d1-8a5c-4eca-872c-6e394cdf9112",
+    "manifest_invocation_id": "74a363d1-8a5c-4eca-872c-6e394cdf9112",
+    "run_results_invocation_id": null,
+    "artifact_status": "partial",
+    "available_artifacts": [
+      "manifest"
+    ],
+    "command": "run",
+    "missing_artifacts": [
+      "run_results"
+    ],
+    "stdout_invocation_ids": [
+      "74a363d1-8a5c-4eca-872c-6e394cdf9112"
+    ],
+    "command_log_sha256": "e4999060ee11fb0b831ad4fc0cccda227ecf81456b682a7fe3e0e04e84d12999",
+    "exit_code": 2,
+    "issue": "connection_refused",
+    "column_id": null,
+    "table_id": "raw.orders",
+    "connection_id": "dbt_orders",
+    "results": [],
+    "test_results": {},
+    "failed_node": null,
+    "actual_failed": [],
+    "potential_downstream": [],
+    "content_hashes": {
+      "manifest": "ea0634a7ca5930267b1c22b47a56d5bbe5fca1312329ecf0c2763d1a51eaa404"
+    },
+    "archived_at": "2026-10-22T00:40:21.161557+00:00",
+    "message": ""
+  },
+  "error": null,
+  "evidence_id": "live-8262c67ab5ce70a1baab"
+}

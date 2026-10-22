@@ -1,0 +1,721 @@
+{
+  "scope": "actual gpt-6-luna calls on frozen authored synthetic evidence; baseline=1 call/no retrieval, full=2 calls/local hybrid retrieval. NOT live-system calls and NOT a comparison across model families.",
+  "phase": "final",
+  "cases": [
+    {
+      "case": "Z01",
+      "expected": "SCHEMA_CHANGE",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "SCHEMA_CHANGE",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1769,
+          "cost": 0.00012815,
+          "elapsed_seconds": 3.255801,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1675,
+          "output_tokens": 94,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "018475d8f7603711f08be467bcf86b72a10017ca5b4966076ccd37b8c123417b",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "SCHEMA_CHANGE",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4796,
+          "cost": 0.0003233,
+          "elapsed_seconds": 10.27457,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4670,
+          "output_tokens": 126,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "018475d8f7603711f08be467bcf86b72a10017ca5b4966076ccd37b8c123417b"
+    },
+    {
+      "case": "Z02",
+      "expected": "SCHEMA_CHANGE",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "SCHEMA_CHANGE",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1756,
+          "cost": 0.000127338,
+          "elapsed_seconds": 3.14736,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1662,
+          "output_tokens": 94,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "acb65f62447b9d6b9631cf983836fea3fd3fdb581ab453377013a8ab29b58e63",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "SCHEMA_CHANGE",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4790,
+          "cost": 0.000326676,
+          "elapsed_seconds": 7.776592,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4644,
+          "output_tokens": 146,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "acb65f62447b9d6b9631cf983836fea3fd3fdb581ab453377013a8ab29b58e63"
+    },
+    {
+      "case": "Z03",
+      "expected": "DATA_QUALITY",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "DATA_QUALITY",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1812,
+          "cost": 0.000132713,
+          "elapsed_seconds": 3.232408,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1708,
+          "output_tokens": 104,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "cf7f33df811f2fa2dbfe627f0b199d6abb50e6afdd79b82be6a52f964fde3397",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "DATA_QUALITY",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4911,
+          "cost": 0.000348676,
+          "elapsed_seconds": 13.78249,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4688,
+          "output_tokens": 223,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "cf7f33df811f2fa2dbfe627f0b199d6abb50e6afdd79b82be6a52f964fde3397"
+    },
+    {
+      "case": "Z04",
+      "expected": "DATA_QUALITY",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "DATA_QUALITY",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1764,
+          "cost": 0.000127463,
+          "elapsed_seconds": 4.233588,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1672,
+          "output_tokens": 92,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "3f7626712fdb7bc2e0efeaedd4cc08fafd06824053dfd5abd6386b33873b79d9",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "DATA_QUALITY",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4788,
+          "cost": 0.000330488,
+          "elapsed_seconds": 11.041102,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4621,
+          "output_tokens": 167,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "3f7626712fdb7bc2e0efeaedd4cc08fafd06824053dfd5abd6386b33873b79d9"
+    },
+    {
+      "case": "Z05",
+      "expected": "CONNECTION_FAILURE",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1779,
+          "cost": 0.000127463,
+          "elapsed_seconds": 4.091735,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1692,
+          "output_tokens": 87,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "5147f7da7ae4168e135cd9e3962d1d5db251b58cc7a5697e347ce6ff028ff844",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4769,
+          "cost": 0.000332863,
+          "elapsed_seconds": 10.574186,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4583,
+          "output_tokens": 186,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "5147f7da7ae4168e135cd9e3962d1d5db251b58cc7a5697e347ce6ff028ff844"
+    },
+    {
+      "case": "Z06",
+      "expected": "CONNECTION_FAILURE",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1748,
+          "cost": 0.000124963,
+          "elapsed_seconds": 4.575501,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1664,
+          "output_tokens": 84,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "4dcdbd0e47803ecc33c0015c7db8dcd8de319254484aca1f3edb02ec4bf3f6c0",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true,
+          "action_target": true
+        },
+        "category": "CONNECTION_FAILURE",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4693,
+          "cost": 0.000320238,
+          "elapsed_seconds": 12.441022,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4549,
+          "output_tokens": 144,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "4dcdbd0e47803ecc33c0015c7db8dcd8de319254484aca1f3edb02ec4bf3f6c0"
+    },
+    {
+      "case": "Z07",
+      "expected": "NORMAL",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "NORMAL",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1739,
+          "cost": 0.00012215,
+          "elapsed_seconds": 4.033262,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1667,
+          "output_tokens": 72,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "b5d9df7dfcdb55b41f10d195061849e1607e0e5d727c312995af84548edd69b3",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "NORMAL",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4716,
+          "cost": 0.000317175,
+          "elapsed_seconds": 7.570471,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4596,
+          "output_tokens": 120,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "b5d9df7dfcdb55b41f10d195061849e1607e0e5d727c312995af84548edd69b3"
+    },
+    {
+      "case": "Z08",
+      "expected": "NORMAL",
+      "baseline": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "NORMAL",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1721,
+          "cost": 0.000120463,
+          "elapsed_seconds": 3.556101,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1652,
+          "output_tokens": 69,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "8a771456fc418fa763632f055c9533024f1f798c0948deb2478ddbe779db31ff",
+      "full": {
+        "passed": true,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": true,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "NORMAL",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4635,
+          "cost": 0.000308926,
+          "elapsed_seconds": 11.63995,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4532,
+          "output_tokens": 103,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "8a771456fc418fa763632f055c9533024f1f798c0948deb2478ddbe779db31ff"
+    },
+    {
+      "case": "Z09",
+      "expected": "UNKNOWN",
+      "baseline": {
+        "passed": false,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": false,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "UNKNOWN",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1555,
+          "cost": 0.000116463,
+          "elapsed_seconds": 5.855556,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1452,
+          "output_tokens": 103,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "8448caa565bd3ce8963bd81f59ccb92e773fe60114b9b6c16d2ed0820fc288ba",
+      "full": {
+        "passed": false,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": false,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "UNKNOWN",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4233,
+          "cost": 0.000286988,
+          "elapsed_seconds": 13.942308,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4113,
+          "output_tokens": 120,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "8448caa565bd3ce8963bd81f59ccb92e773fe60114b9b6c16d2ed0820fc288ba"
+    },
+    {
+      "case": "Z10",
+      "expected": "UNKNOWN",
+      "baseline": {
+        "passed": false,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": false,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "UNKNOWN",
+        "usage": {
+          "llm_calls": 1,
+          "tool_calls": 5,
+          "rag_calls": 0,
+          "tokens": 1564,
+          "cost": 0.000117025,
+          "elapsed_seconds": 4.162072,
+          "api_calls": 1,
+          "local_cache_hits": 0,
+          "input_tokens": 1461,
+          "output_tokens": 103,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "baseline_hash": "cd6599d9af1aaa5f7685cfc60816b38e9760c592f6675b67753f7632dbfd538a",
+      "full": {
+        "passed": false,
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "cause_accepted": false,
+          "status": true,
+          "actions": true,
+          "no_errors": true,
+          "no_recovery_claim": true
+        },
+        "category": "UNKNOWN",
+        "usage": {
+          "llm_calls": 2,
+          "tool_calls": 5,
+          "rag_calls": 1,
+          "tokens": 4233,
+          "cost": 0.0002838,
+          "elapsed_seconds": 11.461599,
+          "api_calls": 2,
+          "local_cache_hits": 0,
+          "input_tokens": 4130,
+          "output_tokens": 103,
+          "price_date": "2026-10-20",
+          "cost_basis": "provider_token_usage_price_estimate",
+          "uncertain_reserved_usd": 0.0,
+          "service_tier": "flex"
+        },
+        "errors": []
+      },
+      "full_hash": "cd6599d9af1aaa5f7685cfc60816b38e9760c592f6675b67753f7632dbfd538a"
+    }
+  ],
+  "independent_human_review": "pending",
+  "cost_before": {
+    "requests": 96,
+    "spent_or_reserved_usd": 0.016042884,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "cost_after": {
+    "requests": 126,
+    "spent_or_reserved_usd": 0.020466205,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "full_aggregate": {
+    "passed": 8,
+    "total": 10,
+    "wilson_95_interval": [
+      0.4902,
+      0.9433
+    ],
+    "caution": "authored correlated convenience sample, not population generalization"
+  },
+  "baseline_aggregate": {
+    "passed": 8,
+    "total": 10,
+    "wilson_95_interval": [
+      0.4902,
+      0.9433
+    ],
+    "caution": "authored correlated convenience sample, not population generalization"
+  }
+}

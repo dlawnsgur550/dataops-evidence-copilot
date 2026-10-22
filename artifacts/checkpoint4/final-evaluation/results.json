@@ -1,0 +1,1178 @@
+{
+  "split": "final",
+  "model": "gpt-6-luna",
+  "service_tier": "flex",
+  "freeze_id": "989656686c2e16405bf63a934876d5d49615c616fe40f80b40871eb114e531c6",
+  "cases": [
+    {
+      "case_id": "F01",
+      "final": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-insufficient:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "case-contract:0",
+          "rb-dns:0",
+          "case-endpoint:0",
+          "case-key:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-connection"
+        ],
+        "query_sha256": "bdd8c0914403c9f6c5bf898575ac64d01e4fa05765dbe348990585773fd28abc"
+      },
+      "final_usage": {
+        "llm_calls": 2,
+        "tool_calls": 1,
+        "rag_calls": 0,
+        "tokens": 1212,
+        "cost": 8.92e-05,
+        "elapsed_seconds": 7.434493,
+        "api_calls": 2,
+        "local_cache_hits": 0,
+        "input_tokens": 1069,
+        "output_tokens": 143,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "review_violations": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "baseline": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1268,
+        "cost": 0.0001094,
+        "elapsed_seconds": 4.503577166004106,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1107,
+        "output_tokens": 161,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "UNKNOWN",
+      "baseline_errors": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::value_error"
+      ]
+    },
+    {
+      "case_id": "F02",
+      "final": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-dns:0",
+          "rb-insufficient:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "case-contract:0",
+          "rb-duplicate:0",
+          "case-key:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-dns"
+        ],
+        "query_sha256": "01a1efcc5889ec3a4edfb17c3de92e4e5eff025e3483453d6d2e9eefe455c6ea"
+      },
+      "final_usage": {
+        "llm_calls": 2,
+        "tool_calls": 1,
+        "rag_calls": 0,
+        "tokens": 1203,
+        "cost": 8.955e-05,
+        "elapsed_seconds": 6.588669,
+        "api_calls": 2,
+        "local_cache_hits": 0,
+        "input_tokens": 1056,
+        "output_tokens": 147,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "review_violations": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "baseline": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": true,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1256,
+        "cost": 0.0001079,
+        "elapsed_seconds": 3.347925917012617,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1099,
+        "output_tokens": 157,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "UNKNOWN",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F03",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-schema:0",
+          "rb-dns:0",
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-connection:0",
+          "rb-insufficient:0",
+          "rb-upstream:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "case-endpoint:0",
+          "case-contract:0"
+        ],
+        "top3_doc_ids": [
+          "rb-schema",
+          "rb-quality",
+          "rb-connection"
+        ],
+        "query_sha256": "20cd42df27555a6c7c014d8a280caed83999feee91177c1231094d182bd1cb40"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 5277,
+        "cost": 0.00043965,
+        "elapsed_seconds": 14.125504,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4622,
+        "output_tokens": 655,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "SCHEMA_CHANGE",
+      "expected_category": "SCHEMA_CHANGE",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1942,
+        "cost": 0.000193338,
+        "elapsed_seconds": 10.113625249941833,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1558,
+        "output_tokens": 384,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "SCHEMA_CHANGE",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F04",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-quality:0",
+          "rb-auth:0",
+          "rb-duplicate:0",
+          "rb-connection:0",
+          "rb-dns:0",
+          "case-key:0",
+          "rb-schema:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-schema:0",
+          "rb-duplicate:0",
+          "case-key:0",
+          "case-endpoint:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-insufficient:0",
+          "rb-stale:0"
+        ],
+        "top3_doc_ids": [
+          "rb-quality",
+          "rb-connection",
+          "rb-duplicate"
+        ],
+        "query_sha256": "df02c55245dd1f9da627e73666aaba9db9f5d883b6be2f76fd30a65238a8a503"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 5110,
+        "cost": 0.000431763,
+        "elapsed_seconds": 21.279878,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4443,
+        "output_tokens": 667,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "DATA_QUALITY",
+      "expected_category": "DATA_QUALITY",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1879,
+        "cost": 0.000188463,
+        "elapsed_seconds": 7.468114834045991,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1500,
+        "output_tokens": 379,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "DATA_QUALITY",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F05",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-quality:0",
+          "rb-auth:0",
+          "rb-connection:0",
+          "rb-dns:0",
+          "case-key:0",
+          "rb-duplicate:0",
+          "rb-schema:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-schema:0",
+          "case-key:0",
+          "case-endpoint:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-insufficient:0",
+          "rb-stale:0"
+        ],
+        "top3_doc_ids": [
+          "rb-quality",
+          "rb-connection",
+          "rb-duplicate"
+        ],
+        "query_sha256": "3ad3b6ba87f209da3553cb9ac1d040291a1b8cb73196b54e70a524970d847d3b"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 4,
+        "rag_calls": 1,
+        "tokens": 5548,
+        "cost": 0.00045855,
+        "elapsed_seconds": 13.630003,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4881,
+        "output_tokens": 667,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "DATA_QUALITY",
+      "expected_category": "DATA_QUALITY",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 2208,
+        "cost": 0.000230025,
+        "elapsed_seconds": 8.478147999965586,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1717,
+        "output_tokens": 491,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "DATA_QUALITY",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F06",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-quality:0",
+          "rb-auth:0",
+          "rb-duplicate:0",
+          "rb-connection:0",
+          "rb-dns:0",
+          "case-key:0",
+          "rb-schema:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-schema:0",
+          "case-key:0",
+          "rb-dns:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "rb-insufficient:0",
+          "rb-stale:0"
+        ],
+        "top3_doc_ids": [
+          "rb-quality",
+          "rb-connection",
+          "rb-duplicate"
+        ],
+        "query_sha256": "7f4e07c922b303c11b7ad55134e03f874635e9f000870560b3f2ae7d993a2849"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 5269,
+        "cost": 0.000444063,
+        "elapsed_seconds": 14.732401,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4585,
+        "output_tokens": 684,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "DATA_QUALITY",
+      "expected_category": "DATA_QUALITY",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1909,
+        "cost": 0.000187525,
+        "elapsed_seconds": 6.499710584059358,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1545,
+        "output_tokens": 364,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "DATA_QUALITY",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F07",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "case-endpoint:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "rb-dns:0",
+          "rb-insufficient:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-dns",
+          "rb-auth"
+        ],
+        "query_sha256": "7068cadff0f093593faffebb14a7c25c0ce19903fe2d5158e01b1bb93a8fdd3e"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 4756,
+        "cost": 0.000372638,
+        "elapsed_seconds": 12.937433,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4286,
+        "output_tokens": 470,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "CONNECTION_FAILURE",
+      "expected_category": "CONNECTION_FAILURE",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1865,
+        "cost": 0.000187588,
+        "elapsed_seconds": 7.815811082953587,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1486,
+        "output_tokens": 379,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "CONNECTION_FAILURE",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F08",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "case-endpoint:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "rb-dns:0",
+          "rb-insufficient:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-dns",
+          "rb-auth"
+        ],
+        "query_sha256": "7068cadff0f093593faffebb14a7c25c0ce19903fe2d5158e01b1bb93a8fdd3e"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 4896,
+        "cost": 0.000391625,
+        "elapsed_seconds": 16.409981,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4368,
+        "output_tokens": 528,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "CONNECTION_FAILURE",
+      "expected_category": "CONNECTION_FAILURE",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1882,
+        "cost": 0.000190338,
+        "elapsed_seconds": 8.971356917056255,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1494,
+        "output_tokens": 388,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "CONNECTION_FAILURE",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F09",
+      "final": {
+        "checks": {
+          "category": false,
+          "required_citations": false,
+          "safe_action": false,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "rb-dns:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "case-endpoint:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-auth:0",
+          "rb-dns:0",
+          "rb-insufficient:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-stale:0",
+          "rb-upstream:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-dns",
+          "rb-auth"
+        ],
+        "query_sha256": "7068cadff0f093593faffebb14a7c25c0ce19903fe2d5158e01b1bb93a8fdd3e"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "rag_calls": 1,
+        "tokens": 5042,
+        "cost": 0.000420501,
+        "elapsed_seconds": 21.038856,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4409,
+        "output_tokens": 633,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "CONNECTION_FAILURE",
+      "errors": [],
+      "review_violations": [
+        "SEMANTIC_REVIEW_REJECTED"
+      ],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1862,
+        "cost": 0.000184775,
+        "elapsed_seconds": 8.933589791995473,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1497,
+        "output_tokens": 365,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "CONNECTION_FAILURE",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F10",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": false,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-dns:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-stale:0",
+          "rb-upstream:0",
+          "rb-insufficient:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-connection:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-schema:0",
+          "rb-upstream:0",
+          "case-endpoint:0",
+          "rb-insufficient:0",
+          "rb-stale:0",
+          "case-key:0"
+        ],
+        "top3_doc_ids": [
+          "rb-connection",
+          "rb-quality",
+          "rb-dns"
+        ],
+        "query_sha256": "0cb4f69c13646e1a2c1aff9a7930159e94ddd4d0fbc13a0fbfd0105e0d4a39fd"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 2,
+        "rag_calls": 1,
+        "tokens": 3963,
+        "cost": 0.000265438,
+        "elapsed_seconds": 9.38517,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 3803,
+        "output_tokens": 160,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "NORMAL",
+      "expected_category": "NORMAL",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": false,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1536,
+        "cost": 0.000127088,
+        "elapsed_seconds": 3.3532391670159996,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1370,
+        "output_tokens": 166,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "UNKNOWN",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F11",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": false,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-stale:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-upstream:0",
+          "rb-insufficient:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-connection:0",
+          "case-endpoint:0",
+          "rb-insufficient:0",
+          "rb-dns:0",
+          "rb-quality:0",
+          "rb-duplicate:0",
+          "rb-auth:0",
+          "rb-schema:0"
+        ],
+        "top3_doc_ids": [
+          "rb-stale",
+          "rb-connection",
+          "rb-upstream"
+        ],
+        "query_sha256": "14583e561014579ae648dd9a598ba989ca1ce5156a11c97b3007cf09948f3216"
+      },
+      "final_usage": {
+        "llm_calls": 4,
+        "tool_calls": 6,
+        "rag_calls": 1,
+        "tokens": 4974,
+        "cost": 0.000360463,
+        "elapsed_seconds": 14.591812,
+        "api_calls": 4,
+        "local_cache_hits": 0,
+        "input_tokens": 4640,
+        "output_tokens": 334,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "UNKNOWN",
+      "errors": [],
+      "review_violations": [],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1983,
+        "cost": 0.000170963,
+        "elapsed_seconds": 5.950966457952745,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1732,
+        "output_tokens": 251,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "UNKNOWN",
+      "baseline_errors": []
+    },
+    {
+      "case_id": "F12",
+      "final": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": false,
+          "abstention": false
+        },
+        "structural_pass": false,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "retrieval_hit_at_3": true,
+      "retrieval_ranking": {
+        "bm25_chunk_ids": [
+          "rb-insufficient:0",
+          "rb-stale:0",
+          "rb-auth:0",
+          "rb-schema:0",
+          "rb-quality:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-upstream:0",
+          "case-contract:0"
+        ],
+        "dense_chunk_ids": [
+          "rb-insufficient:0",
+          "rb-upstream:0",
+          "rb-stale:0",
+          "rb-schema:0",
+          "rb-connection:0",
+          "rb-duplicate:0",
+          "rb-dns:0",
+          "rb-quality:0",
+          "case-endpoint:0",
+          "rb-auth:0"
+        ],
+        "top3_doc_ids": [
+          "rb-insufficient",
+          "rb-stale",
+          "rb-schema"
+        ],
+        "query_sha256": "19ddc8b7ee6edc5be06d33803a8570f9e8ce1b481b1b7d324aa084986b7d43ef"
+      },
+      "final_usage": {
+        "llm_calls": 2,
+        "tool_calls": 1,
+        "rag_calls": 0,
+        "tokens": 1233,
+        "cost": 9.905e-05,
+        "elapsed_seconds": 7.767874,
+        "api_calls": 2,
+        "local_cache_hits": 0,
+        "input_tokens": 1046,
+        "output_tokens": 187,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "final_category": "UNKNOWN",
+      "expected_category": "UNKNOWN",
+      "errors": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "review_violations": [
+        "OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"
+      ],
+      "baseline": {
+        "checks": {
+          "category": true,
+          "required_citations": true,
+          "safe_action": true,
+          "review_accepted": true,
+          "abstention": true
+        },
+        "structural_pass": true,
+        "semantic_review": "requires documented analyst evidence check, not exact text matching"
+      },
+      "baseline_usage": {
+        "llm_calls": 1,
+        "tool_calls": 0,
+        "rag_calls": 0,
+        "tokens": 1250,
+        "cost": 0.000105088,
+        "elapsed_seconds": 4.972922208020464,
+        "api_calls": 1,
+        "local_cache_hits": 0,
+        "input_tokens": 1106,
+        "output_tokens": 144,
+        "price_date": "2026-10-20",
+        "cost_basis": "provider_token_usage_price_estimate",
+        "uncertain_reserved_usd": 0.0,
+        "service_tier": "flex"
+      },
+      "baseline_category": "UNKNOWN",
+      "baseline_errors": []
+    }
+  ],
+  "scope": "synthetic fixed evidence replay; gold read only by scorer; no live system queries",
+  "baseline": "one model call, same actually collected evidence, empty fixed identifier catalog, no retrieved text"
+}

@@ -1,0 +1,11 @@
+{
+  "characters": 48,
+  "code_fence": false,
+  "single_quotes": 0,
+  "double_quotes": 6,
+  "open_braces": 1,
+  "closed_braces": 1,
+  "tools_key_present": true,
+  "actual_service_tier": "flex",
+  "json_valid": true
+}

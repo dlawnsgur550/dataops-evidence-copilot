@@ -1,0 +1,276 @@
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+sh: locale: not found
+2026-10-20 08:04:26.652 UTC [35] WARNING:  no usable system locales were found
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2026-10-20 08:04:26.829 UTC [41] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+2026-10-20 08:04:26.830 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-10-20 08:04:26.831 UTC [44] LOG:  database system was shut down at 2026-10-20 08:04:26 UTC
+2026-10-20 08:04:26.833 UTC [41] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down....2026-10-20 08:04:26.957 UTC [41] LOG:  received fast shutdown request
+2026-10-20 08:04:26.958 UTC [41] LOG:  aborting any active transactions
+2026-10-20 08:04:26.958 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+2026-10-20 08:04:26.959 UTC [42] LOG:  shutting down
+2026-10-20 08:04:26.959 UTC [42] LOG:  checkpoint starting: shutdown immediate
+2026-10-20 08:04:26.978 UTC [42] LOG:  checkpoint complete: wrote 926 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.012 s, total=0.020 s; sync files=301, longest=0.003 s, average=0.001 s; distance=4266 kB, estimate=4266 kB; lsn=0/191C7D0, redo lsn=0/191C7D0
+2026-10-20 08:04:26.979 UTC [41] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2026-10-20 08:04:27.071 UTC [1] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+2026-10-20 08:04:27.071 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-10-20 08:04:27.071 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-10-20 08:04:27.072 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-10-20 08:04:27.074 UTC [57] LOG:  database system was shut down at 2026-10-20 08:04:26 UTC
+2026-10-20 08:04:27.076 UTC [1] LOG:  database system is ready to accept connections
+2026-10-20 08:07:24.339 UTC [1] LOG:  received fast shutdown request
+2026-10-20 08:07:24.340 UTC [1] LOG:  aborting any active transactions
+2026-10-20 08:07:24.345 UTC [1] LOG:  background worker "logical replication launcher" (PID 60) exited with exit code 1
+2026-10-20 08:07:24.345 UTC [55] LOG:  shutting down
+2026-10-20 08:07:24.346 UTC [55] LOG:  checkpoint starting: shutdown immediate
+2026-10-20 08:07:24.358 UTC [55] LOG:  checkpoint complete: wrote 98 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.004 s, total=0.013 s; sync files=54, longest=0.002 s, average=0.001 s; distance=407 kB, estimate=407 kB; lsn=0/1982748, redo lsn=0/1982748
+2026-10-20 08:07:24.360 UTC [1] LOG:  database system is shut down
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+2026-10-20 08:08:38.091 UTC [1] LOG:  starting PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+2026-10-20 08:08:38.091 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-10-20 08:08:38.091 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2026-10-20 08:08:38.094 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-10-20 08:08:38.095 UTC [28] LOG:  database system was shut down at 2026-10-20 08:07:24 UTC
+2026-10-20 08:08:38.098 UTC [1] LOG:  database system is ready to accept connections
+2026-10-20 08:10:18.056 UTC [46] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:18.067 UTC [47] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:18.072 UTC [47] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:18.099 UTC [48] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:18.131 UTC [49] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:18.147 UTC [51] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.835 UTC [52] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.846 UTC [53] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.850 UTC [53] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.873 UTC [54] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.888 UTC [55] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:20.898 UTC [56] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:29.974 UTC [65] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:29.986 UTC [66] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:29.991 UTC [66] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:30.019 UTC [67] WARNING:  there is already a transaction in progress
+2026-10-20 08:10:30.020 UTC [67] ERROR:  column "amount" does not exist at character 275
+2026-10-20 08:10:30.020 UTC [67] STATEMENT:  /* {"app": "dbt", "dbt_version": "1.9.10", "profile_name": "orders_demo", "target_name": "local", "node_id": "model.orders_demo.stg_orders"} */
+	
+	  
+	    
+	
+	  create  table "dataops_c_cp2"."analytics"."stg_orders__dbt_tmp"
+	  
+	  
+	    as
+	  
+	  (
+	    select order_id, customer_id, amount, created_at from "dataops_c_cp2"."raw"."orders"
+	  );
+	  
+2026-10-20 08:10:30.035 UTC [68] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.624 UTC [82] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.635 UTC [83] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.640 UTC [83] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.668 UTC [84] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.701 UTC [85] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:37.716 UTC [86] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.400 UTC [88] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.414 UTC [89] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.419 UTC [89] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.443 UTC [90] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.458 UTC [91] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:40.468 UTC [92] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:48.196 UTC [101] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:48.212 UTC [102] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:48.219 UTC [102] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:48.250 UTC [103] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:48.251 UTC [103] ERROR:  column "amount" does not exist at character 275
+2026-10-20 08:11:48.251 UTC [103] STATEMENT:  /* {"app": "dbt", "dbt_version": "1.9.10", "profile_name": "orders_demo", "target_name": "local", "node_id": "model.orders_demo.stg_orders"} */
+	
+	  
+	    
+	
+	  create  table "dataops_c_cp2"."analytics"."stg_orders__dbt_tmp"
+	  
+	  
+	    as
+	  
+	  (
+	    select order_id, customer_id, amount, created_at from "dataops_c_cp2"."raw"."orders"
+	  );
+	  
+2026-10-20 08:11:48.263 UTC [104] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.694 UTC [112] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.705 UTC [113] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.710 UTC [113] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.737 UTC [114] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.768 UTC [115] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:55.784 UTC [116] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.548 UTC [118] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.561 UTC [119] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.568 UTC [119] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.591 UTC [120] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.607 UTC [121] WARNING:  there is already a transaction in progress
+2026-10-20 08:11:58.617 UTC [122] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.163 UTC [131] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.174 UTC [132] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.179 UTC [132] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.206 UTC [133] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.239 UTC [134] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:06.255 UTC [135] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:08.940 UTC [136] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:08.956 UTC [137] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:08.963 UTC [137] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:08.987 UTC [138] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:09.004 UTC [139] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:09.013 UTC [140] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.413 UTC [148] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.425 UTC [149] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.433 UTC [149] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.462 UTC [150] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.497 UTC [151] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:15.517 UTC [152] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.302 UTC [154] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.313 UTC [155] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.317 UTC [155] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.341 UTC [156] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.357 UTC [157] WARNING:  there is already a transaction in progress
+2026-10-20 08:12:18.366 UTC [158] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.171 UTC [174] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.182 UTC [175] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.187 UTC [175] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.214 UTC [176] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.245 UTC [177] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:35.263 UTC [178] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.873 UTC [179] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.884 UTC [180] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.889 UTC [180] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.912 UTC [181] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.928 UTC [182] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:37.938 UTC [183] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:38.193 UTC [26] LOG:  checkpoint starting: time
+2026-10-20 08:13:45.942 UTC [193] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:45.952 UTC [194] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:45.957 UTC [194] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:45.984 UTC [195] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:45.985 UTC [195] ERROR:  column "amount" does not exist at character 275
+2026-10-20 08:13:45.985 UTC [195] STATEMENT:  /* {"app": "dbt", "dbt_version": "1.9.10", "profile_name": "orders_demo", "target_name": "local", "node_id": "model.orders_demo.stg_orders"} */
+	
+	  
+	    
+	
+	  create  table "dataops_c_cp2"."analytics"."stg_orders__dbt_tmp"
+	  
+	  
+	    as
+	  
+	  (
+	    select order_id, customer_id, amount, created_at from "dataops_c_cp2"."raw"."orders"
+	  );
+	  
+2026-10-20 08:13:45.996 UTC [196] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.244 UTC [26] LOG:  checkpoint complete: wrote 135 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=15.037 s, sync=0.008 s, total=15.052 s; sync files=110, longest=0.004 s, average=0.001 s; distance=1835 kB, estimate=1835 kB; lsn=0/1B90F18, redo lsn=0/1B4D468
+2026-10-20 08:13:53.337 UTC [204] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.348 UTC [205] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.353 UTC [205] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.380 UTC [206] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.414 UTC [207] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:53.430 UTC [208] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.104 UTC [209] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.115 UTC [210] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.119 UTC [210] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.143 UTC [211] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.158 UTC [212] WARNING:  there is already a transaction in progress
+2026-10-20 08:13:56.168 UTC [213] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.501 UTC [223] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.513 UTC [224] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.517 UTC [224] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.545 UTC [225] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.576 UTC [226] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:04.593 UTC [227] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.337 UTC [228] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.349 UTC [229] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.354 UTC [229] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.378 UTC [230] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.394 UTC [231] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:07.403 UTC [232] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.190 UTC [240] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.201 UTC [241] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.206 UTC [241] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.234 UTC [242] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.268 UTC [243] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:13.288 UTC [244] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.096 UTC [245] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.112 UTC [246] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.119 UTC [246] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.151 UTC [247] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.167 UTC [248] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:16.177 UTC [249] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.860 UTC [265] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.872 UTC [266] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.877 UTC [266] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.904 UTC [267] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.936 UTC [268] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:30.953 UTC [269] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.828 UTC [270] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.840 UTC [271] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.845 UTC [271] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.869 UTC [272] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.885 UTC [273] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:33.895 UTC [274] WARNING:  there is already a transaction in progress
+2026-10-20 08:14:36.876 UTC [281] ERROR:  permission denied for table orders
+2026-10-20 08:14:36.876 UTC [281] STATEMENT:  INSERT INTO raw.orders (order_id) VALUES (999999)
+2026-10-20 08:14:36.880 UTC [282] ERROR:  permission denied for table orders
+2026-10-20 08:14:36.880 UTC [282] STATEMENT:  UPDATE raw.orders SET order_id=order_id WHERE false
+2026-10-20 08:14:36.884 UTC [283] ERROR:  permission denied for schema public at character 14
+2026-10-20 08:14:36.884 UTC [283] STATEMENT:  CREATE TABLE public.denied_probe (id integer)
+2026-10-20 08:15:01.639 UTC [293] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:01.650 UTC [294] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:01.656 UTC [294] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:01.684 UTC [295] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:01.719 UTC [296] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:01.739 UTC [297] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.541 UTC [298] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.554 UTC [299] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.561 UTC [299] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.586 UTC [300] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.602 UTC [301] WARNING:  there is already a transaction in progress
+2026-10-20 08:15:04.613 UTC [302] WARNING:  there is already a transaction in progress
+2026-10-20 08:18:38.208 UTC [26] LOG:  checkpoint starting: time
+2026-10-20 08:18:49.884 UTC [26] LOG:  checkpoint complete: wrote 114 buffers (0.7%); 1 WAL file(s) added, 0 removed, 0 recycled; write=11.635 s, sync=0.009 s, total=11.677 s; sync files=78, longest=0.002 s, average=0.001 s; distance=1300 kB, estimate=1781 kB; lsn=0/1C92778, redo lsn=0/1C926E8

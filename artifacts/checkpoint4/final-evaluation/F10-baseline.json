@@ -1,0 +1,154 @@
+{
+  "trace_id": "base-a0ee533afb924d798d81c5fb50596725",
+  "incident_ref": {
+    "incident_id": "inc-fd6991f3e34a",
+    "dag_id": "orders_demo",
+    "run_id": "eval-fd6991f3e34a",
+    "task_id": "publish_summary",
+    "try_number": 1
+  },
+  "plan": null,
+  "evidence": [
+    {
+      "evidence_id": "e-6c56e1db0bbf43",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-fd6991f3e34a",
+          "dag_id": "orders_demo",
+          "run_id": "eval-fd6991f3e34a",
+          "task_id": "publish_summary",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "success",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "success",
+          "dbt_test": "success",
+          "publish_summary": "success"
+        },
+        "log_lines": [
+          "All pipeline tasks and dbt tests succeeded"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-4d04fd0b4e61f0",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-fd6991f3e34a",
+          "dag_id": "orders_demo",
+          "run_id": "eval-fd6991f3e34a",
+          "task_id": "publish_summary",
+          "try_number": 1
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-fd6991f3e34a",
+        "manifest_invocation_id": "inv-fd6991f3e34a",
+        "run_results_invocation_id": "inv-fd6991f3e34a",
+        "issue": null,
+        "column_id": null,
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": null,
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {
+          "not_null_order_id": "pass",
+          "unique_order_id": "pass"
+        },
+        "message": "All pipeline tasks and dbt tests succeeded"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [],
+  "diagnosis": {
+    "category": "UNKNOWN",
+    "diagnosis_status": "insufficient",
+    "severity": "unknown",
+    "cause": "실행 근거는 파이프라인 작업과 dbt 테스트의 성공만 보여 주며, 장애 원인을 뒷받침하지 않습니다.",
+    "evidence_ids": [
+      "e-6c56e1db0bbf43",
+      "e-4d04fd0b4e61f0"
+    ],
+    "missing_evidence": [
+      "원인을 판단할 수 있는 실패 또는 이상 징후 근거",
+      "부분 run_results 누락 여부를 판단할 수 있는 자료"
+    ],
+    "impact": [],
+    "recovery_actions": []
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [
+      "Deterministic validation only; no semantic reviewer in baseline."
+    ],
+    "revision_count": 0,
+    "semantic_reviewer": "none-baseline-code-only"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 1,
+    "tool_calls": 0,
+    "rag_calls": 0,
+    "tokens": 1536,
+    "cost": 0.000127088,
+    "elapsed_seconds": 3.3532391670159996,
+    "api_calls": 1,
+    "local_cache_hits": 0,
+    "input_tokens": 1370,
+    "output_tokens": 166,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "single_llm"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "6166caf7e4d0fc19437f568673e777eb47614f9a3f0a715616dd69b5aa5bdb68",
+  "versions": {
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "retrieval": "none-fixed-identifier-catalog"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "same_actual_rca_evidence_as_final",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

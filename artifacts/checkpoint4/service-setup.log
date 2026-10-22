@@ -1,0 +1,833 @@
+dataops-c-cp2-postgres
+
+exit_code=0
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.airflow
+#1 transferring dockerfile: 479B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/apache/airflow:2.10.4-python3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a
+#4 resolve docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a done
+#4 DONE 0.0s
+
+#5 [3/4] RUN python -m venv /opt/dataops-dbt && /opt/dataops-dbt/bin/pip install --no-cache-dir dbt-core==1.9.10 dbt-postgres==1.9.1
+#5 CACHED
+
+#6 [2/4] RUN mkdir -p /opt/dataops-dbt /opt/dataops-driver && chown -R airflow:root /opt/dataops-dbt /opt/dataops-driver
+#6 CACHED
+
+#7 [4/4] RUN python -m venv /opt/dataops-driver && /opt/dataops-driver/bin/pip install --no-cache-dir pydantic==2.14.1 'psycopg[binary]==3.3.6'
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:d64be0cf589712c1f684395e43165ebba96f3bd6efa91e654c0eb318b8e7374e done
+#8 exporting config sha256:070141a6fc403c06a390ac10a418e44717f109126dd71c09feb4014b6ae85207 done
+#8 exporting attestation manifest sha256:01acd327f50339485f69b8eeed50237e2754e236205dc8636b506d38927ad971 done
+#8 exporting manifest list sha256:e9e4237c1166fb5dabad8f10ba055aa543831b9b7c0ce205e286c2bef0e7fde8 done
+#8 naming to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 unpacking to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/vg1f29qhvqevmv4fea36er7is
+
+exit_code=0
+dataops-c-cp2-airflow
+
+exit_code=0
+postgres (PostgreSQL) 17.10
+
+exit_code=0
+[
+    {
+        "Id": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "RepoTags": [
+            "postgres:17.10-alpine"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-07T17:46:49.401690597Z",
+        "Config": {
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.10",
+                "PG_SHA256=078a03516dcdbdb705fecaf415ea3d13a956c589e46f09fed68a06fb00598c90",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 114981107,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b2848c02ac6ff53d265469b5b30f649f335e546a83330cd8916d54e65e640409",
+                "sha256:3276ea79c0c0c02b7d702de4aa0bf6b60d4b3f1b295b30366973c4ec4bf91249",
+                "sha256:d7d195016259883bbb161fb50292c1be3f96f0c9b50c573cbb0ed57e64dfa2c9",
+                "sha256:1ebee87cc825164b634bd6837685531c240dcfe5a1cf507cb6e8df057f661cbf",
+                "sha256:df8da200347edec60626a356f574551d1ecb9e7727402137d7d1bc6cb3cf11db",
+                "sha256:40252c7d7df3e6b969af3fa01b51346fbff89b508a6f2c5a9f457d23e797cf64",
+                "sha256:11b7e3ae2bd33cf903077779b2178d1242006f750906c41d9941cd45be4c6175",
+                "sha256:60d0936c2e0dac1f79128a468e3259644a610850f2ce98c238027943b5e87108",
+                "sha256:60d2d3ed3afa870cf11fe567074bfc1c37e1f0488fe4f9259b4b4ccd6084c209",
+                "sha256:66c221f9d5b6c9542d87a9f5143ffa653ce6628a4db739870abede8c87da99af"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T08:16:53.787475209Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+            "size": 10301
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/postgres"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+[
+    {
+        "Id": "sha256:e9e4237c1166fb5dabad8f10ba055aa543831b9b7c0ce205e286c2bef0e7fde8",
+        "RepoTags": [
+            "dataops-c-cp2-airflow:2.10.4"
+        ],
+        "RepoDigests": [
+            "dataops-c-cp2-airflow@sha256:e9e4237c1166fb5dabad8f10ba055aa543831b9b7c0ce205e286c2bef0e7fde8"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-20T08:08:50.683872805Z",
+        "Config": {
+            "User": "airflow",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/root/bin:/home/airflow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.11",
+                "PYTHON_SHA256=2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
+                "PYTHON_BASE_IMAGE=python:3.11-slim-bookworm",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LANGUAGE=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "LC_CTYPE=C.UTF-8",
+                "LC_MESSAGES=C.UTF-8",
+                "LD_LIBRARY_PATH=/usr/local/lib",
+                "RUNTIME_APT_DEPS=",
+                "ADDITIONAL_RUNTIME_APT_DEPS=",
+                "RUNTIME_APT_COMMAND=echo",
+                "ADDITIONAL_RUNTIME_APT_COMMAND=",
+                "INSTALL_MYSQL_CLIENT=true",
+                "INSTALL_MYSQL_CLIENT_TYPE=mariadb",
+                "INSTALL_MSSQL_CLIENT=true",
+                "INSTALL_POSTGRES_CLIENT=true",
+                "GUNICORN_CMD_ARGS=--worker-tmp-dir /dev/shm",
+                "AIRFLOW_INSTALLATION_METHOD=",
+                "VIRTUAL_ENV=/home/airflow/.local",
+                "AIRFLOW_UID=50000",
+                "AIRFLOW_USER_HOME_DIR=/home/airflow",
+                "AIRFLOW_HOME=/opt/airflow",
+                "DUMB_INIT_SETSID=1",
+                "PS1=(airflow)",
+                "AIRFLOW_VERSION=2.10.4",
+                "AIRFLOW__CORE__LOAD_EXAMPLES=false",
+                "AIRFLOW_PIP_VERSION=24.3.1",
+                "AIRFLOW_UV_VERSION=0.4.29",
+                "AIRFLOW_USE_UV=false",
+                "BUILD_ID=",
+                "COMMIT_SHA=c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd"
+            ],
+            "Entrypoint": [
+                "/usr/bin/dumb-init",
+                "--",
+                "/entrypoint"
+            ],
+            "WorkingDir": "/opt/airflow",
+            "Labels": {
+                "org.apache.airflow.component": "airflow",
+                "org.apache.airflow.distro": "debian",
+                "org.apache.airflow.image": "airflow",
+                "org.apache.airflow.main-image.build-id": "",
+                "org.apache.airflow.main-image.commit-sha": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.apache.airflow.module": "airflow",
+                "org.apache.airflow.uid": "50000",
+                "org.apache.airflow.version": "2.10.4",
+                "org.opencontainers.image.authors": "dev@airflow.apache.org",
+                "org.opencontainers.image.created": "",
+                "org.opencontainers.image.description": "Reference, production-ready Apache Airflow image",
+                "org.opencontainers.image.documentation": "https://airflow.apache.org/docs/docker-stack/index.html",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.ref.name": "airflow",
+                "org.opencontainers.image.revision": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.opencontainers.image.source": "https://github.com/apache/airflow",
+                "org.opencontainers.image.title": "Production Airflow Image",
+                "org.opencontainers.image.url": "https://airflow.apache.org",
+                "org.opencontainers.image.vendor": "Apache Software Foundation",
+                "org.opencontainers.image.version": "2.10.4"
+            },
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-o",
+                "errexit",
+                "-o",
+                "nounset",
+                "-o",
+                "nolog",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 481568074,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3e620c160447d1acff162610a533282fc64863123cba28ce40eaf98c17dde780",
+                "sha256:29a9c1058a4b8a096f5de532183c47bac13bbcba2813839312c1ca45b20e6a73",
+                "sha256:7289c009ed764f8dcc453b7eecb189d9712413f83392e075ef139822488b9de7",
+                "sha256:d16f554179f54bbac2faf2fd7bf18ef157660a76aaaf6a9f7d83b8df9274e64d",
+                "sha256:305a876a58dae3e3a8fdcbe25fca0b4b71eb46609cb900d8a289c051b42d6b28",
+                "sha256:bfe99f5d94b39fc82b3820af6b776cf59aa1207b086f9f26ae41251039fe1142",
+                "sha256:1cda03ccad0087748283a42c2154aa96cddc23e758eb663f508c3414d1942d08",
+                "sha256:41edf77b65c8f99d6971e00e25df8b6eaec2ec79b105895915d15896841d387f",
+                "sha256:2c872b64909a521839a622d21b4dc269fda657d68823bda7c5dabea21ff5389b",
+                "sha256:b5868845c34de43b0e56749b1d0ffa259dcb8582b4e0d0d22e2b30cb08eed6f8",
+                "sha256:297622f25c9df62a12974b0c5535299776313b42d89216c95fd143dce38ab42a",
+                "sha256:bab3287189151b93b92aa2e375646893a996c1d1d3b26a5c5fe1dbc6ec7ca6e7",
+                "sha256:f81d1ee7dab2f838ef3719069d09af53ec28e41ab6ae82a31df396625d286dd4",
+                "sha256:e3c5225e023c05590f3c9ced63250b0a93533a37ae7ee89122f17694ce5bf6a1",
+                "sha256:bbcf73bc3099460624af93b58c79a54a6e89efe9e7dc18dd0c70c3567f0f0c07",
+                "sha256:539935a96597b3ba0cc2338df8f14093125e12392371b8d62cf8ed78ca4958b1",
+                "sha256:e7279dedae80df97924db20d8b108889de6a465a3589a5df074be1a883b70f09",
+                "sha256:92857971433df4caa89937b95a9605ec69efa97c9b396294fba86ba197529ad8",
+                "sha256:fc5a6e0889fe7025a989935aded693712ab90198e0eb0c412a41537d815427fc",
+                "sha256:6088b9cd3c00a17b4f625ad9dabf83b61728538a9f99f7bea7629c00523887bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:35b273d41ba753340d98b3af23746b014c84600ae1751be740a28d220412da0b",
+                "sha256:59fe0ec8b59e35a87633256486aa3a775b3ca49405ab38f07b5c72a859af2291",
+                "sha256:dfcbf2e4f97e86e356cd7ca78d506b281e9e161bb12dca76abad6dab5a7294f6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T09:17:25.525049125Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:e9e4237c1166fb5dabad8f10ba055aa543831b9b7c0ce205e286c2bef0e7fde8",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "vg1f29qhvqevmv4fea36er7is",
+                    "CreatedAt": "2026-10-20T09:17:25.538852333Z"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+dataops-c-cp2-postgres
+
+exit_code=0
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.airflow
+#1 transferring dockerfile: 479B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/apache/airflow:2.10.4-python3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a
+#4 resolve docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a done
+#4 DONE 0.0s
+
+#5 [3/4] RUN python -m venv /opt/dataops-dbt && /opt/dataops-dbt/bin/pip install --no-cache-dir dbt-core==1.9.10 dbt-postgres==1.9.1
+#5 CACHED
+
+#6 [2/4] RUN mkdir -p /opt/dataops-dbt /opt/dataops-driver && chown -R airflow:root /opt/dataops-dbt /opt/dataops-driver
+#6 CACHED
+
+#7 [4/4] RUN python -m venv /opt/dataops-driver && /opt/dataops-driver/bin/pip install --no-cache-dir pydantic==2.14.1 'psycopg[binary]==3.3.6'
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:d64be0cf589712c1f684395e43165ebba96f3bd6efa91e654c0eb318b8e7374e done
+#8 exporting config sha256:070141a6fc403c06a390ac10a418e44717f109126dd71c09feb4014b6ae85207 done
+#8 exporting attestation manifest sha256:8e932f5cb67276ffc3983e6bac49cfebc9f4869671370307b1eb2bf4d0d10bae done
+#8 exporting manifest list sha256:5be5eabb13bb4af8a75091b63f7a04520700d2de5a84a146b42638cf6a75e2ce done
+#8 naming to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 unpacking to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/vdah6zpya32znv7w9rgc18yal
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-airflow
+
+exit_code=0
+dataops-c-cp2-airflow
+
+exit_code=0
+d18e14f4b7ebc2aad3a5d8e42a767e247ffab7f45109576bc3050e371abf5f2d
+
+exit_code=0
+postgres (PostgreSQL) 17.10
+
+exit_code=0
+[
+    {
+        "Id": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "RepoTags": [
+            "postgres:17.10-alpine"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-07T17:46:49.401690597Z",
+        "Config": {
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.10",
+                "PG_SHA256=078a03516dcdbdb705fecaf415ea3d13a956c589e46f09fed68a06fb00598c90",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 114981107,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b2848c02ac6ff53d265469b5b30f649f335e546a83330cd8916d54e65e640409",
+                "sha256:3276ea79c0c0c02b7d702de4aa0bf6b60d4b3f1b295b30366973c4ec4bf91249",
+                "sha256:d7d195016259883bbb161fb50292c1be3f96f0c9b50c573cbb0ed57e64dfa2c9",
+                "sha256:1ebee87cc825164b634bd6837685531c240dcfe5a1cf507cb6e8df057f661cbf",
+                "sha256:df8da200347edec60626a356f574551d1ecb9e7727402137d7d1bc6cb3cf11db",
+                "sha256:40252c7d7df3e6b969af3fa01b51346fbff89b508a6f2c5a9f457d23e797cf64",
+                "sha256:11b7e3ae2bd33cf903077779b2178d1242006f750906c41d9941cd45be4c6175",
+                "sha256:60d0936c2e0dac1f79128a468e3259644a610850f2ce98c238027943b5e87108",
+                "sha256:60d2d3ed3afa870cf11fe567074bfc1c37e1f0488fe4f9259b4b4ccd6084c209",
+                "sha256:66c221f9d5b6c9542d87a9f5143ffa653ce6628a4db739870abede8c87da99af"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T08:16:53.787475209Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+            "size": 10301
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/postgres"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+[
+    {
+        "Id": "sha256:5be5eabb13bb4af8a75091b63f7a04520700d2de5a84a146b42638cf6a75e2ce",
+        "RepoTags": [
+            "dataops-c-cp2-airflow:2.10.4"
+        ],
+        "RepoDigests": [
+            "dataops-c-cp2-airflow@sha256:5be5eabb13bb4af8a75091b63f7a04520700d2de5a84a146b42638cf6a75e2ce"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-20T08:08:50.683872805Z",
+        "Config": {
+            "User": "airflow",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/root/bin:/home/airflow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.11",
+                "PYTHON_SHA256=2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
+                "PYTHON_BASE_IMAGE=python:3.11-slim-bookworm",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LANGUAGE=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "LC_CTYPE=C.UTF-8",
+                "LC_MESSAGES=C.UTF-8",
+                "LD_LIBRARY_PATH=/usr/local/lib",
+                "RUNTIME_APT_DEPS=",
+                "ADDITIONAL_RUNTIME_APT_DEPS=",
+                "RUNTIME_APT_COMMAND=echo",
+                "ADDITIONAL_RUNTIME_APT_COMMAND=",
+                "INSTALL_MYSQL_CLIENT=true",
+                "INSTALL_MYSQL_CLIENT_TYPE=mariadb",
+                "INSTALL_MSSQL_CLIENT=true",
+                "INSTALL_POSTGRES_CLIENT=true",
+                "GUNICORN_CMD_ARGS=--worker-tmp-dir /dev/shm",
+                "AIRFLOW_INSTALLATION_METHOD=",
+                "VIRTUAL_ENV=/home/airflow/.local",
+                "AIRFLOW_UID=50000",
+                "AIRFLOW_USER_HOME_DIR=/home/airflow",
+                "AIRFLOW_HOME=/opt/airflow",
+                "DUMB_INIT_SETSID=1",
+                "PS1=(airflow)",
+                "AIRFLOW_VERSION=2.10.4",
+                "AIRFLOW__CORE__LOAD_EXAMPLES=false",
+                "AIRFLOW_PIP_VERSION=24.3.1",
+                "AIRFLOW_UV_VERSION=0.4.29",
+                "AIRFLOW_USE_UV=false",
+                "BUILD_ID=",
+                "COMMIT_SHA=c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd"
+            ],
+            "Entrypoint": [
+                "/usr/bin/dumb-init",
+                "--",
+                "/entrypoint"
+            ],
+            "WorkingDir": "/opt/airflow",
+            "Labels": {
+                "org.apache.airflow.component": "airflow",
+                "org.apache.airflow.distro": "debian",
+                "org.apache.airflow.image": "airflow",
+                "org.apache.airflow.main-image.build-id": "",
+                "org.apache.airflow.main-image.commit-sha": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.apache.airflow.module": "airflow",
+                "org.apache.airflow.uid": "50000",
+                "org.apache.airflow.version": "2.10.4",
+                "org.opencontainers.image.authors": "dev@airflow.apache.org",
+                "org.opencontainers.image.created": "",
+                "org.opencontainers.image.description": "Reference, production-ready Apache Airflow image",
+                "org.opencontainers.image.documentation": "https://airflow.apache.org/docs/docker-stack/index.html",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.ref.name": "airflow",
+                "org.opencontainers.image.revision": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.opencontainers.image.source": "https://github.com/apache/airflow",
+                "org.opencontainers.image.title": "Production Airflow Image",
+                "org.opencontainers.image.url": "https://airflow.apache.org",
+                "org.opencontainers.image.vendor": "Apache Software Foundation",
+                "org.opencontainers.image.version": "2.10.4"
+            },
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-o",
+                "errexit",
+                "-o",
+                "nounset",
+                "-o",
+                "nolog",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 481568074,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3e620c160447d1acff162610a533282fc64863123cba28ce40eaf98c17dde780",
+                "sha256:29a9c1058a4b8a096f5de532183c47bac13bbcba2813839312c1ca45b20e6a73",
+                "sha256:7289c009ed764f8dcc453b7eecb189d9712413f83392e075ef139822488b9de7",
+                "sha256:d16f554179f54bbac2faf2fd7bf18ef157660a76aaaf6a9f7d83b8df9274e64d",
+                "sha256:305a876a58dae3e3a8fdcbe25fca0b4b71eb46609cb900d8a289c051b42d6b28",
+                "sha256:bfe99f5d94b39fc82b3820af6b776cf59aa1207b086f9f26ae41251039fe1142",
+                "sha256:1cda03ccad0087748283a42c2154aa96cddc23e758eb663f508c3414d1942d08",
+                "sha256:41edf77b65c8f99d6971e00e25df8b6eaec2ec79b105895915d15896841d387f",
+                "sha256:2c872b64909a521839a622d21b4dc269fda657d68823bda7c5dabea21ff5389b",
+                "sha256:b5868845c34de43b0e56749b1d0ffa259dcb8582b4e0d0d22e2b30cb08eed6f8",
+                "sha256:297622f25c9df62a12974b0c5535299776313b42d89216c95fd143dce38ab42a",
+                "sha256:bab3287189151b93b92aa2e375646893a996c1d1d3b26a5c5fe1dbc6ec7ca6e7",
+                "sha256:f81d1ee7dab2f838ef3719069d09af53ec28e41ab6ae82a31df396625d286dd4",
+                "sha256:e3c5225e023c05590f3c9ced63250b0a93533a37ae7ee89122f17694ce5bf6a1",
+                "sha256:bbcf73bc3099460624af93b58c79a54a6e89efe9e7dc18dd0c70c3567f0f0c07",
+                "sha256:539935a96597b3ba0cc2338df8f14093125e12392371b8d62cf8ed78ca4958b1",
+                "sha256:e7279dedae80df97924db20d8b108889de6a465a3589a5df074be1a883b70f09",
+                "sha256:92857971433df4caa89937b95a9605ec69efa97c9b396294fba86ba197529ad8",
+                "sha256:fc5a6e0889fe7025a989935aded693712ab90198e0eb0c412a41537d815427fc",
+                "sha256:6088b9cd3c00a17b4f625ad9dabf83b61728538a9f99f7bea7629c00523887bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:35b273d41ba753340d98b3af23746b014c84600ae1751be740a28d220412da0b",
+                "sha256:59fe0ec8b59e35a87633256486aa3a775b3ca49405ab38f07b5c72a859af2291",
+                "sha256:dfcbf2e4f97e86e356cd7ca78d506b281e9e161bb12dca76abad6dab5a7294f6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T09:32:03.770058087Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:5be5eabb13bb4af8a75091b63f7a04520700d2de5a84a146b42638cf6a75e2ce",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "vdah6zpya32znv7w9rgc18yal",
+                    "CreatedAt": "2026-10-20T09:32:03.784640212Z"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-airflow
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-postgres
+
+exit_code=0
+dataops-c-cp2-postgres
+
+exit_code=0
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.airflow
+#1 transferring dockerfile: 479B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/apache/airflow:2.10.4-python3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a
+#4 resolve docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a done
+#4 DONE 0.0s
+
+#5 [2/4] RUN mkdir -p /opt/dataops-dbt /opt/dataops-driver && chown -R airflow:root /opt/dataops-dbt /opt/dataops-driver
+#5 CACHED
+
+#6 [3/4] RUN python -m venv /opt/dataops-dbt && /opt/dataops-dbt/bin/pip install --no-cache-dir dbt-core==1.9.10 dbt-postgres==1.9.1
+#6 CACHED
+
+#7 [4/4] RUN python -m venv /opt/dataops-driver && /opt/dataops-driver/bin/pip install --no-cache-dir pydantic==2.14.1 'psycopg[binary]==3.3.6'
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:d64be0cf589712c1f684395e43165ebba96f3bd6efa91e654c0eb318b8e7374e done
+#8 exporting config sha256:070141a6fc403c06a390ac10a418e44717f109126dd71c09feb4014b6ae85207 done
+#8 exporting attestation manifest sha256:97d6b5eff477fb55c228bc15c8d18b675cdd5cdb49823ff51bfee5fc8c558aa6 done
+#8 exporting manifest list sha256:3a7e8b62913737ccb2be0160306e278f23dbd814036bd1c10d16af1b02f21621 done
+#8 naming to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 unpacking to docker.io/library/dataops-c-cp2-airflow:2.10.4 0.0s done
+#8 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ap7m7eolz2oogk80yis76pwm9
+
+exit_code=0
+dataops-c-cp2-airflow
+
+exit_code=0
+postgres (PostgreSQL) 17.10
+
+exit_code=0
+[
+    {
+        "Id": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "RepoTags": [
+            "postgres:17.10-alpine"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-07T17:46:49.401690597Z",
+        "Config": {
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.10",
+                "PG_SHA256=078a03516dcdbdb705fecaf415ea3d13a956c589e46f09fed68a06fb00598c90",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 114981107,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b2848c02ac6ff53d265469b5b30f649f335e546a83330cd8916d54e65e640409",
+                "sha256:3276ea79c0c0c02b7d702de4aa0bf6b60d4b3f1b295b30366973c4ec4bf91249",
+                "sha256:d7d195016259883bbb161fb50292c1be3f96f0c9b50c573cbb0ed57e64dfa2c9",
+                "sha256:1ebee87cc825164b634bd6837685531c240dcfe5a1cf507cb6e8df057f661cbf",
+                "sha256:df8da200347edec60626a356f574551d1ecb9e7727402137d7d1bc6cb3cf11db",
+                "sha256:40252c7d7df3e6b969af3fa01b51346fbff89b508a6f2c5a9f457d23e797cf64",
+                "sha256:11b7e3ae2bd33cf903077779b2178d1242006f750906c41d9941cd45be4c6175",
+                "sha256:60d0936c2e0dac1f79128a468e3259644a610850f2ce98c238027943b5e87108",
+                "sha256:60d2d3ed3afa870cf11fe567074bfc1c37e1f0488fe4f9259b4b4ccd6084c209",
+                "sha256:66c221f9d5b6c9542d87a9f5143ffa653ce6628a4db739870abede8c87da99af"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T08:16:53.787475209Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+            "size": 10301
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/postgres"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+[
+    {
+        "Id": "sha256:3a7e8b62913737ccb2be0160306e278f23dbd814036bd1c10d16af1b02f21621",
+        "RepoTags": [
+            "dataops-c-cp2-airflow:2.10.4"
+        ],
+        "RepoDigests": [
+            "dataops-c-cp2-airflow@sha256:3a7e8b62913737ccb2be0160306e278f23dbd814036bd1c10d16af1b02f21621"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-20T08:08:50.683872805Z",
+        "Config": {
+            "User": "airflow",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/root/bin:/home/airflow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.11",
+                "PYTHON_SHA256=2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
+                "PYTHON_BASE_IMAGE=python:3.11-slim-bookworm",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LANGUAGE=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "LC_CTYPE=C.UTF-8",
+                "LC_MESSAGES=C.UTF-8",
+                "LD_LIBRARY_PATH=/usr/local/lib",
+                "RUNTIME_APT_DEPS=",
+                "ADDITIONAL_RUNTIME_APT_DEPS=",
+                "RUNTIME_APT_COMMAND=echo",
+                "ADDITIONAL_RUNTIME_APT_COMMAND=",
+                "INSTALL_MYSQL_CLIENT=true",
+                "INSTALL_MYSQL_CLIENT_TYPE=mariadb",
+                "INSTALL_MSSQL_CLIENT=true",
+                "INSTALL_POSTGRES_CLIENT=true",
+                "GUNICORN_CMD_ARGS=--worker-tmp-dir /dev/shm",
+                "AIRFLOW_INSTALLATION_METHOD=",
+                "VIRTUAL_ENV=/home/airflow/.local",
+                "AIRFLOW_UID=50000",
+                "AIRFLOW_USER_HOME_DIR=/home/airflow",
+                "AIRFLOW_HOME=/opt/airflow",
+                "DUMB_INIT_SETSID=1",
+                "PS1=(airflow)",
+                "AIRFLOW_VERSION=2.10.4",
+                "AIRFLOW__CORE__LOAD_EXAMPLES=false",
+                "AIRFLOW_PIP_VERSION=24.3.1",
+                "AIRFLOW_UV_VERSION=0.4.29",
+                "AIRFLOW_USE_UV=false",
+                "BUILD_ID=",
+                "COMMIT_SHA=c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd"
+            ],
+            "Entrypoint": [
+                "/usr/bin/dumb-init",
+                "--",
+                "/entrypoint"
+            ],
+            "WorkingDir": "/opt/airflow",
+            "Labels": {
+                "org.apache.airflow.component": "airflow",
+                "org.apache.airflow.distro": "debian",
+                "org.apache.airflow.image": "airflow",
+                "org.apache.airflow.main-image.build-id": "",
+                "org.apache.airflow.main-image.commit-sha": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.apache.airflow.module": "airflow",
+                "org.apache.airflow.uid": "50000",
+                "org.apache.airflow.version": "2.10.4",
+                "org.opencontainers.image.authors": "dev@airflow.apache.org",
+                "org.opencontainers.image.created": "",
+                "org.opencontainers.image.description": "Reference, production-ready Apache Airflow image",
+                "org.opencontainers.image.documentation": "https://airflow.apache.org/docs/docker-stack/index.html",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.ref.name": "airflow",
+                "org.opencontainers.image.revision": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.opencontainers.image.source": "https://github.com/apache/airflow",
+                "org.opencontainers.image.title": "Production Airflow Image",
+                "org.opencontainers.image.url": "https://airflow.apache.org",
+                "org.opencontainers.image.vendor": "Apache Software Foundation",
+                "org.opencontainers.image.version": "2.10.4"
+            },
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-o",
+                "errexit",
+                "-o",
+                "nounset",
+                "-o",
+                "nolog",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 481568074,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3e620c160447d1acff162610a533282fc64863123cba28ce40eaf98c17dde780",
+                "sha256:29a9c1058a4b8a096f5de532183c47bac13bbcba2813839312c1ca45b20e6a73",
+                "sha256:7289c009ed764f8dcc453b7eecb189d9712413f83392e075ef139822488b9de7",
+                "sha256:d16f554179f54bbac2faf2fd7bf18ef157660a76aaaf6a9f7d83b8df9274e64d",
+                "sha256:305a876a58dae3e3a8fdcbe25fca0b4b71eb46609cb900d8a289c051b42d6b28",
+                "sha256:bfe99f5d94b39fc82b3820af6b776cf59aa1207b086f9f26ae41251039fe1142",
+                "sha256:1cda03ccad0087748283a42c2154aa96cddc23e758eb663f508c3414d1942d08",
+                "sha256:41edf77b65c8f99d6971e00e25df8b6eaec2ec79b105895915d15896841d387f",
+                "sha256:2c872b64909a521839a622d21b4dc269fda657d68823bda7c5dabea21ff5389b",
+                "sha256:b5868845c34de43b0e56749b1d0ffa259dcb8582b4e0d0d22e2b30cb08eed6f8",
+                "sha256:297622f25c9df62a12974b0c5535299776313b42d89216c95fd143dce38ab42a",
+                "sha256:bab3287189151b93b92aa2e375646893a996c1d1d3b26a5c5fe1dbc6ec7ca6e7",
+                "sha256:f81d1ee7dab2f838ef3719069d09af53ec28e41ab6ae82a31df396625d286dd4",
+                "sha256:e3c5225e023c05590f3c9ced63250b0a93533a37ae7ee89122f17694ce5bf6a1",
+                "sha256:bbcf73bc3099460624af93b58c79a54a6e89efe9e7dc18dd0c70c3567f0f0c07",
+                "sha256:539935a96597b3ba0cc2338df8f14093125e12392371b8d62cf8ed78ca4958b1",
+                "sha256:e7279dedae80df97924db20d8b108889de6a465a3589a5df074be1a883b70f09",
+                "sha256:92857971433df4caa89937b95a9605ec69efa97c9b396294fba86ba197529ad8",
+                "sha256:fc5a6e0889fe7025a989935aded693712ab90198e0eb0c412a41537d815427fc",
+                "sha256:6088b9cd3c00a17b4f625ad9dabf83b61728538a9f99f7bea7629c00523887bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:35b273d41ba753340d98b3af23746b014c84600ae1751be740a28d220412da0b",
+                "sha256:59fe0ec8b59e35a87633256486aa3a775b3ca49405ab38f07b5c72a859af2291",
+                "sha256:dfcbf2e4f97e86e356cd7ca78d506b281e9e161bb12dca76abad6dab5a7294f6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T09:55:19.300266094Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:3a7e8b62913737ccb2be0160306e278f23dbd814036bd1c10d16af1b02f21621",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "ap7m7eolz2oogk80yis76pwm9",
+                    "CreatedAt": "2026-10-20T09:55:19.322944594Z"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-airflow
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-postgres
+
+exit_code=0

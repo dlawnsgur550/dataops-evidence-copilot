@@ -1,0 +1,268 @@
+{
+  "trace_id": "7f1d7fcd-f6c3-4aad-b7d0-98beb3c2436b",
+  "incident_ref": {
+    "incident_id": "inc-779c533a1472",
+    "dag_id": "orders_demo",
+    "run_id": "eval-779c533a1472",
+    "task_id": "dbt_run",
+    "try_number": 2
+  },
+  "plan": {
+    "provisional_category": "SCHEMA_CHANGE",
+    "investigation": [
+      "dbt_run 로그에 stg_orders 모델에서 amount 컬럼을 찾을 수 없다고 나옵니다.",
+      "raw.orders의 스키마와 stg_orders가 참조하는 컬럼 정의를 비교해 변경 여부를 확인하세요.",
+      "load_demo_data는 성공했고, dbt_test와 publish_summary는 선행 작업 실패로 실행되지 않았습니다."
+    ]
+  },
+  "evidence": [
+    {
+      "evidence_id": "e-8d4d2ff0160cfa",
+      "kind": "get_task_context",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-779c533a1472",
+          "dag_id": "orders_demo",
+          "run_id": "eval-779c533a1472",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "state": "failed",
+        "task_statuses": {
+          "load_demo_data": "success",
+          "dbt_run": "failed",
+          "dbt_test": "upstream_failed",
+          "publish_summary": "upstream_failed"
+        },
+        "log_lines": [
+          "begin selected attempt",
+          "column \"amount\" does not exist in model stg_orders",
+          "attempt closed"
+        ],
+        "truncated": false,
+        "dbt_connection_id": "dbt_orders",
+        "table_id": "raw.orders",
+        "run_started_at": "2026-10-20T07:00:00Z",
+        "run_finished_at": "2026-10-20T07:01:00Z",
+        "quality_column": "order_id"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-bcd65c310da312",
+      "kind": "compare_schema",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "current_observation",
+      "target_ref": {
+        "incident": null,
+        "table_id": "raw.orders",
+        "connection_id": null,
+        "baseline_id": "orders-v1"
+      },
+      "status": "success",
+      "data": {
+        "current_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "created_at": "timestamp",
+          "paid_amount": "numeric"
+        },
+        "baseline_columns": {
+          "order_id": "integer",
+          "customer_id": "integer",
+          "amount": "numeric",
+          "created_at": "timestamp"
+        },
+        "baseline_observed_at": "2026-10-19T07:00:00Z",
+        "baseline_id": "orders-v1",
+        "removed": [
+          "amount"
+        ],
+        "added": [
+          "paid_amount"
+        ],
+        "type_changes": [],
+        "warning": "Current observation; not a historical run snapshot"
+      },
+      "error": null,
+      "simulated": true
+    },
+    {
+      "evidence_id": "e-d42880072cf65d",
+      "kind": "get_dbt_artifacts",
+      "source": "synthetic-evaluation://bundle/v1",
+      "observed_at": "2026-10-20T09:00:00Z",
+      "temporal_scope": "run_snapshot",
+      "target_ref": {
+        "incident": {
+          "incident_id": "inc-779c533a1472",
+          "dag_id": "orders_demo",
+          "run_id": "eval-779c533a1472",
+          "task_id": "dbt_run",
+          "try_number": 2
+        },
+        "table_id": null,
+        "connection_id": null,
+        "baseline_id": null
+      },
+      "status": "success",
+      "data": {
+        "invocation_id": "inv-779c533a1472",
+        "manifest_invocation_id": "inv-779c533a1472",
+        "run_results_invocation_id": "inv-779c533a1472",
+        "issue": "missing_column",
+        "column_id": "amount",
+        "table_id": "raw.orders",
+        "connection_id": "dbt_orders",
+        "failed_node": "model.orders.stg_orders",
+        "potential_downstream": [
+          "model.orders.daily_orders"
+        ],
+        "test_results": {},
+        "message": "Database Error in model stg_orders: column \"amount\" does not exist"
+      },
+      "error": null,
+      "simulated": true
+    }
+  ],
+  "retrieval_hits": [
+    {
+      "doc_id": "rb-schema",
+      "doc_version": "2",
+      "chunk_id": "rb-schema:0",
+      "rank": 1,
+      "content_hash": "6f247324a6035d66c684a0ec0a818687860aed0fefe123ab27617b52d7724eac",
+      "content": "# 누락 컬럼과 계약 변경 / missing column contract\n# 누락 컬럼과 계약 변경 / missing column contract\n\n문서 ID: rb-schema\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nmissing_column, column does not exist, UndefinedColumn, amount, net_amount, unit_price, dbt_run, source mapping\n\n## 확인과 원인 구분\n선택 실행의 로그와 같은 invocation 산출물이 지목한 컬럼을 확인한다. 현재 schema의 removed/added와 baseline을 보조 근거로 대조한다. 현재 관측을 과거 스냅샷으로 부르지 않는다.\n\n## 사람의 조치\n생산자 계약과 컬럼의 업무 의미를 확인한 후 개발자가 소스 매핑 또는 종속 모델 참조를 조정한다. 원본과 매핑 결정 이력을 보존한다.\n\n## 선행 조건\n컬럼의 의도된 의미와 기준 계약, 조치 대상 테이블이 확인돼야 한다.\n\n## 검증\n새 실행의 모든 태스크와 not_null·unique 통과, 원본·staging·일별 집계의 건수와 합계를 확인한다.\n\n## 적용 제외\n접속 거부, 단순 NULL, 다른 테이블의 현재 컬럼 변화만 있는 경우에는 적용하지 않는다. 재시도만으로 계약 불일치는 고쳐지지 않는다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm the missing column in the selected task log and same dbt invocation. Compare the named table with its baseline as current corroboration, not a historical snapshot. A developer confirms producer contract and business meaning, aligns mapping or dependent model references, preserves originals and records the decision. Retry alone is insufficient. Verify a separate new run, all tasks, not_null and unique, counts and aggregates. Exclude connection-only or null-only failures."
+    },
+    {
+      "doc_id": "rb-quality",
+      "doc_version": "2",
+      "chunk_id": "rb-quality:0",
+      "rank": 2,
+      "content_hash": "48084cb943e1e05f19b62a1c0c478de3a265957a34d1e4fea6f8a6ad135ecedd",
+      "content": "# 필수 키 NULL과 데이터 정정 / not_null\n# 필수 키 NULL과 데이터 정정 / not_null\n\n문서 ID: rb-quality\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nnot_null, null_counts, order_id, customer_id, null rows, dbt_test, quality profile\n\n## 확인과 원인 구분\n선택 실행의 검사 결과와 로그에서 실제 실패한 키를 확인하고 현재 같은 테이블의 제한된 프로필을 대조한다. 현재 NULL 건수를 과거 실패 건수로 단정하지 않는다.\n\n## 사람의 조치\n개발자가 원천 매핑과 누락 경로를 확인한다. 원본을 보존하고 승인된 정책에 따라 키를 정정하거나 잘못된 레코드를 격리한다.\n\n## 선행 조건\n업무 키 정의와 정정·격리 정책이 필요하다. 임의 삭제나 임의 키 생성으로 통과시키지 않는다.\n\n## 검증\n새 실행의 not_null와 unique가 모두 통과하고 태스크 성공, 건수·금액 정합성이 유지되는지 확인한다.\n\n## 적용 제외\n컬럼이 없거나 DB에 접속하지 못한 상태를 NULL 문제로 단정하지 않는다. 단순 재시도는 데이터 정정이 아니다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm the failing not_null key in selected-run logs and dbt tests. Current same-table null counts are corroboration, not historical counts. A developer traces source mapping and applies approved correction or quarantine while preserving originals. Do not invent keys or delete data just to pass. Retry alone is insufficient. Verify new-run tasks, not_null and unique, counts and monetary aggregates. Exclude missing-column or connectivity-only failures."
+    },
+    {
+      "doc_id": "rb-connection",
+      "doc_version": "2",
+      "chunk_id": "rb-connection:0",
+      "rank": 3,
+      "content_hash": "46708c1494c355883792be62429a5bc25510fb86f27b3b98aa261f8ab07c58d5",
+      "content": "# dbt 실행 연결 거부 / connection refused\n# dbt 실행 연결 거부 / connection refused\n\n문서 ID: rb-connection\n버전: 2\n수정일: 2026-10-20\n자료 유형: 직접 작성한 운영 절차\n\n## 증상\nconnection_refused, connection refused, dbt_orders, dbt_run, endpoint, host, port\n\n## 확인과 원인 구분\n실패 실행의 로그와 해당 dbt invocation 자료에서 실제 연결 ID를 확인한다. partial manifest만 있으면 검증된 명령 영수증과 누락 run_results를 명시한다.\n\n## 사람의 조치\n개발자가 실제 dbt 실행 설정과 서비스 상태·경로를 점검하고 확인된 설정 오류를 바로잡는다. 비밀번호는 보고서에 넣지 않는다.\n\n## 선행 조건\n실패 프로세스가 사용한 연결 설정을 먼저 확인한다. 포트가 로그에 없으면 잘못된 포트를 확정하지 않는다.\n\n## 검증\n새 실행의 모든 태스크와 두 품질 검사, 집계가 통과해야 한다. 현재 probe 성공이나 mcp_readonly 접속 성공만으로 복구라고 부르지 않는다.\n\n## 적용 제외\n다른 연결의 접속 성공은 dbt_orders 성공이 아니다. 현재 연결 성공은 과거 실행 실패를 지우지 않는다. 인증 오류·DNS 오류는 별도 런북을 확인한다.\n",
+      "method": "bm25_e5_qdrant_rrf_k60",
+      "llm_summary": "Confirm dbt_orders connection refusal in selected-run log and matching dbt invocation. A verified partial manifest receipt can support refusal, but disclose missing run_results. Inspect actual execution endpoint and service configuration; never print credentials or infer a wrong port without evidence. Another connection success, or a current successful probe, does not prove historical recovery. A developer corrects confirmed configuration problems. Verify a new full pipeline run, both tests and aggregates."
+    }
+  ],
+  "diagnosis": {
+    "category": "SCHEMA_CHANGE",
+    "diagnosis_status": "supported",
+    "severity": "high",
+    "cause": "실행 시 stg_orders가 amount 컬럼을 찾지 못해 실패했습니다. 같은 dbt 실행의 산출물도 missing_column을 기록하고, 현재 스키마에서는 amount가 제거되고 paid_amount가 추가된 것이 corroboration으로 확인됩니다. run_results 상세는 제공되지 않았습니다. 실패한 dbt_run과 upstream_failed 상태는 관측됐으며, downstream 모델은 잠재적 영향입니다.",
+    "evidence_ids": [
+      "e-8d4d2ff0160cfa",
+      "e-d42880072cf65d",
+      "e-bcd65c310da312"
+    ],
+    "missing_evidence": [
+      "run_results의 상세 태스크 결과"
+    ],
+    "impact": [
+      "dbt_run 실패, dbt_test 및 publish_summary upstream_failed 관측",
+      "model.orders.daily_orders는 잠재적 downstream 영향"
+    ],
+    "recovery_actions": [
+      {
+        "action_id": "align_orders_schema",
+        "target_ref": {
+          "incident": null,
+          "table_id": "raw.orders",
+          "connection_id": "dbt_orders",
+          "baseline_id": "orders-v1"
+        },
+        "kind": "schema_alignment",
+        "prerequisites": [
+          "개발자가 producer contract와 컬럼의 업무상 의미를 확인"
+        ],
+        "steps": [
+          "검토자가 amount와 paid_amount의 의미 및 매핑을 확인합니다.",
+          "확인 결과에 따라 매핑 또는 종속 모델 참조를 수정하고 원본을 보존하며 결정을 기록합니다."
+        ],
+        "verification": [
+          "새 실행에서 전체 태스크 상태를 확인합니다.",
+          "not_null, unique, 건수 및 집계 결과를 확인합니다."
+        ],
+        "evidence_ids": [
+          "e-8d4d2ff0160cfa",
+          "e-d42880072cf65d",
+          "e-bcd65c310da312"
+        ],
+        "runbook_ids": [
+          "rb-schema"
+        ],
+        "execution_mode": "human_only_text"
+      }
+    ]
+  },
+  "review": {
+    "accepted": true,
+    "violations": [],
+    "feedback": [],
+    "revision_count": 0,
+    "semantic_reviewer": "gpt-6-luna"
+  },
+  "errors": [],
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 3,
+    "rag_calls": 1,
+    "tokens": 5115,
+    "cost": 0.000404888,
+    "elapsed_seconds": 16.411023,
+    "api_calls": 4,
+    "local_cache_hits": 0,
+    "input_tokens": 4590,
+    "output_tokens": 525,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0,
+    "service_tier": "flex"
+  },
+  "node_trace": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "replan_count": 0,
+  "revision_count": 0,
+  "evidence_hash": "534a730a7eb81aa757b23730c934cf09cce3e23dbb6ce0089203bb82c439c54e",
+  "versions": {
+    "app": "0.1.0",
+    "model": "gpt-6-luna",
+    "service_tier": "flex",
+    "prompt_sha256": "dd979b832e53c0b12550e74a0f3594b2d1be5c99837e368270aa4b949703479a",
+    "retrieval": "hybrid-e5-bm25-rrf-4aedd1af4bd00ecb"
+  },
+  "validation_scope": {
+    "llm": "gpt-6-luna",
+    "transport": "fixed_evidence_bundle_replay",
+    "data": "authored_synthetic_evaluation",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "recovered": null
+}

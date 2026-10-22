@@ -1,0 +1,902 @@
+dataops_c_cp2_pg17
+
+exit_code=0
+e9df142af59ad95433382a89eacefb58a711b22ba71bb8cdb9ad17d3adf220d7
+
+exit_code=0
+DB: sqlite:////Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/airflow.db
+Performing upgrade to the metadata database sqlite:////Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/airflow.db
+[2026-10-20T17:04:34.330+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-10-20T17:04:34.330+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+[2026-10-20T17:04:34.331+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-10-20T17:04:34.331+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/lib/python3.11/site-packages/airflow/utils/db.py:801 DeprecationWarning: The load_default_connections option in [core] has been moved to the load_default_connections option in [database] - the old setting has been used, but please update your config.
+Database migrating done!
+
+exit_code=0
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2026-10-20T17:04:35.129+0900] {override.py:1507} INFO - Inserted Role: Admin
+[2026-10-20T17:04:35.130+0900] {override.py:964} WARNING - No user yet created, use flask fab command to do it.
+[2026-10-20T17:04:35.139+0900] {override.py:1911} INFO - Created Permission View: can edit on Passwords
+[2026-10-20T17:04:35.140+0900] {override.py:1962} INFO - Added Permission can edit on Passwords to role Admin
+[2026-10-20T17:04:35.142+0900] {override.py:1911} INFO - Created Permission View: can read on Passwords
+[2026-10-20T17:04:35.143+0900] {override.py:1962} INFO - Added Permission can read on Passwords to role Admin
+[2026-10-20T17:04:35.146+0900] {override.py:1911} INFO - Created Permission View: can edit on My Password
+[2026-10-20T17:04:35.147+0900] {override.py:1962} INFO - Added Permission can edit on My Password to role Admin
+[2026-10-20T17:04:35.148+0900] {override.py:1911} INFO - Created Permission View: can read on My Password
+[2026-10-20T17:04:35.149+0900] {override.py:1962} INFO - Added Permission can read on My Password to role Admin
+[2026-10-20T17:04:35.151+0900] {override.py:1911} INFO - Created Permission View: can edit on My Profile
+[2026-10-20T17:04:35.152+0900] {override.py:1962} INFO - Added Permission can edit on My Profile to role Admin
+[2026-10-20T17:04:35.153+0900] {override.py:1911} INFO - Created Permission View: can read on My Profile
+[2026-10-20T17:04:35.154+0900] {override.py:1962} INFO - Added Permission can read on My Profile to role Admin
+[2026-10-20T17:04:35.160+0900] {override.py:1911} INFO - Created Permission View: can create on Users
+[2026-10-20T17:04:35.161+0900] {override.py:1962} INFO - Added Permission can create on Users to role Admin
+[2026-10-20T17:04:35.162+0900] {override.py:1911} INFO - Created Permission View: can read on Users
+[2026-10-20T17:04:35.163+0900] {override.py:1962} INFO - Added Permission can read on Users to role Admin
+[2026-10-20T17:04:35.165+0900] {override.py:1911} INFO - Created Permission View: can edit on Users
+[2026-10-20T17:04:35.166+0900] {override.py:1962} INFO - Added Permission can edit on Users to role Admin
+[2026-10-20T17:04:35.167+0900] {override.py:1911} INFO - Created Permission View: can delete on Users
+[2026-10-20T17:04:35.168+0900] {override.py:1962} INFO - Added Permission can delete on Users to role Admin
+[2026-10-20T17:04:35.170+0900] {override.py:1911} INFO - Created Permission View: menu access on List Users
+[2026-10-20T17:04:35.171+0900] {override.py:1962} INFO - Added Permission menu access on List Users to role Admin
+[2026-10-20T17:04:35.173+0900] {override.py:1911} INFO - Created Permission View: menu access on Security
+[2026-10-20T17:04:35.174+0900] {override.py:1962} INFO - Added Permission menu access on Security to role Admin
+[2026-10-20T17:04:35.178+0900] {override.py:1911} INFO - Created Permission View: can create on Roles
+[2026-10-20T17:04:35.179+0900] {override.py:1962} INFO - Added Permission can create on Roles to role Admin
+[2026-10-20T17:04:35.180+0900] {override.py:1911} INFO - Created Permission View: can read on Roles
+[2026-10-20T17:04:35.181+0900] {override.py:1962} INFO - Added Permission can read on Roles to role Admin
+[2026-10-20T17:04:35.183+0900] {override.py:1911} INFO - Created Permission View: can edit on Roles
+[2026-10-20T17:04:35.183+0900] {override.py:1962} INFO - Added Permission can edit on Roles to role Admin
+[2026-10-20T17:04:35.185+0900] {override.py:1911} INFO - Created Permission View: can delete on Roles
+[2026-10-20T17:04:35.186+0900] {override.py:1962} INFO - Added Permission can delete on Roles to role Admin
+[2026-10-20T17:04:35.188+0900] {override.py:1911} INFO - Created Permission View: menu access on List Roles
+[2026-10-20T17:04:35.189+0900] {override.py:1962} INFO - Added Permission menu access on List Roles to role Admin
+[2026-10-20T17:04:35.193+0900] {override.py:1911} INFO - Created Permission View: can read on User Stats Chart
+[2026-10-20T17:04:35.194+0900] {override.py:1962} INFO - Added Permission can read on User Stats Chart to role Admin
+[2026-10-20T17:04:35.196+0900] {override.py:1911} INFO - Created Permission View: menu access on User's Statistics
+[2026-10-20T17:04:35.197+0900] {override.py:1962} INFO - Added Permission menu access on User's Statistics to role Admin
+[2026-10-20T17:04:35.202+0900] {override.py:1911} INFO - Created Permission View: can read on Permissions
+[2026-10-20T17:04:35.204+0900] {override.py:1962} INFO - Added Permission can read on Permissions to role Admin
+[2026-10-20T17:04:35.206+0900] {override.py:1911} INFO - Created Permission View: menu access on Actions
+[2026-10-20T17:04:35.207+0900] {override.py:1962} INFO - Added Permission menu access on Actions to role Admin
+[2026-10-20T17:04:35.211+0900] {override.py:1911} INFO - Created Permission View: can read on View Menus
+[2026-10-20T17:04:35.212+0900] {override.py:1962} INFO - Added Permission can read on View Menus to role Admin
+[2026-10-20T17:04:35.215+0900] {override.py:1911} INFO - Created Permission View: menu access on Resources
+[2026-10-20T17:04:35.216+0900] {override.py:1962} INFO - Added Permission menu access on Resources to role Admin
+[2026-10-20T17:04:35.221+0900] {override.py:1911} INFO - Created Permission View: can read on Permission Views
+[2026-10-20T17:04:35.222+0900] {override.py:1962} INFO - Added Permission can read on Permission Views to role Admin
+[2026-10-20T17:04:35.224+0900] {override.py:1911} INFO - Created Permission View: menu access on Permission Pairs
+[2026-10-20T17:04:35.225+0900] {override.py:1962} INFO - Added Permission menu access on Permission Pairs to role Admin
+[2026-10-20T17:04:35.279+0900] {override.py:1596} INFO - Added user dataops_admin
+User "dataops_admin" created with role "Admin"
+
+exit_code=0
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+Viewer is not a valid role. Valid roles are: [Admin]
+
+exit_code=1
+dataops-c-cp2-postgres
+
+exit_code=0
+DB: sqlite:////Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/airflow.db
+Performing upgrade to the metadata database sqlite:////Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow/airflow.db
+[2026-10-20T17:05:03.161+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-10-20T17:05:03.161+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+[2026-10-20T17:05:03.162+0900] {migration.py:207} INFO - Context impl SQLiteImpl.
+[2026-10-20T17:05:03.162+0900] {migration.py:210} INFO - Will assume non-transactional DDL.
+[2026-10-20T17:05:03.162+0900] {db.py:1675} INFO - Creating tables
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+Database migrating done!
+
+exit_code=0
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+Updating actions and resources for all existing roles
+[2026-10-20T17:05:03.850+0900] {override.py:1911} INFO - Created Permission View: can read on DAGs
+[2026-10-20T17:05:03.852+0900] {override.py:1911} INFO - Created Permission View: can delete on DAGs
+[2026-10-20T17:05:03.853+0900] {override.py:1911} INFO - Created Permission View: can edit on DAGs
+[2026-10-20T17:05:03.856+0900] {override.py:1507} INFO - Inserted Role: Public
+[2026-10-20T17:05:03.857+0900] {override.py:1507} INFO - Inserted Role: Viewer
+[2026-10-20T17:05:03.859+0900] {override.py:1962} INFO - Added Permission can read on DAGs to role Viewer
+[2026-10-20T17:05:03.860+0900] {override.py:1911} INFO - Created Permission View: can read on DAG Dependencies
+[2026-10-20T17:05:03.861+0900] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Viewer
+[2026-10-20T17:05:03.862+0900] {override.py:1911} INFO - Created Permission View: can read on DAG Code
+[2026-10-20T17:05:03.863+0900] {override.py:1962} INFO - Added Permission can read on DAG Code to role Viewer
+[2026-10-20T17:05:03.865+0900] {override.py:1911} INFO - Created Permission View: can read on DAG Runs
+[2026-10-20T17:05:03.866+0900] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Viewer
+[2026-10-20T17:05:03.867+0900] {override.py:1911} INFO - Created Permission View: can read on Datasets
+[2026-10-20T17:05:03.868+0900] {override.py:1962} INFO - Added Permission can read on Datasets to role Viewer
+[2026-10-20T17:05:03.869+0900] {override.py:1911} INFO - Created Permission View: can read on Cluster Activity
+[2026-10-20T17:05:03.870+0900] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Viewer
+[2026-10-20T17:05:03.871+0900] {override.py:1911} INFO - Created Permission View: can read on Pools
+[2026-10-20T17:05:03.872+0900] {override.py:1962} INFO - Added Permission can read on Pools to role Viewer
+[2026-10-20T17:05:03.874+0900] {override.py:1911} INFO - Created Permission View: can read on ImportError
+[2026-10-20T17:05:03.874+0900] {override.py:1962} INFO - Added Permission can read on ImportError to role Viewer
+[2026-10-20T17:05:03.876+0900] {override.py:1911} INFO - Created Permission View: can read on DAG Warnings
+[2026-10-20T17:05:03.876+0900] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Viewer
+[2026-10-20T17:05:03.878+0900] {override.py:1911} INFO - Created Permission View: can read on Jobs
+[2026-10-20T17:05:03.879+0900] {override.py:1962} INFO - Added Permission can read on Jobs to role Viewer
+[2026-10-20T17:05:03.879+0900] {override.py:1962} INFO - Added Permission can read on My Password to role Viewer
+[2026-10-20T17:05:03.880+0900] {override.py:1962} INFO - Added Permission can edit on My Password to role Viewer
+[2026-10-20T17:05:03.881+0900] {override.py:1962} INFO - Added Permission can read on My Profile to role Viewer
+[2026-10-20T17:05:03.881+0900] {override.py:1962} INFO - Added Permission can edit on My Profile to role Viewer
+[2026-10-20T17:05:03.883+0900] {override.py:1911} INFO - Created Permission View: can read on SLA Misses
+[2026-10-20T17:05:03.884+0900] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Viewer
+[2026-10-20T17:05:03.885+0900] {override.py:1911} INFO - Created Permission View: can read on Task Instances
+[2026-10-20T17:05:03.886+0900] {override.py:1962} INFO - Added Permission can read on Task Instances to role Viewer
+[2026-10-20T17:05:03.887+0900] {override.py:1911} INFO - Created Permission View: can read on Task Logs
+[2026-10-20T17:05:03.888+0900] {override.py:1962} INFO - Added Permission can read on Task Logs to role Viewer
+[2026-10-20T17:05:03.889+0900] {override.py:1911} INFO - Created Permission View: can read on XComs
+[2026-10-20T17:05:03.890+0900] {override.py:1962} INFO - Added Permission can read on XComs to role Viewer
+[2026-10-20T17:05:03.891+0900] {override.py:1911} INFO - Created Permission View: can read on Website
+[2026-10-20T17:05:03.892+0900] {override.py:1962} INFO - Added Permission can read on Website to role Viewer
+[2026-10-20T17:05:03.893+0900] {override.py:1911} INFO - Created Permission View: menu access on Browse
+[2026-10-20T17:05:03.894+0900] {override.py:1962} INFO - Added Permission menu access on Browse to role Viewer
+[2026-10-20T17:05:03.895+0900] {override.py:1911} INFO - Created Permission View: menu access on DAGs
+[2026-10-20T17:05:03.896+0900] {override.py:1962} INFO - Added Permission menu access on DAGs to role Viewer
+[2026-10-20T17:05:03.897+0900] {override.py:1911} INFO - Created Permission View: menu access on DAG Dependencies
+[2026-10-20T17:05:03.897+0900] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Viewer
+[2026-10-20T17:05:03.898+0900] {override.py:1911} INFO - Created Permission View: menu access on DAG Runs
+[2026-10-20T17:05:03.899+0900] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Viewer
+[2026-10-20T17:05:03.900+0900] {override.py:1911} INFO - Created Permission View: menu access on Datasets
+[2026-10-20T17:05:03.901+0900] {override.py:1962} INFO - Added Permission menu access on Datasets to role Viewer
+[2026-10-20T17:05:03.902+0900] {override.py:1911} INFO - Created Permission View: menu access on Cluster Activity
+[2026-10-20T17:05:03.902+0900] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Viewer
+[2026-10-20T17:05:03.904+0900] {override.py:1911} INFO - Created Permission View: menu access on Documentation
+[2026-10-20T17:05:03.904+0900] {override.py:1962} INFO - Added Permission menu access on Documentation to role Viewer
+[2026-10-20T17:05:03.906+0900] {override.py:1911} INFO - Created Permission View: menu access on Docs
+[2026-10-20T17:05:03.906+0900] {override.py:1962} INFO - Added Permission menu access on Docs to role Viewer
+[2026-10-20T17:05:03.907+0900] {override.py:1911} INFO - Created Permission View: menu access on Jobs
+[2026-10-20T17:05:03.908+0900] {override.py:1962} INFO - Added Permission menu access on Jobs to role Viewer
+[2026-10-20T17:05:03.909+0900] {override.py:1911} INFO - Created Permission View: menu access on SLA Misses
+[2026-10-20T17:05:03.910+0900] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Viewer
+[2026-10-20T17:05:03.911+0900] {override.py:1911} INFO - Created Permission View: menu access on Task Instances
+[2026-10-20T17:05:03.911+0900] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Viewer
+[2026-10-20T17:05:03.912+0900] {override.py:1507} INFO - Inserted Role: User
+[2026-10-20T17:05:03.913+0900] {override.py:1962} INFO - Added Permission can read on DAGs to role User
+[2026-10-20T17:05:03.914+0900] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role User
+[2026-10-20T17:05:03.915+0900] {override.py:1962} INFO - Added Permission can read on DAG Code to role User
+[2026-10-20T17:05:03.916+0900] {override.py:1962} INFO - Added Permission can read on DAG Runs to role User
+[2026-10-20T17:05:03.917+0900] {override.py:1962} INFO - Added Permission can read on Datasets to role User
+[2026-10-20T17:05:03.918+0900] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role User
+[2026-10-20T17:05:03.919+0900] {override.py:1962} INFO - Added Permission can read on Pools to role User
+[2026-10-20T17:05:03.920+0900] {override.py:1962} INFO - Added Permission can read on ImportError to role User
+[2026-10-20T17:05:03.921+0900] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role User
+[2026-10-20T17:05:03.922+0900] {override.py:1962} INFO - Added Permission can read on Jobs to role User
+[2026-10-20T17:05:03.922+0900] {override.py:1962} INFO - Added Permission can read on My Password to role User
+[2026-10-20T17:05:03.923+0900] {override.py:1962} INFO - Added Permission can edit on My Password to role User
+[2026-10-20T17:05:03.924+0900] {override.py:1962} INFO - Added Permission can read on My Profile to role User
+[2026-10-20T17:05:03.925+0900] {override.py:1962} INFO - Added Permission can edit on My Profile to role User
+[2026-10-20T17:05:03.925+0900] {override.py:1962} INFO - Added Permission can read on SLA Misses to role User
+[2026-10-20T17:05:03.926+0900] {override.py:1962} INFO - Added Permission can read on Task Instances to role User
+[2026-10-20T17:05:03.927+0900] {override.py:1962} INFO - Added Permission can read on Task Logs to role User
+[2026-10-20T17:05:03.928+0900] {override.py:1962} INFO - Added Permission can read on XComs to role User
+[2026-10-20T17:05:03.929+0900] {override.py:1962} INFO - Added Permission can read on Website to role User
+[2026-10-20T17:05:03.930+0900] {override.py:1962} INFO - Added Permission menu access on Browse to role User
+[2026-10-20T17:05:03.931+0900] {override.py:1962} INFO - Added Permission menu access on DAGs to role User
+[2026-10-20T17:05:03.932+0900] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role User
+[2026-10-20T17:05:03.933+0900] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role User
+[2026-10-20T17:05:03.934+0900] {override.py:1962} INFO - Added Permission menu access on Datasets to role User
+[2026-10-20T17:05:03.935+0900] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role User
+[2026-10-20T17:05:03.936+0900] {override.py:1962} INFO - Added Permission menu access on Documentation to role User
+[2026-10-20T17:05:03.937+0900] {override.py:1962} INFO - Added Permission menu access on Docs to role User
+[2026-10-20T17:05:03.938+0900] {override.py:1962} INFO - Added Permission menu access on Jobs to role User
+[2026-10-20T17:05:03.939+0900] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role User
+[2026-10-20T17:05:03.940+0900] {override.py:1962} INFO - Added Permission menu access on Task Instances to role User
+[2026-10-20T17:05:03.941+0900] {override.py:1962} INFO - Added Permission can edit on DAGs to role User
+[2026-10-20T17:05:03.941+0900] {override.py:1962} INFO - Added Permission can delete on DAGs to role User
+[2026-10-20T17:05:03.942+0900] {override.py:1911} INFO - Created Permission View: can create on Task Instances
+[2026-10-20T17:05:03.943+0900] {override.py:1962} INFO - Added Permission can create on Task Instances to role User
+[2026-10-20T17:05:03.944+0900] {override.py:1911} INFO - Created Permission View: can edit on Task Instances
+[2026-10-20T17:05:03.945+0900] {override.py:1962} INFO - Added Permission can edit on Task Instances to role User
+[2026-10-20T17:05:03.946+0900] {override.py:1911} INFO - Created Permission View: can delete on Task Instances
+[2026-10-20T17:05:03.947+0900] {override.py:1962} INFO - Added Permission can delete on Task Instances to role User
+[2026-10-20T17:05:03.948+0900] {override.py:1911} INFO - Created Permission View: can create on DAG Runs
+[2026-10-20T17:05:03.948+0900] {override.py:1962} INFO - Added Permission can create on DAG Runs to role User
+[2026-10-20T17:05:03.949+0900] {override.py:1911} INFO - Created Permission View: can edit on DAG Runs
+[2026-10-20T17:05:03.950+0900] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role User
+[2026-10-20T17:05:03.951+0900] {override.py:1911} INFO - Created Permission View: can delete on DAG Runs
+[2026-10-20T17:05:03.952+0900] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role User
+[2026-10-20T17:05:03.953+0900] {override.py:1911} INFO - Created Permission View: can create on Datasets
+[2026-10-20T17:05:03.954+0900] {override.py:1962} INFO - Added Permission can create on Datasets to role User
+[2026-10-20T17:05:03.954+0900] {override.py:1507} INFO - Inserted Role: Op
+[2026-10-20T17:05:03.955+0900] {override.py:1962} INFO - Added Permission can read on DAGs to role Op
+[2026-10-20T17:05:03.956+0900] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Op
+[2026-10-20T17:05:03.957+0900] {override.py:1962} INFO - Added Permission can read on DAG Code to role Op
+[2026-10-20T17:05:03.958+0900] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Op
+[2026-10-20T17:05:03.959+0900] {override.py:1962} INFO - Added Permission can read on Datasets to role Op
+[2026-10-20T17:05:03.960+0900] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Op
+[2026-10-20T17:05:03.961+0900] {override.py:1962} INFO - Added Permission can read on Pools to role Op
+[2026-10-20T17:05:03.962+0900] {override.py:1962} INFO - Added Permission can read on ImportError to role Op
+[2026-10-20T17:05:03.963+0900] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Op
+[2026-10-20T17:05:03.964+0900] {override.py:1962} INFO - Added Permission can read on Jobs to role Op
+[2026-10-20T17:05:03.965+0900] {override.py:1962} INFO - Added Permission can read on My Password to role Op
+[2026-10-20T17:05:03.966+0900] {override.py:1962} INFO - Added Permission can edit on My Password to role Op
+[2026-10-20T17:05:03.966+0900] {override.py:1962} INFO - Added Permission can read on My Profile to role Op
+[2026-10-20T17:05:03.967+0900] {override.py:1962} INFO - Added Permission can edit on My Profile to role Op
+[2026-10-20T17:05:03.968+0900] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Op
+[2026-10-20T17:05:03.969+0900] {override.py:1962} INFO - Added Permission can read on Task Instances to role Op
+[2026-10-20T17:05:03.970+0900] {override.py:1962} INFO - Added Permission can read on Task Logs to role Op
+[2026-10-20T17:05:03.971+0900] {override.py:1962} INFO - Added Permission can read on XComs to role Op
+[2026-10-20T17:05:03.972+0900] {override.py:1962} INFO - Added Permission can read on Website to role Op
+[2026-10-20T17:05:03.973+0900] {override.py:1962} INFO - Added Permission menu access on Browse to role Op
+[2026-10-20T17:05:03.974+0900] {override.py:1962} INFO - Added Permission menu access on DAGs to role Op
+[2026-10-20T17:05:03.975+0900] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Op
+[2026-10-20T17:05:03.976+0900] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Op
+[2026-10-20T17:05:03.977+0900] {override.py:1962} INFO - Added Permission menu access on Datasets to role Op
+[2026-10-20T17:05:03.978+0900] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Op
+[2026-10-20T17:05:03.979+0900] {override.py:1962} INFO - Added Permission menu access on Documentation to role Op
+[2026-10-20T17:05:03.980+0900] {override.py:1962} INFO - Added Permission menu access on Docs to role Op
+[2026-10-20T17:05:03.981+0900] {override.py:1962} INFO - Added Permission menu access on Jobs to role Op
+[2026-10-20T17:05:03.982+0900] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Op
+[2026-10-20T17:05:03.983+0900] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Op
+[2026-10-20T17:05:03.983+0900] {override.py:1962} INFO - Added Permission can edit on DAGs to role Op
+[2026-10-20T17:05:03.984+0900] {override.py:1962} INFO - Added Permission can delete on DAGs to role Op
+[2026-10-20T17:05:03.985+0900] {override.py:1962} INFO - Added Permission can create on Task Instances to role Op
+[2026-10-20T17:05:03.986+0900] {override.py:1962} INFO - Added Permission can edit on Task Instances to role Op
+[2026-10-20T17:05:03.987+0900] {override.py:1962} INFO - Added Permission can delete on Task Instances to role Op
+[2026-10-20T17:05:03.988+0900] {override.py:1962} INFO - Added Permission can create on DAG Runs to role Op
+[2026-10-20T17:05:03.989+0900] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role Op
+[2026-10-20T17:05:03.990+0900] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role Op
+[2026-10-20T17:05:03.991+0900] {override.py:1962} INFO - Added Permission can create on Datasets to role Op
+[2026-10-20T17:05:03.992+0900] {override.py:1911} INFO - Created Permission View: can read on Configurations
+[2026-10-20T17:05:03.993+0900] {override.py:1962} INFO - Added Permission can read on Configurations to role Op
+[2026-10-20T17:05:03.994+0900] {override.py:1911} INFO - Created Permission View: menu access on Admin
+[2026-10-20T17:05:03.995+0900] {override.py:1962} INFO - Added Permission menu access on Admin to role Op
+[2026-10-20T17:05:03.996+0900] {override.py:1911} INFO - Created Permission View: menu access on Configurations
+[2026-10-20T17:05:03.997+0900] {override.py:1962} INFO - Added Permission menu access on Configurations to role Op
+[2026-10-20T17:05:03.998+0900] {override.py:1911} INFO - Created Permission View: menu access on Connections
+[2026-10-20T17:05:03.999+0900] {override.py:1962} INFO - Added Permission menu access on Connections to role Op
+[2026-10-20T17:05:04.000+0900] {override.py:1911} INFO - Created Permission View: menu access on Pools
+[2026-10-20T17:05:04.000+0900] {override.py:1962} INFO - Added Permission menu access on Pools to role Op
+[2026-10-20T17:05:04.002+0900] {override.py:1911} INFO - Created Permission View: menu access on Plugins
+[2026-10-20T17:05:04.003+0900] {override.py:1962} INFO - Added Permission menu access on Plugins to role Op
+[2026-10-20T17:05:04.004+0900] {override.py:1911} INFO - Created Permission View: menu access on Variables
+[2026-10-20T17:05:04.005+0900] {override.py:1962} INFO - Added Permission menu access on Variables to role Op
+[2026-10-20T17:05:04.006+0900] {override.py:1911} INFO - Created Permission View: menu access on Providers
+[2026-10-20T17:05:04.007+0900] {override.py:1962} INFO - Added Permission menu access on Providers to role Op
+[2026-10-20T17:05:04.008+0900] {override.py:1911} INFO - Created Permission View: menu access on XComs
+[2026-10-20T17:05:04.009+0900] {override.py:1962} INFO - Added Permission menu access on XComs to role Op
+[2026-10-20T17:05:04.010+0900] {override.py:1911} INFO - Created Permission View: can create on Connections
+[2026-10-20T17:05:04.010+0900] {override.py:1962} INFO - Added Permission can create on Connections to role Op
+[2026-10-20T17:05:04.011+0900] {override.py:1911} INFO - Created Permission View: can read on Connections
+[2026-10-20T17:05:04.012+0900] {override.py:1962} INFO - Added Permission can read on Connections to role Op
+[2026-10-20T17:05:04.013+0900] {override.py:1911} INFO - Created Permission View: can edit on Connections
+[2026-10-20T17:05:04.014+0900] {override.py:1962} INFO - Added Permission can edit on Connections to role Op
+[2026-10-20T17:05:04.015+0900] {override.py:1911} INFO - Created Permission View: can delete on Connections
+[2026-10-20T17:05:04.015+0900] {override.py:1962} INFO - Added Permission can delete on Connections to role Op
+[2026-10-20T17:05:04.016+0900] {override.py:1911} INFO - Created Permission View: can create on Pools
+[2026-10-20T17:05:04.017+0900] {override.py:1962} INFO - Added Permission can create on Pools to role Op
+[2026-10-20T17:05:04.018+0900] {override.py:1911} INFO - Created Permission View: can edit on Pools
+[2026-10-20T17:05:04.019+0900] {override.py:1962} INFO - Added Permission can edit on Pools to role Op
+[2026-10-20T17:05:04.020+0900] {override.py:1911} INFO - Created Permission View: can delete on Pools
+[2026-10-20T17:05:04.021+0900] {override.py:1962} INFO - Added Permission can delete on Pools to role Op
+[2026-10-20T17:05:04.022+0900] {override.py:1911} INFO - Created Permission View: can read on Plugins
+[2026-10-20T17:05:04.022+0900] {override.py:1962} INFO - Added Permission can read on Plugins to role Op
+[2026-10-20T17:05:04.023+0900] {override.py:1911} INFO - Created Permission View: can read on Providers
+[2026-10-20T17:05:04.024+0900] {override.py:1962} INFO - Added Permission can read on Providers to role Op
+[2026-10-20T17:05:04.025+0900] {override.py:1911} INFO - Created Permission View: can create on Variables
+[2026-10-20T17:05:04.026+0900] {override.py:1962} INFO - Added Permission can create on Variables to role Op
+[2026-10-20T17:05:04.027+0900] {override.py:1911} INFO - Created Permission View: can read on Variables
+[2026-10-20T17:05:04.028+0900] {override.py:1962} INFO - Added Permission can read on Variables to role Op
+[2026-10-20T17:05:04.029+0900] {override.py:1911} INFO - Created Permission View: can edit on Variables
+[2026-10-20T17:05:04.030+0900] {override.py:1962} INFO - Added Permission can edit on Variables to role Op
+[2026-10-20T17:05:04.031+0900] {override.py:1911} INFO - Created Permission View: can delete on Variables
+[2026-10-20T17:05:04.031+0900] {override.py:1962} INFO - Added Permission can delete on Variables to role Op
+[2026-10-20T17:05:04.032+0900] {override.py:1911} INFO - Created Permission View: can delete on XComs
+[2026-10-20T17:05:04.033+0900] {override.py:1962} INFO - Added Permission can delete on XComs to role Op
+[2026-10-20T17:05:04.034+0900] {override.py:1911} INFO - Created Permission View: can delete on Datasets
+[2026-10-20T17:05:04.035+0900] {override.py:1962} INFO - Added Permission can delete on Datasets to role Op
+[2026-10-20T17:05:04.036+0900] {override.py:1962} INFO - Added Permission can read on DAGs to role Admin
+[2026-10-20T17:05:04.037+0900] {override.py:1962} INFO - Added Permission can read on DAG Dependencies to role Admin
+[2026-10-20T17:05:04.038+0900] {override.py:1962} INFO - Added Permission can read on DAG Code to role Admin
+[2026-10-20T17:05:04.039+0900] {override.py:1962} INFO - Added Permission can read on DAG Runs to role Admin
+[2026-10-20T17:05:04.040+0900] {override.py:1962} INFO - Added Permission can read on Datasets to role Admin
+[2026-10-20T17:05:04.041+0900] {override.py:1962} INFO - Added Permission can read on Cluster Activity to role Admin
+[2026-10-20T17:05:04.042+0900] {override.py:1962} INFO - Added Permission can read on Pools to role Admin
+[2026-10-20T17:05:04.043+0900] {override.py:1962} INFO - Added Permission can read on ImportError to role Admin
+[2026-10-20T17:05:04.043+0900] {override.py:1962} INFO - Added Permission can read on DAG Warnings to role Admin
+[2026-10-20T17:05:04.045+0900] {override.py:1962} INFO - Added Permission can read on Jobs to role Admin
+[2026-10-20T17:05:04.046+0900] {override.py:1962} INFO - Added Permission can read on SLA Misses to role Admin
+[2026-10-20T17:05:04.047+0900] {override.py:1962} INFO - Added Permission can read on Task Instances to role Admin
+[2026-10-20T17:05:04.048+0900] {override.py:1962} INFO - Added Permission can read on Task Logs to role Admin
+[2026-10-20T17:05:04.049+0900] {override.py:1962} INFO - Added Permission can read on XComs to role Admin
+[2026-10-20T17:05:04.050+0900] {override.py:1962} INFO - Added Permission can read on Website to role Admin
+[2026-10-20T17:05:04.051+0900] {override.py:1962} INFO - Added Permission menu access on Browse to role Admin
+[2026-10-20T17:05:04.052+0900] {override.py:1962} INFO - Added Permission menu access on DAGs to role Admin
+[2026-10-20T17:05:04.053+0900] {override.py:1962} INFO - Added Permission menu access on DAG Dependencies to role Admin
+[2026-10-20T17:05:04.053+0900] {override.py:1962} INFO - Added Permission menu access on DAG Runs to role Admin
+[2026-10-20T17:05:04.054+0900] {override.py:1962} INFO - Added Permission menu access on Datasets to role Admin
+[2026-10-20T17:05:04.055+0900] {override.py:1962} INFO - Added Permission menu access on Cluster Activity to role Admin
+[2026-10-20T17:05:04.056+0900] {override.py:1962} INFO - Added Permission menu access on Documentation to role Admin
+[2026-10-20T17:05:04.057+0900] {override.py:1962} INFO - Added Permission menu access on Docs to role Admin
+[2026-10-20T17:05:04.058+0900] {override.py:1962} INFO - Added Permission menu access on Jobs to role Admin
+[2026-10-20T17:05:04.059+0900] {override.py:1962} INFO - Added Permission menu access on SLA Misses to role Admin
+[2026-10-20T17:05:04.060+0900] {override.py:1962} INFO - Added Permission menu access on Task Instances to role Admin
+[2026-10-20T17:05:04.061+0900] {override.py:1962} INFO - Added Permission can edit on DAGs to role Admin
+[2026-10-20T17:05:04.062+0900] {override.py:1962} INFO - Added Permission can delete on DAGs to role Admin
+[2026-10-20T17:05:04.063+0900] {override.py:1962} INFO - Added Permission can create on Task Instances to role Admin
+[2026-10-20T17:05:04.064+0900] {override.py:1962} INFO - Added Permission can edit on Task Instances to role Admin
+[2026-10-20T17:05:04.065+0900] {override.py:1962} INFO - Added Permission can delete on Task Instances to role Admin
+[2026-10-20T17:05:04.066+0900] {override.py:1962} INFO - Added Permission can create on DAG Runs to role Admin
+[2026-10-20T17:05:04.067+0900] {override.py:1962} INFO - Added Permission can edit on DAG Runs to role Admin
+[2026-10-20T17:05:04.068+0900] {override.py:1962} INFO - Added Permission can delete on DAG Runs to role Admin
+[2026-10-20T17:05:04.069+0900] {override.py:1962} INFO - Added Permission can create on Datasets to role Admin
+[2026-10-20T17:05:04.070+0900] {override.py:1962} INFO - Added Permission can read on Configurations to role Admin
+[2026-10-20T17:05:04.071+0900] {override.py:1962} INFO - Added Permission menu access on Admin to role Admin
+[2026-10-20T17:05:04.072+0900] {override.py:1962} INFO - Added Permission menu access on Configurations to role Admin
+[2026-10-20T17:05:04.073+0900] {override.py:1962} INFO - Added Permission menu access on Connections to role Admin
+[2026-10-20T17:05:04.073+0900] {override.py:1962} INFO - Added Permission menu access on Pools to role Admin
+[2026-10-20T17:05:04.074+0900] {override.py:1962} INFO - Added Permission menu access on Plugins to role Admin
+[2026-10-20T17:05:04.075+0900] {override.py:1962} INFO - Added Permission menu access on Variables to role Admin
+[2026-10-20T17:05:04.076+0900] {override.py:1962} INFO - Added Permission menu access on Providers to role Admin
+[2026-10-20T17:05:04.077+0900] {override.py:1962} INFO - Added Permission menu access on XComs to role Admin
+[2026-10-20T17:05:04.078+0900] {override.py:1962} INFO - Added Permission can create on Connections to role Admin
+[2026-10-20T17:05:04.079+0900] {override.py:1962} INFO - Added Permission can read on Connections to role Admin
+[2026-10-20T17:05:04.080+0900] {override.py:1962} INFO - Added Permission can edit on Connections to role Admin
+[2026-10-20T17:05:04.081+0900] {override.py:1962} INFO - Added Permission can delete on Connections to role Admin
+[2026-10-20T17:05:04.082+0900] {override.py:1962} INFO - Added Permission can create on Pools to role Admin
+[2026-10-20T17:05:04.083+0900] {override.py:1962} INFO - Added Permission can edit on Pools to role Admin
+[2026-10-20T17:05:04.084+0900] {override.py:1962} INFO - Added Permission can delete on Pools to role Admin
+[2026-10-20T17:05:04.085+0900] {override.py:1962} INFO - Added Permission can read on Plugins to role Admin
+[2026-10-20T17:05:04.086+0900] {override.py:1962} INFO - Added Permission can read on Providers to role Admin
+[2026-10-20T17:05:04.087+0900] {override.py:1962} INFO - Added Permission can create on Variables to role Admin
+[2026-10-20T17:05:04.088+0900] {override.py:1962} INFO - Added Permission can read on Variables to role Admin
+[2026-10-20T17:05:04.089+0900] {override.py:1962} INFO - Added Permission can edit on Variables to role Admin
+[2026-10-20T17:05:04.090+0900] {override.py:1962} INFO - Added Permission can delete on Variables to role Admin
+[2026-10-20T17:05:04.091+0900] {override.py:1962} INFO - Added Permission can delete on XComs to role Admin
+[2026-10-20T17:05:04.092+0900] {override.py:1962} INFO - Added Permission can delete on Datasets to role Admin
+[2026-10-20T17:05:04.094+0900] {override.py:1911} INFO - Created Permission View: can read on Audit Logs
+[2026-10-20T17:05:04.095+0900] {override.py:1962} INFO - Added Permission can read on Audit Logs to role Admin
+[2026-10-20T17:05:04.096+0900] {override.py:1911} INFO - Created Permission View: menu access on Audit Logs
+[2026-10-20T17:05:04.096+0900] {override.py:1962} INFO - Added Permission menu access on Audit Logs to role Admin
+[2026-10-20T17:05:04.098+0900] {override.py:1911} INFO - Created Permission View: can read on Task Reschedules
+[2026-10-20T17:05:04.099+0900] {override.py:1962} INFO - Added Permission can read on Task Reschedules to role Admin
+[2026-10-20T17:05:04.100+0900] {override.py:1911} INFO - Created Permission View: menu access on Task Reschedules
+[2026-10-20T17:05:04.101+0900] {override.py:1962} INFO - Added Permission menu access on Task Reschedules to role Admin
+[2026-10-20T17:05:04.102+0900] {override.py:1911} INFO - Created Permission View: can read on Triggers
+[2026-10-20T17:05:04.103+0900] {override.py:1962} INFO - Added Permission can read on Triggers to role Admin
+[2026-10-20T17:05:04.104+0900] {override.py:1911} INFO - Created Permission View: menu access on Triggers
+[2026-10-20T17:05:04.105+0900] {override.py:1962} INFO - Added Permission menu access on Triggers to role Admin
+
+exit_code=0
+id | username      | email                         | first_name | last_name | roles
+===+===============+===============================+============+===========+======
+1  | dataops_admin | dataops_admin@example.invalid | DataOps    | Local     | Admin
+                                                                                   
+
+exit_code=0
+/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/airflow-venv/lib/python3.11/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+[2026-10-20T17:05:05.361+0900] {override.py:1596} INFO - Added user dataops_viewer
+User "dataops_viewer" created with role "Viewer"
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-postgres
+
+exit_code=0
+dataops-c-cp2-postgres
+
+exit_code=0
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.airflow
+#1 transferring dockerfile: 479B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/apache/airflow:2.10.4-python3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a
+#4 resolve docker.io/apache/airflow:2.10.4-python3.11@sha256:5afa55b7c6087112770605f9b9851afd665f5c7f3719b390fcb4bd28a47a7f9a done
+#4 DONE 0.1s
+
+#5 [2/4] RUN mkdir -p /opt/dataops-dbt /opt/dataops-driver && chown -R airflow:root /opt/dataops-dbt /opt/dataops-driver
+#5 DONE 0.1s
+
+#6 [3/4] RUN python -m venv /opt/dataops-dbt && /opt/dataops-dbt/bin/pip install --no-cache-dir dbt-core==1.9.10 dbt-postgres==1.9.1
+#6 2.028 Collecting dbt-core==1.9.10
+#6 2.072   Downloading dbt_core-1.9.10-py3-none-any.whl.metadata (4.0 kB)
+#6 2.102 Collecting dbt-postgres==1.9.1
+#6 2.111   Downloading dbt_postgres-1.9.1-py3-none-any.whl.metadata (3.8 kB)
+#6 2.127 Collecting agate<1.10,>=1.7.0 (from dbt-core==1.9.10)
+#6 2.136   Downloading agate-1.9.1-py2.py3-none-any.whl.metadata (3.2 kB)
+#6 2.150 Collecting Jinja2<4,>=3.1.3 (from dbt-core==1.9.10)
+#6 2.158   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#6 2.175 Collecting mashumaro<3.15,>=3.9 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core==1.9.10)
+#6 2.183   Downloading mashumaro-3.14-py3-none-any.whl.metadata (114 kB)
+#6 2.194      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 11.2 MB/s eta 0:00:00
+#6 2.213 Collecting click<9.0,>=8.0.2 (from dbt-core==1.9.10)
+#6 2.221   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#6 2.238 Collecting networkx<4.0,>=2.3 (from dbt-core==1.9.10)
+#6 2.246   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+#6 2.325 Collecting protobuf<7.0,>=6.0 (from dbt-core==1.9.10)
+#6 2.334   Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_aarch64.whl.metadata (593 bytes)
+#6 2.352 Collecting requests<3.0.0 (from dbt-core==1.9.10)
+#6 2.360   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#6 2.372 Collecting snowplow-tracker<2.0,>=1.0.2 (from dbt-core==1.9.10)
+#6 2.381   Downloading snowplow_tracker-1.1.0-py3-none-any.whl.metadata (5.7 kB)
+#6 2.393 Collecting pathspec<0.13,>=0.9 (from dbt-core==1.9.10)
+#6 2.401   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+#6 2.415 Collecting sqlparse<0.6.0,>=0.5.0 (from dbt-core==1.9.10)
+#6 2.423   Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+#6 2.440 Collecting dbt-extractor<=0.6,>=0.5.0 (from dbt-core==1.9.10)
+#6 2.449   Downloading dbt_extractor-0.6.0-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.6 kB)
+#6 2.477 Collecting dbt-semantic-interfaces<0.8,>=0.7.4 (from dbt-core==1.9.10)
+#6 2.486   Downloading dbt_semantic_interfaces-0.7.5-py3-none-any.whl.metadata (2.6 kB)
+#6 2.503 Collecting dbt-common<2.0,>=1.13.0 (from dbt-core==1.9.10)
+#6 2.511   Downloading dbt_common-1.39.0-py3-none-any.whl.metadata (5.1 kB)
+#6 2.531 Collecting dbt-adapters<2.0,>=1.10.1 (from dbt-core==1.9.10)
+#6 2.539   Downloading dbt_adapters-1.24.5-py3-none-any.whl.metadata (4.6 kB)
+#6 2.555 Collecting packaging>20.9 (from dbt-core==1.9.10)
+#6 2.563   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#6 2.589 Collecting pytz>=2015.7 (from dbt-core==1.9.10)
+#6 2.597   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+#6 2.619 Collecting pyyaml>=6.0 (from dbt-core==1.9.10)
+#6 2.627   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.4 kB)
+#6 2.639 Collecting daff>=1.3.46 (from dbt-core==1.9.10)
+#6 2.647   Downloading daff-1.4.2-py3-none-any.whl.metadata (10 kB)
+#6 2.662 Collecting typing-extensions>=4.4 (from dbt-core==1.9.10)
+#6 2.670   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#6 2.718 Collecting psycopg2-binary<3.0,>=2.9 (from dbt-postgres==1.9.1)
+#6 2.726   Downloading psycopg2_binary-2.9.13-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (4.9 kB)
+#6 2.743 Collecting Babel>=2.0 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.751   Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+#6 2.762 Collecting isodate>=0.5.4 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.770   Downloading isodate-0.7.2-py3-none-any.whl.metadata (11 kB)
+#6 2.781 Collecting leather>=0.3.2 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.789   Downloading leather-0.4.1-py3-none-any.whl.metadata (3.0 kB)
+#6 2.801 Collecting parsedatetime!=2.5,>=2.1 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.809   Downloading parsedatetime-2.6-py3-none-any.whl.metadata (4.7 kB)
+#6 2.824 Collecting python-slugify>=1.2.1 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.833   Downloading python_slugify-9.1.3-py3-none-any.whl.metadata (12 kB)
+#6 2.845 Collecting pytimeparse>=1.1.5 (from agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 2.853   Downloading pytimeparse-1.1.10-py3-none-any.whl.metadata (3.6 kB)
+#6 2.874 Collecting dbt-protos<2.0,>=1.0.291 (from dbt-adapters<2.0,>=1.10.1->dbt-core==1.9.10)
+#6 2.883   Downloading dbt_protos-1.0.607-py3-none-any.whl.metadata (859 bytes)
+#6 2.911 Collecting colorama<0.5,>=0.3.9 (from dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 2.919   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#6 2.940 Collecting deepdiff<9.0,>=7.0 (from dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 2.949   Downloading deepdiff-8.6.2-py3-none-any.whl.metadata (8.8 kB)
+#6 2.970 Collecting jsonschema<5.0,>=4.0 (from dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 2.978   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+#6 2.998 Collecting opentelemetry-api<3.0,>=1.26 (from dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.006   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#6 3.021 Collecting python-dateutil<3.0,>=2.0 (from dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.029   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#6 3.060 Collecting importlib-metadata<9,>=6.0 (from dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 3.068   Downloading importlib_metadata-8.9.0-py3-none-any.whl.metadata (4.5 kB)
+#6 3.095 Collecting more-itertools<11.0,>=8.0 (from dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 3.103   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+#6 3.162 Collecting pydantic<3,>=1.10 (from dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 3.170   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#6 3.174      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.0/133.0 kB 45.7 MB/s eta 0:00:00
+#6 3.205 Collecting MarkupSafe>=2.0 (from Jinja2<4,>=3.1.3->dbt-core==1.9.10)
+#6 3.213   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#6 3.257 Collecting msgpack>=0.5.6 (from mashumaro[msgpack]<3.15,>=3.9->dbt-core==1.9.10)
+#6 3.266   Downloading msgpack-1.2.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (8.3 kB)
+#6 3.354 Collecting charset_normalizer<4,>=2 (from requests<3.0.0->dbt-core==1.9.10)
+#6 3.363   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (46 kB)
+#6 3.363      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 669.5 MB/s eta 0:00:00
+#6 3.378 Collecting idna<4,>=2.5 (from requests<3.0.0->dbt-core==1.9.10)
+#6 3.386   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#6 3.407 Collecting urllib3<3,>=1.26 (from requests<3.0.0->dbt-core==1.9.10)
+#6 3.415   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#6 3.431 Collecting certifi>=2023.5.7 (from requests<3.0.0->dbt-core==1.9.10)
+#6 3.439   Downloading certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+#6 3.483 Collecting orderly-set<6,>=5.4.1 (from deepdiff<9.0,>=7.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.491   Downloading orderly_set-5.5.0-py3-none-any.whl.metadata (6.6 kB)
+#6 3.522 Collecting zipp>=3.20 (from importlib-metadata<9,>=6.0->dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 3.544   Downloading zipp-4.1.1-py3-none-any.whl.metadata (3.6 kB)
+#6 3.570 Collecting attrs>=22.2.0 (from jsonschema<5.0,>=4.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.578   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+#6 3.591 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5.0,>=4.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.599   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#6 3.618 Collecting referencing>=0.28.4 (from jsonschema<5.0,>=4.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.628   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#6 3.796 Collecting rpds-py>=0.25.0 (from jsonschema<5.0,>=4.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 3.804   Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
+#6 3.832 Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.10->dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 3.840   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#6 4.161 Collecting pydantic-core==2.50.1 (from pydantic<3,>=1.10->dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 4.169   Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.5 kB)
+#6 4.180 Collecting typing-inspection>=0.4.4 (from pydantic<3,>=1.10->dbt-semantic-interfaces<0.8,>=0.7.4->dbt-core==1.9.10)
+#6 4.188   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#6 4.205 Collecting six>=1.5 (from python-dateutil<3.0,>=2.0->dbt-common<2.0,>=1.13.0->dbt-core==1.9.10)
+#6 4.213   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#6 4.227 Collecting text-unidecode>=1.3 (from python-slugify>=1.2.1->agate<1.10,>=1.7.0->dbt-core==1.9.10)
+#6 4.235   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+#6 4.289 Downloading dbt_core-1.9.10-py3-none-any.whl (947 kB)
+#6 4.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 947.1/947.1 kB 56.1 MB/s eta 0:00:00
+#6 4.315 Downloading dbt_postgres-1.9.1-py3-none-any.whl (35 kB)
+#6 4.323 Downloading agate-1.9.1-py2.py3-none-any.whl (95 kB)
+#6 4.325    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.1/95.1 kB 161.5 MB/s eta 0:00:00
+#6 4.332 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#6 4.334    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 153.4 MB/s eta 0:00:00
+#6 4.342 Downloading daff-1.4.2-py3-none-any.whl (144 kB)
+#6 4.343    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.9/144.9 kB 132.8 MB/s eta 0:00:00
+#6 4.352 Downloading dbt_adapters-1.24.5-py3-none-any.whl (177 kB)
+#6 4.354    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.3/177.3 kB 125.8 MB/s eta 0:00:00
+#6 4.362 Downloading dbt_common-1.39.0-py3-none-any.whl (89 kB)
+#6 4.363    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.1/89.1 kB 198.0 MB/s eta 0:00:00
+#6 4.371 Downloading dbt_extractor-0.6.0-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (435 kB)
+#6 4.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.1/435.1 kB 117.7 MB/s eta 0:00:00
+#6 4.385 Downloading dbt_semantic_interfaces-0.7.5-py3-none-any.whl (141 kB)
+#6 4.387    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.0/142.0 kB 72.7 MB/s eta 0:00:00
+#6 4.398 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#6 4.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 104.0 MB/s eta 0:00:00
+#6 4.410 Downloading mashumaro-3.14-py3-none-any.whl (92 kB)
+#6 4.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.2/92.2 kB 105.4 MB/s eta 0:00:00
+#6 4.422 Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+#6 4.468    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 45.1 MB/s eta 0:00:00
+#6 4.491 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#6 4.494    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 45.9 MB/s eta 0:00:00
+#6 4.509 Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+#6 4.528 Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_aarch64.whl (324 kB)
+#6 4.533    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 324.6/324.6 kB 80.2 MB/s eta 0:00:00
+#6 4.552 Downloading psycopg2_binary-2.9.13-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (5.9 MB)
+#6 4.695    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.9/5.9 MB 41.6 MB/s eta 0:00:00
+#6 4.705 Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+#6 4.735    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 506.3/506.3 kB 17.1 MB/s eta 0:00:00
+#6 4.759 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (775 kB)
+#6 4.783    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 775.6/775.6 kB 32.5 MB/s eta 0:00:00
+#6 4.807 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#6 4.810    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 33.6 MB/s eta 0:00:00
+#6 4.833 Downloading snowplow_tracker-1.1.0-py3-none-any.whl (44 kB)
+#6 4.834    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.1/44.1 kB 76.3 MB/s eta 0:00:00
+#6 4.843 Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+#6 4.844    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 709.7 MB/s eta 0:00:00
+#6 4.867 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#6 4.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 797.7 MB/s eta 0:00:00
+#6 4.890 Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+#6 5.014    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 83.4 MB/s eta 0:00:00
+#6 5.022 Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+#6 5.023    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 136.5/136.5 kB 213.2 MB/s eta 0:00:00
+#6 5.031 Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (259 kB)
+#6 5.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.3/259.3 kB 153.0 MB/s eta 0:00:00
+#6 5.042 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#6 5.051 Downloading dbt_protos-1.0.607-py3-none-any.whl (295 kB)
+#6 5.054    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 295.5/295.5 kB 108.8 MB/s eta 0:00:00
+#6 5.062 Downloading deepdiff-8.6.2-py3-none-any.whl (91 kB)
+#6 5.063    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.0/92.0 kB 178.2 MB/s eta 0:00:00
+#6 5.071 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#6 5.073    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 94.0 MB/s eta 0:00:00
+#6 5.081 Downloading importlib_metadata-8.9.0-py3-none-any.whl (27 kB)
+#6 5.089 Downloading isodate-0.7.2-py3-none-any.whl (22 kB)
+#6 5.097 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+#6 5.098    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 176.4 MB/s eta 0:00:00
+#6 5.106 Downloading leather-0.4.1-py3-none-any.whl (30 kB)
+#6 5.114 Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (24 kB)
+#6 5.122 Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+#6 5.123    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 208.3 MB/s eta 0:00:00
+#6 5.131 Downloading msgpack-1.2.3-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (465 kB)
+#6 5.136    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 465.3/465.3 kB 108.3 MB/s eta 0:00:00
+#6 5.144 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#6 5.145    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 253.8 MB/s eta 0:00:00
+#6 5.153 Downloading parsedatetime-2.6-py3-none-any.whl (42 kB)
+#6 5.154    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.5/42.5 kB 859.6 MB/s eta 0:00:00
+#6 5.162 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#6 5.167    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 kB 112.2 MB/s eta 0:00:00
+#6 5.175 Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+#6 5.194    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 109.1 MB/s eta 0:00:00
+#6 5.202 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#6 5.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 467.1 MB/s eta 0:00:00
+#6 5.213 Downloading python_slugify-9.1.3-py3-none-any.whl (16 kB)
+#6 5.221 Downloading pytimeparse-1.1.10-py3-none-any.whl (10 kB)
+#6 5.228 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#6 5.230    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 142.8 MB/s eta 0:00:00
+#6 5.238 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#6 5.246 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#6 5.247    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 169.7 MB/s eta 0:00:00
+#6 5.255 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#6 5.263 Downloading orderly_set-5.5.0-py3-none-any.whl (13 kB)
+#6 5.271 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#6 5.279 Downloading rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (377 kB)
+#6 5.283    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.8/377.8 kB 147.4 MB/s eta 0:00:00
+#6 5.291 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#6 5.299 Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+#6 5.300    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.2/78.2 kB 365.9 MB/s eta 0:00:00
+#6 5.308 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#6 5.316 Downloading zipp-4.1.1-py3-none-any.whl (10 kB)
+#6 5.425 Installing collected packages: text-unidecode, pytz, parsedatetime, leather, daff, zipp, urllib3, typing-extensions, sqlparse, six, rpds-py, pyyaml, pytimeparse, python-slugify, psycopg2-binary, protobuf, pathspec, packaging, orderly-set, networkx, msgpack, more-itertools, MarkupSafe, isodate, idna, dbt-extractor, colorama, click, charset_normalizer, certifi, Babel, attrs, annotated-types, typing-inspection, requests, referencing, python-dateutil, pydantic-core, opentelemetry-api, mashumaro, Jinja2, importlib-metadata, deepdiff, dbt-protos, agate, snowplow-tracker, pydantic, jsonschema-specifications, jsonschema, dbt-semantic-interfaces, dbt-common, dbt-adapters, dbt-core, dbt-postgres
+#6 7.279 Successfully installed Babel-2.18.0 Jinja2-3.1.6 MarkupSafe-3.0.4 agate-1.9.1 annotated-types-0.8.0 attrs-26.1.0 certifi-2026.10.19 charset_normalizer-3.5.2 click-8.5.0 colorama-0.4.6 daff-1.4.2 dbt-adapters-1.24.5 dbt-common-1.39.0 dbt-core-1.9.10 dbt-extractor-0.6.0 dbt-postgres-1.9.1 dbt-protos-1.0.607 dbt-semantic-interfaces-0.7.5 deepdiff-8.6.2 idna-3.20 importlib-metadata-8.9.0 isodate-0.7.2 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 leather-0.4.1 mashumaro-3.14 more-itertools-10.8.0 msgpack-1.2.3 networkx-3.6.1 opentelemetry-api-1.45.1 orderly-set-5.5.0 packaging-26.3 parsedatetime-2.6 pathspec-0.12.1 protobuf-6.33.6 psycopg2-binary-2.9.13 pydantic-2.14.1 pydantic-core-2.50.1 python-dateutil-2.9.0.post0 python-slugify-9.1.3 pytimeparse-1.1.10 pytz-2026.5 pyyaml-6.0.3 referencing-0.37.0 requests-2.34.2 rpds-py-2026.9.1 six-1.17.0 snowplow-tracker-1.1.0 sqlparse-0.5.5 text-unidecode-1.3 typing-extensions-4.16.0 typing-inspection-0.4.4 urllib3-2.8.0 zipp-4.1.1
+#6 7.342 
+#6 7.342 [notice] A new release of pip is available: 24.0 -> 26.2.1
+#6 7.342 [notice] To update, run: python3.11 -m pip install --upgrade pip
+#6 DONE 7.7s
+
+#7 [4/4] RUN python -m venv /opt/dataops-driver && /opt/dataops-driver/bin/pip install --no-cache-dir pydantic==2.14.1 'psycopg[binary]==3.3.6'
+#7 2.040 Collecting pydantic==2.14.1
+#7 2.075   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#7 2.088      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.0/133.0 kB 10.1 MB/s eta 0:00:00
+#7 2.105 Collecting psycopg==3.3.6 (from psycopg[binary]==3.3.6)
+#7 2.113   Downloading psycopg-3.3.6-py3-none-any.whl.metadata (4.4 kB)
+#7 2.126 Collecting annotated-types>=0.6.0 (from pydantic==2.14.1)
+#7 2.133   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#7 2.441 Collecting pydantic-core==2.50.1 (from pydantic==2.14.1)
+#7 2.450   Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.5 kB)
+#7 2.463 Collecting typing-extensions>=4.16.0 (from pydantic==2.14.1)
+#7 2.472   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.482 Collecting typing-inspection>=0.4.4 (from pydantic==2.14.1)
+#7 2.490   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#7 2.570 Collecting psycopg-binary==3.3.6 (from psycopg[binary]==3.3.6)
+#7 2.579   Downloading psycopg_binary-3.3.6-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (2.7 kB)
+#7 2.591 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#7 2.601    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 kB 49.5 MB/s eta 0:00:00
+#7 2.609 Downloading psycopg-3.3.6-py3-none-any.whl (215 kB)
+#7 2.611    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.5/215.5 kB 145.0 MB/s eta 0:00:00
+#7 2.619 Downloading psycopg_binary-3.3.6-cp311-cp311-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl (6.9 MB)
+#7 2.698    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 88.3 MB/s eta 0:00:00
+#7 2.705 Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+#7 2.724    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 112.6 MB/s eta 0:00:00
+#7 2.732 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#7 2.740 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#7 2.741    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 796.9 MB/s eta 0:00:00
+#7 2.752 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#7 2.797 Installing collected packages: typing-extensions, psycopg-binary, annotated-types, typing-inspection, pydantic-core, psycopg, pydantic
+#7 3.049 Successfully installed annotated-types-0.8.0 psycopg-3.3.6 psycopg-binary-3.3.6 pydantic-2.14.1 pydantic-core-2.50.1 typing-extensions-4.16.0 typing-inspection-0.4.4
+#7 3.106 
+#7 3.106 [notice] A new release of pip is available: 24.0 -> 26.2.1
+#7 3.106 [notice] To update, run: python3.11 -m pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 2.5s done
+#8 exporting manifest sha256:d64be0cf589712c1f684395e43165ebba96f3bd6efa91e654c0eb318b8e7374e done
+#8 exporting config sha256:070141a6fc403c06a390ac10a418e44717f109126dd71c09feb4014b6ae85207 done
+#8 exporting attestation manifest sha256:3da5afb9af7a5ac53cc6f393f62e6658ca0707b0293dc688dcec1b5f22d7a794 done
+#8 exporting manifest list sha256:111dec0eb1a40b1256c1619cc704aef16e661fb972a6d6dba5ac9c18698cd593 done
+#8 naming to docker.io/library/dataops-c-cp2-airflow:2.10.4 done
+#8 unpacking to docker.io/library/dataops-c-cp2-airflow:2.10.4
+#8 unpacking to docker.io/library/dataops-c-cp2-airflow:2.10.4 0.7s done
+#8 DONE 3.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/p8cg5bjjr9l947jblzga7l8p1
+
+exit_code=0
+897ca77fea570cd587d76779faa5e1e6646cea20ca8093eec3c3a991558e6568
+
+exit_code=0
+postgres (PostgreSQL) 17.10
+
+exit_code=0
+[
+    {
+        "Id": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "RepoTags": [
+            "postgres:17.10-alpine"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-07-07T17:46:49.401690597Z",
+        "Config": {
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=17",
+                "PG_VERSION=17.10",
+                "PG_SHA256=078a03516dcdbdb705fecaf415ea3d13a956c589e46f09fed68a06fb00598c90",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 114981107,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b2848c02ac6ff53d265469b5b30f649f335e546a83330cd8916d54e65e640409",
+                "sha256:3276ea79c0c0c02b7d702de4aa0bf6b60d4b3f1b295b30366973c4ec4bf91249",
+                "sha256:d7d195016259883bbb161fb50292c1be3f96f0c9b50c573cbb0ed57e64dfa2c9",
+                "sha256:1ebee87cc825164b634bd6837685531c240dcfe5a1cf507cb6e8df057f661cbf",
+                "sha256:df8da200347edec60626a356f574551d1ecb9e7727402137d7d1bc6cb3cf11db",
+                "sha256:40252c7d7df3e6b969af3fa01b51346fbff89b508a6f2c5a9f457d23e797cf64",
+                "sha256:11b7e3ae2bd33cf903077779b2178d1242006f750906c41d9941cd45be4c6175",
+                "sha256:60d0936c2e0dac1f79128a468e3259644a610850f2ce98c238027943b5e87108",
+                "sha256:60d2d3ed3afa870cf11fe567074bfc1c37e1f0488fe4f9259b4b4ccd6084c209",
+                "sha256:66c221f9d5b6c9542d87a9f5143ffa653ce6628a4db739870abede8c87da99af"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T08:03:02.338079463Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+            "size": 10301
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/postgres"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+[
+    {
+        "Id": "sha256:111dec0eb1a40b1256c1619cc704aef16e661fb972a6d6dba5ac9c18698cd593",
+        "RepoTags": [
+            "dataops-c-cp2-airflow:2.10.4"
+        ],
+        "RepoDigests": [
+            "dataops-c-cp2-airflow@sha256:111dec0eb1a40b1256c1619cc704aef16e661fb972a6d6dba5ac9c18698cd593"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-20T08:08:50.683872805Z",
+        "Config": {
+            "User": "airflow",
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Env": [
+                "PATH=/root/bin:/home/airflow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.11",
+                "PYTHON_SHA256=2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
+                "PYTHON_BASE_IMAGE=python:3.11-slim-bookworm",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LANGUAGE=C.UTF-8",
+                "LC_ALL=C.UTF-8",
+                "LC_CTYPE=C.UTF-8",
+                "LC_MESSAGES=C.UTF-8",
+                "LD_LIBRARY_PATH=/usr/local/lib",
+                "RUNTIME_APT_DEPS=",
+                "ADDITIONAL_RUNTIME_APT_DEPS=",
+                "RUNTIME_APT_COMMAND=echo",
+                "ADDITIONAL_RUNTIME_APT_COMMAND=",
+                "INSTALL_MYSQL_CLIENT=true",
+                "INSTALL_MYSQL_CLIENT_TYPE=mariadb",
+                "INSTALL_MSSQL_CLIENT=true",
+                "INSTALL_POSTGRES_CLIENT=true",
+                "GUNICORN_CMD_ARGS=--worker-tmp-dir /dev/shm",
+                "AIRFLOW_INSTALLATION_METHOD=",
+                "VIRTUAL_ENV=/home/airflow/.local",
+                "AIRFLOW_UID=50000",
+                "AIRFLOW_USER_HOME_DIR=/home/airflow",
+                "AIRFLOW_HOME=/opt/airflow",
+                "DUMB_INIT_SETSID=1",
+                "PS1=(airflow)",
+                "AIRFLOW_VERSION=2.10.4",
+                "AIRFLOW__CORE__LOAD_EXAMPLES=false",
+                "AIRFLOW_PIP_VERSION=24.3.1",
+                "AIRFLOW_UV_VERSION=0.4.29",
+                "AIRFLOW_USE_UV=false",
+                "BUILD_ID=",
+                "COMMIT_SHA=c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd"
+            ],
+            "Entrypoint": [
+                "/usr/bin/dumb-init",
+                "--",
+                "/entrypoint"
+            ],
+            "WorkingDir": "/opt/airflow",
+            "Labels": {
+                "org.apache.airflow.component": "airflow",
+                "org.apache.airflow.distro": "debian",
+                "org.apache.airflow.image": "airflow",
+                "org.apache.airflow.main-image.build-id": "",
+                "org.apache.airflow.main-image.commit-sha": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.apache.airflow.module": "airflow",
+                "org.apache.airflow.uid": "50000",
+                "org.apache.airflow.version": "2.10.4",
+                "org.opencontainers.image.authors": "dev@airflow.apache.org",
+                "org.opencontainers.image.created": "",
+                "org.opencontainers.image.description": "Reference, production-ready Apache Airflow image",
+                "org.opencontainers.image.documentation": "https://airflow.apache.org/docs/docker-stack/index.html",
+                "org.opencontainers.image.licenses": "Apache-2.0",
+                "org.opencontainers.image.ref.name": "airflow",
+                "org.opencontainers.image.revision": "c083e456fa02c6cb32cdbe0c9ed3c3b2380beccd",
+                "org.opencontainers.image.source": "https://github.com/apache/airflow",
+                "org.opencontainers.image.title": "Production Airflow Image",
+                "org.opencontainers.image.url": "https://airflow.apache.org",
+                "org.opencontainers.image.vendor": "Apache Software Foundation",
+                "org.opencontainers.image.version": "2.10.4"
+            },
+            "ArgsEscaped": true,
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-o",
+                "errexit",
+                "-o",
+                "nounset",
+                "-o",
+                "nolog",
+                "-c"
+            ]
+        },
+        "Architecture": "arm64",
+        "Os": "linux",
+        "Size": 481568074,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3e620c160447d1acff162610a533282fc64863123cba28ce40eaf98c17dde780",
+                "sha256:29a9c1058a4b8a096f5de532183c47bac13bbcba2813839312c1ca45b20e6a73",
+                "sha256:7289c009ed764f8dcc453b7eecb189d9712413f83392e075ef139822488b9de7",
+                "sha256:d16f554179f54bbac2faf2fd7bf18ef157660a76aaaf6a9f7d83b8df9274e64d",
+                "sha256:305a876a58dae3e3a8fdcbe25fca0b4b71eb46609cb900d8a289c051b42d6b28",
+                "sha256:bfe99f5d94b39fc82b3820af6b776cf59aa1207b086f9f26ae41251039fe1142",
+                "sha256:1cda03ccad0087748283a42c2154aa96cddc23e758eb663f508c3414d1942d08",
+                "sha256:41edf77b65c8f99d6971e00e25df8b6eaec2ec79b105895915d15896841d387f",
+                "sha256:2c872b64909a521839a622d21b4dc269fda657d68823bda7c5dabea21ff5389b",
+                "sha256:b5868845c34de43b0e56749b1d0ffa259dcb8582b4e0d0d22e2b30cb08eed6f8",
+                "sha256:297622f25c9df62a12974b0c5535299776313b42d89216c95fd143dce38ab42a",
+                "sha256:bab3287189151b93b92aa2e375646893a996c1d1d3b26a5c5fe1dbc6ec7ca6e7",
+                "sha256:f81d1ee7dab2f838ef3719069d09af53ec28e41ab6ae82a31df396625d286dd4",
+                "sha256:e3c5225e023c05590f3c9ced63250b0a93533a37ae7ee89122f17694ce5bf6a1",
+                "sha256:bbcf73bc3099460624af93b58c79a54a6e89efe9e7dc18dd0c70c3567f0f0c07",
+                "sha256:539935a96597b3ba0cc2338df8f14093125e12392371b8d62cf8ed78ca4958b1",
+                "sha256:e7279dedae80df97924db20d8b108889de6a465a3589a5df074be1a883b70f09",
+                "sha256:92857971433df4caa89937b95a9605ec69efa97c9b396294fba86ba197529ad8",
+                "sha256:fc5a6e0889fe7025a989935aded693712ab90198e0eb0c412a41537d815427fc",
+                "sha256:6088b9cd3c00a17b4f625ad9dabf83b61728538a9f99f7bea7629c00523887bd",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:35b273d41ba753340d98b3af23746b014c84600ae1751be740a28d220412da0b",
+                "sha256:59fe0ec8b59e35a87633256486aa3a775b3ca49405ab38f07b5c72a859af2291",
+                "sha256:dfcbf2e4f97e86e356cd7ca78d506b281e9e161bb12dca76abad6dab5a7294f6"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-20T08:08:53.205866084Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:111dec0eb1a40b1256c1619cc704aef16e661fb972a6d6dba5ac9c18698cd593",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "p8cg5bjjr9l947jblzga7l8p1",
+                    "CreatedAt": "2026-10-20T08:08:53.903957417Z"
+                }
+            ]
+        }
+    }
+]
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-airflow
+
+exit_code=0
+Flag --time has been deprecated, use --timeout instead
+dataops-c-cp2-postgres
+
+exit_code=0

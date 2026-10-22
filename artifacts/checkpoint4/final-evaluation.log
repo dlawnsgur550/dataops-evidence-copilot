@@ -1,0 +1,12 @@
+{"case": "F01", "category": "UNKNOWN", "structural_pass": false, "new_api_calls_for_report": 2, "baseline_category": "UNKNOWN", "errors": ["OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"]}
+{"case": "F02", "category": "UNKNOWN", "structural_pass": false, "new_api_calls_for_report": 2, "baseline_category": "UNKNOWN", "errors": ["OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"]}
+{"case": "F03", "category": "SCHEMA_CHANGE", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "SCHEMA_CHANGE", "errors": []}
+{"case": "F04", "category": "DATA_QUALITY", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "DATA_QUALITY", "errors": []}
+{"case": "F05", "category": "DATA_QUALITY", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "DATA_QUALITY", "errors": []}
+{"case": "F06", "category": "DATA_QUALITY", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "DATA_QUALITY", "errors": []}
+{"case": "F07", "category": "CONNECTION_FAILURE", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "CONNECTION_FAILURE", "errors": []}
+{"case": "F08", "category": "CONNECTION_FAILURE", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "CONNECTION_FAILURE", "errors": []}
+{"case": "F09", "category": "UNKNOWN", "structural_pass": false, "new_api_calls_for_report": 4, "baseline_category": "CONNECTION_FAILURE", "errors": []}
+{"case": "F10", "category": "NORMAL", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "UNKNOWN", "errors": []}
+{"case": "F11", "category": "UNKNOWN", "structural_pass": true, "new_api_calls_for_report": 4, "baseline_category": "UNKNOWN", "errors": []}
+{"case": "F12", "category": "UNKNOWN", "structural_pass": false, "new_api_calls_for_report": 2, "baseline_category": "UNKNOWN", "errors": ["OPENAI_SCHEMA_VALIDATION_NO_RETRY::json_invalid"]}

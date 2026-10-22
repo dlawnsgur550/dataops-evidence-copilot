@@ -1,0 +1,18 @@
+{
+  "start": {
+    "requests": 93,
+    "spent_or_reserved_usd": 0.015592371,
+    "uncertain_requests": 0,
+    "lifetime_cap_usd": 0.05,
+    "daily_cap_usd": 0.02,
+    "diagnosis_cap_usd": 0.01,
+    "day_timezone": "Asia/Seoul",
+    "profile": "evaluation",
+    "daily_call_cap": 96,
+    "total_call_cap": 128
+  },
+  "max_new_requests": 33,
+  "max_new_usd": 0.012,
+  "model": "gpt-6-luna",
+  "shared_ledger": true
+}

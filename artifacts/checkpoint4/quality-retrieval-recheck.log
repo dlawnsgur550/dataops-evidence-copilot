@@ -1,0 +1,38 @@
+{
+  "fixture_selector": "schema",
+  "category": "DATA_QUALITY",
+  "diagnosis_status": "supported",
+  "review_accepted": true,
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 4,
+    "rag_calls": 1,
+    "tokens": 7247,
+    "cost": 0.001092475,
+    "elapsed_seconds": 8.940498,
+    "api_calls": 2,
+    "local_cache_hits": 2,
+    "input_tokens": 6749,
+    "output_tokens": 498,
+    "price_date": "2026-10-20",
+    "cost_basis": "provider_token_usage_price_estimate",
+    "uncertain_reserved_usd": 0.0
+  },
+  "nodes": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "scope": {
+    "llm": "gpt-6-luna",
+    "transport": "saved_evidence_replay_no_live_query",
+    "data": "replay_of_saved_collected_evidence",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "protocol": {
+    "initialized": false,
+    "note": "Saved evidence replay; no live MCP or database query in this run"
+  },
+  "report": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint4/live-quality-report.json"
+}

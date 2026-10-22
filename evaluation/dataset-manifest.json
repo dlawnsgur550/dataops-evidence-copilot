@@ -1,0 +1,33 @@
+{
+  "version": "authored-v1",
+  "dev_cases": 6,
+  "final_cases": 12,
+  "final_distribution": {
+    "schema": 3,
+    "quality": 3,
+    "connection": 3,
+    "normal": 1,
+    "insufficient": 2
+  },
+  "evidence_sha256": {
+    "dev/D01.json": "86889001a59fcd212d703eea4ee9714f9c949353a827bf3ed3a138c658b2ab76",
+    "dev/D02.json": "66eb7ac20cc89ad16d2c73d4fa1cad145bc9e499ed8175b21105afbd52dfc27c",
+    "dev/D03.json": "90c138aa70ac1a110b2e6d5e736dee23f6fcba0e43083ccb0e33ee9ea42ae958",
+    "dev/D04.json": "9e0f15656b9e216cf36a3d8821b310dfa1a19446fe1b95bd7cc3771dcfc92b69",
+    "dev/D05.json": "c69d69bf82d1a70a181b931b171c35a626ca2c3191bb214bf4057c2bdf3f9721",
+    "dev/D06.json": "47cc5ecbed51cc74695a7bf124586fc43db69aabce119659d0a16d255de1e94d",
+    "final/F01.json": "24461e07bee045bf87601d70418cd96e3c14672200adfd85a638c61208e6b14c",
+    "final/F02.json": "eaec4ed0f899f14dc0fb3e71f11fac7a38d1fd4ed3d66d030d7f8b09b1ed13bf",
+    "final/F03.json": "2b5ca89ec11a591688169bf1b973d4ae97ba3ecd345f7194b2eeebd4c9a919f7",
+    "final/F04.json": "516b5f79acfb070f67af01dce9f538e405985ca857ce2d883964f22871f1fdcb",
+    "final/F05.json": "349dfdb004392f04512a764d9e35ce48b31fd339e00fc160ea863445ba08ba8d",
+    "final/F06.json": "7b6805e1cda9dcbef358f6faa784742aed9103937e4ce94332e9d08739b967e7",
+    "final/F07.json": "79ad616d05de8db5e40ffd0f6397f0010615f23ea56f68723a0bd564084de062",
+    "final/F08.json": "06754e3a72801d2facfa55232da37b36c1e30ba2c4b27b6a2cec193427780e71",
+    "final/F09.json": "3cc59a61691229464979b553120d56df47a581218230d76ddb2a5b39b3bb43a5",
+    "final/F10.json": "b287c215b3c7a927f054663671a1886641f2459765af6ca84e63c8be47af8a4c",
+    "final/F11.json": "9e4bf1007431639ced9408a189f55dcb9872afaaa75b1f0ea2e91416eac30830",
+    "final/F12.json": "b5da9131b9d624c84564b1a401174a751eb23f6dc89e2e47f6f3d759383915f0"
+  },
+  "gold_is_not_model_input": true
+}

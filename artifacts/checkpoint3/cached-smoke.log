@@ -1,0 +1,38 @@
+{
+  "fixture_selector": "schema",
+  "category": "SCHEMA_CHANGE",
+  "diagnosis_status": "supported",
+  "review_accepted": true,
+  "usage": {
+    "llm_calls": 4,
+    "tool_calls": 3,
+    "rag_calls": 1,
+    "tokens": 0,
+    "cost": 0.0,
+    "elapsed_seconds": 0.009634,
+    "api_calls": 0,
+    "local_cache_hits": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "price_date": "2026-10-20",
+    "cost_basis": "local_cache_or_no_request",
+    "uncertain_reserved_usd": 0.0
+  },
+  "nodes": [
+    "triage",
+    "inspector",
+    "rca",
+    "reviewer"
+  ],
+  "scope": {
+    "llm": "gpt-6-luna",
+    "transport": "saved_evidence_replay_no_live_query",
+    "data": "replay_of_saved_collected_evidence",
+    "external_systems": "not_queried_in_this_run"
+  },
+  "protocol": {
+    "initialized": false,
+    "note": "Saved evidence replay; no live MCP or database query in this run"
+  },
+  "report": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint3/cached-schema-report.json"
+}

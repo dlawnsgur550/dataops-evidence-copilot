@@ -1,0 +1,45 @@
+{
+  "final": {
+    "fault_correct_structural": 6,
+    "fault_total": 9,
+    "nonfault_correct_structural": 2,
+    "nonfault_total": 3,
+    "all_structural_pass": 8,
+    "cases": 12,
+    "api_calls": 42,
+    "tokens": 48483,
+    "estimated_cost_usd": 0.003862491,
+    "seconds_mean": 13.3268395,
+    "seconds_max": 21.279878,
+    "cache_hits": 0,
+    "assisted_semantic_fault_correct": 5,
+    "assisted_semantic_nonfault_correct": 2,
+    "no_actions_on_nonfaults": 3
+  },
+  "baseline": {
+    "fault_correct_structural": 7,
+    "fault_total": 9,
+    "nonfault_correct_structural": 2,
+    "nonfault_total": 3,
+    "all_structural_pass": 9,
+    "cases": 12,
+    "api_calls": 12,
+    "tokens": 20840,
+    "estimated_cost_usd": 0.001982491,
+    "seconds_mean": 6.700748948002001,
+    "seconds_max": 10.113625249941833,
+    "cache_hits": 0,
+    "assisted_semantic_fault_correct": 5,
+    "assisted_semantic_nonfault_correct": 2,
+    "no_actions_on_nonfaults": 3
+  },
+  "retrieval": {
+    "hit_at_3": 9,
+    "total_fault_cases": 9
+  },
+  "freeze_id": "989656686c2e16405bf63a934876d5d49615c616fe40f80b40871eb114e531c6",
+  "comparison_evidence_hash_matches": true,
+  "independent_human_review_completed": false,
+  "target_8_of_9_met": false,
+  "no_claim_of_accuracy_improvement": true
+}

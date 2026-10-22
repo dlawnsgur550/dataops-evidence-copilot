@@ -1,0 +1,165 @@
+{
+  "source_python_unchanged": {
+    "src/dataops_copilot/live_adapter.py": true,
+    "src/dataops_copilot/ui_visuals.py": true,
+    "src/dataops_copilot/recovery.py": true,
+    "src/dataops_copilot/models.py": true,
+    "src/dataops_copilot/recovery_v3.py": true,
+    "src/dataops_copilot/claim_contract.py": true,
+    "src/dataops_copilot/ui.py": true,
+    "src/dataops_copilot/api_safety.py": true,
+    "src/dataops_copilot/diagnostics.py": true,
+    "src/dataops_copilot/hybrid.py": true,
+    "src/dataops_copilot/evaluation.py": true,
+    "src/dataops_copilot/policy.py": true,
+    "src/dataops_copilot/__init__.py": true,
+    "src/dataops_copilot/llm.py": true,
+    "src/dataops_copilot/rules.py": true,
+    "src/dataops_copilot/ui_workspace.py": true,
+    "src/dataops_copilot/knowledge_summaries.py": true,
+    "src/dataops_copilot/openai_llm.py": true,
+    "src/dataops_copilot/settings_policy.py": true,
+    "src/dataops_copilot/replay.py": true,
+    "src/dataops_copilot/cli.py": true,
+    "src/dataops_copilot/retrieval.py": true,
+    "src/dataops_copilot/mcp_client.py": true,
+    "src/dataops_copilot/workflow_v3.py": true,
+    "src/dataops_copilot/workflow.py": true,
+    "src/dataops_copilot/artifact_store.py": true,
+    "src/dataops_copilot/fixtures.py": true,
+    "src/dataops_copilot/claim_engine.py": true,
+    "src/dataops_copilot/mcp_server.py": true,
+    "src/dataops_copilot/live_settings.py": true
+  },
+  "archives_unchanged": {
+    "dataops-review-policy.zip": true,
+    "dataops-c-materials-v2.1.zip": true,
+    "dataops-c-materials-v3.1.zip": true,
+    "dataops-c-materials.zip": true,
+    "dataops-program-guide.zip": true,
+    "dataops-presentation-demo.zip": true
+  },
+  "preserved_input_count": 58,
+  "inputs_match": true,
+  "new_frontend": "native HTML/CSS/JS + stdlib loopback server",
+  "python_engine_changed": false,
+  "full_suite": {
+    "command": "PYTHONPATH=src ../dataops-copilot/.venv/bin/python -m pytest -q",
+    "passed": 212,
+    "seconds": 11.14,
+    "exit_code": 0,
+    "xml": "pytest-final.xml"
+  },
+  "http_suite": {
+    "passed": 28,
+    "seconds": 0.75,
+    "xml": "http-tests.xml"
+  },
+  "browser": {
+    "widths_css": [
+      1280,
+      390,
+      319
+    ],
+    "horizontal_overflow": false,
+    "console_errors_or_warnings": 0,
+    "verified": [
+      "five stored cases",
+      "free replay",
+      "incident upload wrong run -> UNKNOWN/no actions/empty pipeline",
+      "three controlled counterexamples",
+      "new-run recovery success",
+      "same-run recovery rejection and state reset",
+      "eleven typed historical model records including Z09 failure",
+      "native dialog Escape and task highlight",
+      "API option disabled",
+      "mobile menu",
+      "URL page/case/tabs"
+    ],
+    "review_fix_measurements": {
+      "evidence_reference_count": 5,
+      "dialog_title_then_metadata": [
+        "H2",
+        "P"
+      ],
+      "operator_body_font_px": [
+        14,
+        14,
+        14
+      ],
+      "visible_icon_hit_area_px": [
+        40,
+        40
+      ],
+      "widths_after_fixes_css": [
+        1280,
+        390,
+        319
+      ],
+      "horizontal_overflow": false
+    }
+  },
+  "capture_note": "Native viewport shots are authoritative for desktop/mobile. Host zoom causes right cropping in overridden fullPage captures; rejected captures moved to work. The 319px full-page shot is valid. Native captures contain host canvas white padding.",
+  "skills": {
+    "impeccable": "16844db5c4a0839244481034153d26d53c4ce076",
+    "web-design-guidelines": "063bee94c3f4df8453406c830b0a7df0f2860278"
+  },
+  "detector": {
+    "runs": 1,
+    "original_findings": "../../.impeccable/review/detector.json",
+    "disposition": [
+      "Skip-link hover explicitly retains white text on cobalt; primary button hover also white by CSS specificity",
+      "offset shadows changed to neutral black",
+      "repeating gradient marks blocked task edges, not decoration"
+    ]
+  },
+  "paid_api_calls_this_redesign": 0,
+  "limitations": [
+    "Synthetic data only",
+    "Historical model quality unchanged",
+    "No independent human validation or new live MCP verification claimed",
+    "LangSmith and independent LLM Judge remain pending"
+  ],
+  "budget_after": {
+    "requests": 128,
+    "standard_total_call_cap": 50,
+    "historical_evaluation_total_call_cap": 128,
+    "spent_or_reserved_usd": 0.02068938,
+    "paid_blocked": true,
+    "uncertain_requests": 0
+  },
+  "review": {
+    "initial": "fix",
+    "material_findings": 4,
+    "resolved": 4,
+    "final_disposition": "ship",
+    "scope": "Verdict pass scored the four named material fixes; not a new whole-surface audit",
+    "initial_file": "../../.impeccable/review/finish-review.md",
+    "verdict_file": "../../.impeccable/review/finish-verdict.md"
+  },
+  "service_after": {
+    "main_port": 18784,
+    "health": 200,
+    "old_demo_port": 18788,
+    "old_demo_closed": true
+  },
+  "final_screen": "final-web.jpg",
+  "source_new_files": [
+    "src/dataops_copilot/web_server.py",
+    "src/dataops_copilot/web/index.html",
+    "src/dataops_copilot/web/app.css",
+    "src/dataops_copilot/web/app.js",
+    "src/dataops_copilot/web/assets/PretendardVariable.woff2",
+    "tests/test_web_server.py"
+  ],
+  "design_documentation": {
+    "files": [
+      "DESIGN.md",
+      ".impeccable/design.json"
+    ],
+    "schema_version": 2,
+    "yaml_json_parsing": "passed",
+    "token_references": "resolved",
+    "component_previews": 10
+  }
+}

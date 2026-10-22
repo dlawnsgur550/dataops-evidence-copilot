@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "api_key_not_visible_in_container": true,
+  "openai_environment_absent": true,
+  "whole_workspace_not_mounted": true,
+  "mounts": [
+    {
+      "source": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/airflow",
+      "read_only": false
+    },
+    {
+      "source": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/driver-container.json",
+      "read_only": true
+    },
+    {
+      "source": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/work/runtime/active-endpoint.json",
+      "read_only": false
+    },
+    {
+      "source": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot",
+      "read_only": true
+    },
+    {
+      "source": "/Users/lim/Documents/Codex/2026-10-20/dataops-candidate-c/outputs/dataops-copilot/artifacts/checkpoint4",
+      "read_only": false
+    }
+  ],
+  "verification_run_id": "boundary-7718bca378094838aa256c3119a12748",
+  "task_statuses": {
+    "load_demo_data": "success",
+    "dbt_run": "success",
+    "dbt_test": "success",
+    "publish_summary": "success"
+  },
+  "dbt_tests": {
+    "not_null_order_id": "pass",
+    "unique_order_id": "pass"
+  },
+  "model_api_calls": 0
+}

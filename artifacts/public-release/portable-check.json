@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "fresh_virtualenv": "uv sync --locked --python 3.11",
+  "full_tests_passed": 212,
+  "test_seconds": 11.95,
+  "full_tests_require_pinned_e5": true,
+  "free_web_requires_api_key": false,
+  "local_work_directory_isolated": true,
+  "saved_cases": 5,
+  "historical_model_records": 11,
+  "readme_local_links": "all resolve",
+  "provider_calls": 0
+}
