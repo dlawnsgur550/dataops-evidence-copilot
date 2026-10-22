@@ -176,7 +176,7 @@ uv run python scripts/run_ui.py
 uv run python scripts/run_ui.py --no-browser
 ~~~
 
-실행 후 **http://127.0.0.1:18784**에서 확인합니다. 이 주소는 실행한 컴퓨터에서 사용하는 로컬 웹 주소입니다. 외부에서 확인할 최종 보고서는 이 GitHub README입니다.
+실행 후 [기본 웹](http://127.0.0.1:18784)에서 확인합니다. 이 주소는 실행한 컴퓨터에서 사용하는 로컬 웹 주소입니다. 외부에서 확인할 최종 보고서는 이 GitHub README입니다.
 
 macOS에서는 [start_web.command](start_web.command)도 사용할 수 있습니다. 저장된 5개 사례·반례·복구 기록·모델 평가 원본 열람에는 외부 DB나 API 키가 필요하지 않습니다. 실제 API 선택은 기본적으로 잠겨 있습니다.
 
