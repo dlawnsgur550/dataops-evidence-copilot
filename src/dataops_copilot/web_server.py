@@ -35,7 +35,6 @@ PRESENTATION_STATIC = {
     '/presentation/deck.js': ('deck.js', 'text/javascript; charset=utf-8'),
     '/presentation/content.js': ('content.js', 'text/javascript; charset=utf-8'),
     '/presentation/evidence.json': ('evidence.json', 'application/json; charset=utf-8'),
-    '/presentation/SCRIPT.txt': ('SCRIPT.txt', 'text/plain; charset=utf-8'),
     '/presentation/assets/workspace.jpg': ('assets/workspace.jpg', 'image/jpeg'),
     '/presentation/assets/PretendardVariable.woff2': ('assets/PretendardVariable.woff2', 'font/woff2'),
     '/presentation/assets/Pretendard-LICENSE.txt': ('assets/Pretendard-LICENSE.txt', 'text/plain; charset=utf-8'),

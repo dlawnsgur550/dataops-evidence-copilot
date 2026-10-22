@@ -2,7 +2,8 @@
 (() => {
   const data=window.DECK, $=id=>document.getElementById(id);
   const slides=[...document.querySelectorAll('.slide')];
-  const presenter=new URLSearchParams(location.search).get('presenter')==='1';
+  const hasNotes=data.slides.some(s=>typeof s.notes==='string' && s.notes.length>0);
+  const presenter=hasNotes && new URLSearchParams(location.search).get('presenter')==='1';
   const stamp=n=>String(Math.floor(n/60)).padStart(2,'0')+':'+String(Math.floor(n%60)).padStart(2,'0');
   let index=Math.max(0,Math.min(slides.length-1,(Number(location.hash.replace('#slide-',''))||1)-1));
   let guard='fake_evidence',recovery='new_run',clock={elapsed:0,startedAt:null},channel=null;
@@ -43,8 +44,8 @@
     $('source').href=s.source;
     $('time-range').textContent=stamp(s.start)+'–'+stamp(s.end)+' · '+s.duration+'초';
     $('planned-time').textContent='권장 '+stamp(s.start)+'–'+stamp(s.end);
-    $('cue').textContent='화면 동작: '+s.cue;
-    $('script').replaceChildren(...s.notes.split('\n\n').map(t=>{const p=document.createElement('p');p.textContent=t;return p;}));
+    $('cue').textContent=s.cue?'화면 동작: '+s.cue:'';
+    $('script').replaceChildren(...(s.notes||'').split('\n\n').map(t=>{const p=document.createElement('p');p.textContent=t;return p;}));
     $('next-slide').textContent=index+1<slides.length?'다음: '+data.slides[index+1].title:'마지막 장표 · 질의응답';
     document.title=(index+1)+' / '+slides.length+' · '+s.title+' · DataOps';
     const hash='#slide-'+(index+1);
@@ -58,6 +59,7 @@
   data.slides.forEach((s,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=(i+1)+' / '+slides.length+' · '+s.title;$('jump').append(o);});
   document.body.classList.toggle('presenter-mode',presenter);
   $('speaker-notes').hidden=!presenter;
+  $('presenter').hidden=!hasNotes;
   $('presenter').textContent=presenter?'청중 창 열기':'발표자 보기';
   $('prev').addEventListener('click',()=>show(index-1));
   $('next').addEventListener('click',()=>show(index+1));

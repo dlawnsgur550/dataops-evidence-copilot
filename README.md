@@ -116,11 +116,11 @@ MCP 도구는 get_task_context, get_dbt_artifacts, compare_schema, get_quality_p
 
 ### 발표 자료
 
-**9장·계획 5분 캐러셀:** 기본 웹 실행 후 [청중 화면](http://127.0.0.1:18784/presentation/)을 엽니다. **발표자 보기**로 장표와 동기화되는 대본 창을 열 수 있으며, Zoom에는 청중 창만 공유합니다. 타이머는 수동으로 시작합니다.
+**9장·계획 5분 캐러셀:** 기본 웹 실행 후 [청중 화면](http://127.0.0.1:18784/presentation/)을 엽니다. 좌우 키·장표 선택 목록으로 이동하며 타이머는 수동으로 시작합니다.
 
-[장표별 대본·시연 동작·예상 질문](presentation/SCRIPT.txt) · [HTML 원본](presentation/index.html) · [반례·복구 원본 검사 결과](presentation/evidence.json) · [오프라인 사용법](presentation/사용법.txt)
+[HTML 원본](presentation/index.html) · [반례·복구 원본 검사 결과](presentation/evidence.json) · [오프라인 사용법](presentation/사용법.txt)
 
-캐러셀의 반례·복구 전환은 코드로 검증해 저장한 결과를 표시합니다. 실제 API 호출이나 서비스 수정은 없습니다. 오프라인에서는 `presentation/` 폴더를 통째로 복사해 `index.html`을 열 수 있습니다. 파일 모드에서는 창 간 동기화를 보장하지 않습니다. 대본·시간 편집 후 [생성 스크립트](scripts/build_presentation.py)를 실행하면 `content.js`와 `SCRIPT.txt`를 함께 갱신합니다.
+반례·복구 전환은 코드로 검증해 저장한 결과를 표시하며 실제 API 호출이나 서비스 수정은 없습니다. `presentation/` 폴더를 통째로 복사해 `index.html`을 열면 오프라인 열람도 가능합니다. 공개본에는 발표 대본·발표자 메모·대본 생성 코드를 포함하지 않습니다.
 
 ## 6. 검증 결과와 비용
 

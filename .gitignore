@@ -22,3 +22,10 @@ llm-cost.sqlite3*
 *.msgpack
 .streamlit/secrets.toml
 .DS_Store
+
+# Private speaker materials must never be committed
+/presentation/SCRIPT.txt
+/presentation/private-*
+/presentation/speaker-notes*
+/scripts/build_presentation.py
+/speaker/

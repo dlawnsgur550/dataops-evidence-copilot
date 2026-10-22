@@ -1,8 +1,6 @@
 {
   "slide_count": 9,
   "planned_duration_seconds": 300,
-  "speaker_script_characters": 2284,
-  "script_and_deck_synchronized": true,
   "pytest": "212 passed in 11.13s",
   "api_requests_before": 128,
   "api_requests_after": 128,
@@ -31,5 +29,6 @@
   ],
   "timer_keyboard_broadcast_guard_recovery": "verified in browser",
   "detector_primary_findings": 0,
-  "detector_advisories": 35
+  "detector_advisories": 35,
+  "speaker_materials_in_public_repository": false
 }
