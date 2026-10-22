@@ -114,27 +114,13 @@ MCP 도구는 get_task_context, get_dbt_artifacts, compare_schema, get_quality_p
 
 </details>
 
-### 5분 발표용 캐러셀과 대본
+### 발표 자료
 
-기본 웹을 실행한 뒤 [발표 캐러셀](http://127.0.0.1:18784/presentation/)을 엽니다. 9장·계획 합계 5분이며, 좌우 키·Space·장표 선택 목록으로 이동합니다. **발표자 보기**는 대본 창을 분리하고 같은 출처의 청중 창과 장표·반례·타이머를 동기화합니다. Zoom에는 청중 창만 공유합니다. 타이머는 수동으로 시작합니다.
+**9장·계획 5분 캐러셀:** 기본 웹 실행 후 [청중 화면](http://127.0.0.1:18784/presentation/)을 엽니다. **발표자 보기**로 장표와 동기화되는 대본 창을 열 수 있으며, Zoom에는 청중 창만 공유합니다. 타이머는 수동으로 시작합니다.
 
-[장표별 대본·클릭 순서·예상 질문](presentation/SCRIPT.txt) · [HTML 원본](presentation/index.html) · [반례·복구 원본 검사 결과](presentation/evidence.json)
+[장표별 대본·시연 동작·예상 질문](presentation/SCRIPT.txt) · [HTML 원본](presentation/index.html) · [반례·복구 원본 검사 결과](presentation/evidence.json) · [오프라인 사용법](presentation/사용법.txt)
 
-| 시간 | 장표 |
-|---|---|
-| 0:00–0:20 | 프로젝트 소개 |
-| 0:20–0:50 | 해결할 문제: 실행 당시와 이후 관측 |
-| 0:50–1:30 | 아키텍처·MCP·RAG·LangGraph 적용 범위 |
-| 1:30–2:10 | 연결 실패 진단과 근거 확인 시연 |
-| 2:10–2:45 | 주장·Reviewer 반례 검사 |
-| 2:45–3:20 | 새 실행 복구 통과·같은 실행 거절 |
-| 3:20–4:00 | 작은 실제 모델 비교와 비용 선택 |
-| 4:00–4:35 | 검증 규모와 신뢰 범위 |
-| 4:35–5:00 | 교훈과 다음 개선 |
-
-장표의 반례·복구 전환은 코드로 검증해 저장한 결과를 표시합니다. API를 새로 호출하거나 서비스를 수정하지 않습니다. 실제 발화 시간은 리허설로 조정하고, 4장의 기본 웹 전환은 20초 이내로 진행합니다. `presentation/` 폴더를 통째로 복사해 `index.html`을 열면 오프라인 열람도 가능합니다. 파일 모드에서는 창 간 동기화를 보장하지 않으며, GitHub 근거 링크와 기본 웹 시연은 별도 연결이 필요합니다. 브라우저의 **인쇄 / PDF**로 전체 장표를 출력할 수 있습니다.
-
-발표 대본·시간·저장 결과의 편집 원본은 [생성 스크립트](scripts/build_presentation.py)이며 `uv run python scripts/build_presentation.py`로 `content.js`와 `SCRIPT.txt`를 함께 갱신합니다.
+캐러셀의 반례·복구 전환은 코드로 검증해 저장한 결과를 표시합니다. 실제 API 호출이나 서비스 수정은 없습니다. 오프라인에서는 `presentation/` 폴더를 통째로 복사해 `index.html`을 열 수 있습니다. 파일 모드에서는 창 간 동기화를 보장하지 않습니다. 대본·시간 편집 후 [생성 스크립트](scripts/build_presentation.py)를 실행하면 `content.js`와 `SCRIPT.txt`를 함께 갱신합니다.
 
 ## 6. 검증 결과와 비용
 
